@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Thatzit"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Thatzit"
+	}
+}
