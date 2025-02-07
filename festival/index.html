@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,15 @@
     <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
     <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
     <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
-    <meta property="og:image" content="images/og_img.jpg"> 
+    <meta property="og:image" content="images/og_img.jpg">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="../common/css/reset.css">
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="../common/css/typography.css">
+    <link rel="stylesheet" href="../common/css/aos.css">
     <link rel="stylesheet" href="css/ui.css">
 </head>
+
 <body>
     <div class="ir_su">축제 스탬프투어</div>
     <!-- s: header -->
@@ -26,30 +29,34 @@
                 <li class="nav_li"><a href="price.html"><span>PRICE</span></a></li>
             </ul>
         </div>
-        <a href="index.html" class="header_logo">
-            <img class="main" src="images/logo.svg" alt="festival stamp tour logo">
+        <a href="index.html" class="header_logo header_move">
+            <img src="images/logo.svg" alt="festival stamp tour logo">
         </a>
         <div class="right_menus">
             <div class="contact_wrap">
                 <div class="btn_contact">CONTACT</div>
             </div>
-            <div class="hamburger d_none">
+            <div class="hamburger">
                 <img src="images/icon_hamburger.svg" alt="hamburger">
             </div>
         </div>
         <!-- e: pc menu -->
 
         <!-- s: mo menu -->
-        <div class="menu_container">
-            <div class="close_btn">
-                <img src="images/icon_close.svg" alt="close">
-            </div>
-            <div class="menu_content">
-                <a href="index.html"><img src="images/logo.svg" alt="festival stamp tour logo"></a>
-                <div class="menu_item">
-                    <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
-                    <div class="mobile_menu"><a href="price.html">PRICE</a></div>
-                    <div class="mobile_btn_contact">CONTACT</div>
+        <div class="mo_menu_wrap">
+            <div class="menu_container">
+                <div class="btn_close">
+                    <img src="images/icon_close.svg" alt="close">
+                </div>
+                <a href="index.html" class="mo_logo">
+                    <img src="images/logo.svg" alt="festival stamp tour logo">
+                </a>
+                <div class="menu_content">
+                    <div class="menu_item">
+                        <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
+                        <div class="mobile_menu"><a href="price.html">PRICE</a></div>
+                        <div class="mo_btn_contact">CONTACT</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,19 +64,10 @@
     </header>
     <!-- e: header -->
 
-    <!-- s: intro logo -->
-    <div class="intro_logo">
-        <a href="index.html">
-            <img class="logo_upper" src="images/logo_top.svg" alt="logo_top">
-            <img class="logo_lower" src="images/logo_bottom.svg" alt="logo_bottom">
-        </a>
-    </div>
-    <!-- e: intro logo -->
-    
     <!-- s: main -->
     <main>
         <section class="intro_section"></section>
-        <section class="section_01">
+        <section class="section_01 container">
             <div class="main_video_wrap">
                 <video class="bg_video" autoplay loop muted playsinline>
                     <source src="images/bg_hero_04.mp4" type="video/mp4">
@@ -77,23 +75,25 @@
                 <div class="main_text_wrap">
                     <div class="slogan_sub">대한민국</div>
                     <div class="main_text_area">
-                        <h1 class="slogan_main change_text_01">지역축제</h1>
-                        <h1 class="slogan_main change_text_02">박람회</h1>
-                        <h1 class="slogan_main change_text_03">전시회</h1>
-                        <h1 class="slogan_main change_text_04">국내여행</h1>
-                        <h1 class="slogan_main change_text_05">대형이벤트</h1>
-                        <h1 class="slogan_main change_text_06">스포츠행사</h1>
+                        <h1 class="slogan_main change_text_01">스포츠행사</h1>
+                        <h1 class="slogan_main change_text_02">지역축제</h1>
+                        <h1 class="slogan_main change_text_03">박람회</h1>
+                        <h1 class="slogan_main change_text_04">전시회</h1>
+                        <h1 class="slogan_main change_text_05">국내여행</h1>
+                        <h1 class="slogan_main change_text_06">대형이벤트</h1>
                         <div>[ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</div>
                     </div>
                     <div class="slogan_sub">문화를 선도합니다.</div>
                 </div>
                 <div class="app_wrap">
                     <div class="app_area">
-                        <div class="btn_app" onclick="window.open('https://apps.apple.com/kr/app/%EC%B6%95%EC%A0%9C%EC%8A%A4%ED%83%AC%ED%94%84%ED%88%AC%EC%96%B4/id1265583626')">
+                        <div class="btn_app"
+                            onclick="window.open('https://apps.apple.com/kr/app/%EC%B6%95%EC%A0%9C%EC%8A%A4%ED%83%AC%ED%94%84%ED%88%AC%EC%96%B4/id1265583626')">
                             <img src="images/icon_apple.svg" alt="icon_apple">
                             <div>App Store</div>
                         </div>
-                        <div class="btn_app" onclick="window.open('https://play.google.com/store/search?q=%EC%B6%95%EC%A0%9C%EC%8A%A4%ED%83%AC%ED%94%84%ED%88%AC%EC%96%B4&c=apps&hl=ko')">
+                        <div class="btn_app"
+                            onclick="window.open('https://play.google.com/store/search?q=%EC%B6%95%EC%A0%9C%EC%8A%A4%ED%83%AC%ED%94%84%ED%88%AC%EC%96%B4&c=apps&hl=ko')">
                             <img src="images/icon_google.svg" alt="icon_google">
                             <div>Google Store</div>
                         </div>
@@ -108,27 +108,78 @@
 
     <!-- s: section_02 -->
     <section class="section_02">
-
+        <div class="section_wrap">
+            <div class="section_logo">
+                <img src="images/logo.svg" alt="logo">
+            </div>
+        </div>
     </section>
-    <section class="section_02">
-
-    </section>
-    <section class="section_02">
-
-    </section>
-
     <!-- e: section_02 -->
-    
+
 
 
 
 
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/common/js/library/aos.js"></script>
     <script src="/common/js/library/gsap.min.js"></script>
     <script src="/common/js/library/ScrollTrigger.min.js"></script>
     <script src="/common/js/library/ScrollToPlugin.min.js"></script>
     <script src="js/layout.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        $(window).on('load', function () {
+            const introLogo = $('.header_logo');
+            const introBg = $('.intro_section');
+
+            // 브라우저의 자동 스크롤 저장 기능을 비활성화
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            // 새로고침 시 강제로 최상단으로 이동 (딜레이 추가하여 확실하게 적용)
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 10);
+            // 인트로 화면 스크롤 방지
+            $('body').addClass('no_scroll');
+            // 인트로 로고 활성화
+            introLogo.addClass('active');
+
+            // 3초 후 인트로 종료 및 스크롤 가능하도록 변경
+            setTimeout(() => {
+                introBg.fadeOut(800, function () {
+                    $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
+                    $('body').removeClass('no_scroll');
+                });
+            }, 3000);
+        });
+
+
+
+        // header
+        const START = 50;
+        const handleHeaderClass = () => {
+            const scrollTop = $(window).scrollTop();
+            if (!$('body').hasClass('no_scroll')) {
+                $('header').toggleClass('on', scrollTop > START);
+                $('.header_logo').toggleClass('header_move', scrollTop > START);
+            }
+        };
+        $(window).on("scroll", handleHeaderClass);
+        handleHeaderClass();
+
+        $(document).ready(function () {
+            $('.hamburger').on('click', function () {
+                $('.mo_menu_wrap').addClass('on');
+                $('body').addClass('no_scroll');
+            });
+            $('.btn_close').on('click', function () {
+                $('.mo_menu_wrap').removeClass('on');
+                $('body').removeClass('no_scroll');
+            });
+        });
+    </script>
 </body>
+
 </html>
