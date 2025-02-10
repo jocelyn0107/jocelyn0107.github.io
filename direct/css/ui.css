@@ -1016,6 +1016,7 @@ html {
   background-size: 600px 93px;
   justify-content: center;
   align-items: center;
+  border-top-right-radius: 4px;
   width: 100%;
   max-width: 600px;
   height: 93px;
@@ -1026,12 +1027,25 @@ html {
   position: relative;
 }
 
-.chat_bule {
+
+.chat_blue {
   background-image: url('../images/chat_blue.png');
   background-position: 100% 100%;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 600px 93px;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 4px;
+  width: 100%;
+  max-width: 600px;
+  height: 93px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  padding: 0;
+  display: block;
+  position: relative;
 }
+
 
 .use_direct {
   grid-column-gap: 0px;
@@ -1065,23 +1079,6 @@ html {
   background-clip: text;
   font-size: 60px;
   font-weight: 700;
-}
-
-.chat_blue {
-  background-image: url('../images/chat_blue.png');
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 600px 93px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  height: 93px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  padding: 0;
-  display: block;
-  position: relative;
 }
 
 .chat_area {
@@ -1475,8 +1472,11 @@ html {
   opacity: 1;
   cursor: pointer;
   border-radius: 50%;
-  padding: 20px;
-  display: inline-block;
+  width: 62px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -3637,7 +3637,7 @@ input[type=radio]:checked {
   .btn_top {
     bottom: 16px;
     right: 16px;
-    padding: 14px;
+    width: 40px;
   }
   .btn_top img{
     width: 14px;
@@ -4248,10 +4248,6 @@ input[type=radio]:checked {
 
   .text_span_main {
     font-size: 38px;
-  }
-
-  .chat_blue {
-    background-position: 100% 100%;
   }
 
   .glowing-wrapper.glowing-wrapper-active {

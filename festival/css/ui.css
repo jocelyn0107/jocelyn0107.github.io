@@ -496,6 +496,7 @@ main .app_area{
     transition: opacity 0.5s ease-in-out, visibility 0.5s;
     position: absolute;
     width: 100%;
+    margin-top: 100px;
 }
 
 .text_wrap.visible {
