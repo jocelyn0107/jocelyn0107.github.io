@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계정만들기</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://example.com/path/to/gmarket-sans-bold.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GmarketSans&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansbold';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFBold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: GmarketSans;
+            background-color: #FAF9F9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('img/v134_973.png');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 1000;
+        }
+
+        .login-container {
+            max-width: 480px;
+            width: 90%;
+            height: auto;
+            background-color: #fff;
+            padding: 20px 40px 60px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+
+            box-sizing: border-box;
+            border-radius: 24px;
+        }
+
+        .login-title {
+            text-align: center;
+            margin: 30px auto;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .input-field {
+            position: relative;
+        }
+
+        .input-field input {
+            width: 100%;
+            height: 60px;
+            border-radius: 6px;
+            font-size: 14px;
+            padding: 0 15px;
+            border: 1px solid #ddd;
+            background: transparent;
+            color: #444;
+            outline: none;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .input-field label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 14px;
+            pointer-events: none;
+            transition: 0.3s;
+            margin-top: -5px;
+        }
+
+        input:focus {
+            border: 1px solid #ddd;
+        }
+
+        input:focus~label,
+        input:valid~label {
+            top: 0;
+            left: 15px;
+            font-size: 14px;
+            padding: 0 2px;
+            background: #fff;
+            color: #333;
+            margin-top: 0;
+        }
+
+
+
+        .form-field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-field input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+        }
+
+        .form-field label {
+
+
+
+            color: #333;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form-field input:focus+label,
+        .form-field input:not(:placeholder-shown)+label {
+
+            font-size: 12px;
+            color: #333;
+            padding: 3px 0 0 5px;
+            box-sizing: border-box;
+        }
+
+        .auto-login {
+            margin: 20px 0;
+            display: flex;
+            align-items: start;
+        }
+
+        .auto-login input[type="checkbox"] {
+            margin-right: 0px;
+            width: 14px;
+
+        }
+
+        .button-wrapper {
+            margin-top: 30px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+
+            box-sizing: border-box;
+            height: 55px;
+            border-radius: 8px;
+
+
+        }
+
+        .login-button,
+        .create-account-button {
+            font-family: 'GmarketSansBold', sans-serif;
+            font-size: 15px;
+        }
+
+        .login-button {
+            background-color: #E81E2C;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .create-account-button {
+            background-color: #222;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-wrap">
+        <div class="logo-box"><img src="img/logo.png" alt="다이렉트 페스티발"></div>
+
+    </header>
+
+    <div class="login-container">
+        <h2 class="login-title">계정만들기</h2>
+        <form class="login-form">
+            <div class="input-field">
+                <input type="text" required spellcheck="false">
+                <label>핸드폰번호 (- 없이)</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required spellcheck="false" maxlength="4">
+                <label>비밀번호 4자리</label>
+            </div>
+            <div class="input-field">
+                <input type="password" required spellcheck="false" maxlength="4">
+                <label>비밀번호 확인</label>
+            </div>
+
+            
+            <div class="button-wrapper">
+                <button type="submit" class="login-button">계정만들기</button>
+               
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
