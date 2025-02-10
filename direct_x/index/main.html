@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Direct Festival Stamp Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://example.com/path/to/gmarket-sans-bold.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gmarket+Sans&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GmarketSans&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansbold';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFBold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        a {
+  text-decoration: none; 
+}
+
+        html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    width: 100%;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #FFEEEF, #FFFFFF);
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; 
+    box-sizing: border-box;
+    font-family: 'GmarketSans', sans-serif;
+    background-color: transparent; 
+}
+
+.logo-box img {
+    display: block;
+    height: auto;
+    padding: 20px; 
+}
+
+.login-box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: -36px; 
+}
+
+.login, .view-box {
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    color: #fff;
+    margin-right: 0;
+}
+
+.login {
+    width: 95px;
+    background-color: #222;
+}
+
+.view-box {
+    width: 200px;
+    background-color: #E81E2C;
+}
+
+.main-banner {
+    
+    
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 880px; 
+}
+
+.content-wrapper {
+    max-width: 100%; 
+    display: flex;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    
+    
+    justify-content: center;
+    
+    overflow: hidden;
+    
+}
+
+    
+
+.content-wrapper img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+    
+}
+
+.app-list {
+    height: 60px;
+    list-style: none;
+    display: flex; 
+    padding: 0; 
+    position: relative;
+    width: 500px;
+    top: -50%;
+    left: 10%;
+   
+   
+   
+    
+    
+}
+
+.app-list li {
+    margin-right: 20px; 
+}
+
+.app-list li:last-child {
+    margin-right: 0; 
+}
+.container{
+    width: 100%;
+}
+
+.section-title{
+    text-align: center;
+    font-family: 'GmarketSansbold', sans-serif;
+    line-height: 45px;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.contents-wrap {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  width: 100%;
+  max-width: 1440px; 
+  margin: 0 auto; 
+}
+
+.contents__left, .contents__right {
+  flex: 1; 
+}
+
+.contents__left {
+  padding: 0 0 0 30px;
+  box-sizing: border-box;
+}
+
+.contents__right {
+  padding-left: 20px; 
+  background-image: url('img/slider-mask.png'); 
+  background-size: cover;
+  background-position: center; 
+  width: 699px; 
+  height: 800px; 
+}
+
+.contents__right .slide-position {
+  max-width: 300px; 
+  margin: 40px 0 0 69px; 
+}
+
+.swiper-container {
+  width: 100%;
+  height: 400px; 
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto; 
+  margin: 30px 0 0 px;
+
+}
+
+.order-list {
+  list-style-type: none;
+  font-family: 'GmarketSans', sans-serif; 
+  margin: 30px 0;
+}
+
+.fes-but{
+    width: 200px;
+    height: 60px;
+    background-color: #E81E2C;
+    font-size: 20px;
+    font-family: 'GmarketSansbold', sans-serif;
+    line-height: 60px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    margin: 70px 0 0 40px;
+}
+
+.order-item {
+  
+  line-height: 40px;
+  font-size: 25px;
+  transition: font-size 0.3s ease; }
+
+.order-item.active {
+    font-size: 30px; 
+    color: #FF0000; 
+}
+
+.order-item .number {
+  display: inline-block;
+  width: 50px; 
+  height: 50px; 
+  line-height: 30px; 
+  text-align: center;
+  border-radius: 50%; 
+  background-color: #222; 
+  margin-right: 10px; 
+  margin-top: 10px;
+  color: #fff;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+.step1-title {
+    text-align: center; 
+    font-family: 'GmarketSansbold', sans-serif;
+    margin: 
+    50px 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+
+}
+
+.step01 {
+    width: 94px;
+    height: 34px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px; 
+    display: inline-block; 
+    line-height: 34px; }
+
+.step1-title-box {
+    font-size: 30px;
+    color: black; 
+    line-height: 45px;
+}
+
+.highlight {
+    color: #E81E2C; 
+}
+
+.step1-title-txt {
+    font-size: 14px;
+    color: #999;
+    font-family: 'GmarketSans', sans-serif;
+}
+
+.step01-img {
+  text-align: center; 
+  margin: 30px 0 0 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.step01-img img {
+  max-width: 100%; 
+  height: auto; 
+  display: inline-block; 
+}
+
+.ex_wrapper {
+  width: 100%;
+  min-height: 100vh; 
+  flex-direction: column; 
+  font-family: 'GmarketSans', sans-serif;
+  margin: 50px 0;
+}
+
+.v149_55 {
+   margin: 20px auto;
+    width: 1440px;
+    height: 388px;
+    background-image: url('img/v149_68.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right center; 
+    text-align: left; 
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 50px 0 0 0;
+    box-sizing: border-box;
+}
+
+.v149_56{background-image: url('img/v149_70.png');
+background-size: auto; 
+    background-repeat: no-repeat; 
+    background-position: left center;
+    text-align: right; 
+    
+
+}
+
+.v149_57{
+    background-image: url('img/v149_72.png');
+    
+}
+
+.v142_281 {
+    width: 94px;
+    height: 34px;
+    background-color: #222;
+    color: white;
+    border-radius: 5px; 
+    line-height: 34px; 
+    text-align: center;
+    display: block;
+    margin: 35px 70px;
+}
+.v142_285{
+    
+   
+    float: right; 
+
+}
+.clearfix {
+    clear: both;
+}
+
+.v142_282 {
+    font-weight: bold;
+    
+    font-size: 25px;
+
+    margin: 35px 70px;
+}
+.v142_283{
+    text-align: left;
+    margin: 35px 70px;
+    line-height: 30px;
+}
+.v142_287{
+    margin: 0 70px;
+}
+
+.v142_284{text-align: right;}
+
+.v149_81 {
+  
+  width: 100%;
+  align-items: center;
+  
+}
+
+
+.v149_76 {
+  background-image: url('img/v149_76.png');
+  background-position: center; 
+  width: 314px;
+  height: 335px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.v149_79 {
+  width: 400px;
+  height: 50px;
+  border-radius: 50px; 
+  margin: 20px auto 100px;
+  
+  
+  align-items: center; 
+  text-decoration: none; 
+  color: #fff;
+  background-color: #E81E2C;
+  line-height: 50px;
+  font-family: 'GmarketSans', sans-serif;
+}
+
+
+a .v149_79 {
+  display: block;
+  text-align: center;
+  
+}
+
+.direct-price {
+    width: 1440px; 
+    background-color: #FCF8F8; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    padding: 50px 0;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+.direct-price .box {
+    width: 420px;
+    height: 548px;
+    border: 1px solid #FFAFAF;
+    padding: 20px;
+    box-sizing: border-box; 
+    font-family: 'GmarketSans', sans-serif;
+    margin: 100px auto;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(255, 229, 229, 0.3);
+    background-color: #fff;
+}
+
+.direct-price h1 {
+    margin-bottom: 10px; 
+    position: relative; 
+    text-align: center;
+    color: #FF3126;
+    font-weight: bold;
+    font-family: 'GmarketSanbold', sans-serif;
+    font-size: 30px;
+
+}
+
+.direct-price h1:after {
+    content: '';
+    position: absolute;
+    bottom: -20px; 
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd; 
+}
+
+.direct-price .price {
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.direct-price .vat {
+    font-size: 14px; 
+    font-weight: normal; 
+}
+
+.direct-price ul {
+    list-style-type: none; 
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+.direct-price li {
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 28px;
+    box-sizing: border-box;
+}
+
+.direct-price li::before {
+    content: '';
+    position: absolute; 
+    left: 0; 
+    top: 2px; 
+    width: 18px; 
+    height: 11px;
+    background-image: url('img/v149_165.png'); 
+    background-size: cover; 
+}
+
+.last-ex{ color: #cecece; margin: 20px 0;
+    padding: 0px 30px;
+    box-sizing: border-box; 
+    position: relative;
+
+}
+
+.last-ex::after {
+    content: ''; 
+    position: absolute; 
+    left: 15px; 
+    top: 3px; 
+    width: 11px; 
+    height: 11px; 
+    background-image: url('img/v149_163.png') !important; 
+    background-size: cover; 
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.v155_142 {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%; 
+}
+
+.slide {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    max-width: 100%; 
+    height: auto; 
+}
+
+.slide:last-child {
+    margin-right: 0;
+}
+
+
+.footer {
+           
+            width: 100%;
+            background-color: #222;
+            color: white;
+            font-family: 'GmarketSans', sans-serif;
+            font-size: 14px;
+            padding: 20px;
+            box-sizing: border-box;
+            margin: 100px 0 0 0;
+            bottom: 0;
+            
+        }
+
+        .footer-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        a{
+            color: inherit;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+       
+       
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="header-wrap">
+            <div class="logo-box"><img src="img/logo.png" alt="다이렉트 페스티발"></div>
+            <div class="login-box">
+                <div class="login"><a href="login.html">로그인</a></div>
+                <div class="view-box"><a href="input.html">미리보기 체험하기</a></div>
+            </div>
+        </header>
+        <div class="main-banner">
+            <div class="content-wrapper">
+                <img src="img/Group 708.png" 
+                    
+                     alt="설명">
+            </div>
+            <ul class="app-list  _mo-block">
+                <li>
+                <a href="#" target="_blank">
+                    <img src="img/Frame 16.png" alt="download android app">
+                </a>
+                </li>
+                <li>
+                <a href="#" target="_blank">
+                    <img src="img/Frame 17.png" alt="download android apple">
+                </a>
+                </li>
+                </ul>
+        </div>
+    </div>
+    <section class="container">
+        <div class="section  -section2">
+            
+            <div class="contents -vertical">
+              <div class="contents-title">
+                <h2 class="section-title">
+                    Festival Stamp tour란?<br/>
+                    <span class="highlight">Direct 사용 전에 먼저</span> 확인하세요!
+                </h2>
+              </div>
+              <div class="contents-wrap ">
+                <div class="contents__left">
+                  <div class="left-side">
+                    <ul class="order-list">
+                      <li class="order-item">
+                        <span class="number">01<sub class="point-sub"></sub></span>
+                        <span>오늘 진행 중인 <strong>행사</strong>를 보여 줍니다.</span>
+                      </li>
+                      <li class="order-item">
+                        <span class="number">02<sub class="point-sub"></sub></span>
+                        <span>우리의 <strong>행사를 선택</strong>합니다.</span>
+                        
+                      </li>
+                      <li class="order-item">
+                        <span class="number">03<sub class="point-sub"></sub></span>
+                        <span>행사 프로그램을  <strong>안내</strong>합니다.</span>
+                        
+                      </li>
+                      <li class="order-item">
+                        <span class="number">04<sub class="point-sub"></sub></span>
+                        <span>해당  <strong>QR코드</strong>를 스캔해 <strong>스탬프</strong>를 받습니다.</span>
+                        
+                      </li>
+                      <li class="order-item">
+                        <span class="number">05<sub class="point-sub"></sub></span>
+                        <span><strong>스탬프</strong>를 모으고, <strong>선물</strong>을 신청합니다.</span>
+                        
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="fes-but" style="background-color: #FF0000;">
+                    자세히 보기
+                  </div>
+                </div>
+    
+                <div class="contents__right">
+                  <div class="right-side -padding50">
+                    <div class="slide-position">
+    
+                        <swiper-container class="mySwiper"  pagination="true" pagination-clickable="true" navigation="false" space-between="30"
+                        centered-slides="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
+                            <swiper-slide><img src="img/img1.jpg" class="-fullimg" alt=""></swiper-slide>
+                            <swiper-slide><img src="img/img2.jpg" class="-fullimg" alt=""></swiper-slide>
+                            <swiper-slide><img src="img/img3.jpg" class="-fullimg" alt=""></swiper-slide>
+                            <swiper-slide><img src="img/img4.jpg" class="-fullimg" alt=""></swiper-slide>
+                            <swiper-slide><img src="img/img5.jpg" class="-fullimg" alt=""></swiper-slide>
+                          </swiper-container>
+                          <script src="./js/swiper-element-bundle.min.js"></script>
+                       
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    </section>
+
+
+    <div class="step1_wrapper">
+        <div class="step1-title">
+            <div class="step01">step01</div>
+            <p class="step1-title-box">미리보기로 <span class="highlight">똑똑하게</span> 확인하세요. </p>
+            <p class="step1-title-txt">아래 계정을 만든 후 미리보기로 리허설을 진행해보세요!<br/>진행된 리허설이 마음에 든다면 최종 결제 후 사용해보세요!</p>
+        </div>
+
+        <p class="step01-img"><img src="img/Group 709.png" alt=""></p>
+    </div>
+
+   
+        
+           <div class="ex_wrapper">
+            <div class="v149_55">
+                
+                <span class="v142_281">step 02</span>
+                <div class="v142_282">공지사항도 미리보기로 체크!</div>
+                <div class="v142_283">축제스탬프투어를 시작 전 알리고 싶은 공지가
+                    있다면<br/>
+                    공지사항 팝업창을 띄우세요!<br/>
+                    원하는 내용이 있을때마다 바로 변경 가능해요!</div>
+            </div>
+           
+    
+            <div class="v149_55 v149_56">
+                
+                <span class="v142_281 v142_285">step 03</span>
+                <div class="clearfix"></div> 
+                <div class="v142_282 v142_287"> 모바일 결제로 편리하게!</div>
+                <div class="v142_283 v142_284">미리보기가 완료됐다면<br/>  확인 후 결제하세요!<br/>
+                    결제가 완료되어도 미리보기는 사라지지 않아요!</div>
+            </div>
+
+            <div class="v149_55 v149_57" onclick="location.href='mypage.html'">
+                
+                <span class="v142_281">step 04</span>
+                <div class="v142_282">마이페이지에서 QR코드 확인하면 끝!</div>
+                <div class="v142_283">마이페이지에서 Qr코드를 <br/> 다운받기 하면 끝! <br/>
+                    효율적이고 간단한  Direct를 체험 해보세요!</div>
+            </div>
+            </div>
+
+            <div class="v149_81"> <div class="v149_76"></div>
+
+                <a href="input.html"><div class="v149_79">미리보기 체험하기</div>
+            </a>
+        </div>
+
+        <div class="step1-title">
+            
+            <p class="step1-title-box"><span class="highlight">Direct  Festival Stamp tour</span> <br/>서비스 가격 안내 </p>
+            
+        </div>
+
+        <div class="diret-price">
+            <div class="direct-price">
+                <div class="box">
+                    <h1>Direct</h1>
+                    <p class="price">1,000,000원 <span class="vat">vat 별도</span></p>
+                    <ul>
+                        <li>서비스 사용기간 : 하루</li>
+                        <li>이벤트 개수 (스탬프) : 5개</li>
+                        <li>참여자 계정 : 카카오톡 로그인</li>
+                        <li>이용방법 : 다이렉트 축제스탬프 web/ app</li>
+                    </ul>
+
+                  
+                        <p class="last-ex">다이렉트형은 빠르고 효율적이게 만들어진<br/>
+                            플랫폼입니다.</li>
+                    
+                   
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="step1-title">
+            
+            <p class="step1-title-box"><span class="highlight">Direct </span><br/>
+                이럴때 사용하세요  </p>
+            <p class="step1-title-txt">원하는 목적에 맞게 선택하세요!</p>
+        </div>
+
+        <div class="slider">
+            <div class="v155_142">
+                <img class="slide" src="img/v149_257.png" alt="이미지 1">
+                <img class="slide" src="img/v149_260.png" alt="이미지 1">
+                <img class="slide" src="img/v149_262.png" alt="이미지 1">
+                <img class="slide" src="img/v149_264.png" alt="이미지 1">
+                <img class="slide" src="img/v149_266.png" alt="이미지 1">
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <img src="img/footer-logo.png" alt="Logo" class="footer-logo">
+                <p>상호: 댓츠잇소프트 주식회사 | 대표: 김범수</p>
+                <p>개인정보관리책임자: 댓츠잇소프트 주식회사 | 문의: 1551-0901 | 이메일: thatzit1012@gmail.com</p>
+                <p>주소: 광주광역시 광산구 무진대로 282, 602호</p>
+                <p>사업자등록번호: 384-81-01361 | 통신판매: 제 2023-4960111-30-2-00021호</p>
+            </div>
+        </footer>
+        
+           
+        
+    
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: false,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            on: {
+                slideChange: function () {
+                    document.querySelectorAll('.order-item').forEach(function (item) {
+                        item.style.fontSize = 'initial'; // 기존 크기로 초기화
+                        item.style.fontWeight = 'normal'; // 기존 굵기로 초기화
+                        item.style.color = 'initial'; // 기존 색상으로 초기화
+                        item.classList.remove('active');
+                    });
+    
+                    var currentIndex = this.realIndex;
+                    var currentItem = document.querySelectorAll('.order-item')[currentIndex];
+                    currentItem.classList.add('active');
+                    currentItem.style.fontSize = '30px'; // 글자 크기 변경
+                    currentItem.style.fontWeight = 'bold'; // 글자 굵기 변경
+                },
+            },
+        });
+    
+        document.querySelectorAll('.order-item').forEach(function(item, index) {
+            item.addEventListener('click', function() {
+                swiper.slideTo(index);
+            });
+        });
+    </script>
+
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Direct Festival Stamp Tour</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://example.com/path/to/gmarket-sans-bold.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gmarket+Sans&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <title>미리보기</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GmarketSans&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansbold';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFBold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: #FAF9F9;
+            font-family: 'GmarketSans', sans-serif;
+            font-family: 'GmarketSansbold', sans-serif;
+
+        }
+
+        body {
+            width: 100%;
+            background: #FAF9F9;
+
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            box-sizing: border-box;
+        }
+
+        .logo-box img,
+        .login img {
+            display: block;
+            height: auto;
+        }
+
+        .login {
+            position: relative;
+        }
+
+        .edit-preview,
+        .view-preview {
+            display: none;
+            width: 100px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            font-size: 12px;
+            font-family: GmarketSans;
+            text-align: center;
+        }
+
+        .login:hover .edit-preview {
+            display: block;
+            top: 100%;
+            margin-top: 0px;
+            cursor: pointer;
+        }
+
+        .login:hover .view-preview {
+            display: block;
+            top: 100%;
+            margin-top: 35px;
+            cursor: pointer;
+        }
+
+        .login:hover .edit-preview,
+        .edit-preview:hover,
+        .login:hover .view-preview,
+        .view-preview:hover {
+            display: block;
+        }
+
+        .all_wrapper {
+            margin: 0px 0 0 0;
+            width: 100%;
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+
+
+        .container {
+            width: 580px;
+            max-height: 1090px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 30px;
+            box-sizing: border-box;
+            float: left;
+            margin: 0 40px 0 0;
+            border-radius: 20px;
+            min-width: 300px;
+            background-color: #fff;
+            box-shadow: 5px 5px 14px 0 rgba(221, 221, 221, 1);
+
+
+        }
+
+        .container::-webkit-scrollbar {
+            width: 10px;
+
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+
+            border-radius: 50px;
+
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: #d6d6d6;
+
+            border-radius: 50px;
+
+        }
+
+
+
+
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .custom-file-input {
+            display: none;
+        }
+
+
+        .custom-file-label {
+
+            padding: 0 40px;
+            cursor: pointer;
+            background-color: #fff;
+            line-height: 45px;
+            border-radius: 8px;
+            height: 48px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            font-size: 13px;
+            position: relative;
+        }
+
+
+        .custom-file-label:hover {
+            background-color: #eaeaea;
+        }
+
+        .custom-file-label::before {
+            content: "";
+
+            display: block;
+            width: 19px;
+            height: 14px;
+            background-image: url(img/doc-img.png);
+            position: absolute;
+            top: calc(50% - 9px);
+            left: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="url"] {
+            width: 100%;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .pr_title {
+            text-align: center;
+            position: relative;
+        }
+
+        .pr_title::after {
+            content: ;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(img/v137_55.png);
+            width: 23px;
+            height: 36px;
+        }
+
+
+        .container02 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            height: 80px;
+
+        }
+
+        .mission-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+
+            box-sizing: border-box;
+            width: 25%;
+            border-radius: 8px;
+        }
+
+        .mission-box input[type="text"] {
+            margin-bottom: 5px;
+        }
+
+        .con-title {
+            font-size: 16px;
+            font-family: GmarketSans;
+            font-weight: bold;
+        }
+
+
+
+        .mission-box,
+        .text_wrap {
+            margin-right: 10px;
+
+        }
+
+        .text_wrap {
+            width: 100%;
+
+        }
+
+        .text_wrap input {
+            width: 100%;
+            margin: 3px 0;
+            height: 24px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+
+        .new-wrapper {
+            margin: 0 0 0 20px;
+            width: 415px;
+
+        }
+
+        .new-title {
+            font-size: 18px;
+            font-weight: bolder;
+            position: relative;
+            padding: 0 0 0 50px;
+            box-sizing: border-box;
+        }
+
+        .new-title::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -4px;
+            left: 0;
+            background-image: url(img/icon1.png);
+            width: 42px;
+            height: 44px;
+            font-family: GmarketSansbold;
+        }
+
+
+        .new-element {
+            width: 415px;
+            height: 800px;
+
+            float: left;
+            overflow-y: scroll;
+
+            background-image: url('img/phone_bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+
+
+        .main-box {
+            overflow-y: scroll;
+            width: 380px;
+            height: 700px;
+            margin: 45px 0 0 0;
+            box-sizing: border-box;
+        }
+
+
+        .min-title {
+            text-align: center;
+            width: 332px;
+            height: 45px;
+            line-height: 45px;
+            margin: 9px 0 0 40px;
+            padding: 0px 0 0 0;
+            box-sizing: border-box;
+            background-color: #7045EF;
+            color: #fff;
+            font-family: GmarketSans;
+            border-radius: 3px 3px 0 0;
+
+        }
+
+        .main-box::-webkit-scrollbar {
+            width: 8px;
+
+        }
+
+        .main-box::-webkit-scrollbar-track {
+            background: #f1f1f1;
+
+            border-radius: 10px;
+
+        }
+
+        .main-box::-webkit-scrollbar-thumb {
+            background: #bfbfbf;
+
+            border-radius: 10px 15px 10px 10px;
+
+        }
+
+        .sub-box-container {
+            width: 332px;
+            height: 300px;
+            background-color: #f0f0f0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 0 0 40px;
+            background-image: url('img/big-img.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .sub-box {
+
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 120px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+        }
+
+        .mini-box {
+            max-width: 100%;
+            height: 28px;
+            background-color: rgba(19, 19, 19, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px 0;
+            text-align: left;
+            border-radius: 30px;
+            color: #fff;
+            display: inline-block;
+            padding: 0 8px;
+            box-sizing: border-box;
+
+
+        }
+
+        .mini-box>p {
+            vertical-align: middle;
+
+            height: 28px;
+            margin: 0;
+            line-height: 28px;
+            font-size: 13px;
+            font-family: GmarketSans;
+        }
+
+
+
+        .bottom-container-wrap {
+            margin: 10px 0 0 40px;
+            width: 332px;
+        }
+
+        .bottom-container {
+            display: flex;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .custom-file-upload {
+            display: inline-block;
+            padding: 6px 20px;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #495057;
+            box-sizing: border-box;
+            text-align: center;
+            letter-spacing: -8;
+        }
+
+        .custom-file-upload:hover {
+            background-color: #e2e6ea;
+        }
+
+        .image-box {
+            width: 90px;
+            height: 90px;
+
+            border-radius: 50%;
+            background-image: url(img/little-bg.png);
+            border: 1px solid #ddd;
+
+        }
+
+        .text-boxes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 220px;
+            padding: 0 0 0 5px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        .text-box {
+            height: 40px;
+            background-color: #fff;
+            font-size: 15px;
+            border: 1px solid #ddd;
+            line-height: 40px;
+            padding: 0 0 0 5px;
+            font-family: GmarketSans;
+
+        }
+
+        .text-box1 {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .button_wrapper {
+            width: auto;
+            border: none;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+
+            box-sizing: border-box;
+        }
+
+        .button_box {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            position: relative;
+            height: 50px;
+            box-sizing: border-box;
+        }
+
+        .button_box:first-child::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: black;
+        }
+
+
+
+        .button_box:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: red;
+        }
+
+
+
+
+
+        .button {
+            padding: 10px 20px;
+
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'GmarketSans', sans-serif;
+            height: 40px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+
+        .button01 {
+            background-color: #222;
+        }
+
+        .button02 {
+            background-color: #E81E2C;
+        }
+
+        .button03 {
+            background-color: #585858;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #222;
+            color: white;
+            font-family: 'GmarketSans', sans-serif;
+            font-size: 14px;
+            padding: 20px 0;
+            box-sizing: border-box;
+            margin: 100px 0 0 0;
+
+        }
+
+        .footer-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-wrap">
+        <div class="logo-box"><img src="img/logo.png" alt="다이렉트 페스티발"></div>
+        <div class="login">
+            <img src="img/login_i.png" alt="로그인">
+            <div class="edit-preview">마이페이지</div>
+            <div class="view-preview">로그아웃</div>
+        </div>
+    </header>
+
+    <div class="all_wrapper">
+
+        <div class="container">
+            <div class="form-group">
+                <label for="imageUpload" class="con-title">이미지 업로드</label>
+                <input type="file" id="imageUpload" class="custom-file-input"
+                    onchange="previewImage('imageUpload', 'preview')">
+                <label for="imageUpload" class="custom-file-label">파일 선택</label>
+            </div>
+            <div class="form-group">
+                <label for="eventName" class="con-title">행사명</label>
+                <input type="text" id="eventName">
+            </div>
+            <div class="form-group">
+                <label for="eventDate" class="con-title">날짜</label>
+                <input type="date" id="eventDate">
+            </div>
+            <div class="form-group">
+                <label for="eventLocation" class="con-title">장소</label>
+                <input type="text" id="eventLocation">
+            </div>
+            <div class="form-group">
+                <label for="eventorganizer" class="con-title">주최</label>
+                <input type="text" id="eventorganizer">
+            </div>
+            <div class="form-group">
+                <label for="eventwebsite" class="con-title">홈페이지</label>
+                <input type="url" id="eventwebsite">
+            </div>
+
+
+
+            <h2 class="pr_title">타이틀 스탬프미션 등록하기</h2>
+
+
+
+
+            <div class="container02">
+                <div class="mission-box">
+                    <div class="mission-image">
+                        <label for="little1" class="custom-file-upload">파일 선택</label>
+                        <input type="file" id="little1" onchange="previewImage('little1', 'image-box1')"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="text_wrap">
+                    <input type="text" id="text1-1" placeholder="10글자까지 입력" maxlength="10"
+                        oninput="updatePreview('text1-1', 'text-box1-1')">
+                    <input type="text" id="text1-2" placeholder="20글자까지 입력" maxlength="20"
+                        oninput="updatePreview('text1-2', 'text-box1-2')">
+                </div>
+            </div>
+
+            <div class="container02">
+                <div class="mission-box">
+                    <div class="mission-image">
+                        <label for="little2" class="custom-file-upload">파일 선택</label>
+                        <input type="file" id="little2" onchange="previewImage('little2', 'image-box2')"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="text_wrap">
+                    <input type="text" id="text1-3" placeholder="10글자까지 입력" maxlength="10"
+                        oninput="updatePreview('text1-3', 'text-box1-3')">
+                    <input type="text" id="text1-4" placeholder="20글자까지 입력" maxlength="20"
+                        oninput="updatePreview('text1-4', 'text-box1-4')">
+                </div>
+            </div>
+
+
+
+            <div class="container02">
+                <div class="mission-box">
+                    <div class="mission-image">
+                        <label for="little3" class="custom-file-upload">파일 선택</label>
+                        <input type="file" id="little3" onchange="previewImage('little3', 'image-box3')"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="text_wrap">
+                    <input type="text" id="text1-5" placeholder="10글자까지 입력" maxlength="10"
+                        oninput="updatePreview('text1-5', 'text-box1-5')">
+                    <input type="text" id="text1-6" placeholder="20글자까지 입력" maxlength="20"
+                        oninput="updatePreview('text1-6', 'text-box1-6')">
+                </div>
+            </div>
+
+
+
+            <div class="container02">
+                <div class="mission-box">
+                    <div class="mission-image">
+                        <label for="little4" class="custom-file-upload">파일 선택</label>
+                        <input type="file" id="little4" onchange="previewImage('little4', 'image-box4')"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="text_wrap">
+                    <input type="text" id="text1-7" placeholder="10글자까지 입력" maxlength="10"
+                        oninput="updatePreview('text1-7', 'text-box1-7')">
+                    <input type="text" id="text1-8" placeholder="20글자까지 입력" maxlength="20"
+                        oninput="updatePreview('text1-8', 'text-box1-8')">
+                </div>
+            </div>
+
+
+            <div class="container02">
+                <div class="mission-box">
+                    <div class="mission-image">
+                        <label for="little5" class="custom-file-upload">파일 선택</label>
+                        <input type="file" id="little5" onchange="previewImage('little5', 'image-box5')"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="text_wrap">
+                    <input type="text" id="text1-9" placeholder="10글자까지 입력" maxlength="10"
+                        oninput="updatePreview('text1-9', 'text-box1-9')">
+                    <input type="text" id="text1-10" placeholder="20글자까지 입력" maxlength="20"
+                        oninput="updatePreview('text1-10', 'text-box1-10')">
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="new-wrapper">
+            <p class="new-title">미리보기</p>
+
+            <div class="new-element">
+                <div class="main-box">
+                    <p class="min-title">축제상세</p>
+                    <div class="sub-box-container" id="preview">
+                        <div class="sub-box">
+                            <div class="mini-box">
+                                <p id="previewEventName">행사명을 입력하세요</p>
+                            </div>
+                            <div class="mini-box">
+                                <p id="previewEventDate">날짜를 등록하세요</p>
+                            </div>
+                            <div class="mini-box">
+                                <p id="previewEventLocation">장소를 입력하세요</p>
+                            </div>
+                            <div class="mini-box">
+                                <p id="previewEventHost">주최하는 곳을 입력하세요</p>
+                            </div>
+                            <div class="mini-box">
+                                <p id="previewEventHomepage">홈페이지를 입력하세요</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bottom-container-wrap">
+                        <div class="bottom-container">
+                            <div class="image-box" id="image-box1"></div>
+                            <div class="text-boxes">
+                                <div class="text-box" id="text-box1-1"></div>
+                                <div class="text-box text-box1" id="text-box1-2"></div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-container">
+                            <div class="image-box" id="image-box2"></div>
+                            <div class="text-boxes">
+                                <div class="text-box" id="text-box1-3"></div>
+                                <div class="text-box text-box1" id="text-box1-4"></div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-container">
+                            <div class="image-box" id="image-box3"></div>
+                            <div class="text-boxes">
+                                <div class="text-box" id="text-box1-5"></div>
+                                <div class="text-box text-box1" id="text-box1-6"></div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-container">
+                            <div class="image-box" id="image-box4"></div>
+                            <div class="text-boxes">
+                                <div class="text-box" id="text-box1-7"></div>
+                                <div class="text-box text-box1" id="text-box1-8"></div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-container">
+                            <div class="image-box" id="image-box5"></div>
+                            <div class="text-boxes">
+                                <div class="text-box" id="text-box1-9"></div>
+                                <div class="text-box text-box1" id="text-box1-10"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="button_wrapper">
+                <div class="button_box">
+                    <button class="button button01" style="width: 190px;">Google Store</button>
+                    <button class="button button02" style="width: 190px;">App Store</button>
+                </div>
+                <div class="button_box">
+                    <button class="button button03" style="width: 390px;">결제하기</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="img/footer-logo.png" alt="Logo" class="footer-logo">
+            <p>상호: 댓츠잇소프트 주식회사 | 대표: 김범수</p>
+            <p>개인정보관리책임자: 댓츠잇소프트 주식회사 | 문의: 1551-0901 | 이메일: thatzit1012@gmail.com</p>
+            <p>주소: 광주광역시 광산구 무진대로 282, 602호</p>
+            <p>사업자등록번호: 384-81-01361 | 통신판매: 제 2023-4960111-30-2-00021호</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        function addInputEventListener(inputId, previewId) {
+            const inputElement = document.getElementById(inputId);
+            const previewElement = document.getElementById(previewId);
+
+            inputElement.addEventListener('input', function () {
+                previewElement.textContent = inputElement.value;
+            });
+        }
+
+
+        addInputEventListener('eventName', 'previewEventName');
+        addInputEventListener('eventDate', 'previewEventDate');
+        addInputEventListener('eventLocation', 'previewEventLocation');
+        addInputEventListener('eventorganizer', 'previewEventHost');
+        addInputEventListener('eventwebsite', 'previewEventHomepage');
+
+
+
+
+
+
+        function updatePreview(inputId, previewId) {
+            const inputElement = document.getElementById(inputId);
+            const previewElement = document.getElementById(previewId);
+            previewElement.textContent = inputElement.value;
+        }
+
+
+        function previewImage(inputId, previewId) {
+            const fileInput = document.getElementById(inputId);
+            const file = fileInput.files[0];
+            const preview = document.getElementById(previewId);
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    preview.style.backgroundImage = 'url(' + event.target.result + ')';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.backgroundImage = 'none';
+            }
+        }
+
+        function previewImage(inputId, previewId) {
+            const fileInput = document.getElementById(inputId);
+            const file = fileInput.files[0];
+            const preview = document.getElementById(previewId);
+
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+
+                    preview.style.backgroundImage = 'url(' + event.target.result + ')';
+
+                    preview.style.backgroundSize = 'cover';
+
+                    preview.style.backgroundPosition = 'center';
+
+                    //preview.style.height = '370px';
+                    //preview.style.width = '218px';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                a
+                preview.style.backgroundImage = 'none';
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

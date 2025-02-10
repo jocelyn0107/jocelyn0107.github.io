@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 수집 동의 안내</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://example.com/path/to/gmarket-sans-bold.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GmarketSans&display=swap');
+
+        @font-face {
+            font-family: 'GmarketSans';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFMedium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansbold';
+            src: url('font/GmarketSans.woff2') format('woff2'),
+                url('font/GmarketSans.woff') format('woff'),
+                url('font/GmarketSansTTFBold.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: GmarketSans;
+            background-color: #FAF9F9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('img/v134_973.png');
+            background-position: right top;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            z-index: 1000;
+        }
+
+        .login-container {
+            max-width: 480px;
+            width: 90%;
+            height: auto;
+            background-color: #fff;
+            padding: 20px 40px 60px 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+
+            box-sizing: border-box;
+            border-radius: 24px;}
+
+            .login-title {
+                text-align: center;
+                margin: 30px auto;
+                width: 100%;
+                font-weight: bold;
+            }
+
+            .user-info {
+                max-height: 200px;
+                overflow-y: auto;
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: normal;
+                color: #333;
+            }
+
+            .input-field {
+                position: relative;
+            }
+
+            .input-field input {
+                width: 100%;
+                height: 60px;
+                border-radius: 6px;
+                font-size: 14px;
+                padding: 0 15px;
+                border: 1px solid #ddd;
+                background: transparent;
+                color: #444;
+                outline: none;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            .input-field label {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                color: #333;
+                font-size: 14px;
+                pointer-events: none;
+                transition: 0.3s;
+            }
+
+
+            .input-field-inline {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .input-field-inline input {
+                flex: 2;
+
+
+
+            }
+
+            .label-button-container {
+                display: flex;
+                flex: 1;
+
+                align-items: center;
+
+            }
+
+            .label-button-container label {
+                margin-right: 0px;
+
+                vertical-align: top;
+            }
+
+            .label-button-container button {
+                white-space: nowrap;
+                width: 30%;
+                vertical-align: top;
+            }
+
+            .input-field {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+
+            .input-field input,
+            .input-field-inline input {
+                width: 100%;
+                height: 60px;
+                border-radius: 6px;
+                font-size: 14px;
+                padding: 0 15px;
+                border: 1px solid #ddd;
+                background: transparent;
+                color: #444;
+                outline: none;
+                box-sizing: border-box;
+            }
+
+            .input-field label,
+            .label-button-container label {
+                position: absolute;
+                top: 50%;
+                left: 15px;
+                transform: translateY(-50%);
+                color: #333;
+                font-size: 14px;
+                pointer-events: none;
+                transition: 0.3s;
+                width: 100%;
+                margin-top: -5px;
+            }
+
+            .input-field input:focus,
+            .input-field-inline input:focus {
+                border: 1px solid #ddd;
+            }
+
+            .input-field input:focus~label,
+            .input-field-inline input:focus~label,
+            .input-field input:valid~label,
+            .input-field-inline input:valid~label {
+                width: auto;
+                top: 0;
+                left: 15px;
+                font-size: 14px;
+                padding: 0 5px;
+                background-color: #fff;
+                margin-top: 0;
+                box-sizing: border-box;
+            }
+
+            .send-btn {
+                margin-top: -10px;
+                height: 60px;
+                font-family: 'GmarketSansBold', sans-serif;
+                margin-left: 5px;
+            }
+
+
+            .button-wrapper {
+                margin-top: 30px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+
+                box-sizing: border-box;
+                height: 55px;
+                border-radius: 8px;
+
+
+
+            }
+
+
+
+            .login-button {
+                background-color: #E81E2C;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                margin: 5px;
+                cursor: pointer;
+                font-family: 'GmarketSansBold', sans-serif;
+                font-size: 15px;
+                background-position: rotate(0deg);
+            }
+    </style>
+</head>
+
+<body>
+    <header class="header-wrap">
+        <div class="logo-box"><img src="img/logo.png" alt="다이렉트 페스티발"></div>
+
+    </header>
+
+    <div class="login-container">
+        <h2 class="login-title">계정만들기</h2>
+        <div class="user-info"><strong style="font-size: 16px; font-weight: bolder;">개인정보 수집동의 안내</strong></br></br>
+
+            개인정보 수집 및 활용</br></br>
+
+            수집항목 : 휴대폰 번호</br>
+            이용목적 : 다이렉트축제스탬프 홈페이지 접속 계정 만들기</br>
+            보유기간 : 3년</br>
+            수탁업체 : 댓츠잇소프트 주식회사</br></br>
+
+            홈페이지 이용을 위한 개인정보수집사항을 확인하시고 동의하시면</br> 인증번호
+            를 받으실 본인 휴대전화번호를 입력해주세요</div>
+        <form class="login-form">
+            <div class="input-field input-field-inline">
+                <input type="text" required spellcheck="false">
+                <label>핸드폰번호 (- 없이)</label>
+            </div>
+            <div class="input-field input-field-inline label-button-container">
+                <input type="text" required spellcheck="false">
+                <label>인증번호</label>
+                <button class="send-btn">인증번호 발송</button>
+            </div>
+
+
+
+            <div class="button-wrapper">
+                <button type="submit" class="login-button">인증하기</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
