@@ -1,190 +1,25 @@
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin)
-// AOS.init();
+$(window).on('load', function () {
+    const introLogo = $('.header_logo');
+    const introBg = $('.intro_section');
 
+    // 브라우저의 자동 스크롤 저장 기능을 비활성화
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    // 새로고침 시 강제로 최상단으로 이동 (딜레이 추가하여 확실하게 적용)
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
+    // 인트로 화면 스크롤 방지
+    $('body').addClass('no_scroll');
+    // 인트로 로고 활성화
+    introLogo.addClass('active');
 
-
-
-const sleep = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-// init animation
-const action = async () => {
-    await sleep(1);
-    document.querySelector("body").style.overflow = "hidden";
-    const timeLine = gsap.timeline({});
-    gsap.set(".intro_logo", {
-        opacity: 0,
-        y: 120,
-    });
-    await sleep(200);
-    timeLine.to(".intro_logo", {
-        duration: 2,
-        y: 0,
-        opacity: 1,
-        ease: "power1.out",
-    });
-    timeLine.to(
-        ".logo_lower", {
-            duration: 0.1,
-            opacity: 1,
-            visibility: "visible",
-            ease: "power4.out",
-            // ease: "Power1.easeOut",
-        },
-        ">"
-    );
-    // await sleep(1000);
-    // ScrollTrigger.create({
-    //     trigger: ".section02",
-    //     start: "bottom bottom",
-    //     end: "bottom bottom",
-    //     toggleActions: "restart none restart none ",
-    //     onEnter: () => {
-    //         gsap.to(window, {
-    //             scrollTo: {
-    //                 y: document.querySelector(".section03").offsetTop,
-    //             },
-    //             duration: 0.5,
-    //         });
-    //     },
-    // });
-    await sleep(1600);
-    gsap.to("header", {
-        duration: 2,
-        delay: 1,
-        opacity: 1,
-        visibility: "visible",
-        ease: "power4.out",
-    });
-    gsap.to(".intro_section", {
-        duration: 3,
-        opacity: 0,
-        ease: "power4.out",
-        onComplete: () => {
-            document.querySelector(".intro_section").style.display = "none";
-            document.querySelector("header").style.position = "fixed";
-            document.querySelector(".intro_logo").style.position = "fixed";
-            document.querySelector("body").style.overflow = "auto";
-        },
-    });
-
-    await sleep(100);
-
-    gsap.to(".intro_logo", {
-        duration: 2,
-        top: 38,
-        width: 130,
-        height: 40,
-        transform: "translate(-50%, 0)",
-    });
-    // gsap.to(".section01", {
-    //     duration: 3,
-    //     opacity: 1,
-    //     ease: "power1.out",
-    //     onStart: () => {
-    //         if (document.querySelector('.popup')) {
-    //             document.querySelector(".popup").style.opacity = 1;
-    //             document.querySelector(".popup").style.visibility = "visible";
-    //         }
-    //         const initialSlide = document.querySelector(".swiper-slide");
-    //         const img = initialSlide ? .querySelector("img");
-    //         const video = initialSlide ? .querySelector("video");
-    //         if (img) {
-    //             setTimeout(() => {
-    //                 dateSwiper.slideTo(1);
-    //             }, 3000);
-    //         }
-    //         if (video) {
-    //             video.currentTime = 0;
-    //             video.play();
-    //         }
-    //     },
-    // });
-};
-const actionMobile = async () => {
-    document.querySelector("body").style.overflow = "hidden";
-    const timeLine = gsap.timeline({});
-    gsap.set(".intro_logo", {
-        opacity: 0,
-        y: 120,
-    });
-    await sleep(200);
-    timeLine.to(".intro_logo", {
-        duration: 2,
-        y: 0,
-        opacity: 1,
-        ease: "power1.out",
-    });
-    timeLine.to(
-        ".logo_lower", {
-            duration: 0.1,
-            opacity: 1,
-            visibility: "visible",
-            ease: "power4.out",
-        },
-        ">"
-    );
-
-    await sleep(2600);
-    gsap.to("header", {
-        duration: 2,
-        delay: 1,
-        opacity: 1,
-        visibility: "visible",
-        ease: "power4.out",
-    });
-    gsap.to(".intro_section", {
-        duration: 3,
-        opacity: 0,
-        ease: "power4.out",
-        onComplete: () => {
-            document.querySelector(".intro_section").style.display = "none";
-            document.querySelector("header").style.position = "fixed";
-            document.querySelector(".intro_logo").style.position = "fixed";
-            if (
-                !document
-                .querySelector("header .menu_container")
-                .classList.contains("active")
-            ) {
-                document.querySelector("body").style.overflow = "auto";
-            }
-            // new MouseShowMore();
-        },
-    });
-
-    await sleep(100);
-
-    gsap.to(".intro_logo", {
-        duration: 1.5,
-        top: 14,
-        width: 120,
-        height: 36,
-        left: 20,
-        transform: "translate(0, 0)",
-    });
-    // gsap.to(".section01", {
-    //     duration: 2.5,
-    //     opacity: 1,
-    //     ease: "power1.out",
-    //     onStart: () => {
-    //         if (document.querySelector('.popup')) {
-    //             document.querySelector(".popup").style.opacity = 1;
-    //             document.querySelector(".popup").style.visibility = "visible";
-    //         }
-    //         const initialSlide = document.querySelector(
-    //             ".contents_sw_mo .swiper-slide"
-    //         );
-    //         const img = initialSlide ? .querySelector("img");
-    //         const video = initialSlide ? .querySelector("video");
-    //         if (img) {
-    //             setTimeout(() => {
-    //                 dateSwiper.slideTo(1);
-    //             }, 3000);
-    //         }
-    //         if (video) {
-    //             video.pause();
-    //             video.currentTime = 0;
-    //             video.play();
-    //         }
-    //     },
-    // });
-};
+    // 3초 후 인트로 종료 및 스크롤 가능하도록 변경
+    setTimeout(() => {
+        introBg.fadeOut(800, function () {
+            $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
+            $('body').removeClass('no_scroll');
+        });
+    }, 3000);
+});

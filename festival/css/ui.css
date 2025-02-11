@@ -25,6 +25,7 @@ body{
     font-weight: 400;
     letter-spacing: -0.5px;
     overflow: auto !important;
+    line-height: 1.5;
 }
 body.no_scroll {
     overflow: hidden !important;
@@ -34,6 +35,7 @@ body.no_scroll::-webkit-scrollbar {
     display: none;
 }
 .container{
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
@@ -262,7 +264,7 @@ main .intro_section{
     justify-content: center;
     align-items: center;
     z-index: 110;
-    /* display: none; */
+    display: none;
 }
 .intro_logo img {
     opacity: 1;
@@ -387,7 +389,7 @@ main .app_wrap{
     left: 50%;
     transform: translateX(-50%);
 }
-main .app_area{
+.app_area{
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -472,14 +474,15 @@ main .app_area{
     position: relative;
 }
 .section_02 .top_text_content{
+    width: 100%;
     position: absolute;
-    top: 200px;
+    top: 250px;
     text-align: center;
     transition: opacity 0.4s;
 }
 .top_text_content.fixed {
     position: fixed;
-    top: 200px; /* 원하는 fixed 위치 */
+    top: 250px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -489,43 +492,126 @@ main .app_area{
 .top_text_content.hidden{
     opacity: 0;
 }
+.middle_text_content{
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.middle_text_content .text_wrap {
+    width: 100%;
+    max-width: 350px;
+    min-width: 290px;
+    margin-top: 100px;
+    /* text-shadow: 0 0 5px rgba(0,0,0,0.25); */
+}
+.middle_text_content .text_wrap .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.middle_text_content .text_wrap .sub{
+    font-size: 20px;
+    font-weight: 300;
+}
 
-.text_wrap {
+
+
+
+
+
+
+
+
+
+
+
+.section_02_bottom_bg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s;
-    position: absolute;
-    width: 100%;
-    margin-top: 100px;
+    transition: opacity 0.5s;
 }
-
-.text_wrap.visible {
+.section_02_bottom_bg.on{
     opacity: 1;
     visibility: visible;
-    position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section_02_bottom{
+    width: 100%;
+    height: 100vh;
     position: absolute;
     bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.section_02_bottom .text_youtube_wrap .title{
+    display: inline-block;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+.icon_comma{
+    position: absolute;
+    bottom: 4px;
+    right: -24px;
+    width: 12px;
+    animation: blink 1s infinite;
+} 
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.section_02_bottom .text_youtube_wrap .sub{
+    font-size: 20px;
+}
+.section_02_bottom .text_youtube_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.section_02_bottom .text_youtube_wrap>div{
+    width: 48%;
+    min-width: 450px;
+}
+.youtube_wrap iframe{
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 2/1;
+    
+}
+.section_02_bottom .app_wrap .app_area{
+    justify-content: left;
+    margin: 5% 0 0 0;
 }
 
 
 
 
 
+
+
+
+.section_03{
+    width: 100%;
+    height: 200vh;
+    background-color: var(--color-static-black);
+}
 
 
 /* 404page */
@@ -569,6 +655,18 @@ main .app_area{
 }
 
 @media (max-width: 1024px) {
+    .section_02_bottom .text_youtube_wrap{
+        flex-direction: column;
+        gap: 70px;
+    }
+    .section_02_bottom .text_youtube_wrap>div{
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .section_02_bottom .app_wrap .app_area{
+        justify-content: center;
+    }
 
 }
 @media (max-width: 900px) {
@@ -584,6 +682,25 @@ main .app_area{
         display: block;
         opacity: 1;
     }
+    .section_02 .top_text_content{
+        top: 200px;
+    }
+    .top_text_content.fixed {
+        top: 200px;
+    }
+    .top_text_content .section_logo img{
+        width: 200px;
+    }
+    .middle_text_content .text_wrap {
+        margin-top: 60px;
+    }
+    .middle_text_content .text_wrap .title{
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+    .middle_text_content .text_wrap .sub{
+        font-size: 18px;
+    }
 }
 @media (max-width: 768px) {
 
@@ -592,14 +709,65 @@ main .app_area{
     header.on{
         padding: 0 20px;
     }
+    .section_02 .top_text_content{
+        top: 120px;
+    }
+    .top_text_content.fixed {
+        top: 120px;
+    }
+    .top_text_content .section_logo img{
+        width: 32%;
+    }
+    .middle_text_content .text_wrap {
+        margin-top: 40px;
+    }
+    .middle_text_content .text_wrap .title{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .middle_text_content .text_wrap .sub{
+        font-size: 15px;
+    }
 }
 @media (max-width: 500px) {
     header{
         padding: 0 20px;
     }
+    .section_02_bottom{
+        max-width: 500px;
+    }
+    .middle_text_content .text_wrap {
+        max-width: 300px;
+        min-width: 0;
+        text-shadow: 0 0 5px rgba(0,0,0,0.25);
+    }
+    .section_02_bottom .text_youtube_wrap>div{
+        width: 100%;
+        min-width: 0;
+    }
+    .section_02_bottom .text_youtube_wrap .title {
+        font-size: 30px;
+    }
+    .section_02_bottom .text_youtube_wrap .sub {
+        font-size: 15px;
+    }
+    .section_02_bottom .text_youtube_wrap{
+        gap: 30px;
+    }
+    .icon_comma {
+        bottom: 4px;
+        right: -18px;
+        width: 10px;
+    }
 
 }
 @media (max-width: 425px) {
+    .container{
+        padding: 0 20px;
+    }
+    .middle_text_content {
+        padding: 0 20px;
+    }
     .main_text_wrap{
         font-size: 30px;
     }
@@ -618,7 +786,9 @@ main .app_area{
     }
 }
 @media (max-width: 360px) {
-
+    .section_02_bottom .text_youtube_wrap .title {
+        font-size: 26px;
+    }
 }
 
 
