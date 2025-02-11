@@ -435,6 +435,7 @@ main .app_wrap{
     top: 5px;
     width: 2px;
     height: 4px;
+    border-radius: 2px;
     background-color: rgb(255, 255, 255);
     -webkit-animation: scrollMove 2s infinite;
     animation: scrollMove 2s infinite;
@@ -722,11 +723,11 @@ main .app_wrap{
         margin-top: 40px;
     }
     .middle_text_content .text_wrap .title{
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom: 10px;
     }
     .middle_text_content .text_wrap .sub{
-        font-size: 15px;
+        font-size: 17px;
     }
 }
 @media (max-width: 500px) {
