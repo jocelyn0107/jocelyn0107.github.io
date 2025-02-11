@@ -264,7 +264,7 @@ main .intro_section{
     justify-content: center;
     align-items: center;
     z-index: 110;
-    display: none;
+    /* display: none; */
 }
 .intro_logo img {
     opacity: 1;
