@@ -1,5 +1,11 @@
 // 현재 날짜를 보여줌
-document.getElementById('eventDate').value = new Date().toISOString().substring(0, 10).replace(/-/g, '.');
+const today = new Date();
+const year = today.getFullYear();
+const month = String(today.getMonth() + 1).padStart(2, '0'); // 월(0부터 시작) → +1
+const day = String(today.getDate()).padStart(2, '0'); // 일
+
+document.getElementById('eventDate').value = `${year}.${month}.${day}`;
+
 // 현재 시간을 가져와 포맷하는 함수
 function updateCurrentTime() {
 	const now = new Date();
@@ -100,5 +106,13 @@ $(document).ready(function () {
 			var todayLabel = week[today];
 			$(this).prev().children("span").text(todayLabel ? todayLabel.split("요일")[0] : '');
 		});
+	});
+	$('.btn_pay').on('click', function () {
+		$('#modalLogin').fadeIn();
+		$('body').addClass('no_scroll');
+	});
+	$('.btn_modal_close').on('click', function () {
+		$('#modalLogin').fadeOut();
+		$('body').removeClass('no_scroll');
 	});
 });
