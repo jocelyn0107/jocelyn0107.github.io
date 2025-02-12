@@ -12,7 +12,6 @@ $(window).on('load', function () {
     }, 10);
     // 인트로 화면 스크롤 방지
     $('body').addClass('no_scroll');
-    // 인트로 로고 활성화
     introLogo.addClass('active');
 
     // 3초 후 인트로 종료 및 스크롤 가능하도록 변경
