@@ -345,7 +345,7 @@ main .intro_section{
     z-index: 110;
     /* display: none; */
 }
-main .intro_black{
+/* main .intro_black{
     position: fixed;
     top: 0;
     left: 0;
@@ -353,7 +353,7 @@ main .intro_black{
     bottom: 0;
     background-color: var(--color-static-black);
     z-index: 109;
-}
+} */
 .intro_logo img {
     opacity: 1;
     position: relative;

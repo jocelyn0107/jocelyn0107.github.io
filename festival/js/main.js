@@ -19,13 +19,12 @@ $(document).ready(function () {
         $('.mo_menu_wrap').removeClass('on');
         $('body').removeClass('no_scroll');
     });
-    $('.intro_black').show();
+    $('.intro_section').show();
 });
 
 $(window).on('load', function () {
     const introLogo = $('.header_logo');
     const introBg = $('.intro_section');
-    const introBgBlk = $('.intro_black');
 
     // 브라우저의 자동 스크롤 저장 기능을 비활성화
     if ('scrollRestoration' in history) {
@@ -45,7 +44,6 @@ $(window).on('load', function () {
             $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
             $('body').removeClass('no_scroll');
         });
-        introBgBlk.hide();
     }, 3000);
 });
 
