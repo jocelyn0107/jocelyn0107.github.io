@@ -19,6 +19,7 @@ $(document).ready(function () {
         $('.mo_menu_wrap').removeClass('on');
         $('body').removeClass('no_scroll');
     });
+    $('.intro_black').show();
 });
 
 $(window).on('load', function () {
@@ -44,7 +45,7 @@ $(window).on('load', function () {
             $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
             $('body').removeClass('no_scroll');
         });
-        introBgBlk.fadeOut();
+        introBgBlk.hide();
     }, 3000);
 });
 
