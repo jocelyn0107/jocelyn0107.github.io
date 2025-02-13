@@ -336,7 +336,7 @@ main .intro_section{
     background: url(../images/bg_intro_section.jpg);
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     display: flex;
