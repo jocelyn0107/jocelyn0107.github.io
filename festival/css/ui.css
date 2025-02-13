@@ -332,7 +332,7 @@ main{
     width: 100vw;
     height: 100vh;
 }
-main .intro_section link{
+main .intro_section{
     background: url(../images/bg_intro_section.jpg);
     background-size: cover;
     background-position: center;
