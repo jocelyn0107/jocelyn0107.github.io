@@ -327,7 +327,7 @@ main .intro_section{
     justify-content: center;
     align-items: center;
     z-index: 110;
-    /* display: none; */
+    display: none;
 }
 .intro_logo img {
     opacity: 1;
@@ -699,10 +699,10 @@ main .app_wrap{
 }
 @keyframes moveRight {
     from {
-        transform: translateX(-50%);
+        transform: translateX(-40%);
     }
     to {
-        transform: translateX(0);
+        transform: translateX(10%);
     }
 }
 .ani_festival_rotate{
@@ -772,7 +772,7 @@ main .app_wrap{
     width: 1px;
     height: 0px;
     background: var(--primary-color);
-    transition: height 1.5s ease-in-out;
+    transition: height 1s ease-in-out;
 }
 .star_line.down{
     height: 200px;
@@ -785,6 +785,9 @@ main .app_wrap{
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+}
+.star_02{
+    opacity: 1;
 }
 .star.show {
     opacity: 1;
@@ -911,7 +914,99 @@ main .app_wrap{
 }
 .section_05{
     width: 100%;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--color-static-black) 15%, var(--primary-dark-color));
+}
+.bg_star_blink{
+    width: 100%;
+    height: 300px;
     position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.bg_star_blink .star_blink{
+    width: 30px;
+    position: absolute;
+}
+.bg_star_blink .star_blink.lo_01{
+    top: 50%;
+    left: 5%;
+    animation: blink 2s infinite;
+}
+.bg_star_blink .star_blink.lo_02{
+    transform: scale(1.2);
+    top: 30%;
+    left: 20%;
+    animation: blink 3s infinite;
+}
+.bg_star_blink .star_blink.lo_03{
+    top: 70%;
+    left: 40%;
+    animation: blink 2.5s infinite;
+}
+.bg_star_blink .star_blink.lo_04{
+    transform: scale(1.6);
+    top: 56%;
+    left: 60%;
+    animation: blink 2s infinite;
+}
+.bg_star_blink .star_blink.lo_05{
+    transform: scale(1.1);
+    top: 26%;
+    left: 80%;
+    animation: blink 3s infinite;
+}
+.bg_star_blink .star_blink.lo_06{
+    top: 43%;
+    left: 95%;
+    animation: blink 2.5s infinite;
+}
+.partner_slide{
+    width: max-content;
+    display: flex;
+    animation: paMoveLeft 30s linear infinite;
+    margin: 100px 0;
+}
+.partner_slide .partner{
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    background-color: var(--color-static-white);
+    border-radius: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner_slide .partner+.partner{
+    margin-left: 20px;
+}
+@keyframes paMoveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.bg_circle_half{
+    width: 100vw;
+    height: 50vw;
+    background: linear-gradient(180deg, var(--color-static-black) 70%, var(--primary-dark-color));
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+    position: relative;
+}
+.bg_circle_half .text_wrap{
+    text-align: center;
+    padding-top: 10%;
+}
+.bg_circle_half .text_wrap .title{
+    font-family: 'Butler';
+    font-size: 60px;
+    font-weight: 700;
 }
 
 
@@ -1032,7 +1127,9 @@ main .app_wrap{
     .history_area .text_wrap{
         text-align: center;
     }
-
+    .partner_slide .partner{
+        max-width: 150px;
+    }
 }
 @media (max-width: 620px) {
     header.on{
@@ -1084,6 +1181,10 @@ main .app_wrap{
     }
     .ani_festival_rotate{
         bottom: 1%;
+    }
+    .partner_slide .partner{
+        max-width: 100px;
+        padding: 0 16px;
     }
 }
 @media (max-width: 500px) {
