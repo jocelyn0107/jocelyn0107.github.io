@@ -20,7 +20,7 @@ $(document).ready(function () {
         $('body').removeClass('no_scroll');
     });
 });
-
+AOS.init();
 $(document).ready(function(){
     $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
 });

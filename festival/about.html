@@ -68,23 +68,105 @@
 
     <!-- s: main -->
     <main>
-        <section class="section_01">
-            
+        <section class="about_01">
+            <div class="main_about_wrap container">
+                <div class="slogan">그저 행사가 아니라,<br />하나의 <span class="strong">특별한 경험</span>입니다.</div>
+                <div class="img_wrap">
+                    <div class="iphone_01">
+                        <img src="images/iphone_festival_info.png" alt="festival_app">
+                    </div>
+                    <div class="iphone_02">
+                        <img src="images/iphone_qr.png" alt="festival_app">
+                    </div>
+                </div>
+            </div>
+            <div class="icon_scroll"></div>
         </section>
     </main>
     <!-- e: main -->
 
-  
+    <!-- s: section_02 -->
+    <section class="about_02">
+        <div class="bg_text lo_01">WHO ARE WE?</div>
+        <div class="container text_center">
+            <h1 class="about_h1">축제 및 지역 행사의 참여도를 높이고 방문객의 몰입도를<h1>
+                    <h1 class="about_h1">극대화하는 디지털 플랫폼입니다.</h1>
+                    <div class="sub">단순한 관람을 넘어, 참가자가 직접 미션을 수행하고 스탬프를 획득하며 자연스럽게 행사에 대한 흥미와 참여도를 높일 수 있도록 설계되었습니다.
+                    </div>
+        </div>
+        <div class="bg_text lo_02">WHO ARE WE?</div>
+    </section>
+    <!-- e: section_02 -->
 
-   
+    <!-- s: section_03 -->
+    <section class="about_03">
+        <div class="star_area">
+            <div class="star_line"></div>
+            <img src="images/icon_star_main.svg" alt="icon_star" class="star star_01">
+        </div>
+        <div class="bg_star_blink">
+            <img src="images/icon_star_main.svg" class="star_blink lo_01">
+            <img src="images/icon_star_main.svg" class="star_blink lo_02">
+            <img src="images/icon_star_main.svg" class="star_blink lo_03">
+            <img src="images/icon_star_main.svg" class="star_blink lo_04">
+            <img src="images/icon_star_main.svg" class="star_blink lo_05">
+            <img src="images/icon_star_main.svg" class="star_blink lo_06">
+        </div>
+        <div class="process_wrap">
+            <h2 class="section_title text_center pb-5">Process</h2>
+            <div class="container card_container">
+                <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="step">STEP 01</div>
+                    <img src="images/icon_info.svg" alt="icon_process_01">
+                    <div class="title">콘텐츠 전달</div>
+                    <div class="sub">기획한 콘텐츠를 보냅니다. (작성 양식 참조)</div>
+                    <div class="button">
+                        <button class="btn_contents">콘텐츠 양식<img src="images/icon_download.svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="step">STEP 01</div>
+                    <img src="images/icon_qr.svg" alt="icon_process_01">
+                    <div class="title">콘텐츠 구성 및 QR코드제작</div>
+                    <div class="sub">앱 콘텐츠를 구성하고, 각 콘텐츠의 QR코드를 제작합니다. (1~2일 소요)</div>
+                    <div class="button">
+                        <button class="btn_contents">콘텐츠 양식<img src="images/icon_download.svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                    <div class="step">STEP 01</div>
+                    <img src="images/icon_rehearsal.svg" alt="icon_process_01">
+                    <div class="title">QR코드 수령 및 리허설</div>
+                    <div class="sub">각 콘텐츠의 QR코드(온라인 스탬프의 경우, 링크)를 받고 리허설을 진행합니다.</div>
+                    <div class="button">
+                        <button class="btn_contents">콘텐츠 양식<img src="images/icon_download.svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                    <div class="step">STEP 01</div>
+                    <img src="images/icon_pay.svg" alt="icon_process_01">
+                    <div class="title">사용료 결제</div>
+                    <div class="sub">서비스 사용료를 결제합니다.</div>
+                    <div class="button">
+                        <button class="btn_contents">콘텐츠 양식<img src="images/icon_download.svg" alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- e: section_03 -->
 
-   
-   
+
+
+
+
+
+
     <!-- s: footer -->
     <footer class="footer">
         <div class="container">
             <div class="slogan_logo_area">
-                <div class="slogan">그저 행사가 아니라,<br/> 하나의 특별한 경험입니다.</div>
+                <div class="slogan">그저 행사가 아니라,<br /> 하나의 특별한 경험입니다.</div>
                 <div class="logo_area">
                     <img src="images/logo.svg" alt="logo">
                 </div>
@@ -132,8 +214,32 @@
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
     <script>
-        
+        $(document).ready(function () {
+            $('.iphone_01, .iphone_02, .slogan').addClass('on');
 
+            const stars = $('.star_01');
+            const starLine = $('.star_line');
+            const about03 = $('.about_03');
+
+            $(window).on('scroll', function () {
+                const scrollTop = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                const scrollBottom = scrollTop + windowHeight; // 화면 하단의 스크롤 위치
+                const about03Top = about03.offset().top;
+
+                
+                if (scrollBottom >= about03Top) {
+                    starLine.addClass('down');
+                    setTimeout(() => {
+                        stars.addClass('show');
+                    }, 970);
+                } else {
+                    starLine.removeClass('down');
+                    stars.removeClass('show');
+                }
+
+            });
+        });
     </script>
 </body>
 
