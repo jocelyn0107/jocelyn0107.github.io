@@ -332,8 +332,8 @@ main{
     width: 100vw;
     height: 100vh;
 }
-main .intro_section{
-    background: url(../images/bg_intro_section.jpg);
+main .intro_section link{
+    /* background: url(../images/bg_intro_section.jpg); */
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -344,6 +344,10 @@ main .intro_section{
     align-items: center;
     z-index: 110;
     /* display: none; */
+}
+link{
+    width: 100vw;
+    height: 100vh;
 }
 /* main .intro_black{
     position: fixed;
