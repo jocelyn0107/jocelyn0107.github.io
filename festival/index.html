@@ -15,34 +15,10 @@
     <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="../common/css/typography.css">
     <link rel="stylesheet" href="../common/css/aos.css">
-    <!-- <link rel="stylesheet" href="/common/css/slick.css">
-    <link rel="stylesheet" href="/common/css/slick-theme.css"> -->
     <link rel="stylesheet" href="css/ui.css">
 </head>
 
 <body>
-    <!-- s: modal -->
-    <div class="modal_popup" id="modalLogin">
-        <div class="modal_wrap_s">
-            <div class="modal_top_w_s">
-                <div class="modal_exit btn_modal_close">
-                    <img src="images/icon_close_blk.svg" alt="icon_close">
-                </div>
-            </div>
-            <div class="modal_icon">
-                <img src="images/icon_warning.svg" alt="icon_warning">
-            </div>
-            <div class="modal_contents">
-                <div>로그인 후 이용 가능합니다.</div>
-            </div>
-            <div class="modal_btn_w">
-                <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
-                <button class="modal_btn color_main">로그인</button>
-            </div>
-        </div>
-    </div>
-    <!-- e: modal -->
-
     <div class="ir_su">축제 스탬프투어</div>
     <!-- s: header -->
     <header>
@@ -54,7 +30,7 @@
                 <li class="nav_li"><a href="board.html"><span>BOARD</span></a></li>
             </ul>
         </div>
-        <a href="index.html" class="header_logo header_move">
+        <a href="index.html" class="header_logo">
             <img src="images/logo.svg" alt="festival stamp tour logo">
         </a>
         <div class="right_menus">
@@ -276,11 +252,11 @@
 
     <!-- s: section_04 -->
     <section class="section_04">
-        <div class="star_area" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">
+        <div class="star_area">
             <div class="star_line"></div>
             <img src="images/icon_star_main.svg" alt="icon_star" class="star star_01">
         </div>
-        <div class="container py-5">
+        <div class="container py-5 mb-5">
             <h2 class="section_title text_center mb-5" data-aos="fade-down" data-aos-duration="1000">History</h2>
             <div class="history_area py-5">
                 <div class="text_wrap" data-aos="fade-right" data-aos-duration="1000">
@@ -437,7 +413,7 @@
             <img src="images/icon_star_main.svg" class="star_blink lo_06">
         </div>
         <div class="container">
-            <h2 class="section_title">Clients & Partners</h2>
+            <h2 class="section_title" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Clients & Partners</h2>
         </div>
         <div class="partner_slide">
             <div class="partner"><img src="images/pa_01.svg" alt="partner"></div>
@@ -488,13 +464,13 @@
         <div class="bg_circle_half">
             <div class="container">
                 <div class="text_wrap">
-                    <div class="title">More Than an Event,<br/>It's an Experience.</div>
-                    <div class="sub">그저 행사가 아니라, 하나의 특별한 경험입니다.</div>
+                    <div class="title" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">More Than an Event,<br/>It's an Experience.</div>
+                    <div class="sub" data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000">그저 행사가 아니라, 하나의 특별한 경험입니다.</div>
                 </div>
-                <div class="star_area" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="star_line"></div>
-                    <img src="images/icon_star_main.svg" alt="icon_star" class="star star_02">
-                </div>
+            </div>
+            <div class="star_area" data-aos="fade-in" data-aos-delay="1200" data-aos-duration="1000">
+                <div class="star_line"></div>
+                <img src="images/icon_star_main.svg" alt="icon_star" class="star star_02">
             </div>
         </div>
     </section>
@@ -502,159 +478,55 @@
 
     <!-- s: footer -->
     <footer class="footer">
-
+        <div class="container">
+            <div class="slogan_logo_area">
+                <div class="slogan">그저 행사가 아니라,<br/> 하나의 특별한 경험입니다.</div>
+                <div class="logo_area">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="info">
+                <div class="company">댓츠잇소프트 주식회사</div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">대표</div>
+                        <div class="text">김범수</div>
+                    </div>
+                    <div>
+                        <div class="title">문의</div>
+                        <div class="text">02-1551-0901</div>
+                    </div>
+                    <div>
+                        <div class="title">이메일</div>
+                        <div class="text">thatzit1012@gmail.com</div>
+                    </div>
+                </div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">개인정보관리책임자</div>
+                        <div class="text">댓츠잇소프트 주식회사</div>
+                    </div>
+                    <div>
+                        <div class="title">사업자등록번호</div>
+                        <div class="text">384-81-01361</div>
+                    </div>
+                    <div>
+                        <div class="title">통신판매</div>
+                        <div class="text">제 2023-4960111-30-2-00021호</div>
+                    </div>
+                </div>
+                <div class="copyright">&copy;THATZIT Co. Ltd. All rights reserved</div>
+            </div>
+        </div>
+        <div class="ani_festival_rotate">
+            <img src="images/circle_festival_white.svg" alt="festival">
+        </div>
     </footer>
     <!-- e: footer -->
 
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
-    <!-- <script src="/common/js/library/slick.min.js"></script> -->
-    <script src="js/layout.js"></script>
-    <!-- <script src="js/main.js"></script> -->
-    <script>
-        
-        AOS.init();
-
-        // advantage ani
-        const textWrappers = document.querySelectorAll('.ani_advantage');
-
-        function createScrollingText(wrapper) {
-            for (let i = 0; i < 20; i++) {
-                const textElement = document.createElement('div');
-                textElement.classList.add('moving_text');
-                textElement.textContent = 'ADVANTAGE';
-                wrapper.appendChild(textElement);
-            }
-        }
-        textWrappers.forEach(createScrollingText);
-
-        $(document).ready(function () {
-            const sectionLayout = $('.top_text_content');
-            const section02 = $('.section_02');
-            const section03 = $('.section_03');
-            const section04 = $('.section_04');
-            const starLine = $('.star_line');
-            const stars = $('.star_01');
-            const sectionBottom = $('.section_02_bottom');
-            const sectionBottomBg = $('.section_02_bottom_bg');
-            const sectionWrap = $('.section_wrap');
-
-            $(window).on('scroll', function () {
-                const scrollTop = $(window).scrollTop();
-                const windowHeight = $(window).height();
-                const scrollBottom = scrollTop + windowHeight; // 화면 하단의 스크롤 위치
-                const section02Top = section02.offset().top;
-                const section03Top = section03.offset().top;
-                const section04Top = section04.offset().top;
-                const bottomTop = sectionBottom.offset().top - windowHeight +
-                100; // 화면에 보이기 시작하는 지점 +100
-                const bottomEnd = sectionBottom.offset().top + sectionBottom.outerHeight() -
-                    windowHeight - 350; // 완전히 화면 하단에 닿았을 때 -350
-
-                // sectionLayout 고정 처리
-                if (scrollTop >= section02Top) {
-                    sectionLayout.addClass('fixed');
-                } else {
-                    sectionLayout.removeClass('fixed');
-                }
-
-                // sectionLayout 숨김 & sectionBottomBg 효과 적용
-                if (scrollTop >= bottomTop) {
-                    sectionLayout.addClass('hidden');
-                } else {
-                    sectionLayout.removeClass('hidden');
-                }
-
-                // sectionBottom이 화면 맨 아래에 닿았을 때 'on' 추가
-                if (scrollTop >= bottomEnd) {
-                    sectionBottomBg.addClass('on');
-                } else {
-                    sectionBottomBg.removeClass('on');
-                }
-
-                // 화면 하단(scrollBottom)이 section03Top에 닿았을 때 'on' 제거
-                if (scrollBottom >= section03Top + 100) {
-                    sectionBottomBg.removeClass('on');
-                }
-
-                if (scrollBottom >= section04Top) {
-                    starLine.addClass('down');
-                    setTimeout(() => {
-                        stars.addClass('show');
-                    }, 970);
-                } else {
-                    starLine.removeClass('down');
-                    stars.removeClass('show');
-                }
-
-
-                // partner_slide
-                // $('.partner_slide').slick({
-                //     dots: false,
-                //     arrows: false,
-                //     infinite: true,
-                //     slidesToShow: 9,
-                //     autoplay: true,
-                //     responsive:[
-                //         {
-                //             breakpoint: 768,
-                //             settings:{
-                //                 slidesToShow: 7,
-                //             }
-                //         }
-                //     ]
-                // });
-
-
-
-            });
-
-            // history
-            const historySection = $('.history');
-
-            historySection.on('scroll', function () {
-                const scrollTop = $(this).scrollTop();
-
-                $('.history .year').each(function () {
-                    const elementTop = $(this).position().top;
-
-                    if (scrollTop >= elementTop) {
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-            });
-
-
-
-
-
-
-
-
-
-
-
-        });
-
-        // 현재 시간을 가져와 포맷하는 함수
-        function updateCurrentTime() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0'); // 시
-            const minutes = String(now.getMinutes()).padStart(2, '0'); // 분
-            const formattedTime = `${hours}:${minutes}`;
-            document.getElementById('currentTime').textContent = formattedTime;
-        }
-        setInterval(updateCurrentTime, 1000);
-
-        updateCurrentTime();
-    </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -22,5 +22,5 @@ $(document).ready(function () {
 });
 
 $(document).ready(function(){
-
+    $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
 });

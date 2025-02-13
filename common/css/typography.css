@@ -61,43 +61,43 @@
     font-family: 'Butler';
     font-weight: 700;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-Blk.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-Blk.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 600;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-XBd.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-XBd.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 500;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-Bd.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-Bd.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 400;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-SBd.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-SBd.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 300;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-Med.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-Med.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 200;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-Rmn.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-Rmn.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Butler';
     font-weight: 100;
     font-display: swap;
-    src: url(../fonts/butler/Butler-Free-Lgt.ttf) format('ttf');
+    src: url(../fonts/butler/Butler-Free-Lgt.ttf) format('truetype');
 }
 
 /* font size */
