@@ -51,6 +51,7 @@ function createScrollingText(wrapper) {
 textWrappers.forEach(createScrollingText);
 
 $(document).ready(function () {
+    // 모바일
     $('.hamburger').on('click', function () {
         $('.mo_menu_wrap').addClass('on');
         $('body').addClass('no_scroll');
@@ -60,6 +61,18 @@ $(document).ready(function () {
         $('body').removeClass('no_scroll');
     });
     $('.intro_section').show();
+
+    // 컨택트
+    $('.btn_contact, .mo_btn_contact').on('click', function(){
+        $('#modalContact').fadeIn();
+        $('body').addClass('no_scroll');
+    });
+
+    // 모달 닫았을 때
+    $('.modal_close').on('click', function(){
+        $('.modal_popup').fadeOut();
+        $('body').removeClass('no_scroll');
+    });
 
     const sectionLayout = $('.top_text_content');
     const section02 = $('.section_02');

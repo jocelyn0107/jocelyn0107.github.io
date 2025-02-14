@@ -19,6 +19,64 @@
 </head>
 
 <body>
+    <!-- s: contact modal -->
+    <div class="modal_popup" id="modalContact">
+        <div class="modal_wrap modal_wrap_md">
+            <div class="modal_top_w">
+                <div class="modal_title"></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_wrap_line d_none"></div>
+            <div class="title">Contact</div>
+            <div class="modal_contents">
+                <div class="representative">
+                    <div>02-1551-0901</div>
+                    <div>thatzit1012@gmail.com</div>
+                </div>
+                <div class="contact_area">
+                    <div class="input_group">
+                        <div class="title">이름</div>
+                        <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">이메일</div>
+                        <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">연락처</div>
+                        <input type="text" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">내용</div>
+                        <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+                    </div>
+                    <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                </div>
+                <div class="modal_btn_w">
+                    <button class="color_main btn_big btn_submit">전송하기</button>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!-- e: contact modal -->
     <div class="ir_su">축제 스탬프투어</div>
     <!-- s: header -->
     <header>
@@ -27,7 +85,7 @@
             <ul>
                 <li class="nav_li"><a href="about.html"><span>ABOUT</span></a></li>
                 <li class="nav_li active"><a href="price.html"><span>PRICE</span></a></li>
-                <li class="nav_li"><a href="board.html"><span>BOARD</span></a></li>
+                <!-- <li class="nav_li"><a href="board.html"><span>BOARD</span></a></li> -->
             </ul>
         </div>
         <a href="index.html" class="header_logo">
@@ -56,7 +114,7 @@
                     <div class="menu_item">
                         <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
                         <div class="mobile_menu active"><a href="price.html">PRICE</a></div>
-                        <div class="mobile_menu"><a href="board.html">BOARD</a></div>
+                        <!-- <div class="mobile_menu"><a href="board.html">BOARD</a></div> -->
                         <div class="mo_btn_contact">CONTACT</div>
                     </div>
                 </div>
@@ -90,9 +148,11 @@
             <img src="images/icon_star_main.svg" class="star_blink lo_05">
             <img src="images/icon_star_main.svg" class="star_blink lo_06">
         </div>
-        <h2 class="section_title text_center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Price</h2>
+        <h2 class="section_title text_center" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Price
+        </h2>
         <div class="container">
-            <div class="sub" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">귀하의 행사에 최적화된 요금제를 선택하세요.</div>
+            <div class="sub" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">귀하의 행사에 최적화된 요금제를 선택하세요.
+            </div>
         </div>
         <div class="price_wrap">
             <div class="container price_container">
@@ -239,30 +299,26 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
-    <script>    
-        $(document).ready(function(){
-            $('.price_wrap .container .box .content button').on('click', function(){
-                $(this).hide();
-                $(this).siblings('p').hide();
-                $(this).parents().parents().addClass('click');
-            });
+    <script>
+        $(document).ready(function () {
+            
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-    const boxes = document.querySelectorAll(".box");
+            const boxes = document.querySelectorAll(".box");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show"); // 화면에 보이면 show 추가
-            } else {
-                entry.target.classList.remove("show"); // 화면에서 벗어나면 제거
-            }
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("move"); // 화면에 보이면 move 추가
+                    }
+                });
+            }, {
+                threshold: window.innerWidth <= 768 ? 0 : 0.3 // 768px 이하일 때 threshold 0으로 설정
+            });
+
+            boxes.forEach(box => observer.observe(box));
         });
-    }, { threshold: 0.3 }); // 30% 보이면 실행
-
-    boxes.forEach(box => observer.observe(box));
-});
     </script>
 </body>
 

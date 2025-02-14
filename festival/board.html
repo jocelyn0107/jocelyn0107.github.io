@@ -19,23 +19,82 @@
 </head>
 
 <body>
-    <!-- s: modal -->
-    <div class="modal_popup" id="modalLogin">
-        <div class="modal_wrap_s">
-            <div class="modal_top_w_s">
-                <div class="modal_exit btn_modal_close">
+    <!-- s: contact modal -->
+    <div class="modal_popup" id="modalContact">
+        <div class="modal_wrap modal_wrap_md">
+            <div class="modal_top_w">
+                <div class="modal_title"></div>
+                <div class="modal_close">
                     <img src="images/icon_close_blk.svg" alt="icon_close">
                 </div>
             </div>
-            <div class="modal_icon">
-                <img src="images/icon_warning.svg" alt="icon_warning">
+            <div class="modal_wrap_line d_none"></div>
+            <div class="title">Contact</div>
+            <div class="modal_contents">
+                <div class="representative">
+                    <div>02-1551-0901</div>
+                    <div>thatzit1012@gmail.com</div>
+                </div>
+                <div class="contact_area">
+                    <div class="input_group">
+                        <div class="title">이름</div>
+                        <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">이메일</div>
+                        <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">연락처</div>
+                        <input type="text" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                    </div>
+                    <div class="input_group">
+                        <div class="title">내용</div>
+                        <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+                    </div>
+                    <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                </div>
+                <div class="modal_btn_w">
+                    <button class="color_main btn_big btn_submit">전송하기</button>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!-- e: contact modal -->
+    <!-- s: modal -->
+    <div class="modal_popup" id="modalLogin">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
             </div>
             <div class="modal_contents">
-                <div>로그인 후 이용 가능합니다.</div>
-            </div>
-            <div class="modal_btn_w">
-                <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
-                <button class="modal_btn color_main">로그인</button>
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">로그인 후 이용 가능합니다.</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main">로그인</button>
+                </div>
             </div>
         </div>
     </div>
@@ -49,7 +108,7 @@
             <ul>
                 <li class="nav_li"><a href="about.html"><span>ABOUT</span></a></li>
                 <li class="nav_li"><a href="price.html"><span>PRICE</span></a></li>
-                <li class="nav_li active"><a href="board.html"><span>BOARD</span></a></li>
+                <!-- <li class="nav_li active"><a href="board.html"><span>BOARD</span></a></li> -->
             </ul>
         </div>
         <a href="index.html" class="header_logo">
@@ -78,7 +137,7 @@
                     <div class="menu_item">
                         <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
                         <div class="mobile_menu"><a href="price.html">PRICE</a></div>
-                        <div class="mobile_menu active"><a href="board.html">BOARD</a></div>
+                        <!-- <div class="mobile_menu active"><a href="board.html">BOARD</a></div> -->
                         <div class="mo_btn_contact">CONTACT</div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-// header
+// 헤더
 const START = 50;
 const handleHeaderClass = () => {
     const scrollTop = $(window).scrollTop();
@@ -10,7 +10,9 @@ const handleHeaderClass = () => {
 $(window).on("scroll", handleHeaderClass);
 handleHeaderClass();
 
-$(document).ready(function () {
+AOS.init();
+$(document).ready(function(){
+    // 모바일
     $('.hamburger').on('click', function () {
         $('.mo_menu_wrap').addClass('on');
         $('body').addClass('no_scroll');
@@ -19,12 +21,30 @@ $(document).ready(function () {
         $('.mo_menu_wrap').removeClass('on');
         $('body').removeClass('no_scroll');
     });
-});
-AOS.init();
-$(document).ready(function(){
+
+    // 컨택트
+    $('.btn_contact, .mo_btn_contact').on('click', function(){
+        $('#modalContact').fadeIn();
+        $('body').addClass('no_scroll');
+    });
+
+    // 모달 닫았을 때
+    $('.modal_close').on('click', function(){
+        $('.modal_popup').fadeOut();
+        $('body').removeClass('no_scroll');
+    });
+
     $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
     $('.iphone_01, .iphone_02, .slogan').addClass('on');
 
+    // 가격 더 보기 클릭 시
+    $('.price_wrap .container .box .content button').on('click', function () {
+        $(this).hide();
+        $(this).siblings('p').hide();
+        $(this).parents().parents().addClass('click');
+    });
+
+    // 라인 , 별 애니메이션
     $(window).on('scroll', function () {
         const scrollTop = $(window).scrollTop();
         const windowHeight = $(window).height();
