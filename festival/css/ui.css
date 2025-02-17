@@ -411,7 +411,7 @@ header>.right_menus .btn_contact{
 header>.left_menus,
 header>.right_menus{
     opacity: 0;
-    transition: all 0.2s;
+    transition: opacity 0.3s;
 }
 header>.left_menus.on,
 header>.right_menus.on{
@@ -513,14 +513,20 @@ main .intro_section{
     background: url(../images/bg_intro_section.webp);
     background-size: cover;
     background-position: center;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 110;
     /* display: none; */
+}
+main .intro_section img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
 }
 .intro_logo img {
     opacity: 1;
