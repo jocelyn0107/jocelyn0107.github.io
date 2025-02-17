@@ -1114,7 +1114,7 @@ main .app_wrap{
 }
 .bg_star_blink{
     width: 100%;
-    height: 300px;
+    height: 300px;   
     position: relative;
     top: 0;
     left: 0;
@@ -1134,29 +1134,29 @@ main .app_wrap{
     transform: scale(1.2);
     top: 30%;
     left: 20%;
-    animation: blink 3s infinite;
+    animation: blink 3.2s infinite;
 }
 .bg_star_blink .star_blink.lo_03{
     top: 70%;
     left: 40%;
-    animation: blink 2.5s infinite;
+    animation: blink 2.1s infinite;
 }
 .bg_star_blink .star_blink.lo_04{
     transform: scale(1.6);
     top: 56%;
     left: 60%;
-    animation: blink 2s infinite;
+    animation: blink 2.4s infinite;
 }
 .bg_star_blink .star_blink.lo_05{
     transform: scale(1.1);
     top: 26%;
     left: 80%;
-    animation: blink 3s infinite;
+    animation: blink 3.3s infinite;
 }
 .bg_star_blink .star_blink.lo_06{
     top: 43%;
     left: 95%;
-    animation: blink 2.5s infinite;
+    animation: blink 2.7s infinite;
 }
 .partner_slide{
     width: max-content;
@@ -1449,17 +1449,6 @@ main .price_01 .main_price_wrap{
     font-size: 20px;
     margin: 20px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 .price_wrap .price_container{
     display: flex;
     justify-content: space-around;
@@ -1552,7 +1541,6 @@ main .price_01 .main_price_wrap{
     animation: animate 2s ease-in-out infinite;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08)
 }
-
 .price_wrap .price_container .box.click span.sm_box::before{
     top: -30px;
     left: 75px;
@@ -1560,7 +1548,6 @@ main .price_01 .main_price_wrap{
     height: 70px;
     opacity: 1;
 }
-
 .price_wrap .price_container .box span.sm_box::after{
     content:'';
     position: absolute;
@@ -1577,7 +1564,6 @@ main .price_01 .main_price_wrap{
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     animation-delay: -1s;
 }
-
 .price_wrap .price_container .box.click span.sm_box:after{
     bottom: -20px;
     right: 65px;
@@ -1585,7 +1571,6 @@ main .price_01 .main_price_wrap{
     height: 70px;
     opacity: 1;
 }
-
 @keyframes animate{
     0%, 100%{
         transform: translateY(10px);
@@ -1594,7 +1579,6 @@ main .price_01 .main_price_wrap{
         transform: translate(-10px);
     }
 }
-
 .price_wrap .price_container .box .content{
     width: 100%;
     max-width: 320px;
@@ -1610,12 +1594,10 @@ main .price_01 .main_price_wrap{
     transition: all 0.5s;
     color: #fff;
 }
-
 .price_wrap .price_container .box.click .content{
     padding: 30px 40px;
     height: 360px;
 }
-
 .price_wrap .price_container .box .content h2{
     text-align: center;
     font-size: 30px;
@@ -1625,7 +1607,6 @@ main .price_01 .main_price_wrap{
 .price_wrap .price_container .box.click .content h2{
     margin-bottom: 8px;
 }
-
 .price_wrap .price_container .box .content p{
     text-align: center;
     font-size: 18px;
@@ -1686,10 +1667,261 @@ main .price_01 .main_price_wrap{
     bottom: 60px;
     transform: translateX(-50%);
 }
-
 .price_wrap .price_container .box .content button:hover{
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
 }
+
+
+
+
+
+main .board_01{
+    width: 100vw;
+    height: 85vh;
+    background: url('../images/bg_sub_board.jpg') no-repeat;
+    position: relative;
+}
+main .board_01 .main_board_wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.main_board_wrap .slogan{
+    font-size: 34px;
+    font-weight: 600;
+    transform: translateY(100%);
+    text-align: center;
+}
+.board_02{
+    background-color: var(--color-static-white);
+    color: var(--color-static-black);
+    padding: 140px 0;
+}
+.board_02 .pc{
+    opacity: 1;
+    visibility: visible;
+    max-height: none;
+    transition: all 0.5s ease-in-out;
+}
+.board_02 .mobile{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.board_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: bottom;
+}
+.board_top .total_text{
+    font-size: 17px;
+}
+.board_top .total_text .total{
+    font-weight: 700;
+    font-size: 22px;
+}
+.board_top .search_area{
+    width: 300px;
+    position: relative;
+}
+.search_area input{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--color-static-black);
+    padding: 0 0 8px 10px;
+}
+.search_area input::placeholder{
+    color: var(--color-gray-500);
+}
+.search_area .btn_search{
+    width: 34px;
+    background-color: transparent;
+    position: absolute;
+    bottom: 4px;
+    right: 2px;
+}
+table caption{
+    font-size: 0;
+}
+.board_table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 20px 0;
+}
+.board_table th,
+.board_table td {
+    color: var(--color-static-black);
+    text-align: center;
+    padding: 15px 0;
+}
+.board_table th{
+    border: 2px solid var(--color-static-black);
+    border-left: 0;
+    border-right: 0;
+    vertical-align: middle;
+    font-weight: 500;
+}
+.board_table tr {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+.board_table tr td{
+    cursor: pointer;
+}
+.board_table tbody tr.fixed,
+.board_table tbody tr:hover {
+    background: #F9F5FF;
+}
+.board_table tbody tr td {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.board_table tbody tr td.td_title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.board_table tbody tr td .title{
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+}
+.board_table tbody tr td.td_title .pin{
+    width: 20px;
+    margin-right: 10px;
+}
+.board_table tbody tr td.td_title .img{
+    width: 13px;
+    margin-left: 6px;
+}
+.board_table tbody tr td.td_title .comment{
+    margin-left: 6px;
+    font-size: 13px;
+    color: var(--color-gray-500);
+}
+.board_table .badge div{
+    display: inline-block;
+    padding: 0px 6px;
+    font-size: 13px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+}
+.board_table .badge.notice div{
+    color: var(--color-static-white);
+    background-color: var(--primary-color);
+}
+.btn_write_login{
+    display: flex;
+    justify-content: space-between;
+}
+.btn_write_login button{
+    width: 140px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.board_02 .mobile .board_top{
+    justify-content: center;
+}
+.board_02 .mobile .board_top .search_area{
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 30px 0 30px 0 ;
+}
+.pagination ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.pagination li {
+    display: inline-block;
+    color: var(--color-gray-500);
+    cursor: pointer;
+}
+.pagination li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+.pagination li.active::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid var(--primary-color);
+}
+.pagination li.active{
+    color: var(--font-color);
+}
+.pagination .pagi_arrow {
+    color: transparent;
+}
+.pagination .init {
+    background: url('../images/icon_arrow_double_left.svg') no-repeat center;
+}
+.pagination .prev {
+    background: url('../images/icon_arrow_left.svg') no-repeat center;
+}
+.pagination .next {
+    background: url('../images/icon_arrow_right.svg') no-repeat center;
+}
+.pagination .last {
+    background: url('../images/icon_arrow_double_right.svg') no-repeat center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1846,7 +2078,20 @@ main .price_01 .main_price_wrap{
     .price_wrap .price_container .box:nth-of-type(3) {
         transition-delay: 0s;
     }
-    
+    main .board_01{
+        height: 50vh;
+    }
+    .board_02 .pc{
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .board_02 .mobile{
+        opacity: 1;
+        visibility: visible;
+        max-height: none;
+    }
 }
 @media (max-width: 620px) {
     header.on{
