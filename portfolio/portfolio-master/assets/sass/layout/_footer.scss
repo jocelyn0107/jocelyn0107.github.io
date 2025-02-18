@@ -1,0 +1,84 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:160px;
+  position: relative;
+  z-index: 1;
+  padding: 60px 130px;
+  background: $color-primary;
+  box-sizing: border-box;
+  color: #222;
+  font-size: 20px;
+  &::before{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: $color-primary;
+    content: '';
+    border-top: 10px solid #000;
+  }
+  .title-area {
+    width: 100%;
+    line-height: 1.5;
+    word-break: keep-all;
+    p {
+      overflow: hidden;
+    }
+    span {
+      font-size: 28px;
+      font-weight: bold;
+      display: block;
+    }
+  }
+  .copy-area {
+    overflow: hidden;
+    span {display: block;}
+  }
+  .social-area {
+    display: flex;
+    gap: 30px;
+    a {
+      display: block;
+      transition: transform 0.5s;
+      &::after {
+        content: '';
+        display: block;
+        width: 0; height: 1px;
+        background: #000;
+        transition: width 1s;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+      overflow: hidden;
+      span {display: block;}
+    }
+    .link-github {}
+    .link-velog {}
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 30px;
+    .title-area {
+      text-align: center;
+      span {
+        font-size: 24px;
+      }
+    }
+    .copy-area {
+      order: 2;
+      font-size: 16px;
+    }
+    .social-area {
+      order: 1;
+      font-size: 18px;
+    }
+  }
+}

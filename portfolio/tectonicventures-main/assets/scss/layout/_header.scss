@@ -1,0 +1,108 @@
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2.4rem;
+    overflow: hidden;
+
+    @include tablet{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    &-inner{
+            display: grid;
+            width: 100%;
+            height: auto;
+            grid-template-columns: 3.5fr 4.25fr 1fr 1fr;
+            h1{
+                position: absolute;
+                z-index: 151;
+                width: 54.25rem;
+                height: 100%;
+                
+                .logo-lottie{
+                    opacity: 0;
+    
+                    @include mobile{ display: none; }
+                    
+                }
+
+                @include tablet{
+                    position: fixed;
+                    width: 90%;
+                    height: 100%;
+                    transform: translateY(-100%);
+                }
+                
+                @include mobile{ width: 214px;height: 30px; }
+
+                a{ display: block; }
+            }
+            .text-right{
+                display: flex;
+                position: relative;
+                align-items: center;
+                grid-area: 1/3/2/4;
+                color: #1c2729;
+                letter-spacing: .02rem;
+                padding: 0.3rem;
+                font-size: .75rem;
+                line-height: .8rem;
+
+                @include tablet{ display: none; }
+                @include mobile{ display: none; }
+
+                &:hover{
+                    color: #FBF9ED;
+                    width: 100%;
+                }
+                &:hover .bg{ width: 100%; }
+                .text{
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 7;
+                }
+                .bg{
+                    background-color: #1c2729;
+                    position: absolute;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    transition: 0.8s;
+                }
+                
+
+            }
+            .symbol{
+                display: flex;
+                position: absolute;
+                align-self: center;
+                justify-self: end;
+                grid-area: 1/4/2/4;
+                padding-right: 2.4rem;
+
+                @include tablet{ display: none; }
+                @include mobile{ display: none; }
+
+            }
+    }
+    .intro-bg{
+        position: absolute;
+        z-index: 150;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background:#1973c2;;
+
+        @include mobile{ display: none; }
+    }
+}
+
+
+

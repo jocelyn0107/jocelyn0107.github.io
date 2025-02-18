@@ -1,0 +1,145 @@
+@import './reset.css';
+@import './common.css';
+
+.wrapper{
+    min-width: 1440px;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    z-index: 1;
+    visibility: hidden;
+}
+.header .logo{}
+.header .logo a{
+    display: block;
+    padding: 17px 0;
+    filter: invert(0);
+    transition: filter .5s;
+}
+.header .logo a img{
+    width: 100px;
+}
+.header .gnb-list{
+    display: flex;
+    align-items: center;
+}
+.header .gnb-item{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+    transition: color .5s;
+}
+.header .gnb-item>a{
+    padding: 23px 25px;
+}
+.header .gnb-item .btn-lang{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 23px 0 23px 25px;
+}
+.header .gnb-item .btn-lang svg{
+    filter: invert(1);
+    transition: filter .5s;
+}
+
+.dark .header .logo a,
+.header.on .logo a{
+    filter: invert(1);
+    transition: filter .5s;
+}
+
+
+.dark .header .gnb-item,
+.header.on .gnb-item{
+    color:#fff;
+    transition: color .5s;
+}
+.dark .header .gnb-item .btn-lang svg,
+.header.on .gnb-item .btn-lang svg{
+    filter: invert(0);
+    transition: filter .5s;
+}
+
+.header .gnb-item .lang-list{
+    position: absolute;
+    top: 55px;
+    right: 0;
+    /* opacity: 0;
+    visibility: hidden; */
+    background-color: #000;
+    border: 1px solid #5a5a5a;
+    border-radius: 6px;
+    display: none;
+}
+.header .gnb-item .lang-list a{
+    padding: 6px 13px;
+    display: block;
+    color: #fff;
+    opacity: 0.2;
+}
+
+.footer{
+    padding: 0 100px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer .flex3{
+    display: flex;
+    flex-direction: column;
+    padding: 58px 0;
+    font-size: 14px;
+    line-height: 1;
+    gap: 10px;
+}
+
+.footer .flex3 small{
+    text-transform: uppercase;
+}
+
+.footer .logo img{
+    width: 193px;
+}
+
+.btn-top{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 100px;
+    bottom: 40px;
+    z-index: 2;
+    background-color: #111;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+
+.btn-top.on{
+    opacity: 1;
+}
+
+.btn-top.change{
+    position: absolute;
+    bottom: 100.08px;
+    opacity: 1;
+}
+
+.btn-top.on2{
+    position: absolute;
+    bottom: 254px;
+    opacity: 1;
+}

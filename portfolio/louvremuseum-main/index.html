@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louvre</title>
+
+    <meta property="og:type" content="Website"/>
+	<meta property="og:title" content="이해현, 2023 포트폴리오"/>
+	<meta property="og:url" content="http://hh5039.dothome.co.kr/louvremuseum/index.html"/>
+	<meta property="og:description" content="Louvre Museum"/>
+	<meta property="og:image" content="https://i.ibb.co/JxRbX3v/image.png"/>
+	<meta property="og:site_name" content="이해현 | 20203 포트폴리오 | 루브르박물관"/>
+
+    <link rel="shortcut icon" href="./assets/images/20231027_014959.png">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./assets/js/js.js" defer></script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1><a href=""><span class="blind">Louvre</span></a></h1>
+            <button class="btn-menu">
+                <div class="btn-open">
+                    <span class="blind">menuopen</span>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="btn-close">
+                    <span class="blind">menuclose</span>
+                    <div class="line-wrap">
+                        <div class="line"></div>
+                        <div class="line rotate"></div>
+                    </div>
+                </div>
+            </button>
+            <nav class="gnb">
+                <div class="gnb-inner">
+                    <ul class="nav-list">
+                        <li class="home"><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Papers</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Our Clients</a></li>
+                        <li><a href="">Information & Resources</a></li>
+                        <li><a href="">News & Insights</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <div class="bottom-area">
+                        <a href="">
+                            <span class="blind">Facebook</span>
+                            <svg viewBox="0 0 24 24"><path d="m9.78 22-.03-8.75H6V9.5h3.75V7c0-3.37 2.09-5 5.1-5 1.44 0 2.68.1 3.04.15v3.53H15.8c-1.63 0-1.95.78-1.95 1.92v1.9h4.65l-1.25 3.75h-3.4V22H9.78z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Instagram</span>
+                            <svg viewBox="0 0 24 24"><path d="M13.02 2c1.8 0 2.18.02 3.1.06 1.06.05 1.79.22 2.42.47.66.25 1.22.6 1.77 1.15.56.55.9 1.11 1.16 1.77.25.63.41 1.36.46 2.43.05.95.06 1.32.06 3.32v1.6c0 2-.01 2.37-.06 3.32a7.33 7.33 0 0 1-.46 2.42c-.26.66-.6 1.22-1.15 1.77-.56.56-1.12.9-1.78 1.16-.63.25-1.36.41-2.42.46-.95.05-1.33.06-3.33.06H11.2c-2 0-2.37-.01-3.33-.06a7.34 7.34 0 0 1-2.42-.46 4.91 4.91 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.16-1.78 7.35 7.35 0 0 1-.46-2.42 55.2 55.2 0 0 1-.06-3.1v-2.05c0-1.8.02-2.18.06-3.1.05-1.06.22-1.79.46-2.42.26-.66.6-1.22 1.16-1.77a4.7 4.7 0 0 1 1.77-1.15 7.35 7.35 0 0 1 2.42-.47c.92-.04 1.3-.06 3.1-.06zm.02 1.8h-2.09c-1.73 0-2.1.02-3 .06-.97.04-1.5.2-1.85.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.13.35-.3.88-.34 1.86-.04.9-.06 1.26-.06 3v2.08c0 1.74.02 2.1.06 3 .04.97.2 1.5.34 1.85.18.47.4.8.75 1.15.35.35.68.57 1.15.75.35.14.88.3 1.86.34.97.05 1.32.06 3.48.06h1.11c2.17 0 2.51-.01 3.49-.06.97-.04 1.5-.2 1.85-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.35.3-.88.34-1.85.05-.98.06-1.32.06-3.49v-1.1c0-2.17-.01-2.52-.06-3.5-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 0 0-.75-1.15 3.09 3.09 0 0 0-1.15-.75 5.6 5.6 0 0 0-1.85-.34 54.1 54.1 0 0 0-3-.06zM12 6.86a5.13 5.13 0 1 1 0 10.27 5.13 5.13 0 0 1 0-10.27zm0 1.8a3.33 3.33 0 1 0 0 6.67 3.33 3.33 0 0 0 0-6.67zm5.33-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Twitter</span>
+                            <svg viewBox="0 0 24 24"><path d="M22 5.88c-.75.37-1.5.5-2.38.62.88-.5 1.5-1.25 1.75-2.25a8.2 8.2 0 0 1-2.62 1 4.36 4.36 0 0 0-3-1.25c-2.13 0-4 1.88-4 4.13 0 .37 0 .62.13.87a11.5 11.5 0 0 1-8.5-4.25 3.8 3.8 0 0 0-.5 2.13 4.1 4.1 0 0 0 1.87 3.37c-.63 0-1.25-.25-1.88-.5 0 2 1.38 3.63 3.25 4-.37.13-.75.13-1.12.13-.25 0-.5 0-.75-.13.5 1.63 2 2.88 3.88 2.88A7.95 7.95 0 0 1 3 18.38H2a12.2 12.2 0 0 0 6.25 1.87c7.5 0 11.63-6.25 11.63-11.63v-.5A7.27 7.27 0 0 0 22 5.88z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">YouTube</span>
+                            <svg viewBox="0 0 24 24"><path d="M10.03 15.38V8.62L15.97 12l-5.94 3.38zm13.2-8.88a2.85 2.85 0 0 0-2-2.02C19.46 4 12.35 4 12.35 4s-7.1 0-8.87.48a2.85 2.85 0 0 0-2 2.02C1 8.28 1 12 1 12s0 3.72.47 5.5a2.85 2.85 0 0 0 2.01 2.02c1.77.48 8.88.48 8.88.48s7.1 0 8.87-.48a2.85 2.85 0 0 0 2-2.02c.48-1.78.48-5.5.48-5.5s0-3.72-.47-5.5z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Pinterest</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.64 19.3c-.1-.79-.17-2 .03-2.87l1.17-4.97s-.3-.6-.3-1.48c0-1.39.81-2.42 1.82-2.42.85 0 1.27.64 1.27 1.4 0 .86-.55 2.14-.84 3.33-.24 1 .5 1.81 1.49 1.81 1.78 0 3.14-1.87 3.14-4.57 0-2.4-1.72-4.06-4.18-4.06a4.33 4.33 0 0 0-4.52 4.33c0 .86.33 1.78.74 2.28.08.1.09.19.06.29l-.28 1.13c-.04.18-.15.23-.33.14-1.26-.59-2.04-2.4-2.04-3.88 0-3.15 2.3-6.04 6.62-6.04 3.46 0 6.17 2.46 6.17 5.77 0 3.45-2.18 6.22-5.2 6.22-1 0-1.96-.53-2.28-1.15l-.63 2.37a11 11 0 0 1-1.24 2.63A10 10 0 1 0 12 2z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Linkedin</span>
+                            <svg viewBox="0 0 24 24"><path d="M6.44 8.2a1.74 1.74 0 1 0 0-3.47 1.74 1.74 0 0 0 0 3.47m-1.51 6.08v4.58c0 .16.03.23.2.23h2.62c.16 0 .2-.06.2-.21v-9.2c0-.16-.06-.2-.22-.2H5.16c-.18 0-.22.05-.22.23v4.57m7.74-3.55V9.7c0-.18-.05-.23-.22-.22H10c-.25 0-.25 0-.25.24v9.12c0 .2.06.25.24.25h2.53c.25 0 .25 0 .25-.25v-4.59c0-.32.03-.64.08-.95.12-.64.42-1.17 1.1-1.34.21-.05.44-.06.65-.06.72.01 1.16.35 1.32 1.04.09.38.12.79.12 1.18a371 371 0 0 1 0 4.72c0 .19.06.25.25.25h2.53c.18 0 .25-.05.24-.24 0-1.83.02-3.65-.01-5.47-.01-.6-.1-1.22-.23-1.81-.24-1.06-.86-1.84-1.94-2.14-.38-.1-.77-.13-1.16-.18a3.08 3.08 0 0 0-1.86.37c-.49.27-.88.64-1.2 1.1m-.68-8.71L20.51 2A1.46 1.46 0 0 1 22 3.43v17.15c0 .76-.6 1.39-1.36 1.42H3.5c-.7 0-1.24-.38-1.43-1.03a1.51 1.51 0 0 1-.06-.42V3.45c0-.8.61-1.43 1.42-1.44H12"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="content">
+            <section class="sc-visual">
+                <div class="visual-inner">
+                    <h2 class="title">
+                        <span>Bienvenue au Louvre.</span>
+                        <img src="./assets/images/logo.png" alt>
+                    </h2>
+                    <div class="image-grid">
+                        <div class="image-grid__item pos-1" data-img="100"><img src="./assets/images/intro-img1.jpg" alt></div>
+                        <div class="image-grid__item pos-2" data-img="100"><img src="./assets/images/intro-img8.webp" alt></div>
+                        <div class="image-grid__item pos-3" data-img="-100"><img src="./assets/images/intro-img3.jpg" alt></div>
+                        <div class="image-grid__item pos-4" data-img="30"><img src="./assets/images/intro-img4.jpg" alt></div>
+                        <div class="image-grid__item pos-5" data-img="-40"><img src="./assets/images/intro-img10.webp" alt></div>
+                        <div class="image-grid__item pos-6" data-img="100"><img src="./assets/images/sc-capodimonte_img2.webp" alt></div>
+                        <div class="image-grid__item pos-7" data-img="30"><img src="./assets/images/sc-prints4.webp" alt></div>
+                        <div class="image-grid__item pos-8" data-img="30"><img src="./assets/images/monalisa.webp" alt></div>
+                        <div class="image-grid__item pos-9" data-img="30"><img src="./assets/images/sc-capodimonte_img1.webp" alt></div>
+                        <div class="image-grid__item pos-10" data-img="30"><img src="./assets/images/intro-img5.jpg" alt></div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-monalisa">
+                <div class="inner">
+                    <h2>Meilleur chef-d'œuvre de Léonard de Vinci</h2>
+                    <div class="divider-line"></div>
+                    <div class="flex">
+                        <img src="./assets/images/monalisa.webp" alt="monalisa">
+                        <div class="col-right">
+                            <img src="./assets/images/monalisa2.webp" alt>
+                            <div class="wrap">
+                                <h3>Monna Lisa</h3>
+                                <p>C’est le portrait le plus célèbre du monde, celui de Monna Lisa, l’épouse du marchand d’étoffes florentin, Francesco del Giocondo, surnommée la « Gioconda » francisé La Joconde. Peinte devant un paysage lointain, la Joconde nous regarde, son légendaire sourire aux lèvres. Mais outre son expression, c’est la technique du sfumato qui lui confère cette présence si particulière : Léonard de Vinci a superposé de fines couches de peintures jusqu’à créer des formes tout en atténuant les contours et les contrastes. L’artiste saisit l’instant où Monna Lisa se tourne vers le spectateur. C’est ce mouvement si naturel qui donne une impression de vie au tableau.</p>
+                                <a href="" class="link-box"><span>Voir l'œuvre à la loupe</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-louvre">
+                <h2 class="blind">How to visit the Le Louvre Museum</h2>
+                <div class="sticky">
+                    <div class="inner-louvre">
+                        <img src="./assets/images/louvre3.webp" alt="louvre">
+                        <div class="group-main">
+                            <h3>Bienvenue au Louvre.</h3>
+                            <p>Il y a toujours une bonne raison de venir au Louvre. Les œuvres du palais vous étonnent, vous invitent à rêver, à imaginer. Il est temps de préparer votre visite. Besoin d’inspiration ? Parcours et visites guidées vous font découvrir les lieux emblématiques. Et au cœur de Paris, les jardins vous accueillent. </p>
+                        </div>
+                    </div>
+                    <div class="louvre-page1 hori">
+                        <div class="padding-inner">
+                            <div class="container">
+                                <div class="top-area">
+                                    <div class="line-bar line-page1"></div>
+                                    <h3 class="h3-page1" >chef-d'œuvre antique de la collection royale</h3>
+                                </div>
+                                <div class="bottom-area">
+                                    <p>
+                                        Avec le roi Henri II, le château médiéval se métamorphose en palais Renaissance. Pour cette majestueuse salle de bal, l’architecte Pierre Lescot conçoit un décor à l’antique, avec une tribune pour les musiciens soutenue par des cariatides : ces statues-colonnes inspirées de Rome. Une manière pour l’architecte de faire d’Henri II l’égal de l’empereur romain Auguste<br><br>
+                                        Cet espace change de vocation en 1692 : on y expose les sculptures antiques, auxquelles les souverains s'intéressent à partir de la Renaissance. La Diane chasseresse est l’une des premières à être entrées dans les collections royales. Quant à l’Hermaphrodite endormi, il a été acheté en 1807 par Napoléon Ier. Il faut en faire le tour pour comprendre tous les aspects de la troublante créature.
+                                    </p>
+                                    <img src="./assets/images/sc-louvre_img1.jpg" alt="Hall of Caryatids">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="louvre-page2 hori">
+                        <div class="padding-inner">
+                            <div class="container">
+                                <div class="top-area">
+                                    <div class="line-bar line-page2"></div>
+                                    <h3 class="h3-page2">Aphrodite, dite Vénus de Milo</h3>
+                                </div>
+                                <div class="bottom-area">
+                                    <p class="text-color2">
+                                        La douceur de son regard et son déhanché auraient-ils suffi à la distinguer d’autres déesses sculptées ? Cette Vénus s’est taillée une réputation dès son entrée au Louvre en 1821. Découverte sur l’île grecque de Milo, elle a été offerte à Louis XVIII qui la donne à son tour au Louvre.<br><br></r>Six ans plus tôt, après la défaite de Napoléon à Waterloo, le traité de Vienne avait imposé la restitution de quelque 5 000 œuvres saisies lors des conquêtes. Le Louvre, plus grand musée du monde sous le Premier Empire (1804 – 1815), notamment pour sa collection d’antiques, avait vu ses salles se vider. Ainsi, lorsque la Vénus de Milo arrive, elle est saluée et valorisée comme un chef-d’œuvre. Depuis, elle n’a jamais cessé de séduire, copiée par les artistes ou détournée, de mille façons, par l’art et la culture populaire.
+                                    </p>
+                                    <img src="./assets/images/sc-louvre_img2.webp" alt="Statue of Venus by Milo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="louvre-page3 hori">
+                        <div class="padding-inner">
+                            <div class="container">
+                                <div class="top-area">
+                                    <div class="line-bar line-page3"></div>
+                                    <h3 class="h3-page3">La Victoire de Samothrace</h3>
+                                </div>
+                                <div class="bottom-area">
+                                    <p class="text-color3">
+                                        Du haut de l’escalier Daru, la Victoire de Samothrace est désormais une icône intemporelle de l’art occidental. On l’a découverte dans un sanctuaire de l’île de Samothrace, où les incantations protégeaient des dangers de la mer.<br><br>L’emplacement originel de la statue, mise en scène de manière spectaculaire, révèle qu’elle a été sculptée pour être vue de trois quarts du côté gauche. De là, on apprécie le mouvement de son manteau qui claque au vent et les effets de transparence du « drapé mouillé ».  Une déesse ailée sur un navire de guerre dans un sanctuaire : aucun doute, c’est Niké, la messagère venue annoncer une victoire.
+                                    </p>
+                                    <img src="./assets/images/sc-louvre_img3.webp" alt="a statue of Nikke">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="louvre-page4 hori">
+                        <div class="padding-inner">
+                            <div class="container">
+                                <div class="top-area">
+                                    <div class="line-bar line-page4"></div>
+                                <h3 class="h3-page4">Vénus et Sammisin</h3>
+                                </div>
+                                <div class="bottom-area">
+                                    <p class="text-color4">
+                                        Les fresques du peintre Sandro Botticelli sont arrivées au Louvre en 1882, après avoir été (re)découvertes, en Italie. C’est en 1873, lors de la rénovation d’une villa près de Florence, que sous de la chaux – un mélange minéral dont on enduit les murs pour les blanchir sont apparus ces chefs-d’œuvre de la Renaissance. À cette époque, la demeure appartenait à une riche famille qui avait sans doute commandé les fresques à Botticelli, alors très réputé.<br><br>L’artiste aurait mis en scène la jeune fille de la maison avec des héroïnes de l’Antiquité et un Cupidon, peut-être à l’occasion de ses fiançailles. Sur le mode allégorique, ce sont des idées que Botticelli représente : plus que le cadeau lui-même, c’est le geste du don qui importe.Une autre fresque, tout aussi allégorique, montre un jeune homme que la Prudence présente à la Grammaire entourée des Arts libéraux. On aimerait lui donner le rôle du fiancé…
+                                    </p>
+                                    <img src="./assets/images/sv-louvre_img4.jpg" alt="A young woman who receives gifts from Venus and the Three Mises">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="louvre-page5 hori">
+                        <div class="padding-inner">
+                            <div class="container">
+                                <div class="top-area">
+                                    <div class="line-bar line-page5"></div>
+                                    <h3 class="h3-page5">Psyché ranimée par le baiser de l'Amour</h3>
+                                </div>
+                                <div class="bottom-area">
+                                    <p class="text-color5"> En pénétrant dans la galerie Michel-Ange, c’est peut-être l’œuvre d’un autre sculpteur italien qui attirera votre regard, accroché par l’aile de Cupidon… Antonio Canova s’était fait une spécialité de représenter les épisodes de la mythologie dans des marbres délicats qui ont séduit les poètes romantiques à la fin du 19e siècle.<br><br>Et l’on comprend pourquoi. Canova réussit à incarner un sentiment dans la pierre : c’est la sensation même de l’élan amoureux qui saisit dès qu’on embrasse du regard l’inséparable duo… Canova n’a pas seulement copié un modèle antique, il en a travaillé la mise en scène de manière quasi chorégraphique : il a pertinemment choisi le moment où la déesse revient à la vie. Et c’est ce mouvement qui nous séduit aujourd’hui encore, au-delà de l’histoire universelle qu’il raconte. </p>
+                                    <img src="./assets/images/sc-louvre_img5.webp" alt="Psyche revived by Eros' kiss">
+                                    <a href="" class="link-area">
+                                        <strong>En savoir plus sur l'œuvre</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <
+            </section>
+            <section class="sc-capodimonte">
+                <div class="inner">
+                    <div class="images-wrapper">
+                        <div class="images-1" data-scroll-y="-20">
+                            <img src="./assets/images/sc-capodimonte_img1.webp" alt="Portrait of a Young Woman known as Antea">
+                        </div>
+                        <div class="images-2" data-scroll-y="30">
+                            <img src="./assets/images/sc-capodimonte_img2.webp" alt="Dana-eh">
+                        </div>
+                        <div class="images-3" data-scroll-y="40">
+                            <img src="./assets/images/sc-capodimonte_img3.webp" alt="Pisa Altarpiece">
+                        </div>
+                        <div class="images-4" data-scroll-y="-20">
+                            <img src="./assets/images/sc-capodimonte_img4.webp" alt="Valdasare Peruzzi">
+                        </div>
+                        <div class="images-5" data-scroll-y="-30">
+                            <img src="./assets/images/sc-capodimonte_img5.webp" alt="Atalanta and Hippomenes">
+                        </div>
+                    </div>
+                    <div class="group-top">
+                        <h2 class="h2-text">
+                            Le <span class="header-text1">Louvr</span>e invite le
+                            <br>
+                            musée de <span class="header-text2">Capodimonte</span>
+                        </h2>
+                    </div>
+                    <div class="group-bottom">
+                        <p> Ancienne résidence de chasse des souverains Bourbon, le palais (la Reggia en italien) abrite aujourd’hui l’un des plus grands musées d’Italie et l’une des plus importantes pinacothèques d’Europe, tant par le nombre que par la qualité exceptionnelle des œuvres conservées. Capodimonte est l’un des seuls musées de la péninsule dont les collections permettent de présenter l’ensemble des écoles de la peinture italienne. Il abrite également le deuxième cabinet de dessins d’Italie après celui des Offices ainsi qu’un ensemble remarquable de porcelaines. </p>
+                        <a class="link-area">
+                            <strong>*Visite du musée Capodimonte →</strong>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-video">
+                <h2 class="blind">Louvre Introduction Video</h2>
+                <img src="./assets/images/logo.png" alt>
+                <div class="dimmed"></div>
+                <video loop="" autoplay="" muted="" playsinline="" data-object-fit="cover"> <source src="https://api-www.louvre.fr/sites/default/files/videos/video_2_1_2048/video.mp4" type="video/mp4"> </video>
+            </section>
+            <section class="sc-thegreat">
+                <div class="sticky">
+                    <div class="group-text">
+                        <h2>La galerie du Bord-de-l’Eau</h2>
+                        <p class="col-left desc"> Devenu roi de France, Henri IV engage de grands travaux pour le Louvre dès 1595. Il veut ainsi asseoir son nouveau pouvoir en s’inscrivant dans la lignée des grands souverains bâtisseurs. Pour donner plus d’ampleur et de majesté au vieux château des rois de France, il décide de créer un grand ensemble architectural en reliant le Louvre à l’élégant palais des Tuileries (aujourd’hui disparu) que la reine Catherine de Médicis avait fait construire quelques décennies auparavant. </p>
+                    </div>
+                    <div class="cardimg-wrap">
+                        <ul class="card-list">
+                            <li class="card-item"><div class="img-wrap"><img src="./assets/images/sc-prints1.webp" alt="Léonard de Vinci, Portrait d'une dame de la cour de Milan, dit La belle Ferronnière"></div></li>
+                            <li class="card-item"><div class="img-wrap"><img src="./assets/images/sc-prints2.webp" alt="La Vierge à l'Enfant avec le petit saint Jean-Baptiste, dite La Belle Jardinière"></div></li>
+                            <li class="card-item"><div class="img-wrap"><img src="./assets/images/sc-prints3.webp" alt="L'Hiver"></div></li>
+                            <li class="card-item"><div class="img-wrap"><img src="./assets/images/sc-prints4.webp" alt="Le Printemps"></div></li>
+                            <li class="card-item"><div class="img-wrap"><img src="./assets/images/sc-prints5.webp" alt=" Portrait d'homme, dit Le Condottiere"></div></li>
+                        </ul>
+                        <ul class="painter-list">
+                            <li class="painter-item">Leonardo di ser Piero da Vinci</li>
+                            <li class="painter-item">Raffaello Santi, dit Raphaël</li>
+                            <li class="painter-item">Giuseppe Arcimboldo</li>
+                            <li class="painter-item">Giuseppe Arcimboldo</li>
+                            <li class="painter-item">Antonello Da Messina</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient"></div>
+                </div>
+            </section>
+            <section class="sc-slide">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="top-text">Les Odyssées du Louvre</div>
+                        <p>Le musée du Louvre et France Inter s’associent sur une série de podcasts à destination des 7-12 ans autour des œuvres et des personnalités du plus grand musée du monde. Plongez dans les trésors de l’histoire du Louvre pour (re)découvrir des œuvres connues ou moins connues du musée dont les parcours croisent des épisodes marquants de l’histoire de France.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="top-text">Contes du Louvre</div>
+                        <p>Suivez-nous au cœur des collections du Louvre et laissez-vous conter les histoires qui se cachent derrière les œuvres !</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="top-text">Les Enquêtes du Louvre</div>
+                        <p>Dans l’ombre de La Joconde et de la Vénus de Milo s’accomplissent de terribles forfaits : assassinats, vols, enlèvements, empoisonnements… En compagnie de Romane Bohringer, revisitez les chefs-d’œuvre du musée à la manière d’une enquête policière pour en élucider tous les mystères.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="top-text">A la découverte du Louvre</div>
+                        <p>Partez à la découverte du Louvre et laissez-vous guider à travers son histoire, ses collections et ses chefs-d'œuvre.</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="top-text">Conférences</div>
+                        <p>Pour écouter, voir ou revoir une sélection de conférences captées à l'Auditorium Michel Laclotte, en lien avec l'actualité des musées, de l'histoire de l'art et de la muséographie.</p>
+                      </div>
+                    </div>
+                    <div class="control">
+                        <div class="btn-prev">
+                            <span class="blind">Previous</span>
+                            <a href=""><img alt="forward arrow" loading="lazy" src="https://uploads-ssl.webflow.com/63d7264acdfd665f1c235324/64007061aa417401c2d9d0b5_Vector%202.svg"> </a>
+                        </div>
+                        <div class="btn-next">
+                            <span class="blind">next</span>
+                            <a href=""> <img alt="backwards arrow" loading="lazy" src="https://uploads-ssl.webflow.com/63d7264acdfd665f1c235324/640070617d68f8a49f7c5b79_Vector%203.svg"> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sc-inputemail">
+                <div class="group-text">
+                    <h2>RESTONS EN CONTACT</h2>
+                    <p>Recevez des nouvelles du Louvre selon vos goûts !</p>
+                </div>
+                <a href=""><svg viewBox="0 0 20 20"focusable="false"><path d="M17.5 3.75h-15c-.69 0-1.25.56-1.25 1.25v10c0 .69.56 1.25 1.25 1.25h15c.69 0 1.25-.56 1.25-1.25V5c0-.69-.56-1.25-1.25-1.25zM16.12 5 10 9.24 3.87 5h12.25zM2.5 15V5.57l7.14 4.94c.22.15.5.15.72 0l7.14-4.94V15h-15z"></path></svg> Inscrivez-vousp </a>
+                <img src="./assets/images/sc-inputemail.webp" alt>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="inner-logo">
+                    <a href="" class="louvrelogo"><img src="./assets/images/logo.png"></a>
+                    <div class="spacer-6em"></div>
+                    <div class="sns-list">
+                        <a href="">
+                            <span class="blind">Facebook</span>
+                            <svg viewBox="0 0 24 24"><path d="m9.78 22-.03-8.75H6V9.5h3.75V7c0-3.37 2.09-5 5.1-5 1.44 0 2.68.1 3.04.15v3.53H15.8c-1.63 0-1.95.78-1.95 1.92v1.9h4.65l-1.25 3.75h-3.4V22H9.78z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Instagram</span>
+                            <svg viewBox="0 0 24 24"><path d="M13.02 2c1.8 0 2.18.02 3.1.06 1.06.05 1.79.22 2.42.47.66.25 1.22.6 1.77 1.15.56.55.9 1.11 1.16 1.77.25.63.41 1.36.46 2.43.05.95.06 1.32.06 3.32v1.6c0 2-.01 2.37-.06 3.32a7.33 7.33 0 0 1-.46 2.42c-.26.66-.6 1.22-1.15 1.77-.56.56-1.12.9-1.78 1.16-.63.25-1.36.41-2.42.46-.95.05-1.33.06-3.33.06H11.2c-2 0-2.37-.01-3.33-.06a7.34 7.34 0 0 1-2.42-.46 4.91 4.91 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.16-1.78 7.35 7.35 0 0 1-.46-2.42 55.2 55.2 0 0 1-.06-3.1v-2.05c0-1.8.02-2.18.06-3.1.05-1.06.22-1.79.46-2.42.26-.66.6-1.22 1.16-1.77a4.7 4.7 0 0 1 1.77-1.15 7.35 7.35 0 0 1 2.42-.47c.92-.04 1.3-.06 3.1-.06zm.02 1.8h-2.09c-1.73 0-2.1.02-3 .06-.97.04-1.5.2-1.85.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.13.35-.3.88-.34 1.86-.04.9-.06 1.26-.06 3v2.08c0 1.74.02 2.1.06 3 .04.97.2 1.5.34 1.85.18.47.4.8.75 1.15.35.35.68.57 1.15.75.35.14.88.3 1.86.34.97.05 1.32.06 3.48.06h1.11c2.17 0 2.51-.01 3.49-.06.97-.04 1.5-.2 1.85-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.35.3-.88.34-1.85.05-.98.06-1.32.06-3.49v-1.1c0-2.17-.01-2.52-.06-3.5-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 0 0-.75-1.15 3.09 3.09 0 0 0-1.15-.75 5.6 5.6 0 0 0-1.85-.34 54.1 54.1 0 0 0-3-.06zM12 6.86a5.13 5.13 0 1 1 0 10.27 5.13 5.13 0 0 1 0-10.27zm0 1.8a3.33 3.33 0 1 0 0 6.67 3.33 3.33 0 0 0 0-6.67zm5.33-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Twitter</span>
+                            <svg viewBox="0 0 24 24"><path d="M22 5.88c-.75.37-1.5.5-2.38.62.88-.5 1.5-1.25 1.75-2.25a8.2 8.2 0 0 1-2.62 1 4.36 4.36 0 0 0-3-1.25c-2.13 0-4 1.88-4 4.13 0 .37 0 .62.13.87a11.5 11.5 0 0 1-8.5-4.25 3.8 3.8 0 0 0-.5 2.13 4.1 4.1 0 0 0 1.87 3.37c-.63 0-1.25-.25-1.88-.5 0 2 1.38 3.63 3.25 4-.37.13-.75.13-1.12.13-.25 0-.5 0-.75-.13.5 1.63 2 2.88 3.88 2.88A7.95 7.95 0 0 1 3 18.38H2a12.2 12.2 0 0 0 6.25 1.87c7.5 0 11.63-6.25 11.63-11.63v-.5A7.27 7.27 0 0 0 22 5.88z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">YouTube</span>
+                            <svg viewBox="0 0 24 24"><path d="M10.03 15.38V8.62L15.97 12l-5.94 3.38zm13.2-8.88a2.85 2.85 0 0 0-2-2.02C19.46 4 12.35 4 12.35 4s-7.1 0-8.87.48a2.85 2.85 0 0 0-2 2.02C1 8.28 1 12 1 12s0 3.72.47 5.5a2.85 2.85 0 0 0 2.01 2.02c1.77.48 8.88.48 8.88.48s7.1 0 8.87-.48a2.85 2.85 0 0 0 2-2.02c.48-1.78.48-5.5.48-5.5s0-3.72-.47-5.5z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Pinterest</span>
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.64 19.3c-.1-.79-.17-2 .03-2.87l1.17-4.97s-.3-.6-.3-1.48c0-1.39.81-2.42 1.82-2.42.85 0 1.27.64 1.27 1.4 0 .86-.55 2.14-.84 3.33-.24 1 .5 1.81 1.49 1.81 1.78 0 3.14-1.87 3.14-4.57 0-2.4-1.72-4.06-4.18-4.06a4.33 4.33 0 0 0-4.52 4.33c0 .86.33 1.78.74 2.28.08.1.09.19.06.29l-.28 1.13c-.04.18-.15.23-.33.14-1.26-.59-2.04-2.4-2.04-3.88 0-3.15 2.3-6.04 6.62-6.04 3.46 0 6.17 2.46 6.17 5.77 0 3.45-2.18 6.22-5.2 6.22-1 0-1.96-.53-2.28-1.15l-.63 2.37a11 11 0 0 1-1.24 2.63A10 10 0 1 0 12 2z"></path></svg>
+                        </a>
+                        <a href="">
+                            <span class="blind">Linkedin</span>
+                            <svg viewBox="0 0 24 24"><path d="M6.44 8.2a1.74 1.74 0 1 0 0-3.47 1.74 1.74 0 0 0 0 3.47m-1.51 6.08v4.58c0 .16.03.23.2.23h2.62c.16 0 .2-.06.2-.21v-9.2c0-.16-.06-.2-.22-.2H5.16c-.18 0-.22.05-.22.23v4.57m7.74-3.55V9.7c0-.18-.05-.23-.22-.22H10c-.25 0-.25 0-.25.24v9.12c0 .2.06.25.24.25h2.53c.25 0 .25 0 .25-.25v-4.59c0-.32.03-.64.08-.95.12-.64.42-1.17 1.1-1.34.21-.05.44-.06.65-.06.72.01 1.16.35 1.32 1.04.09.38.12.79.12 1.18a371 371 0 0 1 0 4.72c0 .19.06.25.25.25h2.53c.18 0 .25-.05.24-.24 0-1.83.02-3.65-.01-5.47-.01-.6-.1-1.22-.23-1.81-.24-1.06-.86-1.84-1.94-2.14-.38-.1-.77-.13-1.16-.18a3.08 3.08 0 0 0-1.86.37c-.49.27-.88.64-1.2 1.1m-.68-8.71L20.51 2A1.46 1.46 0 0 1 22 3.43v17.15c0 .76-.6 1.39-1.36 1.42H3.5c-.7 0-1.24-.38-1.43-1.03a1.51 1.51 0 0 1-.06-.42V3.45c0-.8.61-1.43 1.42-1.44H12"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                <ul class="link-list">
+                    <li class="headline"><a href="">À PROPOS</a></li>
+                    <li><a href="">L'établissement public</a></li>
+                    <li><a href="">Le Louvre en France</a></li>
+                    <li><a href="">Règlement de visite</a></li>
+                    <li><a href="">Prêts et dépôts</a></li>
+                    <li><a href="">Commande publique </a></li>
+                    <li><a href="">Actes administratifs</a></li>
+                </ul>
+                <ul class="link-list">
+                    <li class="headline"><a href="">Nos sites</a></li>
+                    <li><a href="">Billetterie</a></li>
+                    <li><a href="">Boutique en ligne</a></li>
+                    <li><a href="">Collections</a></li>
+                    <li><a href="">Corpus</a></li>
+                    <li><a href="">Don en ligne</a></li>
+                    <li><a href="">Éditions</a></li>
+                    <li><a href="">Petite Galerie</a></li>
+                    <li><a href="">Presse</a></li>
+                </ul>
+                <ul class="link-list">
+                    <li class="headline"><a href="">Nous contacter</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Contacts</a></li>
+                    <li><a href="">Donnez-nous votre avis !</a></li>
+                    <li><a href="">Offres d’emploi - concours</a></li>
+                    <li><a href="">Privatisations et tournages</a></li>
+                    <li><a href="">Louvre Conseil</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

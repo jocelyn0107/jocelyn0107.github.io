@@ -391,11 +391,14 @@ header>.right_menus .contact_wrap{
     font-weight: 300;
     letter-spacing: 0;
 }
+header>.right_menus .btn_login,
 header>.right_menus .btn_contact{
+    min-width: 140px;
     padding: 6px 24px;
     border: 1px solid var(--color-static-white);
     border-radius: 30px;
     cursor: pointer;
+    text-align: center;
     transition: box-shadow 0.2s;
 }
 .hamburger{
@@ -497,7 +500,7 @@ header>.right_menus.on{
 .menu_item .mobile_menu:hover a::before{
     width: calc(100% + 50px);
 }
-.mo_btn_contact{
+.mo_btn_contact, .mo_btn_login{
     cursor: pointer;
     padding: 6px 36px;
     border: 1px solid var(--color-static-white);
@@ -674,6 +677,7 @@ main .app_wrap{
 .btn_app img{
     width: 18px;
 }
+.btn_login:hover, .mo_btn_login:hover,
 .btn_app:hover, .btn_contact:hover, .mo_btn_contact:hover{
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
 }
@@ -1808,7 +1812,7 @@ table caption{
     font-size: 13px;
     color: var(--color-gray-500);
 }
-.board_table .badge div{
+.badge div{
     display: inline-block;
     padding: 0px 6px;
     font-size: 13px;
@@ -1816,7 +1820,7 @@ table caption{
     border-radius: 10px;
     color: var(--primary-color);
 }
-.board_table .badge.notice div{
+.badge.notice div{
     color: var(--color-static-white);
     background-color: var(--primary-color);
 }
@@ -1825,7 +1829,7 @@ table caption{
     justify-content: space-between;
 }
 .btn_write_login button{
-    width: 140px;
+    width: 130px;
     height: 40px;
     background-color: transparent;
     border: 1px solid var(--primary-color);
@@ -1840,6 +1844,110 @@ table caption{
 .board_02 .mobile .board_top .search_area{
     width: 100%;
     max-width: 400px;
+}
+.tab_menu {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+    padding: 3px;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+}
+.tabs {
+    display: flex;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    background: var(--color-static-white);
+}
+.tab {
+    flex: 1;
+    padding: 8px 0;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
+    color: var(--color-gray-500);
+}
+.tab.active {
+    color: var(--color-static-white);
+}
+.tab_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% / 3);
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+.board_wrap {
+    overflow: hidden;
+}
+.board_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    transition: transform 0.3s ease-in-out;
+}
+.board_list {
+    width: 100%;
+    min-width: 100%;
+    opacity: 0;
+    height: 0;
+}
+.board_list.active{
+    opacity: 1;
+    height: auto;
+}
+.mobile .badge{
+    margin-bottom: 6px;
+}
+.mobile .board_list .title{
+    font-size: 17px;
+}
+.mobile .board_list .contents{
+    color: var(--color-gray-500);
+    margin: 6px 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mobile .board_list .date_comments_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile .board_list .date_comments_area>div{
+    display: flex;
+}
+.date_comments_area{
+    color: var(--color-gray-500);
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-gray-500);
+}
+.date_comments_area .view{
+    margin-left: 10px;
+}
+.date_comments_area .img_comments>div>div{
+    margin-left: 5px;
+}
+.date_comments_area .img_comments .comments{
+    margin-left: 10px;
+}
+.mobile .board_list .date_comments_area>div.img_comments>div{
+    display: flex;
+    align-items: center;
+}
+.mobile .board_list .list:last-of-type .date_comments_area:last-of-type{
+    border-bottom: 0;
 }
 
 

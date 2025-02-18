@@ -11,7 +11,7 @@ $(window).on("scroll", handleHeaderClass);
 handleHeaderClass();
 
 AOS.init();
-$(document).ready(function(){
+$(document).ready(function () {
     // 모바일
     $('.hamburger').on('click', function () {
         $('.mo_menu_wrap').addClass('on');
@@ -23,13 +23,13 @@ $(document).ready(function(){
     });
 
     // 컨택트
-    $('.btn_contact, .mo_btn_contact').on('click', function(){
+    $('.btn_contact, .mo_btn_contact').on('click', function () {
         $('#modalContact').fadeIn();
         $('body').addClass('no_scroll');
     });
 
     // 모달 닫았을 때
-    $('.modal_close').on('click', function(){
+    $('.modal_close').on('click', function () {
         $('.modal_popup').fadeOut();
         $('body').removeClass('no_scroll');
     });
@@ -49,8 +49,8 @@ $(document).ready(function(){
         const scrollTop = $(window).scrollTop();
         const windowHeight = $(window).height();
         const scrollBottom = scrollTop + windowHeight; // 화면 하단의 스크롤 위치
-        
-        $('.about_03').each(function(){
+
+        $('.about_03').each(function () {
             const about03Top = $(this).offset().top;
             const starLine = $(this).find('.star_line');
             const stars = $(this).find('.star_01');
@@ -66,7 +66,7 @@ $(document).ready(function(){
             }
         });
 
-        $('.price_02').each(function(){
+        $('.price_02').each(function () {
             const price02Top = $(this).offset().top;
             const starLine = $(this).find('.star_line');
             const stars = $(this).find('.star_01');
@@ -82,4 +82,27 @@ $(document).ready(function(){
             }
         });
     });
+
+    // 탭메뉴
+    const tabs = document.querySelectorAll(".tab");
+    const tabBackground = document.querySelector(".tab_background");
+    const boardLists = document.querySelectorAll('.board_list');
+    const boardContainer = document.querySelector(".board_container");
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", function () {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            tabBackground.style.transform = `translateX(${index * 100}%)`;
+
+            boardLists.forEach(list => list.classList.remove('active'));
+            // 클릭된 탭에 해당하는 board_list에 active 클래스 추가
+            boardLists[index].classList.add('active');
+            // board_list 슬라이드 이동
+            boardContainer.style.transform = `translateX(-${index * 100}%)`;
+        });
+    });
+
+    // 초기 상태 설정
+    tabs[0].classList.add("active");
 });

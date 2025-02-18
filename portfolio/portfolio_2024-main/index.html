@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HaeHyun's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="Website"/>
+	<meta property="og:title" content="이해현, 2024 포트폴리오"/>
+	<meta property="og:url" content="http://hh5039.dothome.co.kr/portfolio/index.html"/>
+	<meta property="og:description" content="Portfolio"/>
+	<meta property="og:image" content="https://i.ibb.co/GTSpnsh/opengraph.png"/>
+	<meta property="og:site_name" content="이해현 | 20203 포트폴리오"/>
+
+    <link rel="shortcut icon" href="https://i.ibb.co/JKq7RhF/20241027-014959.jpg">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/js.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <section class="sc-fixation">
+            <a href="" class="logo"><span>HYUN</span></a>
+            <div class="group-producer">
+                <span class="blind">2024년 이해현 제작</span>
+                <span class="left">2024<sub>©</sub></span>
+                <span>—</span>
+                <span>Lee-HaeHyun All Rights Reserved</span>
+            </div>
+            <div class="time-area">
+                <div class="inner kor">
+                    <span class="blind">한국 현재 시간</span>
+                    <em>KOR</em>
+                    <div class="time" id="koTime">17:39:20</div>
+                    <span class="dot"><span class="dot-in"></span></span>
+                </div>
+                <div class="inner nyc">
+                    <span class="blind">뉴욕 현재 시간</span>
+                    <em>NYC</em>
+                    <div class="time" id="nyTime">17:39:20</div>
+                    <span class="dot"><span class="dot-in"></span></span>
+                </div>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#scAbout">About Me</a></li>
+                    <li><a href="#scMain">Main Project</a></li>
+                    <li><a href="#scSide">Side Project</a></li>
+                    <li><a href="#scJavascript">JS</a></li>
+                    <li><a href="#scIntro">Go TOP</a></li>
+                </ul>
+            </nav>
+            <div class="m-gnb-wrap">
+                <div class="m-gnb">
+                    <button class="open" aria-expanded="true">
+                        <div class="btn menu">
+                            <span>Menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="none">
+                                <path d="M2 5H18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 11H18" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="btn close">
+                            <span>Close</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 16" fill="none">
+                                <path d="M5.00098 3.00098L15.001 13.001" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.00098 12.999L15.001 2.99902" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <a href="#scIntro" class="talk">
+                        <span>Go TOP</span>
+                    </a>
+                </div>
+            </div>
+            <div class="open-menu">
+                <ul class="m-menu-list">
+                    <li class="m-menu-item">
+                        <a href="#scAbout">
+                            <span>About Me</span>
+                            <i> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white"/> </svg> </i>
+                        </a>
+                    </li>
+                    <li class="m-menu-item">
+                        <a href="#scMain">
+                            <span>Main Project</span>
+                            <i> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white"/> </svg> </i>
+                        </a>
+                    </li>
+                    <li class="m-menu-item">
+                        <a href="#scSide">
+                            <span>Side Project</span>
+                            <i> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white"/> </svg> </i>
+                        </a>
+                    </li>
+                    <li class="m-menu-item">
+                        <a href="#scJavascript">
+                            <span>JavaScript</span>
+                            <i> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white"/> </svg> </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        <div class="curser-wrap">
+            <div class="curser-inner">
+                <div class="cursor"></div><i></i>
+            </div>
+            <div class="learn-more">
+                <span>more view</span>
+            </div>            
+        </div>
+        <section class="sc-intro" id="scIntro">
+            <h2 class="blind">메인페이지</h2>
+            <div class="content">
+                <div class="group-text">
+                    <span class="blind">이해현 2024 포트폴리오</span>
+                    <span class="word _1">
+                        <span class="char">P</span>
+                        <span class="char">U</span>
+                        <span class="char">B</span>
+                        <span class="char">L</span>
+                        <span class="char">I</span>
+                        <span class="char">S</span>
+                        <span class="char">H</span>
+                        <span class="char">E</span>
+                        <span class="char">R</span>
+                    </span>
+                    <span class="word serif">
+                        <span class="char">P</span>
+                        <span class="char">o</span>
+                        <span class="char">r</span>
+                        <span class="char">t</span>
+                        <span class="char">f</span>
+                        <span class="char">o</span>
+                        <span class="char">l</span>
+                        <span class="char">i</span>
+                        <span class="char">o</span>
+                    </span>
+                </div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner">
+                    <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.mp4" data-wf-ignore="true"><source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.webm" data-wf-ignore="true"></video>
+                </div>
+            </div>
+        </section>
+        <section class="sc-about" id="scAbout">
+            <h2>About Me</h2>
+            <p class="top-text">Learning, Growing, and Developing </p>
+            <div class="bottom-text">
+                <p>저는 어릴 때부터 궁금한 게 생기며 잠을 설칠 정도로 호기심이 강한 아이였습니다. 지금도 새로운 것을 접하면 대체 어떤 식으로 한 거지? 라는 생각과 동시에 나도 할 수 있어! 라는 생각으로 끊임없이 도전하고 발전하려고 노력하고 있습니다.</p>
+                <p>또한 모든 일에는 기본기가 중요하다고 생각이 듭니다. 아무리 잘한다 해도 기본기가 없는 것은 언제 무너져도 이상하지 않는 철근 없는 아파트라고 생각이 듭니다. 기초 공사가 탄탄한! 마크업을 하려고 노력하며 더불어 효율적인 CSS사용과 시선을 사로잡는 동적인 Javascript로 시선을 사로잡고 다양한 프레임워크와 라이브러리를 배우며 성장하는 도전적인 사람이 되고 싶습니다</p>
+            </div>
+        </section>
+        <section class="sc-mainproject">
+            <h2>Main Project</h2>
+            <div class="inner-sticky">
+                <div class="group-item _1" id="scMain">
+                    <div class="img-wrap">
+                        <div class="cont">
+                            <h3><span class="serif">Clones</span>Tectonic Ventures</h3>
+                            <div class="group-bottom">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://leehh0203.github.io/tectonicventures/
+                                        " class="link" target="_blank">
+                                            <span>GO SITE</span>
+                                            <div class="svg-wrap"> <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> <path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path> </svg> </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@hh5039/Tectonic-Ventures" target="_blank" class="link mouse-event"> <span>CODE REVIEW</span> </a>
+                                    </li>
+                                </ul>
+                                <ul class="toll-list">
+                                    <!-- <li><span>작업기간: 5일</span></li> -->
+                                    <li><span>기여도: 100%</span></li>
+                                    <li><span>#scss</span></li>
+                                    <li><span>#js</span></li>
+                                    <li><span>#gsap</span></li>
+                                    <li><span>#scrollTrigger</span></li>
+                                    <li><span>#Draggable</span></li>
+                                    <li><span>#Lottie</span></li>
+                                </ul>
+                                <p>SCSS를 사용하였으며 GSAP 활용에 중점을 두고 클론코딩한 <span>반응형</span>작업입니다</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <div class="mask"></div>
+                            <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://uploads-ssl.webflow.com/6481baa8b4e61d7cb8a9f0a0/64980d39c97910472fbfa13f_HeroVideo_04_compressed-transcode.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-item pin _2">
+                    <div class="img-wrap">
+                        <div class="cont">
+                            <h3><span class="serif">Clones</span>Keywordlab</h3>
+                            <div class="group-bottom">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://leehh0203.github.io/keywordlab/" target="_blank" class="link" >
+                                            <span>Go SITE</span>
+                                            <div class="svg-wrap"><svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> <path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path></svg></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@hh5039/%ED%82%A4%EC%9B%8C%EB%93%9C%EB%9E%A9-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9-8qae5snc" target="_blank" class="link mouse-event"><span>CODE REVIEW</span> </a>
+                                    </li>
+                                </ul>
+                                <ul class="toll-list">
+                                    <!-- <li><span>작업기간: 4일</span></li> -->
+                                    <li><span>기여도: 100%</span></li>
+                                    <li><span>#js</span></li>
+                                    <li><span>#gsap</span></li>
+                                    <li><span>#fullpage</span></li>
+                                    <li><span>#Swiper</span></li>
+                                </ul>
+                                <p>키워드랩 클론 코딩을 통한 JS로 활용에 중점을 둔 <span>반응형</span>작업입니다</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <div class="mask"></div>
+                            <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/641319fe73926c0e5bc81ccf_ver 2-transcode.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-item pin _3">
+                    <div class="img-wrap">
+                        <div class="cont">
+                            <h3><span class="serif">create</span>Louvre Museum</h3>
+                            <div class="group-bottom">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://leehh0203.github.io/louvremuseum/" target="_blank" class="link">
+                                            <span>Go SITE</span>
+                                            <div class="svg-wrap"> <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> <path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path> </svg> </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@hh5039/%EB%A3%A8%EB%B8%8C%EB%A5%B4%EB%B0%95%EB%AC%BC%EA%B4%80-%EB%A6%AC%EB%89%B4%EC%96%BC-scffu2ie" target="_blank" class="link mouse-event"><span>CODE REVIEW</span> </a>
+                                    </li>
+                                </ul>
+                                <ul class="toll-list">
+                                    <li><span>기여도: 100%</span></li>
+                                    <!-- <li><span>작업기간: 4일</span></li> -->
+                                    <li><span>#js</span></li>
+                                    <li><span>#gsap</span></li>
+                                    <li><span>#scrollTrigger</span></li>
+                                    <li><span>#lenis</span></li>
+                                    <li><span>#Swiper</span></li>
+                                </ul>
+                                <p>루브르박물관을 리뉴얼한 사이트이며 GSAP을 사용해 다양한 애니메이션 효과에 중점을 둔 사이트입니다</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <div class="mask"></div>
+                            <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://api-www.louvre.fr/sites/default/files/videos/video_2_1_2048/video.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-item pin _4">
+                    <div class="img-wrap">
+                        <div class="cont">
+                            <h3><span class="serif">Clones</span>Kituramimall</h3>
+                            <div class="group-bottom">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="https://leehh0203.github.io/kituramimall/" target="_blank" class="link">
+                                            <span>Go SITE</span>
+                                            <div class="svg-wrap"> <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> <path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path> </svg> </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://velog.io/@hh5039/%EA%B7%80%EB%9A%9C%EB%9D%BC%EB%AF%B8%EB%AA%B0-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9" target="_blank" class="link mouse-event"><span>CODE REVIEW</span> </a>
+                                    </li>
+                                </ul>
+                                <ul class="toll-list">
+                                    <li><span>기여도: 100%</span></li>
+                                    <!-- <li><span>작업기간: 2일</span></li> -->
+                                    <li><span>#js</span></li>
+                                    <li><span>#Swiper</span></li>
+                                    <li><span>#json</span></li>
+                                </ul>
+                                <p><span>귀뚜라미모바일</span> 코딩을 통한 JSON 데이터 형식과 Fetch 문법으로 데이터 연동을 하였습니다</p>
+                            </div>
+                        </div>
+                        <div class="video-wrap">
+                            <div class="mask"></div>
+                            <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets-global.website-files.com/63f5d378a903c2a12583ce2f/64141d4ec8908bf27b1f08c8_ph2-transcode.mp4"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-pagenation">
+                    <div class="pagenation_wrap">
+                        <ul>
+                            <li>01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                            <li>05</li>
+                            <li>06</li>
+                        </ul>
+                    </div>
+                    <span>Main project</span>
+                    <span class="m-text">Main.</span>
+                </div>
+            </div>
+        </section>
+        <section class="sc-sideproject" id="scSide">
+            <h2>Side project</h2>
+            <p class="top-text">클론 코딩을 통한 시멘틱 마크업의 중요성과 Class Naming 작성법, 접근성을 위한 IR기법과 효율적인 이미지 로딩을 위한 IS기법을 중점으로 두며 Swiper 라이브러리와 제이쿼리를 통한 다양한 스크립트 구현하였습니다</p> </p>
+            <div class="flex-wrap">
+                <div class="img-inner seoul">
+                    <a href="https://leehh0203.github.io/seoulcityhall/" target="_blank" class="img-wrap mouse-event">
+                        <div class="img img-event"></div>
+                        <div class="mask"></div>
+                        <span class="img-logo">Seoul City Hall</span>
+                    </a>
+                    <a href="https://velog.io/@hh5039/%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%B2%AD-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9-ga7mbfs2" target="_blank" class="subtext mouse-event">CODE REVIEW</a>
+                </div>
+                <div class="img-inner naver">
+                    <a href="https://leehh0203.github.io/naver/" target="_blank" class="img-wrap mouse-event">
+                        <div class="img img-event"></div>
+                        <div class="mask"></div>
+                        <div class="img-logo"> naver </div>
+                    </a>
+                    <a href="https://velog.io/@hh5039/NAVERmain-%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9-y0ugy606" target="_blank" class="subtext mouse-event">CODE REVIEW</a>
+                </div>
+            </div>
+            <!-- <div class="link-box">
+                <a href=""><span>View all projects</span></a>
+            </div> -->
+        </section>
+        <section class="sc-javascript" id="scJavascript">
+            <h2>/ JavaScript</h2>
+
+            <ul class="project-list">
+                <li class="project-item mouse-event">
+                    <a href="https://codepen.io/tzmhudws-the-decoder/pen/ZEPBVOp" target="_blank">
+                        <div class="col-left">
+                            <strong>슬라이드 플러그인 제작</strong>
+                            <span>/ 2024</span>
+                        </div>
+                        <div class="col-right">
+                            <p>JS를 공부하기 위한 과정으로 무한반복,오토플레이,버튼,페이지네이션,스피드,넓이,슬라이드 개수등 플러그인을 제작하였습니다.</p>
+                        </div>
+                        <div class="item-img">
+                            <img src="./assets/img/swiper.png" alt="code">
+                        </div>
+                    </a>
+                </li>
+                <li class="project-item mouse-event">
+                    <a href="https://leehh0203.github.io/canvas_tab/" target="_blank">
+                        <div class="col-left">
+                            <strong>Canvas를 활용한<br> Scroll인터렉션</strong>
+                            <span>/ 2024</span>
+                        </div>
+                        <div class="col-right">
+                            <p>라이브러리 의존 없이 JS만 사용하여 Tab구현과 Scroll을 사용한 Canvas를 구현하였습니다.</p>
+                        </div>
+                        <div class="item-img">
+                            <img src="./assets/img/tab.png" alt="scroll">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- <div class="link-box">
+                <a href=""><span>View all articles</span></a>
+            </div> -->
+        </section>
+    </main>
+    <footer class="footer">
+        <h2>Lee Hae hyun</h2>
+        <div class="group-bottom">
+            <div class="col-left">
+                <div class="info-box">
+			 <a href="mailto:leemisi@naver.com">E-mail: leemisi@naver.com</a>
+<!-- 			 <a href="tel:"></a> -->
+                    <div class="sns-list">
+                        <a href="https://velog.io/@hh5039?tag=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4" target="_blank"><img src="./assets/img/velog-icon.png" alt="velog"></a>
+                        <a href="https://github.com/leehh0203?tab=repositories" target="_blank"><img src="./assets/img/free-icon-github-logo-25231.png" alt="github"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="producer">
+                    <div class="group-producer">
+                        <span>© 2024</span>
+                    </div>
+                    <a href="">Lee-HaeHyun All Rights Reserved</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg">
+            <div class="video-wrap">
+                <video loop="" autoplay="" style="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.mp4" data-wf-ignore="true"><source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.webm" data-wf-ignore="true"></video>
+            </div>  
+            <div class="video-overlay"></div>
+        </div>
+    </footer>
+</body>
+</html>

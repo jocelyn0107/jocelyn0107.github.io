@@ -1,0 +1,137 @@
+@import './fonts.css';
+@import './reset.css';
+@import './common.css';
+
+
+/* nav menu*/
+.gnb{
+    display: flex;
+    position: fixed;
+    padding-left: 5em;
+    right: 0;
+    z-index: 99;
+    height: 100%;
+    width: 30%;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    box-shadow: 0 0 30px rgba(132,132,132,.13);
+}
+.gnb .gnb-inner{ padding: 9em 0; }
+.gnb .nav-list{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+.gnb .nav-list li{
+    font-variation-settings: "wght" 633;
+    font-size: 1.25em;
+    line-height: 1.6;
+}
+.gnb .home{ text-decoration: underline; }
+.gnb .bottom-area{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5em;
+}
+.gnb .bottom-area a{
+    padding: 0.3em;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.gnb .bottom-area svg{ width: 1.3em; filter: invert(0); }
+
+
+
+
+/* nav btn*/
+.header .btn-menu{
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 999;
+    opacity: 0.4;
+    width: 2.7em;
+    height: 2.5em;
+    border-radius: 8px;
+    background-color: rgba(122, 122, 122, 0.6);
+    /* box-shadow: 0 0 5px rgba(132,132,132,.5); */
+    font-size: 1.5em;
+}
+.header .btn-menu .btn-open{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35em;
+    width: 100%;
+    height: 100%;
+}
+.header .btn-menu .btn-open .line{
+    /* width: 30px; */
+    width: 1.25em;
+    border-bottom: 2px solid #ffffff;
+}
+.header .btn-menu .btn-close{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.header .btn-menu .btn-close .line{
+    width: 1.25em;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(-45deg);
+}
+.header .btn-close .line.rotate{
+    width: 1.25em;
+    transform: rotate(45deg);
+}
+
+/* .on이 들어갔을 경우에 오픈은 안보이고 크로즈는 보이게끔 세팅 */
+.header .btn-menu.on .btn-open{display: none; }
+.header .btn-menu.on .btn-close{display: flex;}
+
+
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+}
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 5em 0;
+}
+.footer .louvrelogo{
+    display: block;
+    /* width: 200px; */
+    width: 13em;
+    margin-bottom: 70px;
+}
+.footer .inner-logo .sns-list{
+    display: flex;
+    gap: 1em;
+}
+.sns-list a{ border: 1px solid #ffffff; padding: 0.6em; border-radius: 100%;}
+.sns-list svg{ width: 1.2em;filter: brightness(0) invert(1); }
+.footer .link-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.85em;
+}
+.footer .link-list .headline{
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+.footer .link-list li{
+    font-size: 0.94em;
+    font-weight: 300;
+}
