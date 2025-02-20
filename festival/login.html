@@ -27,7 +27,7 @@
         <a href="index.html" class="header_logo">
             <img src="images/logo.svg" alt="festival stamp tour logo">
         </a>
-        <div class="right_menus">
+        <div class="right_menus invisible">
             <div class="contact_wrap">
                 <div class="btn_login">LOGIN</div>
             </div>
@@ -48,7 +48,7 @@
                 </a>
                 <div class="menu_content">
                     <div class="menu_item">
-                        <div class="mo_btn_login">LOGIN</div>
+                        <div class="mo_btn_login" onclick="location.href='login.html'">LOGIN</div>
                     </div>
                 </div>
             </div>
@@ -58,10 +58,28 @@
     <!-- e: header -->
 
     <!-- s: main -->
-    <main class="main_price">
-        <section class="price_01">
-            <div class="main_price_wrap container">
-                <h1 class="slogan">행사의 성공을 위한<br>맞춤형 요금제를 선택하세요.</h1>
+    <main class="main_login">
+        <section class="login_01">
+            <div class="main_login_wrap">
+                <div class="login_form">
+                    <form class="login">
+                        <div class="title text_center">로그인</div>
+                        <div class="form_group">
+                            <label for="userId">휴대전화 번호</label>
+                            <input type="text" class="input" placeholder="하이픈(-) 없이 입력" id="userId" maxlength="11" autocomplete="off">
+                        </div>
+                        <div class="form_group mb-4">
+                            <label for="userPw">비밀번호</label>
+                            <input type="password" class="input" placeholder="비밀번호" id="userPw">
+                            <div class="helper_error" id="loginError">입력하신 정보가 일치하지 않습니다.</div>
+                        </div>
+                        <div class="btn_login_submit" onclick="loginClick();">로그인</div>
+                        <div class="login_bottom">
+                            <div onclick="location.href='signup.html'">회원가입</div>
+                            <div onclick="location.href='find_pw.html'">비밀번호 찾기</div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -73,7 +91,21 @@
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
     <script>
-       
+        $(document).ready(function(){
+            $('.login_form').addClass('on');
+        })
+        function loginClick() {
+            var Id = document.getElementById('userId').value;
+            var Pw = document.getElementById('userPw').value;
+            var errorElement = document.querySelector('.helper_error'); // 오류 메시지 요소 찾기
+            errorElement.classList.remove('active');
+
+            setTimeout(() => {
+                if (Id !== '1' || Pw !== '12') {
+                    errorElement.classList.add('active'); // .active 클래스 추가
+                }
+            }, 10);
+        }
     </script>
 </body>
 

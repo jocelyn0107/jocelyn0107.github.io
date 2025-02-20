@@ -512,15 +512,133 @@ header>.right_menus.on{
 }
 /* e: 모바일 메뉴 */
 
+/* 로그인 */
+main.main_login{
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/bg_intro_section.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.login_01{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main_login_wrap{
+    width: 90%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login_form{
+    width: 100%;
+    background-color: var(--color-white-opa-10);
+    border-radius: 8px;
+    padding: 40px 0;
+    height: 100%;
+}
+form.login{
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+form.login .title, .main_signup .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.form_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form_group label{
+    margin-bottom: 6px;
+}
+.form_group .input{
+    width: 100%;
+    height: 44px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--color-white-opa-60);
+    margin-bottom: 6px;
+}
+.form_group .input::placeholder{
+    color: var(--color-gray-700);
+}
+.form_group .helper_error{
+    opacity: 0;
+    font-size: 13px;
+    color: var(--color-red);
+}
+.form_group .helper_error.active{
+    animation: shake 1s ease forwards;
+}
+@-webkit-keyframes shake{
+    0%{
+        opacity: 0;
+        transform: translateX(0%);
+    }
+    10%, 30%, 50%, 70%, 90%{
+        transform: translateX(5%);
+    }
+    20%, 40%, 60%, 80%{
+        transform: translateX(-5%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.btn_login_submit{
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--color-static-white);
+}
+.login_bottom{
+    display: flex;
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 30px;
+}
+.login_bottom>div:last-of-type{
+    position: relative;
+}
+.login_bottom>div:last-of-type::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 12px;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-static-white);
+}
+
+
+
 main .intro_section{
-    background: url(../images/bg_intro_section.webp);
+    background: url('../images/bg_intro_section.webp');
     background-size: cover;
     background-position: center;
     position: fixed;
     width: 100vw;
     height: 100vh;
     z-index: 110;
-    /* display: none; */
 }
 main .intro_section img{
     width: 100%;
@@ -1301,6 +1419,7 @@ main .about_01{
     margin-top: 100px;
     transform: translateX(100%);
 }
+.login_form,
 .img_wrap .iphone_01,
 .img_wrap .iphone_02,
 .main_about_wrap .slogan,
@@ -1322,6 +1441,7 @@ main .about_01{
     font-weight: 100;
     transform: translateY(100%);
 }
+.login_form.on,
 .container .slogan.on{
     opacity: 1;
     transform: translateY(0);
