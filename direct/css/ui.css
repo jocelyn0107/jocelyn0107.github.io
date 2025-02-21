@@ -3084,9 +3084,30 @@ input[type=radio]:checked {
   height: 91%;
   overflow-y: auto;
 }
+.mode_light::-webkit-scrollbar,
+.mode_dark::-webkit-scrollbar {
+  width: 7px;
+}
+.mode_light::-webkit-scrollbar-button:vertical:start:decrement, 
+.mode_light::-webkit-scrollbar-button:vertical:end:decrement,
+.mode_dark::-webkit-scrollbar-button:vertical:start:decrement, 
+.mode_dark::-webkit-scrollbar-button:vertical:end:decrement{
+  display: block;
+  height: 50px;
+}
+.mode_light::-webkit-scrollbar-thumb,
+.mode_dark::-webkit-scrollbar-thumb {
+  background: #686868;
+  border-radius: 10px;
+}
+
+.mode_lighty::-webkit-scrollbar-track,
+.mode_dark::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 .mode_light {
-  /* display: none; */
+  display: none;
   background: var(--wht);
 }
 
