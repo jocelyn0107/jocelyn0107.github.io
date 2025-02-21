@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 스탬프투어</title>
+    <meta property="og:title" content="축제 스탬프투어로 행사를 더 똑똑하게 참여를 더 즐겁게 만드세요.">
+    <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
+    <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
+    <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
+    <meta property="og:image" content="images/og_img.jpg">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/typography.css">
+    <link rel="stylesheet" href="../common/css/aos.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body>
+    <!-- s: contact modal -->
+    <div class="modal_popup" id="modalContact">
+        <div class="modal_wrap modal_wrap_md">
+            <div class="modal_top_w">
+                <div class="modal_title"></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_wrap_line d_none"></div>
+            <div class="title">Contact</div>
+            <div class="modal_contents">
+                <div class="representative">
+                    <div>02-1551-0901</div>
+                    <div>thatzit1012@gmail.com</div>
+                </div>
+                <div class="contact_area">
+                    <div class="input_group">
+                        <label class="title">이름<span class="essential">*</span></label>
+                        <div>
+                            <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">이메일<span class="essential">*</span></label>
+                        <div>
+                            <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                            <div class="helper_error active">올바른 이메일 형식이 아닙니다.</div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">연락처<span class="essential">*</span></label>
+                        <div>
+                            <input type="tel" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                            <div class="helper_error">올바른 연락처 형식이 아닙니다.</div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">내용<span class="essential">*</span></label>
+                        <div>
+                            <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+                    </div>
+                    <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                    <div class="input_group">
+                        <div class="helper_error">필수 선택 항목입니다.</div>
+                    </div>
+                </div>
+                <div class="modal_btn_w">
+                    <button class="color_main btn_big btn_submit">전송하기</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- e: contact modal -->
+    <!-- s: modal -->
+    <div class="modal_popup" id="modalLogin">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_contents">
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">로그인 후 이용 가능합니다.</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main" onclick="location.href='login.html'">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: modal -->
+
+    <div class="ir_su">축제 스탬프투어</div>
+    <!-- s: header -->
+    <header>
+        <!-- s: pc menu -->
+        <div class="left_menus">
+            <ul>
+                <li class="nav_li"><a href="about.html"><span>ABOUT</span></a></li>
+                <li class="nav_li"><a href="price.html"><span>PRICE</span></a></li>
+                <li class="nav_li active"><a href="board.html"><span>BOARD</span></a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="header_logo">
+            <img src="images/logo.svg" alt="festival stamp tour logo">
+        </a>
+        <div class="right_menus">
+            <div class="contact_wrap">
+                <div class="btn_contact">CONTACT</div>
+            </div>
+            <div class="hamburger">
+                <img src="images/icon_hamburger.svg" alt="hamburger">
+            </div>
+        </div>
+        <!-- e: pc menu -->
+
+        <!-- s: mo menu -->
+        <div class="mo_menu_wrap">
+            <div class="menu_container">
+                <div class="btn_close">
+                    <img src="images/icon_close.svg" alt="close">
+                </div>
+                <a href="index.html" class="mo_logo">
+                    <img src="images/logo.svg" alt="festival stamp tour logo">
+                </a>
+                <div class="menu_content">
+                    <div class="menu_item">
+                        <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
+                        <div class="mobile_menu"><a href="price.html">PRICE</a></div>
+                        <div class="mobile_menu active"><a href="board.html">BOARD</a></div>
+                        <div class="mo_btn_contact">CONTACT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: mo menu -->
+    </header>
+    <!-- e: header -->
+
+    <!-- s: main -->
+    <main>
+        <section class="board_01">
+            <div class="main_board_wrap container">
+                <h1 class="slogan">게시판</h1>
+            </div>
+        </section>
+    </main>
+    <!-- e: main -->
+
+    <section class="board_02">
+        <!-- s: section_02(pc) -->
+        <div class="pc">
+            <div class="container">
+                <div class="board_top">
+                    <div class="total_text">총 <span class="total">100</span>건</div>
+                    <div class="search_area">
+                        <input type="text" class="input_border_bottom" placeholder="검색어를 입력해주세요.">
+                        <button class="btn_search"><img src="images/icon_search.svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="board_table_wrap">
+                    <table class="board_table">
+                        <caption>게시판</caption>
+                        <colgroup>
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="50%">
+                            <col width="15%">
+                            <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">분류</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="fixed" onclick="location.href='board_detail.html'">
+                                <td>1</td>
+                                <td class="badge notice">
+                                    <div>공지</div>
+                                </td>
+                                <td class="td_title">
+                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
+                                    <div class="title">전 세계에서 폭발적으로 인기를 끈 가상 현실 게임,'넥서스' 출시!</div>
+                                    <div class="comment">(4)</div>
+                                </td>
+                                <td>아이디_01</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr class="fixed" onclick="location.href='board_detail.html'">
+                                <td>2</td>
+                                <td class="badge notice">
+                                    <div>공지</div>
+                                </td>
+                                <td class="td_title">
+                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
+                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
+                                </td>
+                                <td>아이디_01</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr class="fixed" onclick="location.href='board_detail.html'">
+                                <td>3</td>
+                                <td class="badge notice">
+                                    <div>공지</div>
+                                </td>
+                                <td class="td_title">
+                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
+                                    <div class="title">실감나는 가상현실 컨텐츠,엔터테인먼트 산업의 혁신 동력</div>
+                                    <img src="images/icon_image.svg" alt="icon" class="img">
+                                    <div class="comment">(4)</div>
+                                </td>
+                                <td>아이디_01</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>10</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">양자 컴퓨팅의 상용화,문제 해결 속도 지수적으로 증가</div>
+                                    <div class="comment">(4)</div>
+                                </td>
+                                <td>아이디_01</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>9</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">스마트 홈 시스템 확장,인공지능 비서가 집안 생활을 편리하게 지원</div>
+                                </td>
+                                <td>아이디_01</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>8</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">전 세계에서 폭발적으로 인기를 끈 가상 현실 게임,'넥서스' 출시!</div>
+                                </td>
+                                <td>아이디_0001</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>7</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
+                                </td>
+                                <td>아이디_0001</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>6</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
+                                    <div class="comment">(4)</div>
+                                </td>
+                                <td>아이디_0001</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>5</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">실감나는 가상현실 컨텐츠,엔터테인먼트 산업의 혁신 동력</div>
+                                </td>
+                                <td>아이디_0001</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                            <tr onclick="location.href='board_detail.html'">
+                                <td>4</td>
+                                <td class="badge">
+                                    <div>구분</div>
+                                </td>
+                                <td class="td_title">
+                                    <div class="title">블록체인 기술을 활용한 전자 투표 시스템 도입,투표 과정의 투명성 확보</div>
+                                </td>
+                                <td>아이디_0001</td>
+                                <td>2025.02.17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn_write_login">
+                    <button class="btn_write">게시글 작성</button>
+                    <button class="btn_login" onclick="location.href='login.html'">로그인</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: section_02(pc) -->
+
+       
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- s: footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="slogan_logo_area">
+                <div class="slogan">그저 행사가 아니라,<br /> 하나의 특별한 경험입니다.</div>
+                <div class="logo_area">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="info">
+                <div class="company">댓츠잇소프트 주식회사</div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">대표</div>
+                        <div class="text">김범수</div>
+                    </div>
+                    <div>
+                        <div class="title">문의</div>
+                        <div class="text">02-1551-0901</div>
+                    </div>
+                    <div>
+                        <div class="title">이메일</div>
+                        <div class="text">thatzit1012@gmail.com</div>
+                    </div>
+                </div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">개인정보관리책임자</div>
+                        <div class="text">댓츠잇소프트 주식회사</div>
+                    </div>
+                    <div>
+                        <div class="title">사업자등록번호</div>
+                        <div class="text">384-81-01361</div>
+                    </div>
+                    <div>
+                        <div class="title">통신판매</div>
+                        <div class="text">제 2023-4960111-30-2-00021호</div>
+                    </div>
+                </div>
+                <div class="copyright">&copy;THATZIT Co. Ltd. All rights reserved</div>
+            </div>
+        </div>
+        <div class="ani_festival_rotate">
+            <img src="images/circle_festival_white.svg" alt="festival">
+        </div>
+    </footer>
+    <!-- e: footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/common/js/library/aos.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+
+</html>
