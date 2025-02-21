@@ -231,6 +231,18 @@ body.no_scroll::-webkit-scrollbar {
     display: flex;
     width: 100%;
     margin-bottom: 20px;
+    position: relative;
+}
+.input_group .helper_error{
+    opacity: 0;
+    position: absolute;
+    bottom: -18px;
+    text-align-last: left;
+    font-size: 12px;
+    color: var(--color-red);
+}
+.input_group .helper_error.active{
+    animation: shake 1s ease forwards;
 }
 .input_group .title{
     white-space: nowrap;
@@ -239,7 +251,7 @@ body.no_scroll::-webkit-scrollbar {
     padding-top: 8px;
     font-weight: 500;
 }
-.input_group .input{
+.input_group>div{
     width: calc(100% - 100px);
 }
 .input_group textarea{
@@ -249,7 +261,7 @@ body.no_scroll::-webkit-scrollbar {
     outline: none;
     width: 100%;
     border: 1px solid var(--color-gray-300);
-    margin-top: 20px;
+    margin-top: 8px;
     border-radius: 4px;
     height: 100px;
     max-height: 100px;
@@ -262,6 +274,7 @@ body.no_scroll::-webkit-scrollbar {
 .checkbox {
     display: flex;
     align-items: center;
+    position: relative;
 }
 .checkbox input {
     position: absolute;
@@ -273,7 +286,8 @@ body.no_scroll::-webkit-scrollbar {
     padding: 0 0 0 25px;
     line-height: 18px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 300;
 }
 .checkbox input+.label:before {
     content: '';
@@ -513,44 +527,84 @@ header>.right_menus.on{
 /* e: 모바일 메뉴 */
 
 /* 로그인 */
-main.main_login{
+main.main_login,
+main.main_signup,
+main.main_find_pw,
+main.main_change_pw{
     width: 100vw;
     height: 100vh;
     background: url('../images/bg_intro_section.webp') no-repeat;
     background-position: center;
     background-size: cover;
 }
-.login_01{
+.login_01,
+.signup_01,
+.find_pw_01,
+.change_pw_01{
     width: 100%;
     height: 100%;
     position: relative;
 }
-.main_login_wrap{
+.main_login_wrap,
+.main_signup_wrap,
+.main_find_pw_wrap,
+.main_change_pw_wrap{
     width: 90%;
     max-width: 600px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.login_form{
+.main_signup_wrap{
+    max-width: 1400px;
+}
+.login_form,
+.signup_form,
+.find_pw_form,
+.change_pw_form{
     width: 100%;
     background-color: var(--color-white-opa-10);
     border-radius: 8px;
     padding: 40px 0;
     height: 100%;
+    transform: translateY(-10%);
+    opacity: 0;
+    transition: all 1.5s ease;
 }
-form.login{
+.login_form.on,
+.signup_form.on,
+.find_pw_form.on,
+.change_pw_form.on,
+.main_signup .title.on,
+.main_find_pw .title.on,
+.main_change_pw .title.on{
+    opacity: 1;
+    transform: translateY(0);
+}
+form.login,
+form.find_pw,
+form.change_pw{
     width: 100%;
     max-width: 340px;
     height: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
-form.login .title, .main_signup .title{
+form.login .title,
+.main_signup .title,
+.main_find_pw .title,
+.main_change_pw .title{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 30px;
+}
+.main_signup .title,
+.main_find_pw .title,
+.main_change_pw .title{
+    opacity: 0;
+    transition: all 1.5s ease;
+    transform: translateY(-10%);
 }
 .form_group {
     display: flex;
@@ -560,6 +614,11 @@ form.login .title, .main_signup .title{
 }
 .form_group label{
     margin-bottom: 6px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+label .essential{
+    padding-left: 5px;
+    color: var(--color-red);
 }
 .form_group .input{
     width: 100%;
@@ -597,23 +656,31 @@ form.login .title, .main_signup .title{
         transform: translateX(0%);
     }
 }
-.btn_login_submit{
+.btn_submit{
     cursor: pointer;
     text-align: center;
     width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
     padding: 10px;
     border: 0;
     border-radius: 4px;
     background-color: var(--primary-color);
     color: var(--color-static-white);
+    transition: background-color 0.3s;
+}
+.btn_submit:hover{
+    background-color: #5600bf;
 }
 .login_bottom{
+    cursor: pointer;
     display: flex;
     font-size: 13px;
     font-weight: 100;
     margin-top: 30px;
     justify-content: center;
     gap: 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .login_bottom>div:last-of-type{
     position: relative;
@@ -628,6 +695,69 @@ form.login .title, .main_signup .title{
     transform: translateY(-50%);
     background: var(--color-static-white);
 }
+.main_signup .title{
+    margin-bottom: 10px;
+}
+.main_find_pw .title,
+.main_change_pw .title{
+    margin-bottom: 6px;
+}
+.main_find_pw .sub,
+.main_change_pw .sub{
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+form.signup{
+    width: 100%;
+    max-height: 55vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+form.signup .d_flex{
+    width: 100%;
+    justify-content: space-around;
+    column-gap: 30px;
+}
+form.signup .d_flex>div{
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form_group .input_btn{
+    display: flex;
+    column-gap: 10px;
+}
+.form_group .input_btn .input{
+    width: calc(100% - 100px);
+}
+.form_group .input_btn .btn_sm_main_dark, .btn_sm_main_dark{
+    cursor: pointer;
+    width: 100px;
+    height: 44px;
+    background-color: rgba(114, 0, 255, 0.5);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.form_group .input_btn .btn_sm_main_dark:hover, .btn_sm_main_dark:hover{
+    background-color: var(--primary-color);
+}
+.main_signup .textarea{
+    background-color: var(--color-white-opa-60);
+    border: 0;
+    min-height: 180px;
+}
+.main_find_pw .btn_sm_main_dark{
+    width: 100%;
+}
+
 
 
 
@@ -1419,7 +1549,6 @@ main .about_01{
     margin-top: 100px;
     transform: translateX(100%);
 }
-.login_form,
 .img_wrap .iphone_01,
 .img_wrap .iphone_02,
 .main_about_wrap .slogan,
@@ -1441,7 +1570,6 @@ main .about_01{
     font-weight: 100;
     transform: translateY(100%);
 }
-.login_form.on,
 .container .slogan.on{
     opacity: 1;
     transform: translateY(0);
@@ -2322,6 +2450,21 @@ table caption{
     }
 }
 @media (max-width: 620px) {
+    .modal_contents {
+        padding: 0px 20px 20px 20px;
+    }
+    form.login .title,
+    .main_signup .title,
+    .main_find_pw .title,
+    .main_change_pw .title{
+        font-size: 24px;
+    }
+    form.signup .d_flex{
+        flex-direction: column;
+    }
+    form.signup .d_flex>div{
+        width: 100%;
+    }
     header.on{
         padding: 0 20px;
     }
@@ -2476,7 +2619,7 @@ table caption{
         width: 100%;
         margin-bottom: 8px;
     }
-    .input_group .input{
+    .input_group>div{
         width: 100%;
     }
     .checkbox{

@@ -19,17 +19,39 @@
 </head>
 
 <body>
+    <!-- s: modal -->
+    <div class="modal_popup" id="modalSignUpComplete">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_contents">
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">정상적으로 회원가입이 되었습니다.<br/>로그인 후 이용해주세요.</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main" onclick="location.href='login.html'">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: modal -->
     <div class="ir_su">축제 스탬프투어</div>
     <!-- s: header -->
     <header>
         <!-- s: pc menu -->
-        <div class="left_menus"></div>
+        <div class="left_menus invisible"></div>
         <a href="index.html" class="header_logo">
             <img src="images/logo.svg" alt="festival stamp tour logo">
         </a>
         <div class="right_menus">
             <div class="contact_wrap">
-                <div class="btn_login">LOGIN</div>
+                <div class="btn_login" onclick="location.href='login.html'">LOGIN</div>
             </div>
             <div class="hamburger">
                 <img src="images/icon_hamburger.svg" alt="hamburger">
@@ -59,25 +81,65 @@
 
     <!-- s: main -->
     <main class="main_signup">
-        <section class="login_01">
+        <section class="signup_01">
             <div class="main_signup_wrap">
                 <div class="title">회원가입</div>
-                <div class="login_form">
-                    <form class="login">
-                        <div class="form_group">
-                            <label for="userId">휴대전화 번호</label>
-                            <input type="text" class="input" placeholder="하이픈(-) 없이 입력" id="userId" maxlength="11" autocomplete="off">
+                <div class="signup_form">
+                    <form class="signup">
+                        <div class="d_flex">
+                            <div>
+                                <div class="form_group">
+                                    <label for="userId">휴대전화 번호<span class="essential">*</span></label>
+                                    <div class="input_btn">
+                                        <input type="text" class="input" placeholder="하이픈(-) 없이 입력" id="userId"
+                                            maxlength="11" autocomplete="off">
+                                        <div class="btn_sm_main_dark">인증번호 발송</div>
+                                    </div>
+                                    <div class="input_btn">
+                                        <input type="text" class="input" placeholder="인증번호" id="userSertifiNum" maxlength="8" autocomplete="off">
+                                        <div class="btn_sm_main_dark">인증 확인</div>
+                                    </div>
+                                    <div class="helper_error">인증번호가 일치하지 않습니다.</div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="userNIckName">닉네임<span class="essential">*</span></label>
+                                    <div class="input_btn">
+                                        <input type="text" class="input" placeholder="닉네임" id="userNIckName"
+                                            maxlength="20" autocomplete="off">
+                                        <div class="btn_sm_main_dark">중복확인</div>
+                                    </div>
+                                    <div class="helper_error">중복된 닉네임이 존재합니다.</div>
+                                </div>
+                                <div class="form_group">
+                                    <label for="userPw">비밀번호<span class="essential">*</span></label>
+                                    <input type="password" class="input" placeholder="비밀번호 숫자 8자리" id="userPw">
+                                    <input type="password" class="input" placeholder="비밀번호 확인" id="userPwCheck">
+                                    <div class="helper_error">비밀번호가 일치하지 않습니다.</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                                    <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+                                </div>
+                                <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                                <div class="form_group mb-4">
+                                    <div class="helper_error">필수 선택 항목입니다.</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form_group mb-4">
-                            <label for="userPw">비밀번호</label>
-                            <input type="password" class="input" placeholder="비밀번호" id="userPw">
-                            <div class="helper_error" id="loginError">입력하신 정보가 일치하지 않습니다.</div>
-                        </div>
-                        <div class="btn_login_submit" onclick="loginClick();">로그인</div>
-                        <div class="login_bottom">
-                            <div onclick="location.href='signup.html'">회원가입</div>
-                            <div onclick="location.href='find_pw.html'">비밀번호 찾기</div>
-                        </div>
+                        <div class="btn_submit btn_signup_submit">회원가입</div>
                     </form>
                 </div>
             </div>
@@ -91,21 +153,6 @@
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
     <script>
-        $(document).ready(function(){
-            $('.login_form').addClass('on');
-        })
-        function loginClick() {
-            var Id = document.getElementById('userId').value;
-            var Pw = document.getElementById('userPw').value;
-            var errorElement = document.querySelector('.helper_error'); // 오류 메시지 요소 찾기
-            errorElement.classList.remove('active');
-
-            setTimeout(() => {
-                if (Id !== '1' || Pw !== '12') {
-                    errorElement.classList.add('active'); // .active 클래스 추가
-                }
-            }, 10);
-        }
     </script>
 </body>
 

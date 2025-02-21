@@ -29,7 +29,7 @@
         </a>
         <div class="right_menus invisible">
             <div class="contact_wrap">
-                <div class="btn_login">LOGIN</div>
+                <div class="btn_login" onclick="location.href='login.html'">LOGIN</div>
             </div>
             <div class="hamburger">
                 <img src="images/icon_hamburger.svg" alt="hamburger">
@@ -66,14 +66,14 @@
                         <div class="title text_center">로그인</div>
                         <div class="form_group">
                             <label for="userId">휴대전화 번호</label>
-                            <input type="text" class="input" placeholder="하이픈(-) 없이 입력" id="userId" maxlength="11" autocomplete="off">
+                            <input type="tel" class="input" placeholder="하이픈(-) 없이 입력" id="userId" maxlength="11" autocomplete="off">
                         </div>
                         <div class="form_group mb-4">
                             <label for="userPw">비밀번호</label>
                             <input type="password" class="input" placeholder="비밀번호" id="userPw">
-                            <div class="helper_error" id="loginError">입력하신 정보가 일치하지 않습니다.</div>
+                            <div class="helper_error">입력하신 정보가 일치하지 않습니다.</div>
                         </div>
-                        <div class="btn_login_submit" onclick="loginClick();">로그인</div>
+                        <div class="btn_submit btn_login_submit" onclick="loginClick();">로그인</div>
                         <div class="login_bottom">
                             <div onclick="location.href='signup.html'">회원가입</div>
                             <div onclick="location.href='find_pw.html'">비밀번호 찾기</div>
@@ -90,23 +90,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.login_form').addClass('on');
-        })
-        function loginClick() {
-            var Id = document.getElementById('userId').value;
-            var Pw = document.getElementById('userPw').value;
-            var errorElement = document.querySelector('.helper_error'); // 오류 메시지 요소 찾기
-            errorElement.classList.remove('active');
-
-            setTimeout(() => {
-                if (Id !== '1' || Pw !== '12') {
-                    errorElement.classList.add('active'); // .active 클래스 추가
-                }
-            }, 10);
-        }
-    </script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>

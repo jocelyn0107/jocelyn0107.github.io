@@ -28,14 +28,24 @@ $(document).ready(function () {
         $('body').addClass('no_scroll');
     });
 
+    $('.btn_signup_submit').on('click', function () {
+        $('#modalSignUpComplete').fadeIn();
+        $('body').addClass('no_scroll');
+    });
+
+    $('.btn_change_pw_submit').on('click', function () {
+        $('#modalChangePwComplete').fadeIn();
+        $('body').addClass('no_scroll');
+    });
+    
     // 모달 닫았을 때
-    $('.modal_close').on('click', function () {
+    $('.modal_close, .btn_modal_close').on('click', function () {
         $('.modal_popup').fadeOut();
         $('body').removeClass('no_scroll');
     });
 
     $('header>.left_menus, header>.right_menus, .header_logo').addClass('on');
-    $('.iphone_01, .iphone_02, .slogan').addClass('on');
+    $('.iphone_01, .iphone_02, .slogan, .login_form, .signup_form, .title, .find_pw_form, .change_pw_form').addClass('on');
 
     // 가격 더 보기 클릭 시
     $('.price_wrap .container .box .content button').on('click', function () {

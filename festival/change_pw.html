@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 스탬프투어</title>
+    <meta property="og:title" content="축제 스탬프투어로 행사를 더 똑똑하게 참여를 더 즐겁게 만드세요.">
+    <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
+    <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
+    <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
+    <meta property="og:image" content="images/og_img.jpg">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/typography.css">
+    <link rel="stylesheet" href="../common/css/aos.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body>
+    <!-- s: modal -->
+    <div class="modal_popup" id="modalChangePwComplete">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_contents">
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">비밀번호가 변경되었습니다.<br/>로그인 후 이용해주세요.</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main" onclick="location.href='login.html'">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: modal -->
+
+    <div class="ir_su">축제 스탬프투어</div>
+    <!-- s: header -->
+    <header>
+        <!-- s: pc menu -->
+        <div class="left_menus invisible"></div>
+        <a href="index.html" class="header_logo">
+            <img src="images/logo.svg" alt="festival stamp tour logo">
+        </a>
+        <div class="right_menus">
+            <div class="contact_wrap">
+                <div class="btn_login" onclick="location.href='login.html'">LOGIN</div>
+            </div>
+            <div class="hamburger">
+                <img src="images/icon_hamburger.svg" alt="hamburger">
+            </div>
+        </div>
+        <!-- e: pc menu -->
+
+        <!-- s: mo menu -->
+        <div class="mo_menu_wrap">
+            <div class="menu_container">
+                <div class="btn_close">
+                    <img src="images/icon_close.svg" alt="close">
+                </div>
+                <a href="index.html" class="mo_logo">
+                    <img src="images/logo.svg" alt="festival stamp tour logo">
+                </a>
+                <div class="menu_content">
+                    <div class="menu_item">
+                        <div class="mo_btn_login" onclick="location.href='login.html'">LOGIN</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: mo menu -->
+    </header>
+    <!-- e: header -->
+
+    <!-- s: main -->
+    <main class="main_change_pw">
+        <section class="change_pw_01">
+            <div class="main_change_pw_wrap">
+                <div class="change_pw_form">
+                    <form class="change_pw">
+                        <div class="title text_center">비밀번호 변경</div>
+                        <div class="sub">새로운 비밀번호를 입력해주세요.</div>
+                        <div class="form_group mb-4">
+                            <label for="userNwePw">새 비밀번호</label>
+                            <input type="password" class="input" placeholder="비밀번호 숫자 8자리" id="userNwePw" maxlength="8">
+                            <input type="password" class="input" placeholder="비밀번호 확인" id="userNwePwCheck" maxlength="8">
+                            <div class="helper_error">비밀번호가 일치하지 않습니다.</div>
+                        </div>
+                        <div class="btn_submit btn_change_pw_submit mb-3">확인</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- e: main -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/common/js/library/aos.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+
+</html>

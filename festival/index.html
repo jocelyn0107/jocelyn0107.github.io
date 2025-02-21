@@ -38,20 +38,30 @@
                 </div>
                 <div class="contact_area">
                     <div class="input_group">
-                        <div class="title">이름</div>
-                        <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                        <label class="title">이름<span class="essential">*</span></label>
+                        <div>
+                            <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                        </div>
                     </div>
                     <div class="input_group">
-                        <div class="title">이메일</div>
-                        <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                        <label class="title">이메일<span class="essential">*</span></label>
+                        <div>
+                            <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                            <div class="helper_error active">올바른 이메일 형식이 아닙니다.</div>
+                        </div>
                     </div>
                     <div class="input_group">
-                        <div class="title">연락처</div>
-                        <input type="text" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                        <label class="title">연락처<span class="essential">*</span></label>
+                        <div>
+                            <input type="tel" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                            <div class="helper_error">올바른 연락처 형식이 아닙니다.</div>
+                        </div>
                     </div>
                     <div class="input_group">
-                        <div class="title">내용</div>
-                        <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                        <label class="title">내용<span class="essential">*</span></label>
+                        <div>
+                            <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
                     </div>
                     <div class="checkbox">
                         <input type="checkbox" name="checkbox1" id="checkbox1" checked>
@@ -69,6 +79,9 @@
 관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
 
 * 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                    <div class="input_group">
+                        <div class="helper_error">필수 선택 항목입니다.</div>
+                    </div>
                 </div>
                 <div class="modal_btn_w">
                     <button class="color_main btn_big btn_submit">전송하기</button>
