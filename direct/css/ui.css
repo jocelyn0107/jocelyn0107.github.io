@@ -896,7 +896,7 @@ html {
 }
 
 .service_area {
-  background-image: url('../images/bg_circle_gra.png');
+  background-image: url('../images/bg_circle_gra.svg');
   background-position: 70% 70%;
   background-repeat: no-repeat;
   background-size: 451px 451px;
@@ -1099,7 +1099,7 @@ html {
 }
 
 .chat_purple {
-  background-image: url('../images/chat_purple.png');
+  background-image: url('../images/chat_purple.svg');
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 600px 93px;
@@ -1118,7 +1118,7 @@ html {
 
 
 .chat_blue {
-  background-image: url('../images/chat_blue.png');
+  background-image: url('../images/chat_blue.svg');
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 600px 93px;
@@ -1944,6 +1944,7 @@ html {
   background-image: linear-gradient(180deg, var(--black), #040b24 50%, var(--black));
   padding-top: 140px;
   padding-bottom: 140px;
+  overflow: hidden;
 }
 
 .team_heading {
@@ -1962,15 +1963,12 @@ html {
 }
 
 .team_wrap {
-  grid-column-gap: 10px;
-  grid-row-gap: 100px;
-  flex-flow: column;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  justify-content: center;
-  place-items: center;
-  display: grid;
+  width: 100%;
+  column-gap: 20px;
+  row-gap: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .team_name {
@@ -2090,7 +2088,7 @@ html {
 
 .company_contact_area {
   grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-row-gap: 50px;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
@@ -2300,6 +2298,8 @@ html {
 .login_form {
   margin-bottom: 0;
   position: relative;
+  max-height: 70vh;
+  overflow: auto;
 }
 
 .auto_login_label {
@@ -2486,6 +2486,10 @@ html {
   top: 150px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.sns_contact_area div{
+  white-space: nowrap;
 }
 
 .btn_close {
@@ -3657,11 +3661,6 @@ input[type=radio]:checked {
     font-size: 20px;
   }
 
-  .team_wrap {
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 1fr;
-  }
-
   .team_name.text_white {
     font-size: 26px;
   }
@@ -3680,13 +3679,6 @@ input[type=radio]:checked {
 
   .team_text_mbti {
     font-size: 14px;
-  }
-
-  .company_contact_area {
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-flow: row;
   }
 
   .contact_us_area {
@@ -4009,13 +4001,6 @@ input[type=radio]:checked {
 
   .price_info_text {
     font-size: 16px;
-  }
-
-  .team_wrap {
-    grid-column-gap: 0px;
-    grid-row-gap: 60px;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: 1fr;
   }
 
   .team_name {
@@ -4534,11 +4519,6 @@ input[type=radio]:checked {
 
   .sign_up_area {
     background-size: 500px;
-  }
-
-  .normal_input {
-    height: 33px;
-    margin-bottom: 10px;
   }
 
   .card {
