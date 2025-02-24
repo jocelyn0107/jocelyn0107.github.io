@@ -25,6 +25,22 @@ body.no_scroll::-webkit-scrollbar {
     scrollbar-width: 0;
     display: none;
 }
+
+html::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 10px;
+}
+html::-webkit-scrollbar-button {
+    display:none;
+}
+
 .container{
     width: 100%;
     max-width: 1400px;
@@ -1293,7 +1309,7 @@ main .app_wrap{
     height: 50px;
 }
 .phone_wrap .history::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
+    background: #babac0;
     border-radius: 10px;
 }
 
