@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>축제 스탬프투어</title>
+    <meta property="og:title" content="축제 스탬프투어로 행사를 더 똑똑하게 참여를 더 즐겁게 만드세요.">
+    <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
+    <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
+    <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
+    <meta property="og:image" content="images/og_img.jpg">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/common.css">
+    <link rel="stylesheet" href="../common/css/typography.css">
+    <link rel="stylesheet" href="../common/css/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="color_white">
+    <!-- s: contact modal -->
+    <div class="modal_popup" id="modalContact">
+        <div class="modal_wrap modal_wrap_md">
+            <div class="modal_top_w">
+                <div class="modal_title"></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_wrap_line d_none"></div>
+            <div class="title">Contact</div>
+            <div class="modal_contents">
+                <div class="representative">
+                    <div>02-1551-0901</div>
+                    <div>thatzit1012@gmail.com</div>
+                </div>
+                <div class="contact_area">
+                    <div class="input_group">
+                        <label class="title">이름<span class="essential">*</span></label>
+                        <div>
+                            <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">이메일<span class="essential">*</span></label>
+                        <div>
+                            <input type="email" class="input" placeholder="이메일을 입력해주세요.">
+                            <div class="helper_error active">올바른 이메일 형식이 아닙니다.</div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">연락처<span class="essential">*</span></label>
+                        <div>
+                            <input type="tel" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
+                            <div class="helper_error">올바른 연락처 형식이 아닙니다.</div>
+                        </div>
+                    </div>
+                    <div class="input_group">
+                        <label class="title">내용<span class="essential">*</span></label>
+                        <div>
+                            <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+                    </div>
+                    <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+                    <div class="input_group">
+                        <div class="helper_error">필수 선택 항목입니다.</div>
+                    </div>
+                </div>
+                <div class="modal_btn_w">
+                    <button class="color_main btn_big btn_submit">전송하기</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- e: contact modal -->
+    <!-- s: modal -->
+    <div class="modal_popup" id="modalWriteComplete">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_contents">
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">게시글 작성이 정상적으로<br>완료 되었습니다.</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main" onclick="location.href='board.html'">목록으로</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: modal -->
+
+    <div class="ir_su">축제 스탬프투어</div>
+    <!-- s: header -->
+    <header>
+        <!-- s: pc menu -->
+        <div class="left_menus">
+            <ul>
+                <li class="nav_li"><a href="about.html"><span>ABOUT</span></a></li>
+                <li class="nav_li"><a href="price.html"><span>PRICE</span></a></li>
+                <li class="nav_li active"><a href="board.html"><span>BOARD</span></a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="header_logo">
+            <img src="images/logo.svg" alt="festival stamp tour logo">
+        </a>
+        <div class="right_menus">
+            <div class="contact_wrap">
+                <div class="btn_contact">CONTACT</div>
+            </div>
+            <div class="hamburger">
+                <img src="images/icon_hamburger.svg" alt="hamburger">
+            </div>
+        </div>
+        <!-- e: pc menu -->
+
+        <!-- s: mo menu -->
+        <div class="mo_menu_wrap">
+            <div class="menu_container">
+                <div class="btn_close">
+                    <img src="images/icon_close.svg" alt="close">
+                </div>
+                <a href="index.html" class="mo_logo">
+                    <img src="images/logo.svg" alt="festival stamp tour logo">
+                </a>
+                <div class="menu_content">
+                    <div class="menu_item">
+                        <div class="mobile_menu"><a href="about.html">ABOUT</a></div>
+                        <div class="mobile_menu"><a href="price.html">PRICE</a></div>
+                        <div class="mobile_menu active"><a href="board.html">BOARD</a></div>
+                        <div class="mo_btn_contact">CONTACT</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: mo menu -->
+    </header>
+    <!-- e: header -->
+
+    <!-- s: main -->
+    <main>
+        <section class="board_01">
+            <div class="main_board_wrap container">
+                <h1 class="slogan">게시판</h1>
+            </div>
+        </section>
+    </main>
+    <!-- e: main -->
+
+    <!-- s: board_w_02 -->
+    <section class="board_w_02">
+        <div class="container">
+            <div class="title">게시글 작성</div>
+            <div class="contents_area">
+                <div class="c">
+                    <div class="sub_title">카테고리</div>
+                    <div class="select">
+                        <button class="sel">선택</button>
+                        <div class="lSel">
+                            <button>공지</button>
+                            <button>질문</button>
+                            <button>동행</button>
+                            <button>기타</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="c">
+                    <div class="sub_title">제목</div>
+                    <div>
+                        <input type="text" class="input" autocomplete="off">
+                    </div>
+                </div>
+                <div class="c">
+                    <div class="sub_title">내용</div>
+                    <div class="text_editor">
+                        <div id="editor"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <div class="btn_board_write">작성하기</div>
+            </div>
+        </div>
+    </section>
+    <!-- e: board_w_02 -->
+
+    <!-- s: footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="slogan_logo_area">
+                <div class="slogan">그저 행사가 아니라,<br /> 하나의 특별한 경험입니다.</div>
+                <div class="logo_area">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="info">
+                <div class="company">댓츠잇소프트 주식회사</div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">대표</div>
+                        <div class="text">김범수</div>
+                    </div>
+                    <div>
+                        <div class="title">문의</div>
+                        <div class="text">02-1551-0901</div>
+                    </div>
+                    <div>
+                        <div class="title">이메일</div>
+                        <div class="text">thatzit1012@gmail.com</div>
+                    </div>
+                </div>
+                <div class="info_wrap">
+                    <div>
+                        <div class="title">개인정보관리책임자</div>
+                        <div class="text">댓츠잇소프트 주식회사</div>
+                    </div>
+                    <div>
+                        <div class="title">사업자등록번호</div>
+                        <div class="text">384-81-01361</div>
+                    </div>
+                    <div>
+                        <div class="title">통신판매</div>
+                        <div class="text">제 2023-4960111-30-2-00021호</div>
+                    </div>
+                </div>
+                <div class="copyright">&copy;THATZIT Co. Ltd. All rights reserved</div>
+            </div>
+        </div>
+        <div class="ani_festival_rotate">
+            <img src="images/circle_festival_white.svg" alt="festival">
+        </div>
+    </footer>
+    <!-- e: footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/common/js/library/aos.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script>
+       const toolbarOptions = [
+            [{ 'font': [] }],
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+            [{ 'size': ['small', false, 'large', 'huge'] }],
+            [{ 'color': [] }, { 'background': [] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            ['clean'],
+
+            ['link', 'image', 'video'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+
+            [{ 'align': [] }],
+
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            ['blockquote', 'code-block']
+        ];
+
+        const quill = new Quill('#editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'snow'
+        });     
+    </script>
+</body>
+
+</html>

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/ui.css">
 </head>
 
-<body>
+<body class="color_white">
     <!-- s: contact modal -->
     <div class="modal_popup" id="modalContact">
         <div class="modal_wrap modal_wrap_md">
@@ -112,6 +112,28 @@
         </div>
     </div>
     <!-- e: modal -->
+     <!-- s: modal -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap modal_wrap_sm">
+            <div class="modal_top_w">
+                <div></div>
+                <div class="modal_close">
+                    <img src="images/icon_close_blk.svg" alt="icon_close">
+                </div>
+            </div>
+            <div class="modal_contents">
+                <div class="modal_icon">
+                    <img src="images/icon_warning.svg" alt="icon_warning">
+                </div>
+                <div class="text">정말 삭제하시겠습니까?</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn color_gray_500 btn_modal_close">닫기</button>
+                    <button class="modal_btn color_main">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: modal -->
 
     <div class="ir_su">축제 스탬프투어</div>
     <!-- s: header -->
@@ -170,177 +192,133 @@
     </main>
     <!-- e: main -->
 
-    <section class="board_02">
-        <!-- s: section_02(pc) -->
-        <div class="pc">
-            <div class="container">
-                <div class="board_top">
-                    <div class="total_text">총 <span class="total">100</span>건</div>
-                    <div class="search_area">
-                        <input type="text" class="input_border_bottom" placeholder="검색어를 입력해주세요.">
-                        <button class="btn_search"><img src="images/icon_search.svg" alt="icon"></button>
+    <!-- s: board_d_02 -->
+    <section class="board_d_02">
+        <div class="container">
+            <div class="title_area">
+                <div class="badge_btn_area">
+                    <div class="badge notice"><div>공지</div></div>
+                    <div class="btn_area">
+                        <div class="modify">
+                            <img src="images/icon_modify.svg" alt="icon">
+                        </div>
+                        <div class="delete">
+                            <img src="images/icon_delete.svg" alt="icon">
+                        </div>
                     </div>
                 </div>
-                <div class="board_table_wrap">
-                    <table class="board_table">
-                        <caption>게시판</caption>
-                        <colgroup>
-                            <col width="10%">
-                            <col width="10%">
-                            <col width="50%">
-                            <col width="15%">
-                            <col width="15%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">분류</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성자</th>
-                                <th scope="col">작성일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="fixed" onclick="location.href='board_detail.html'">
-                                <td>1</td>
-                                <td class="badge notice">
-                                    <div>공지</div>
-                                </td>
-                                <td class="td_title">
-                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
-                                    <div class="title">전 세계에서 폭발적으로 인기를 끈 가상 현실 게임,'넥서스' 출시!</div>
-                                    <div class="comment">(4)</div>
-                                </td>
-                                <td>아이디_01</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr class="fixed" onclick="location.href='board_detail.html'">
-                                <td>2</td>
-                                <td class="badge notice">
-                                    <div>공지</div>
-                                </td>
-                                <td class="td_title">
-                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
-                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
-                                </td>
-                                <td>아이디_01</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr class="fixed" onclick="location.href='board_detail.html'">
-                                <td>3</td>
-                                <td class="badge notice">
-                                    <div>공지</div>
-                                </td>
-                                <td class="td_title">
-                                    <img src="images/icon_fixed.svg" alt="icon" class="pin">
-                                    <div class="title">실감나는 가상현실 컨텐츠,엔터테인먼트 산업의 혁신 동력</div>
-                                    <img src="images/icon_image.svg" alt="icon" class="img">
-                                    <div class="comment">(4)</div>
-                                </td>
-                                <td>아이디_01</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>10</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">양자 컴퓨팅의 상용화,문제 해결 속도 지수적으로 증가</div>
-                                    <div class="comment">(4)</div>
-                                </td>
-                                <td>아이디_01</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>9</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">스마트 홈 시스템 확장,인공지능 비서가 집안 생활을 편리하게 지원</div>
-                                </td>
-                                <td>아이디_01</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>8</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">전 세계에서 폭발적으로 인기를 끈 가상 현실 게임,'넥서스' 출시!</div>
-                                </td>
-                                <td>아이디_0001</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>7</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
-                                </td>
-                                <td>아이디_0001</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>6</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">미래의 건강 산업,개인 맞춤형 의료 서비스 급부상</div>
-                                    <div class="comment">(4)</div>
-                                </td>
-                                <td>아이디_0001</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>5</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">실감나는 가상현실 컨텐츠,엔터테인먼트 산업의 혁신 동력</div>
-                                </td>
-                                <td>아이디_0001</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                            <tr onclick="location.href='board_detail.html'">
-                                <td>4</td>
-                                <td class="badge">
-                                    <div>구분</div>
-                                </td>
-                                <td class="td_title">
-                                    <div class="title">블록체인 기술을 활용한 전자 투표 시스템 도입,투표 과정의 투명성 확보</div>
-                                </td>
-                                <td>아이디_0001</td>
-                                <td>2025.02.17</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="btn_write_login">
-                    <button class="btn_write">게시글 작성</button>
-                    <button class="btn_login" onclick="location.href='login.html'">로그인</button>
+                <div class="title">제목을 입력하는 곳입니다. 제목을 입력하는 곳입니다. 제목을 입력하는 곳입니다.</div>
+                <div class="date_writer_area">
+                    <div class="date">2025.01.09</div>
+                    <div class="writer">작성자 : 아이디_001</div>
                 </div>
             </div>
+            <div class="board_detail">
+                detail
+            </div>
+            <div class="detail_comments_area">
+                <div class="top">
+                    <div>댓글<span class="comment_total">4</span></div>
+                    <div class="sort">
+                        <div class="active">등록순</div>
+                        <div>최신순</div>
+                    </div>
+                </div>
+                <div class="comments_area nothing">
+                    <div>
+                        <img src="images/icon_unhappy.svg" alt="icon">
+                        <div>
+                            아직 댓글이 없습니다.<br>가장 먼저 댓글을 남겨보세요.
+                        </div>
+                    </div>
+                </div>
+                <div class="comments_area">
+                    <div class="comment_list">
+                        <div class="profile_img">
+                            <img src="images/icon_profile.svg" alt="icon">
+                        </div>
+                        <div class="id_comment_date_area">
+                            <div class="id_btn">
+                                <div class="id">id_001<span class="me">작성자</span></div>
+                                <div class="btn">
+                                    <div class="btn_modify_comment">수정</div>
+                                    <div class="btn_modify_delete">삭제</div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다. 댓글 내용을 입력하는 영역입니다.
+                            </div>
+                            <div class="date_recomment_area">
+                                <div class="date">2025.01.10</div>
+                                <div class="recomment">답글 쓰기</div>
+                            </div>
+                            <div class="comment_write comment_modify">
+                                <textarea></textarea>
+                                <div class="btn_comment_submit">수정</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_list">
+                        <div class="profile_img">
+                            <img src="images/icon_profile.svg" alt="icon">
+                        </div>
+                        <div class="id_comment_date_area">
+                            <div class="id_btn">
+                                <div class="id">id_001</div>
+                            </div>
+                            <div class="comment">
+                                comment
+                            </div>
+                            <div class="date_recomment_area">
+                                <div class="date">2025.01.10</div>
+                                <div class="recomment">답글 쓰기</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_list re">
+                        <div class="profile_img">
+                            <img src="images/icon_profile.svg" alt="icon">
+                        </div>
+                        <div class="id_comment_date_area">
+                            <div class="id_btn">
+                                <div class="id">id_001</div>
+                            </div>
+                            <div class="comment">
+                                comment
+                            </div>
+                            <div class="date_recomment_area">
+                                <div class="date">2025.01.10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment_list re">
+                        <div class="profile_img">
+                            <img src="images/icon_profile.svg" alt="icon">
+                        </div>
+                        <div class="id_comment_date_area">
+                            <div class="id_btn">
+                                <div class="id">id_001</div>
+                            </div>
+                            <div class="comment">
+                                comment
+                            </div>
+                            <div class="date_recomment_area">
+                                <div class="date">2025.01.10</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment_write">
+                    <textarea></textarea>
+                    <div class="btn_comment_submit">등록</div>
+                </div>
+            </div>
+            <div class="btn_write_login mt-5">
+                <button class="btn_list" onclick="location.href='board.html'">목록으로</button>
+            </div>
         </div>
-        <!-- e: section_02(pc) -->
-
-       
-
     </section>
-
-
-
-
-
-
-
-
+    <!-- e: board_d_02 -->
 
     <!-- s: footer -->
     <footer class="footer">
@@ -393,6 +371,14 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.board_d_02 .detail_comments_area .top .sort>div').on('click',function(){
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

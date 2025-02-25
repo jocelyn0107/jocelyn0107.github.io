@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/ui.css">
 </head>
 
-<body>
+<body class="color_white">
     <!-- s: contact modal -->
     <div class="modal_popup" id="modalContact">
         <div class="modal_wrap modal_wrap_md">
@@ -323,7 +323,7 @@
                     </table>
                 </div>
                 <div class="btn_write_login">
-                    <button class="btn_write">게시글 작성</button>
+                    <button class="btn_write" onclick="location.href='board_write.html'">게시글 작성</button>
                     <button class="btn_login" onclick="location.href='login.html'">로그인</button>
                 </div>
             </div>
@@ -350,7 +350,7 @@
                 <div class="board_wrap">
                     <div class="board_container">
                         <div class="board_list active">
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge notice">
                                     <div>공지</div>
                                 </div>
@@ -373,7 +373,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -396,7 +396,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -419,7 +419,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -442,7 +442,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -465,7 +465,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -490,7 +490,7 @@
                             </div>
                         </div>
                         <div class="board_list">
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge">
                                     <div>구분</div>
                                 </div>
@@ -515,7 +515,7 @@
                             </div>
                         </div>
                         <div class="board_list">
-                            <div class="list">
+                            <div class="list" onclick="location.href='board_detail.html'">
                                 <div class="badge notice">
                                     <div>공지</div>
                                 </div>
@@ -541,14 +541,14 @@
                         </div>
                     </div>
                     <div class="btn_write_login">
-                        <button class="btn_write">게시글 작성</button>
+                        <button class="btn_write" onclick="location.href='board_write.html'">게시글 작성</button>
                         <button class="btn_login" onclick="location.href='login.html'">로그인</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- e: section_02(mobile) -->
-
+         
         <!-- s: pagination -->
         <div class="pagination">
             <ul>
@@ -564,14 +564,6 @@
         </div>
         <!-- e: pagination -->
     </section>
-
-
-
-
-
-
-
-
 
     <!-- s: footer -->
     <footer class="footer">

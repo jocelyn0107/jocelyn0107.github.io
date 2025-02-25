@@ -37,6 +37,16 @@ $(document).ready(function () {
         $('#modalChangePwComplete').fadeIn();
         $('body').addClass('no_scroll');
     });
+
+    $('.btn_board_write').on('click', function () {
+        $('#modalWriteComplete').fadeIn();
+        $('body').addClass('no_scroll');
+    });
+
+    $('.btn_modify_delete, .delete').on('click', function () {
+        $('#modalDelete').fadeIn();
+        $('body').addClass('no_scroll');
+    });
     
     // 모달 닫았을 때
     $('.modal_close, .btn_modal_close').on('click', function () {
@@ -52,6 +62,24 @@ $(document).ready(function () {
         $(this).hide();
         $(this).siblings('p').hide();
         $(this).parents().parents().addClass('click');
+    });
+
+    // 셀렉박스
+    $(".select > .sel:not(.disable)").on("click", function () {
+        $(this).parent().toggleClass("active");
+    });
+    $(".lSel button").on("click", function () {
+        var selectedText = $(this).text();
+        $(this).parent().parent().removeClass("active");
+        var $selButton = $(this).parent().prev();
+        $selButton.text(selectedText);
+    });
+
+    $('.comment_list .btn_modify_comment').on('click', function(){
+        $(this).parent().addClass('d_none');
+        $(this).parent().parent().siblings('.comment').addClass('d_none');
+        $(this).parent().parent().siblings('.date_recomment_area').addClass('d_none');
+        $(this).parent().parent().siblings('.comment_modify').addClass('d_block');
     });
 
     // 라인 , 별 애니메이션
