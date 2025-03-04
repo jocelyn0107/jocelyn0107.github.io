@@ -22,7 +22,7 @@ $(document).ready(function () {
         $('body').removeClass('no_scroll');
     });
 
-    // 컨택트
+    // 모달
     $('.btn_contact, .mo_btn_contact').on('click', function () {
         $('#modalContact').fadeIn();
         $('body').addClass('no_scroll');
@@ -64,6 +64,12 @@ $(document).ready(function () {
         $(this).parents().parents().addClass('click');
     });
 
+    // 정렬
+    $('.board_d_02 .detail_comments_area .top .sort>div').on('click',function(){
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
     // 셀렉박스
     $(".select > .sel:not(.disable)").on("click", function () {
         $(this).parent().toggleClass("active");
@@ -75,6 +81,7 @@ $(document).ready(function () {
         $selButton.text(selectedText);
     });
 
+    // 수정 버튼 클릭 시 댓글 창
     $('.comment_list .btn_modify_comment').on('click', function(){
         $(this).parent().addClass('d_none');
         $(this).parent().parent().siblings('.comment').addClass('d_none');
