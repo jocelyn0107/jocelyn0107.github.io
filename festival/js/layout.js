@@ -128,3 +128,20 @@ $(document).ready(function () {
         });
     });
 });
+
+// 가격
+document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".box");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("move"); // 화면에 보이면 move 추가
+            }
+        });
+    }, {
+        threshold: window.innerWidth <= 768 ? 0 : 0.3 // 768px 이하일 때 threshold 0으로 설정
+    });
+
+    boxes.forEach(box => observer.observe(box));
+});

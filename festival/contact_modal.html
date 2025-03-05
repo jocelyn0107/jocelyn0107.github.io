@@ -1,0 +1,71 @@
+<div class="modal_wrap modal_wrap_md">
+    <div class="modal_top_w">
+        <div class="modal_title"></div>
+        <div class="modal_close">
+            <img src="images/icon_close_blk.svg" alt="icon_close">
+        </div>
+    </div>
+    <div class="modal_wrap_line d_none"></div>
+    <div class="title">Contact</div>
+    <div class="modal_contents">
+        <div class="representative">
+            <div>02-1551-0901</div>
+            <div>thatzit1012@gmail.com</div>
+        </div>
+        <div class="contact_area">
+            <div class="input_group">
+                <label class="title">이름<span class="essential">*</span></label>
+                <div>
+                    <input type="text" class="input essential_input" id="name_input" placeholder="이름을 입력해주세요.">
+                </div>
+            </div>
+            <div class="input_group">
+                <label class="title">이메일<span class="essential">*</span></label>
+                <div>
+                    <input type="email" class="input essential_input" id="email_input" placeholder="이메일을 입력해주세요.">
+                    <div class="helper_error" id="helper_error_email">올바른 이메일 형식이 아닙니다.</div>
+                </div>
+            </div>
+            <div class="input_group">
+                <label class="title">연락처<span class="essential">*</span></label>
+                <div>
+                    <input type="tel" class="input essential_input" id="phone_input" placeholder="연락처를 입력해주세요.( - 제외)">
+                    <div class="helper_error" id="helper_error_phone">올바른 연락처 형식이 아닙니다.</div>
+                </div>
+            </div>
+            <div class="input_group">
+                <label class="title">내용<span class="essential">*</span></label>
+                <div>
+                    <textarea class="input essential_input" id="content_input" placeholder="내용을 입력해주세요."></textarea>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox1" id="checkbox1" class="essential_input" checked>
+                <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+            </div>
+            <textarea readonly class="textarea">개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.</textarea>
+            <div class="input_group">
+                <div class="helper_error">필수 선택 항목입니다.</div>
+            </div>
+        </div>
+        <div class="modal_btn_w">
+            <button class="color_main btn_big btn_submit" id="submit_contact_btn">전송하기</button>
+        </div>
+            
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/contact.js"></script>

@@ -7,7 +7,7 @@
     <title>축제 스탬프투어</title>
     <meta property="og:title" content="축제 스탬프투어로 행사를 더 똑똑하게 참여를 더 즐겁게 만드세요.">
     <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
-    <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
+    <meta property="og:url" content="https://www.festivalstamp.com/">
     <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
     <meta property="og:image" content="images/og_img.jpg">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
@@ -39,31 +39,31 @@
                     <div class="input_group">
                         <label class="title">이름<span class="essential">*</span></label>
                         <div>
-                            <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                            <input type="text" class="input essential_input" id="name_input" placeholder="이름을 입력해주세요.">
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">이메일<span class="essential">*</span></label>
                         <div>
-                            <input type="email" class="input" placeholder="이메일을 입력해주세요.">
-                            <div class="helper_error active">올바른 이메일 형식이 아닙니다.</div>
+                            <input type="email" class="input essential_input" id="email_input" placeholder="이메일을 입력해주세요.">
+                            <div class="helper_error" id="helper_error_email">올바른 이메일 형식이 아닙니다.</div>
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">연락처<span class="essential">*</span></label>
                         <div>
-                            <input type="tel" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
-                            <div class="helper_error">올바른 연락처 형식이 아닙니다.</div>
+                            <input type="tel" class="input essential_input" id="phone_input" placeholder="연락처를 입력해주세요.( - 제외)">
+                            <div class="helper_error" id="helper_error_phone">올바른 연락처 형식이 아닙니다.</div>
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">내용<span class="essential">*</span></label>
                         <div>
-                            <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                            <textarea class="input essential_input" id="content_input" placeholder="내용을 입력해주세요."></textarea>
                         </div>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <input type="checkbox" name="checkbox1" id="checkbox1" class="essential_input" checked>
                         <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
                     </div>
                     <textarea readonly class="textarea">개인정보 수집 및 이용 동의
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="modal_btn_w">
-                    <button class="color_main btn_big btn_submit">전송하기</button>
+                    <button class="color_main btn_big btn_submit" id="submit_contact_btn">전송하기</button>
                 </div>
                     
             </div>
@@ -414,53 +414,42 @@
                                         <div>2023 경남 IT EXPO</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="year_wrap">
-                                <div class="year">2024</div>
                                 <div class="contents_wrap">
-                                    <div class="mon">2024. 11</div>
+                                    <div class="mon">2023. 10</div>
                                     <div class="mon_list">
-                                        <div>2024 단국 대학교 4C페스타</div>
+                                        <div>진주 하모 나이트 미션 투어</div>
+                                        <div>행주명탐정: 사라진 왜적의 실마리</div>
+                                        <div>2023 대한민국 국향대전</div>
+                                        <div>The Art Plaza : 을지미로 by IBK</div>
+                                        <div>GYEONGSANBUKDO TRAVEL FESTA</div>
+                                        <div>제11회 독일마을 맥주축제</div>
                                     </div>
                                 </div>
                                 <div class="contents_wrap">
-                                    <div class="mon">2024. 10</div>
+                                    <div class="mon">2023. 9</div>
                                     <div class="mon_list">
-                                        <div>2024 대한민국 국향대전</div>
-                                        <div>2024 국제종자박람회</div>
+                                        <div>황금가을, 황금연휴, 황금노을, 보령 추석맞이 3金 모바일 스탬프투어</div>
+                                        <div>2023 강원세계산림엑스포</div>
+                                        <div>제18회 시흥갯골축제 패밀리런</div>
+                                        <div>2023청춘대로: BLOOMING</div>
+                                        <div>2023 ACC 보물찾기</div>
+                                        <div>2023 산청세계전통의약항노화엑스포</div>
+                                        <div>2023 전라남도 청소년박람회</div>
+                                        <div>제11회 단국대학교 지산학협력 링크 3.0 락 페스티발</div>                                        
                                     </div>
                                 </div>
                                 <div class="contents_wrap">
-                                    <div class="mon">2024. 9</div>
+                                    <div class="mon">2023. 7</div>
                                     <div class="mon_list">
-                                        <div>제 24회 산청한방약초축제</div>
-                                        <div>2024 구로G페스티벌</div>
-                                        <div>보령 "황금연휴" 모바일 스탬프투어</div>
-                                        <div>2024 평창백일홍축제</div>
-                                        <div>제2회 과천시 청소년 진로 페스티벌</div>
-                                        <div>2024 서울아트위크</div>
+                                        <div>제 26회 보령머드축제</div>
+                                        <div>2023 화성시 스포츠 스탬프 투어 하반기</div>
                                     </div>
                                 </div>
                                 <div class="contents_wrap">
-                                    <div class="mon">2024. 5</div>
+                                    <div class="mon">2023. 6</div>
                                     <div class="mon_list">
-                                        <div>코리아 헬스&웰니스 페스티벌 in 코리아 뷰티 페스티벌</div>
-                                        <div>제 3회 전라남도 청소년 박람회</div>
-                                        <div>연천 구석기 축제</div>
-                                    </div>
-                                </div>
-                                <div class="contents_wrap">
-                                    <div class="mon">2024. 4</div>
-                                    <div class="mon_list">
-                                        <div>제26회 함평나비대축제</div>
-                                        <div>2024 화성시 축제 시즌제</div>
-                                        <div>제49회 의령홍의장군축제</div>
-                                    </div>
-                                </div>
-                                <div class="contents_wrap">
-                                    <div class="mon">2024. 3</div>
-                                    <div class="mon_list">
-                                        <div>2024년 진해군항상권 "근대역사 모바일 스탬프 투어"</div>
+                                        <div>LG휘센 라인업을 찾아라!</div>
+                                        <div>시간여행10X시간여행카페</div>
                                     </div>
                                 </div>
                             </div>
@@ -598,6 +587,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>

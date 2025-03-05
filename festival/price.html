@@ -7,7 +7,7 @@
     <title>축제 스탬프투어</title>
     <meta property="og:title" content="축제 스탬프투어로 행사를 더 똑똑하게 참여를 더 즐겁게 만드세요.">
     <meta property="og:site_name" content="FESTIVAL STAMP TOUR">
-    <!-- <meta property="og:url" content="https://festivalstamp.com/">-->
+    <meta property="og:url" content="https://www.festivalstamp.com/">
     <meta property="og:description" content="그저 행사가 아니라, 하나의 특별한 경험입니다.">
     <meta property="og:image" content="images/og_img.jpg">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
@@ -39,31 +39,31 @@
                     <div class="input_group">
                         <label class="title">이름<span class="essential">*</span></label>
                         <div>
-                            <input type="text" class="input" placeholder="이름을 입력해주세요.">
+                            <input type="text" class="input essential_input" id="name_input" placeholder="이름을 입력해주세요.">
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">이메일<span class="essential">*</span></label>
                         <div>
-                            <input type="email" class="input" placeholder="이메일을 입력해주세요.">
-                            <div class="helper_error active">올바른 이메일 형식이 아닙니다.</div>
+                            <input type="email" class="input essential_input" id="email_input" placeholder="이메일을 입력해주세요.">
+                            <div class="helper_error" id="helper_error_email">올바른 이메일 형식이 아닙니다.</div>
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">연락처<span class="essential">*</span></label>
                         <div>
-                            <input type="tel" class="input" placeholder="연락처를 입력해주세요.( - 제외)">
-                            <div class="helper_error">올바른 연락처 형식이 아닙니다.</div>
+                            <input type="tel" class="input essential_input" id="phone_input" placeholder="연락처를 입력해주세요.( - 제외)">
+                            <div class="helper_error" id="helper_error_phone">올바른 연락처 형식이 아닙니다.</div>
                         </div>
                     </div>
                     <div class="input_group">
                         <label class="title">내용<span class="essential">*</span></label>
                         <div>
-                            <textarea class="input" placeholder="내용을 입력해주세요."></textarea>
+                            <textarea class="input essential_input" id="content_input" placeholder="내용을 입력해주세요."></textarea>
                         </div>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+                        <input type="checkbox" name="checkbox1" id="checkbox1" class="essential_input" checked>
                         <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
                     </div>
                     <textarea readonly class="textarea">개인정보 수집 및 이용 동의
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="modal_btn_w">
-                    <button class="color_main btn_big btn_submit">전송하기</button>
+                    <button class="color_main btn_big btn_submit" id="submit_contact_btn">전송하기</button>
                 </div>
                     
             </div>
@@ -335,23 +335,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/common/js/library/aos.js"></script>
     <script src="js/layout.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const boxes = document.querySelectorAll(".box");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("move"); // 화면에 보이면 move 추가
-                    }
-                });
-            }, {
-                threshold: window.innerWidth <= 768 ? 0 : 0.3 // 768px 이하일 때 threshold 0으로 설정
-            });
-
-            boxes.forEach(box => observer.observe(box));
-        });
-    </script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
