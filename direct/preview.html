@@ -181,12 +181,12 @@
               <div class="stamp_info">
                 <div class="form_group">
                   <label class="con_title">제목</label>
-                  <input type="text" class="input_form" placeholder="최대 10글자 입력 가능" maxlength="10" id="text1_1"
+                  <input type="text" class="input_form" id="text1_1"
                     oninput="updatePreview('text1_1', 'text_box1_1')">
                 </div>
                 <div class="form_group">
                   <label class="con_title">내용</label>
-                  <input type="text" class="input_form" placeholder="최대 20글자 입력 가능" maxlength="20" id="text1_2"
+                  <input type="text" class="input_form" id="text1_2"
                     oninput="updatePreview('text1_2','text_box1_2')">
                 </div>
               </div>
@@ -205,12 +205,12 @@
               <div class="stamp_info">
                 <div class="form_group">
                   <label class="con_title">제목</label>
-                  <input type="text" class="input_form" placeholder="최대 10글자 입력 가능" maxlength="10" id="text1_3"
+                  <input type="text" class="input_form" id="text1_3"
                     oninput="updatePreview('text1_3','text_box1_3')">
                 </div>
                 <div class="form_group">
                   <label class="con_title">내용</label>
-                  <input type="text" class="input_form" placeholder="최대 20글자 입력 가능" maxlength="20" id="text1_4"
+                  <input type="text" class="input_form" id="text1_4"
                     oninput="updatePreview('text1_4','text_box1_4')">
                 </div>
               </div>
@@ -229,12 +229,12 @@
               <div class="stamp_info">
                 <div class="form_group">
                   <label class="con_title">제목</label>
-                  <input type="text" class="input_form" placeholder="최대 10글자 입력 가능" maxlength="10" id="text1_5"
+                  <input type="text" class="input_form" id="text1_5"
                     oninput="updatePreview('text1_5','text_box1_5')">
                 </div>
                 <div class="form_group">
                   <label class="con_title">내용</label>
-                  <input type="text" class="input_form" placeholder="최대 20글자 입력 가능" maxlength="20" id="text1_6"
+                  <input type="text" class="input_form" id="text1_6"
                     oninput="updatePreview('text1_6','text_box1_6')">
                 </div>
               </div>
@@ -253,12 +253,12 @@
               <div class="stamp_info">
                 <div class="form_group">
                   <label class="con_title">제목</label>
-                  <input type="text" class="input_form" placeholder="최대 10글자 입력 가능" maxlength="10" id="text1_7"
+                  <input type="text" class="input_form" id="text1_7"
                     oninput="updatePreview('text1_7','text_box1_7')">
                 </div>
                 <div class="form_group">
                   <label class="con_title">내용</label>
-                  <input type="text" class="input_form" placeholder="최대 20글자 입력 가능" maxlength="20" id="text1_8"
+                  <input type="text" class="input_form" id="text1_8"
                     oninput="updatePreview('text1_8','text_box1_8')">
                 </div>
               </div>
@@ -277,14 +277,68 @@
               <div class="stamp_info">
                 <div class="form_group">
                   <label class="con_title">제목</label>
-                  <input type="text" class="input_form" placeholder="최대 10글자 입력 가능" maxlength="10" id="text1_9"
+                  <input type="text" class="input_form" id="text1_9"
                     oninput="updatePreview('text1_9','text_box1_9')">
                 </div>
                 <div class="form_group">
                   <label class="con_title">내용</label>
-                  <input type="text" class="input_form" placeholder="최대 20글자 입력 가능" maxlength="20" id="text1_10"
+                  <input type="text" class="input_form" id="text1_10"
                     oninput="updatePreview('text1_10','text_box1_10')">
                 </div>
+              </div>
+            </div>
+            <h2 class="preview_heading">공지 및 스탬프 조건 등록하기</h2>
+            <div class="form_group">
+              <div class="con_title">공지사항</div>
+              <div class="d_flex">
+                <div class="radio_area">
+                  <input type="radio" class="input_radio" id="noticeRadio01" name="noticeRadio">
+                  <label for="noticeRadio01">사용함</label>
+                </div>
+                <div class="radio_area">
+                  <input type="radio" class="input_radio" id="noticeRadio02" name="noticeRadio" checked>
+                  <label for="noticeRadio02">사용하지 않음</label>
+                </div>
+              </div>
+              <input type="text" class="input_form" id="noticeText">
+            </div>
+            <div class="form_group">
+              <div class="con_title">스탬프 조건</div>
+              <div class="checkbox mt">
+                <input type="checkbox" name="checkbox1" id="checkbox1" class="input" checked>
+                <label class="label" for="checkbox1">
+                  <div class="check_input">
+                    <div>스탬프</div>
+                    <input type="text" class="input_form size_01" maxlength="1">
+                    <div>개 모으시면</div>
+                    <input type="text" class="input_form size_02">
+                    <div>을(를) 드립니다.</div>
+                  </div>
+                </label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="checkbox2" id="checkbox2" class="input">
+                <label class="label" for="checkbox2">
+                  <div class="check_input">
+                    <div>스탬프</div>
+                    <input type="text" class="input_form size_01" maxlength="1">
+                    <div>개 모으시면</div>
+                    <input type="text" class="input_form size_02">
+                    <div>을(를) 드립니다.</div>
+                  </div>
+                </label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="checkbox3" id="checkbox3" class="input">
+                <label class="label" for="checkbox3">
+                  <div class="check_input">
+                    <div>스탬프</div>
+                    <input type="text" class="input_form size_01" maxlength="1">
+                    <div>개 모으시면</div>
+                    <input type="text" class="input_form size_02">
+                    <div>을(를) 드립니다.</div>
+                  </div>
+                </label>
               </div>
             </div>
           </form>

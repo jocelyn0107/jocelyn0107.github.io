@@ -115,4 +115,14 @@ $(document).ready(function () {
 		$('#modalLogin').fadeOut();
 		$('body').removeClass('no_scroll');
 	});
+
+	function toggleNoticeText() {
+        if ($("#noticeRadio01").is(":checked")) {
+            $("#noticeText").show();
+        } else {
+            $("#noticeText").hide();
+        }
+    }
+    toggleNoticeText();
+    $("input[name='noticeRadio']").on("change", toggleNoticeText);
 });
