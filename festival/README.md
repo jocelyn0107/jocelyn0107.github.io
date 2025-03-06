@@ -7,4 +7,4 @@
 - 사용 기술: HTML, CSS, Javascript, Jquery
 
 ## 🔍 Overview
-![Image](https://github.com/user-attachments/assets/86753af0-3b3e-4ef7-8c6f-2aaea1b407ad)
+<img src="https://github.com/user-attachments/assets/86753af0-3b3e-4ef7-8c6f-2aaea1b407ad"  width="300">
