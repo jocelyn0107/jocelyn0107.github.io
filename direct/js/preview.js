@@ -47,6 +47,8 @@ addInputEventListener('eventDate', 'previewEventDate');
 addInputEventListener('eventLocation', 'previewEventLocation');
 addInputEventListener('eventorganizer', 'previewEventHost');
 addInputEventListener('eventwebsite', 'previewEventHomepage');
+addInputEventListener('stampNum', 'prevStampNum');
+addInputEventListener('stampGift', 'prevStampGift');
 
 function updatePreview(inputId, previewId) {
 	const inputElement = document.getElementById(inputId);
@@ -72,6 +74,21 @@ function previewImage(inputId, previewId) {
 		preview.style.backgroundImage = 'none';
 	}
 }
+
+// 공지사항 미리보기
+document.addEventListener("DOMContentLoaded", function () {
+    var eventNotice = document.getElementById("eventnotice");
+    var noticeContents = document.querySelector(".notice_contents");
+
+    eventNotice.addEventListener("input", function () {
+        var inputText = eventNotice.value;
+        if (inputText.trim() === "") {
+            noticeContents.innerHTML = "공지사항을 입력해주세요.";
+        } else {
+            noticeContents.innerHTML = inputText.replace(/\n/g, "<br>");
+        }
+    });
+});
 
 // jQuery를 사용한 datepicker 설정
 $(document).ready(function () {
