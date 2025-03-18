@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드핏</title>
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="../../common/css/common.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <!-- s: guide modal -->
+    <div class="modal_popup full_screen_popup" id="modalGuide">
+        <div class="modal_wrap modal_wrap_lg">
+            <div class="dot_area">
+                <div class="dot active"></div>  
+                <div class="dot"></div>  
+                <div class="dot"></div>  
+            </div>
+            <h2 class="sm_title">모바일 명세서 업로드 가이드</h2>
+            <div class="lg_title_area">
+                <h2 class="lg_title active">카드사 또는 은행 어플을<br>실행해 주세요.</h2>
+                <h2 class="lg_title">검색창에 "명세서"를<br>검색해 주세요.</h2>
+                <h2 class="lg_title">카드사 또는 은행 어플을<br>저장해 주세요.</h2>
+            </div>
+            <div class="guide_img_area">
+                <img src="images/g_01.png" alt="guide_01" class="img active">
+                <img src="images/g_02.png" alt="guide_02" class="img">
+                <img src="images/g_03.png" alt="guide_03" class="img">
+            </div>
+            <div class="bottom_btn">
+                <div class="modal_close">가이드 닫기</div>
+                <div class="arrow_btn">
+                    <div class="modal_prev">이전</div>
+                    <div class="modal_next">다음</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: guide modal -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+       $(document).ready(function () {
+            let currentIndex = 0;
+            const $dots = $(".dot_area .dot");
+            const $titles = $(".lg_title_area .lg_title");
+            const $images = $(".guide_img_area .img");
+            const $prevBtn = $(".modal_prev");
+            const $nextBtn = $(".modal_next");
+
+            function updateActiveSlide(index) {
+                $dots.removeClass("active").eq(index).addClass("active");
+                $titles.removeClass("active").eq(index).addClass("active");
+                $images.removeClass("active").eq(index).addClass("active");
+
+                if (index === 0) {
+                    $prevBtn.hide();
+                } else {
+                    $prevBtn.show();
+                }
+
+                // 마지막 화면일 때 다음 버튼 비활성화
+                if (index === $dots.length - 1) {
+                    $nextBtn.css({"pointer-events": "none" });
+                } else {
+                    $nextBtn.css({"pointer-events": "auto" });
+                }
+            }
+
+            $nextBtn.click(function () {
+                if (currentIndex < $dots.length - 1) {
+                    currentIndex++;
+                    updateActiveSlide(currentIndex);
+                }
+            });
+
+            $prevBtn.click(function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateActiveSlide(currentIndex);
+                }
+            });
+
+            updateActiveSlide(currentIndex);
+        });
+
+
+    </script>
+</body>
+</html>

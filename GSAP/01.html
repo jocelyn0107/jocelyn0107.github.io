@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap_scrollTrigger</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+</head>
+<style>
+    *{padding: 0;margin: 0;}
+    li{list-style: none;}
+    section{height: 100vh; background: #23282a; color: white; display: flex; justify-content: center; align-items: center; border: 2px solid red;}
+    .con01 .title{font-size: 120px; text-transform: uppercase; line-height: 1.1;}
+    .con01 .title span{-webkit-text-stroke: 2px #b1dd40; color: transparent; display: block;}
+    .con02 ul{display: flex; width: 70%; justify-content: space-between; color: #000;}
+    .con02 ul li{width: 22%; background: #fed700; height: 300px; border-radius: 20px; display: flex; justify-content: center; align-items: center;}
+    .con03 {position: relative; overflow: hidden; margin-bottom: 2000px;}
+    .con03 .contitle{-webkit-text-stroke: 2px #b1dd40; color: transparent; font-size: 100px;}
+    .con03 span{display: block; width: 250px; height: 350px; background: #fee8b0; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 20px; display: flex; justify-content: center; align-items: center; color: #333; font-size: 28px; font-weight: bold;}
+    .con03 span.a{transform: translate(-50%, -50%) rotate(-12deg);}
+    .con03 span.b{background: #ffbbcc; transform: translate(-50%, -50%) rotate(12deg);}
+    .con03 span.c{background: #ffcccc; transform: translate(-50%, -50%) rotate(-15deg);}
+    .con03 span.d{background: #df9773; transform: translate(-50%, -50%) rotate(18deg);}
+    .con03 span.e{background: #d9eccb; transform: translate(-50%, -50%) rotate(-3deg);}
+</style>
+<body>
+    <div class="wrap">
+        <section class="con01">
+            <h2 class="title"><span>GSAP</span>ScrollTrigger</h2>
+        </section>
+        <section class="con02">
+            <ul>
+                <li>Card1</li>
+                <li>Card2</li>
+                <li>Card3</li>
+                <li>Card4</li>
+            </ul>
+        </section>
+        <section class="con03">
+            <h2 class="contitle">section 03</h2>
+            <span class="a">Card1</span>
+            <span class="b">Card2</span>
+            <span class="c">Card3</span>
+            <span class="d">Card4</span>
+            <span class="e">Card5</span>
+        </section>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        $(function(){
+            gsap.timeline({
+                scrollTrigger:{
+                    trigger:'.con02 ul',
+                    start:'top 90%',
+                    end:'20% 100%',
+                    scrub:2,
+                    // markers:true
+                }
+            })
+            .from('.con02 li:nth-child(1)',{y:'400px', duration:1, ease:'none'},0.2)
+            .from('.con02 li:nth-child(2)',{y:'400px', duration:1, ease:'none'},0.4)
+            .from('.con02 li:nth-child(3)',{y:'400px', duration:1, ease:'none'},0.6)
+            .from('.con02 li:nth-child(4)',{y:'400px', duration:1, ease:'none'},0.8)
+
+            // con03
+            gsap.timeline({
+                scrollTrigger:{
+                    trigger:'.con03',
+                    start: 'top 100%',
+                    end:'100% 100%',
+                    scrub:2,
+                    markers:true
+                }
+            })
+            .fromTo('.con03 span.a', {y:'400%'},{y:'0'},1.2)
+            .fromTo('.con03 span.b', {y:'400%'},{y:'0'},1.4)
+            .fromTo('.con03 span.c', {y:'400%'},{y:'0'},1.6)
+            .fromTo('.con03 span.d', {y:'400%'},{y:'0'},1.8)
+            .fromTo('.con03 span.e', {y:'400%'},{y:'0'},2.0)
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드핏</title>
+    <link rel="stylesheet" href="../../common/css/reset.css">
+    <link rel="stylesheet" href="../../common/css/common.css">
+    <link rel="stylesheet" href="../../common/css/slick.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <!-- s: guide modal -->
+    <div class="modal_popup" id="modalGuide">
+        <div class="modal_wrap modal_wrap_lg">
+            <h2 class="sm_title">모바일 명세서 업로드 가이드</h2>
+            <div class="popup_slide">
+                <div>
+                    <p><span>01</span>카드사 또는 은행 어플을 실행해 주세요.</p>
+                    <img src="images/g_01.png" alt="img" class="img">
+                </div>
+                <div>
+                    <p><span>02</span>검색창에 "명세서"를 검색해 주세요.</p>
+                    <img src="images/g_02.png" alt="img" class="img">
+                </div>
+                <div>
+                    <p><span>03</span>명세서 캡처 후 이미지를 업로드해 주세요.</p>
+                    <img src="images/g_03.png" alt="img" class="img">
+                </div>
+            </div>
+            <div class="btn_popup">
+                <div class="modal_close">가이드 다시 보지 않기</div>
+                <div class="modal_close">닫기</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../common/js/library/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.popup_slide').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+            });
+        });
+    </script>
+</body>
+</html>
