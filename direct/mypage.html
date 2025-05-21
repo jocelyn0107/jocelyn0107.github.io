@@ -95,7 +95,7 @@
           <div class="div-block-7">
             <div class="d_flex_horizontal mb_20">
               <div class="my_info_title">아이디</div>
-              <div class="my_info_text">01012345678</div>
+              <div class="my_info_text">010-1234-5678</div>
             </div>
             <div class="d_flex_horizontal">
               <div class="my_info_title">관리자페이지</div>
@@ -111,53 +111,142 @@
   </div>
   <div class="my_stamp_area">
     <div class="container">
-      <h2 class="team_heading text_black mb_50 text_left">스탬프 리스트</h2>
-      <div class="pre_normal_20 text_black">이미지 클릭 시 QR코드를 미리 볼 수 있습니다.</div>
-      <div class="my_stamp_wrap">
-        <div class="my_stamp_w">
-          <div data-w-id="93c1c912-4f4c-ebef-65a9-575117dbcd0c" class="card">
-            <div class="front"></div>
-            <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
-          </div>
-          <div class="my_stamp_title">굿즈 판매 장소</div>
-          <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
-        </div>
-        <div id="w-node-_9e6823f4-d7f0-a3b1-a444-544e7d53dc35-551a1425" class="my_stamp_w">
-          <div data-w-id="9e6823f4-d7f0-a3b1-a444-544e7d53dc36" class="card">
-            <div class="front"></div>
-            <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
-          </div>
-          <div class="my_stamp_title">필름 제작소</div>
-          <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
-        </div>
-        <div id="w-node-_16dae28e-762a-f67a-e1ef-f0d6ff6ae19f-551a1425" class="my_stamp_w">
-          <div data-w-id="16dae28e-762a-f67a-e1ef-f0d6ff6ae1a0" class="card">
-            <div class="front"></div>
-            <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
-          </div>
-          <div class="my_stamp_title">어린이 필름 체험장</div>
-          <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
-        </div>
-        <div id="w-node-_89e17b83-106d-c085-4887-2243ffc9edbe-551a1425" class="my_stamp_w">
-          <div data-w-id="89e17b83-106d-c085-4887-2243ffc9edbf" class="card">
-            <div class="front"></div>
-            <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
-          </div>
-          <div class="my_stamp_title">수제 굿즈 제작소</div>
-          <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
-        </div>
-        <div id="w-node-_55d84c9f-7a01-0e88-1deb-446ecb1603d5-551a1425" class="my_stamp_w">
-          <div data-w-id="55d84c9f-7a01-0e88-1deb-446ecb1603d6" class="card">
-            <div class="front"></div>
-            <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
-          </div>
-          <div class="my_stamp_title">필름 역사 체험장</div>
-          <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
-        </div>
-        <div id="w-node-af67e64c-d9e5-6d6d-33fa-00172d51e1a1-551a1425" class="my_stamp_w d_none">
-          <div data-w-id="af67e64c-d9e5-6d6d-33fa-00172d51e1a2" class="card"></div>
-        </div>
+      <h2 class="team_heading text_black mb_50 text_left">축제 리스트</h2>
+      <div class="table_w mt_20">
+        <table class="table festival_list">
+          <thead class="table_thead">
+              <tr>
+                  <th>행사명</th>
+                  <th>날짜</th>
+                  <th>장소</th>
+                  <th>주최</th>
+                  <th>수정</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="underline">행사명_01</td>
+                  <td>2025.05.15</td>
+                  <td>장소명_01</td>
+                  <td>주최명_01</td>
+                  <td><button onclick="location.href='preview.html'">수정</button></td>
+              </tr>
+              <tr>
+                  <td class="underline">행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02</td>
+                  <td>2025.05.15</td>
+                  <td>장소명_01</td>
+                  <td>주최명_01</td>
+                  <td><button onclick="location.href='preview.html'">수정</button></td>
+              </tr>
+          </tbody>
+        </table>
       </div>
+      <!-- s: qr_list -->
+      <div class="qr_list_w">
+        <div class="qr_list">
+          <h2 class="team_heading text_black mt_60 mb_10 text_left">큐알 리스트</h2>
+          <div class="pre_mebium_30 text_black mb_20 mt_50">행사명_01</div>
+          <div class="pre_normal_20 text_black">이미지 클릭 시 QR코드를 미리 볼 수 있습니다.</div>
+          <div class="my_stamp_wrap">
+            <div class="my_stamp_w">
+              <div data-w-id="93c1c912-4f4c-ebef-65a9-575117dbcd0c" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">굿즈 판매 장소</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_9e6823f4-d7f0-a3b1-a444-544e7d53dc35-551a1425" class="my_stamp_w">
+              <div data-w-id="9e6823f4-d7f0-a3b1-a444-544e7d53dc36" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">필름 제작소</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_16dae28e-762a-f67a-e1ef-f0d6ff6ae19f-551a1425" class="my_stamp_w">
+              <div data-w-id="16dae28e-762a-f67a-e1ef-f0d6ff6ae1a0" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">어린이 필름 체험장</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_89e17b83-106d-c085-4887-2243ffc9edbe-551a1425" class="my_stamp_w">
+              <div data-w-id="89e17b83-106d-c085-4887-2243ffc9edbf" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">수제 굿즈 제작소</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_55d84c9f-7a01-0e88-1deb-446ecb1603d5-551a1425" class="my_stamp_w">
+              <div data-w-id="55d84c9f-7a01-0e88-1deb-446ecb1603d6" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">필름 역사 체험장</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-af67e64c-d9e5-6d6d-33fa-00172d51e1a1-551a1425" class="my_stamp_w d_none">
+              <div data-w-id="af67e64c-d9e5-6d6d-33fa-00172d51e1a2" class="card"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qr_list">
+          <h2 class="team_heading text_black mt_60 mb_10 text_left">큐알 리스트</h2>
+          <div class="pre_mebium_30 text_black mb_20 mt_50">행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02행사명_02</div>
+          <div class="pre_normal_20 text_black">이미지 클릭 시 QR코드를 미리 볼 수 있습니다.</div>
+          <div class="my_stamp_wrap">
+            <div class="my_stamp_w">
+              <div data-w-id="93c1c912-4f4c-ebef-65a9-575117dbcd0c" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">타이틀_01</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_9e6823f4-d7f0-a3b1-a444-544e7d53dc35-551a1425" class="my_stamp_w">
+              <div data-w-id="9e6823f4-d7f0-a3b1-a444-544e7d53dc36" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">타이틀_02</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_16dae28e-762a-f67a-e1ef-f0d6ff6ae19f-551a1425" class="my_stamp_w">
+              <div data-w-id="16dae28e-762a-f67a-e1ef-f0d6ff6ae1a0" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">타이틀_03</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_89e17b83-106d-c085-4887-2243ffc9edbe-551a1425" class="my_stamp_w">
+              <div data-w-id="89e17b83-106d-c085-4887-2243ffc9edbf" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">타이틀_04</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-_55d84c9f-7a01-0e88-1deb-446ecb1603d5-551a1425" class="my_stamp_w">
+              <div data-w-id="55d84c9f-7a01-0e88-1deb-446ecb1603d6" class="card">
+                <div class="front"></div>
+                <div class="back"><img src="images/qr_img.png" loading="lazy" width="100" height="Auto" alt=""></div>
+              </div>
+              <div class="my_stamp_title">타이틀_05</div>
+              <a href="#" class="btn_my_stamp_qr gradient_move w-button">QR코드 다운</a>
+            </div>
+            <div id="w-node-af67e64c-d9e5-6d6d-33fa-00172d51e1a1-551a1425" class="my_stamp_w d_none">
+              <div data-w-id="af67e64c-d9e5-6d6d-33fa-00172d51e1a2" class="card"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- e: qr_list -->
     </div>
   </div>
   <div class="preview_banner">
@@ -205,5 +294,4 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="js/layout.js"></script>
 </body>
-
 </html>

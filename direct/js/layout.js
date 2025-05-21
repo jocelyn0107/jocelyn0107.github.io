@@ -8,4 +8,10 @@ $(document).ready(function(){
         $('#modalLogout').fadeOut();
         $('body').removeClass('no_scroll');
     });
+
+    $('.festival_list tbody tr').on('click', function(){
+        const index = $(this).index();
+        $('.qr_list_w .qr_list').removeClass('d_block');
+        $('.qr_list_w .qr_list').eq(index).addClass('d_block');
+      });
 });

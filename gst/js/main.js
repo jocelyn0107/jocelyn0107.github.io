@@ -36,7 +36,7 @@ $(document).ready(function () {
         start: "top top", // section.technology의 top이 화면 상단에 닿을 때
         end: "bottom bottom", // section.technology의 bottom이 화면 하단에 닿을 때까지
         pin: true, // 해당 섹션을 고정
-        pinSpacing: true, // 고정된 후에도 공간을 유지
+        // pinSpacing: true, // 고정된 후에도 공간을 유지
         scrub: 1, // 스크롤에 따라 부드럽게 이동
     });
 

@@ -81,6 +81,7 @@
   font-style: normal;
   font-display: swap;
 }
+html {scroll-behavior: smooth; -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select: none;}
 body.no_scroll {
   overflow: hidden !important;
 }
@@ -1842,15 +1843,19 @@ html {
 }
 
 .team_info_w:nth-of-type(4) {
-  animation-delay: 2s;
+  animation-delay: 1.3s;
 }
 
 .team_info_w:nth-of-type(5) {
-  animation-delay: 2.3s;
+  animation-delay: 1.6s;
 }
 
 .team_info_w:nth-of-type(6) {
-  animation-delay: 2.6s;
+  animation-delay: 1.9s;
+}
+
+.team_info_w:nth-of-type(7) {
+  animation-delay: 2.5s;
 }
 
 .fade_in {
@@ -2563,9 +2568,83 @@ html {
 }
 
 .my_stamp_area {
-  padding-top: 140px;
   padding-bottom: 140px;
 }
+
+/* table */
+.table {
+  width: 100%;
+  color: #212529;
+}
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+.table_w {
+  max-height: 500px;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.table_w::-webkit-scrollbar{
+  width: 6px;
+}
+.table_w::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.table_w::-webkit-scrollbar-thumb{
+  background-color: rgba(149, 149, 149, 0.1);
+  border-radius: 10px;
+}
+.table_w::-webkit-scrollbar-track{
+  background-color: rgba(106, 106, 106, 0);
+}
+.festival_list>thead th {
+  background-color: #667cf82e;
+}
+.festival_list thead th{
+  border-bottom: 0;
+}
+.festival_list td{
+  border-top: 0;
+  border-bottom: 1px solid #dee2e6;
+  text-align: center;
+}
+.festival_list {
+  max-height: 500px !important;
+  overflow-y: auto;
+}
+.table_w .table_thead {
+  position: sticky !important;
+  top: 0;
+  font-weight: 600;
+}
+.festival_list tbody tr{
+  cursor: pointer;
+}
+.table .underline{
+  text-align: left;
+  text-decoration: underline;
+  max-width: 300px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.qr_list{
+  display: none;
+}
+.qr_list.d_block{
+  display: block !important;
+}
+
+
 
 .my_stamp_wrap {
   grid-column-gap: 20px;
