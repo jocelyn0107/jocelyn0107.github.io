@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1> 
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- modal delete -->
+        <div class="modal_popup" id="modalDelete">
+            <div class="modal_wrap_sm">
+                <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                    <div class="modal_control">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                    </div>
+                </div>
+                <div class="modal_content">정말로 삭제하시겠습니까?</div>
+                <div class="modal_btn_w">
+                    <button class="modal_btn_ok">확인</button>
+                    <button class="btn_close_modal">닫기</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li><a href="project.html">PROJECT</a>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold lnb_active"><a href="myboard.html">강성희</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li class="lnb_active"><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg"
+                            class="m_menu_icon_active" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li class="lnb_active"><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile nav -->
+
+    <!-- left aside start -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='admin_board.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_board.svg" class="aside_icon" alt="left aside My Board">
+            <div class="aside_menu_title">My Board</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_schedule.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_schedule.svg" class="aside_icon" alt="left aside Schedule">
+            <div class="aside_menu_title">Schedule</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_employees.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_hour.svg" class="aside_icon" alt="left aside Working Hour">
+            <div class="aside_menu_title">Employees Management</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu left_aside_active" onclick="location.href='admin_notice.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_notice.svg" class="aside_icon" alt="left aside Notice">
+            <div class="aside_menu_title">Notice</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_approval.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_approval.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Approval</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="my_left_signout btn_signout">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_logout.svg" class="aside_icon" alt="left aside Notice">
+            <div class="aside_menu_title">로그아웃</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- left aside end -->
+
+    <!-- main start -->
+    <main id="main_contents" class="notice_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>My page</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>Notice</div>
+                </div>
+            </div>
+            <!-- my_notice start -->
+            <div class="my_wrap my_notice">
+                <div class="goto_bottom_wrap" onclick="location.href='#tableNotice'">
+                    <div class="goto_bottom">
+                        <p class="mr-2">목록으로 가기</p>
+                        <img class="none_hover" src="images/ico_notice_down_none.svg" alt="목록으로 스크롤">
+                        <img class="hover" src="images/ico_notice_down.svg" alt="목록으로 스크롤">
+                    </div>
+                </div>
+                <!-- notice_detail start -->
+                <div class="notice_detail ">
+                    
+                    <div class="top_button">
+                        <button>
+                            <img src="images/ico_detail_close.svg" alt="공지 상세페이지 열기">
+                        </button>
+                        <span class="tooltip">
+                            상세페이지 닫기
+                        </span>
+                    </div>
+                    <div class="title d-flex justify-content-between flex-wrap">
+                        <div class="d-flex tit_btn_wrap">
+                            <div class="d-flex h3_wrap">
+                                <span class="array mr-2">
+                                    공지
+                                </span>
+                                <h3>
+                                    사무실 이전 관련 사무실 이전 관련 사무실 이전 관련 사무실 이전 관련 사무실 이전 관련 사무실 이전 관련
+                                </h3>
+                            </div> 
+                            <div class="d-flex btns mt-1">
+                                <img onclick="location.href='mynotice_add.html'" class="btn_correction pointer mr-1" src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" alt="회의록 수정">
+                                <img class="btn_delete pointer" src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" alt="회의록 삭제">
+                            </div>
+                        </div>
+                        <ul class="dates d-flex align-items-center">
+                            <li class="mr-2">김상우</li>
+                            <li>2024.00.00</li>
+                        </ul>
+                    </div>
+                    <div class="view_contents">
+                        <pre>
+[※공지]서울 사무실이 이전합니다.
+주소와 출입에 필요한 앱 링크 공유합니다.
+가입해 주세요~
+
+주소 : 서울 강남구 테헤란로 501 브이플렉스 506호
+앱 : https://fastfive.app.link/invitation?code=7u57chlq6c
+                        </pre>
+                    </div>
+                    <div class="text-left comment title">댓글
+                        <span class="ml-1 mr-2">4</span>
+                    </div>
+                    <div class="comment_container s_hover scroll">
+                        <div class="comment_wrap">
+                            <div class="w_100 d-flex">
+                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                <div class="d-block w_100 text-left">
+                                    <div class="comment_array d-flex text-left justify-content-between">
+                                        <div class="contents d-flex flex-wrap">
+                                            <div class="name mr-2">왕규웅</div>
+                                            <pre class="comment_contents text-left mr-1">넵 알겠습니다.</pre>
+                                            <div class="date">24.00.00 00:00</div>
+                                        </div>
+                                        <div class="tools_wrap d-flex comment_btn_w position-relative">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_recomment.svg" class="pointer mr-1 btn_recomment" alt="대댓글">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="comment_wrap_line"></div>
+                        </div>
+                        <div class="comment_wrap">
+                            <div class="w_100 d-flex">
+                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                <div class="d-block w_100 text-left">
+                                    <div class="comment_array d-flex text-left justify-content-between">
+                                        <div class="contents d-flex flex-wrap">
+                                            <div class="name mr-2">정찬호</div>
+                                            <pre class="comment_contents text-left mr-2">공지사항 댓글입니다. 공지사항 댓글입니다. 공지사항 댓글입니다. 공지사항 댓글입니다.</pre>
+                                            <div class="date">24.00.00 00:00</div>
+                                        </div>
+                                        <div class="tools_wrap d-flex comment_btn_w position-relative">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_recomment.svg" class="pointer mr-1 btn_recomment" alt="대댓글">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment_wrap_line"></div>
+                        </div>
+                        <div class="comment_wrap">
+                            <div class="w_100 d-flex">
+                                <img src="http://test.s1.unipware.com/unipware/images/img_recomment.svg" class="img_recomment mr-3">
+                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                <div class="d-block w_100">
+                                    <div class="comment_array d-flex text-left justify-content-between">
+                                        <div class="contents d-flex flex-wrap">
+                                            <div class="name mr-2">강성희</div>
+                                            <pre class="comment_contents text-left mr-2">공지사항 답댓글입니다.</pre>
+                                            <div class="date">24.00.00 00:00</div>
+                                        </div>
+                                        <div class="tools_wrap d-flex comment_btn_w position-relative">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                            <!-- 댓글 수정 파일 첨부 기능 삭제 수정 -->
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                            <!-- 첨부 파일 삭제 수정 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment_wrap">
+                            <div class="comment_wrap_line"></div><div class="w_100 d-flex">
+                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                <div class="d-block w_100 text-left">
+                                    <div class="comment_array d-flex text-left justify-content-between">
+                                        <div class="contents d-flex flex-wrap">
+                                            <div class="name mr-2">정찬호</div>
+                                            <pre class="comment_contents text-left mr-2">공지사항 댓글입니다. 공지사항 댓글입니다. 공지사항 댓글입니다. 공지사항 댓글입니다.</pre>
+                                            <div class="date">24.00.00 00:00</div>
+                                        </div>
+                                        <div class="tools_wrap d-flex comment_btn_w position-relative">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_recomment.svg" class="pointer mr-1 btn_recomment" alt="대댓글">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="mt-3 mb-2 text-left">댓글 작성</div>
+                        <div class="position-relative">
+                            <textarea class="detail_comment_input history_view_input" placeholder="댓글을 입력해주세요"></textarea>
+                            <div class="detail_comment_inpute_icon">
+                                <!-- 파일 첨부 삭제 수정 -->
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_comment_send.svg" class="pointer" alt="댓글 작성">
+                            </div>
+                            <!-- 파일 첨부 명 삭제 수정 -->
+                        </div>
+                </div>
+                <!-- notice_detail end -->
+                <div id="tableNotice" class="table_notice_w">
+                    <div class="notice_table_w mt-4 pt-2">
+                        <div class="mb-3 notice_table_num d-flex justify-content-between align-items-center">
+                            <div class="notice_top d-flex flex-wrap align-items-center justify-content-between w_100">
+                                <!-- search area  -->
+                                <div class="data_search_area notice">
+                                    <div class="search_icon">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_search.svg" alt="삭제">
+                                    </div>
+                                    <div class="search_delete_icon">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_input_delete.svg" alt="검색 삭제">
+                                    </div>
+                                    <input type="text" class="data_form_control w_100 serch_notice" placeholder="검색">
+                                </div>
+                                <!-- buttons -->
+                                <div class="d-flex align-items-center">
+                                    <button type="button" class="btn_console" onclick="location.href='mynotice_add.html'">
+                                        <span>등록</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table notice_table">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="70%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                                <tr class="notice_fixed pointer">
+                                    <td scope="col">
+                                        <div class="">공지</div>
+                                    </td>
+                                    <td scope="col" class="active">
+                                        사무실 이전 관련
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">김상우</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="notice_fixed pointer">
+                                    <td scope="col">
+                                        <div class="">공지</div>
+                                    </td>
+                                    <td scope="col">주간회의 요일 변경</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">왕규웅</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="notice_fixed pointer">
+                                    <td scope="col">
+                                        <div class="">공지</div>
+                                    </td>
+                                    <td scope="col">특별 휴가 공지</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">1</td>
+                                    <td scope="col">설 연휴 공지</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">2</td>
+                                    <td scope="col">근무시간 관련 공지</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">3</td>
+                                    <td scope="col">공지사항입니다. 공지사항입니다. 공지사항입니다. 공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.  공지사항입니다.</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">4</td>
+                                    <td scope="col">공지사항입니다.</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">5</td>
+                                    <td scope="col">공지사항입니다.</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">6</td>
+                                    <td scope="col">공지사항입니다.</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                                <tr class="pointer">
+                                    <td scope="col">7</td>
+                                    <td scope="col">공지사항입니다.</td>
+                                    <td scope="col">
+                                        <div class="notice_table_writer">조영호</div>
+                                    </td>
+                                    <td scope="col">
+                                        <div class="notice_table_date">2024.00.00</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- s:pagination start -->
+                    <div class="pagination justify-content-center">
+                        <ul>
+                            <li class="pagi_arrow init"></li>
+                            <li class="pagi_arrow prev"></li>
+                            <li class="is-active">1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li class="pagi_arrow next"></li>
+                            <li class="pagi_arrow last"></li>
+                        </ul>
+                    </div>
+                    <!-- e:pagination end -->
+                </div>
+            </div>
+            <!-- my_notice end -->
+        </section>
+    </main>
+    <!-- main end -->
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/progress.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+</body>
+
+</html>

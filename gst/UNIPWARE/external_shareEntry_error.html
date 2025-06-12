@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal share password -->
+    <div class="modal_popup" id="modalSharePassword" style="display: block;">
+        <div class="modal_wrap modal_wrap_md document_upload share_password_entry">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">공유 링크 암호 확인</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+
+            <div class="modal_wrap_line mb-4"></div>
+            <!-- s: modal_scroll -->
+            <div class="modal_scroll">
+                <div class="password confirm">
+                   <img src="http://test.s1.unipware.com/unipware/images/modal_confirm.svg" alt="느낌표">
+                   <p class="mb-4">공유 링크가 암호로 보호되어 있습니다.<br>
+                    확인하려면 암호를 입력해주세요.
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <div class="share_password error w_80">
+                            <input class="modal_form_control error w_100" type="password" placeholder="비밀번호를 입력해주세요.">
+                            <span class="error_message mt-1">비밀번호를 입력해주세요.</span>
+                        </div>
+                    </div>
+                    <!-- 하단 버튼 -->
+                    <div class="modal_btn_w mb-2">
+                        <button class="btn_close_modal">취소</button>
+                        <button class="modal_btn_ok">확인</button>
+                    </div>
+                </div>
+            </div>
+            <!-- e: modal_scroll -->
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="header" class="external">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- main start -->
+    <main id="main_contents" class="external">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <div class="wrap external" style="display: none;">
+                <!-- 타이틀 -->
+                <div class="external_share_wrap d-flex justify-content-between w_100">
+                    <div class="external_share d-flex w_100">
+                        <h1 class="mr-3">공유 받은 파일</h1>
+                        <dl class="expire_date d-flex align-items-center">
+                            <dt class="mr-2">유효기간</dt>
+                            <dd>
+                                1일
+                                <b>(2024.12.04 만료)</b>
+                            </dd>
+                        </dl>
+                    </div>
+                    <p class="share_owner">
+                        <b>정기쁨</b>님이 공유하신 파일입니다.
+                    </p>
+                </div>
+                <!-- 타이틀 -->
+                <button class="btn_external_download">다운로드</button>
+                <!-- s: share_table_wrap -->
+                <div class="share_table_wrap">
+                    <!-- s: head -->
+                    <div class="head">
+                        <table class="table s_hover">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="checks">
+                                        <input type="checkbox" id="shareFileAll">
+                                        <label for="shareFileAll"></label>
+                                    </th>
+                                    <th scope="col" class="text-left">파일명</th>
+                                    <th scope="col" class="text-right">크기</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <!-- e: head -->
+                    <div class="table_outline scroll s_hover">
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="checks">
+                                        <input type="checkbox" id="shareFile1">
+                                        <label for="shareFile1"></label>
+                                    </td>
+                                    <td class="text-left">
+                                        <p>Uniware 기획안.zip</p>
+                                        <p class="mobile_capacity">115.6MB</p>
+                                    </td>
+                                    <td class="capacity text-right">115.6MB</td>
+                                </tr>
+                                <tr>
+                                    <td class="checks">
+                                        <input type="checkbox" id="shareFile2">
+                                        <label for="shareFile2"></label>
+                                    </td>
+                                    <td class="text-left">
+                                        <p>파일명.pdf</p>
+                                        <p class="mobile_capacity">9999.99MB</p>
+                                    </td>
+                                    <td class="capacity text-right">9999.99MB</td>
+                                </tr>
+                                <tr>
+                                    <td class="checks">
+                                        <input type="checkbox" id="shareFile3">
+                                        <label for="shareFile3"></label>
+                                    </td>
+                                    <td class="text-left">
+                                        <p>파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명파일명.hwp</p>
+                                        <p class="mobile_capacity">88.8MB</p>
+                                    </td>
+                                    <td class="capacity text-right">88.8MB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- e:share_table_wrap -->
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+</body>
+
+</html>

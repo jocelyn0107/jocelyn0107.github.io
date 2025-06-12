@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li class="lnb_active"><a href="project.html">PROJECT</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li class="lnb_active"><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold"><a href="myboard.html">강성희</a>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#"  class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg"
+                            class="m_menu_icon_active" alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li class="lnb_active"><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile_nav -->
+
+    <!-- s: left aside -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='project.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_project.svg" class="aside_icon" alt="left aside project">
+            <div class="aside_menu_title">프로젝트 목록</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div class="left_aside_menu left_aside_active" onclick="location.href='customer.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_customer.svg" class="aside_icon" alt="left aside customer">
+            <div class="aside_menu_title">고객사 목록</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- e: left aside -->
+
+     <!-- main start -->
+     <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>프로젝트</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>고객사</div>
+                </div>
+            </div>
+            <div class="pc_breadcrumb">
+                <div>프로젝트</div>
+                <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                </div>
+                <div>고객사</div>
+                <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                </div>
+                <div>등록</div>
+            </div>
+            <div class="wrap">
+                <div class="database_wrap query_wrap customer_wrap query_add">
+                    <!-- customer_input_wrap start -->
+                    <div class="query_add query_inputs_wrap customer_input_wrap d-flex justify-content-between">
+                        <div class="d-flex input_section">
+                            <h3 class="pb-2">기본 정보</h3>
+                            <ul class="add query_inputs_container d-flx contents query_add d-flex justify-content-end q_column c_column">
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">
+                                        고객사
+                                        <span class="r_value ml-1">*</span>
+                                    </label>
+                                    <input id="connString" type="text" class="form_control" placeholder="고객사를 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">
+                                        대표자
+                                        <span class="r_value ml-1">*</span>
+                                    </label>
+                                    <input id="connString" type="text" class="form_control" placeholder="대표자를 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">
+                                        연락처
+                                        <span class="r_value ml-1">*</span>
+                                    </label>
+                                    <input id="connString" type="text" class="form_control" placeholder="연락처를 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">이메일</label>
+                                    <input id="connString" type="text" class="form_control" placeholder="이메일을 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-start justify-content-start address">
+                                    <label class="title">주소</label>
+                                    <div class="d-flex flex-wrap">
+                                        <div class="d-flex mb-2 w-100">
+                                            <button class="btn address mr-2" onclick="execDaumPostcode()">주소 검색</button>
+                                            <input type="text" id="member_addr" readonly="" class="form_control w-100" placeholder="주소">
+                                        </div>
+                                        <input type="text" class="form_control address" placeholder="상세주소를 입력해주세요.">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex input_section">
+                            <h3 class="pb-2">부가 정보</h3>
+                            <ul class="add query_inputs_container d-flex contents query_add d-flex justify-content-start q_column c_column">
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">세금 계산서용 <span class="word-break"><br>이메일</span></label>
+                                    <input id="connString"type="text" class="form_control" placeholder="세금 계산서용 이메일을 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">사업자등록번호</label>
+                                    <input id="connString"type="text" class="form_control" placeholder="사업자등록번호를 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-center justify-content-start">
+                                    <label class="title">홈페이지 주소</label>
+                                    <input id="connString"type="text" class="form_control" placeholder="홈페이지 주소를 입력해주세요">
+                                </li>
+                                <li class="input_div d-flex align-items-start justify-content-start">
+                                    <label class="title">비고</label>
+                                    <textarea class="form_control textarea" placeholder="비고를 입력해주세요" id="Query"></textarea>
+                                </li>
+                                <li class="input_div d-flex align-items-start justify-content-start">
+                                    <label class="title">첨부파일</label>
+                                    <ul class="file_uploader_container">
+                                    <li class="d-grid mb-2 uploader_section">
+                                            <label class="title sub_tit">사업자등록증</label>
+                                            <!-- file_uploader_wrap start -->
+                                            <div class="file_uploader_wrap">
+                                                <div class="file_uploader d-grid">
+                                                    <input type="file" class="upload_file_input" style="display: none;">
+                                                    <!-- file_name_wrap start -->
+                                                    <div class="file_name_wrap" style="display: none;">
+                                                        <div class="d-grid">
+                                                            <p class="file_name">241015_휴먼러벗_화면설계서 v1.0.pptx</p>
+                                                            <img class="file_cancel pointer mr-1" src="http://test.s1.unipware.com/unipware/images/ico_file_cancel.svg" alt="복사">
+                                                        </div>
+                                                    </div>
+                                                    <!-- file_name_wrap end -->
+                                                    <p class="no_file">선택된 파일이 없습니다.</p>
+                                                    <button class="btn_file">파일 선택</button>
+                                                </div>
+                                            </div>
+                                            <!-- file_uploader_wrap end -->
+                                    </li> 
+                                    <li class="uploader_section d-grid mb-0">
+                                            <label class="title sub_tit">통장사본</label>
+                                            <!-- file_uploader_wrap start -->
+                                            <div class="file_uploader_wrap">
+                                                <div class="file_uploader d-grid">
+                                                    <input type="file" class="upload_file_input" style="display: none;">
+                                                    <!-- file_name_wrap start -->
+                                                    <div class="file_name_wrap" style="display: none;">
+                                                        <div class="d-grid">
+                                                            <p class="file_name">휴먼러벗_화면설계서.pptx휴먼러벗_화면설계서.pptx휴먼러벗_화면설계서.pptx휴먼러벗_화면설계서.pptx</p>
+                                                            <img class="file_cancel pointer mr-1" src="http://test.s1.unipware.com/unipware/images/ico_file_cancel.svg" alt="복사">
+                                                        </div>
+                                                    </div>
+                                                    <!-- file_name_wrap end -->
+                                                    <p class="no_file">선택된 파일이 없습니다.</p>
+                                                    <button class="btn_file">파일 선택</button>
+                                                </div>
+                                            </div>
+                                            <!-- file_uploader_wrap end -->
+                                        </li> 
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- customer_input_wrap end -->
+                    <div class="text-center">
+                        <button type="button" class="btn_cancle" onclick="location.href='customer.html'">취소</button>
+                        <button id="btnSubmit" type="button" class="btn_console btn_input_check">확인</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    console.log(data);
+
+                    var roadAddr = data.roadAddress; // 도로명 주소 변수
+                    var jibunAddr = data.jibunAddress; // 지번 주소 변수
+
+                    if (roadAddr !== '') {
+                        document.getElementById("member_addr").value = roadAddr;
+                    } else if (jibunAddr !== '') {
+                        document.getElementById("member_addr").value = jibunAddr;
+                    }
+                }
+            }).open();
+        }
+    </script>
+
+    <!-- 입력하지 않았을 경우 빨간 테두리 -->
+    <script>
+        document.getElementById('btnSubmit').addEventListener('click', function () {
+            var Query = document.getElementById('Query');
+
+            var hasError = false;
+
+            if (!Query.value.trim()) {
+                Query.classList.add('error');
+                hasError = true;
+            } else {
+                Query.classList.remove('error');
+            }
+            if (!hasError) {
+                location.href = 'customer.html';
+            } else {}
+        });
+
+        function execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    console.log(data);
+
+                    var roadAddr = data.roadAddress; // 도로명 주소 변수
+                    var jibunAddr = data.jibunAddress; // 지번 주소 변수
+
+                    if (roadAddr !== '') {
+                        document.getElementById("member_addr").value = roadAddr;
+                    } else if (jibunAddr !== '') {
+                        document.getElementById("member_addr").value = jibunAddr;
+                    }
+                }
+            }).open();
+        }
+    </script>
+</body>
+
+</html>

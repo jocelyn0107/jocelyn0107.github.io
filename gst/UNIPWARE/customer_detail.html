@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1> 
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_popup uploader_section" id="modalCustomerManagerAdd">
+        <div class="modal_wrap modal_wrap_md document_upload">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">담당자 등록</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll">
+                <div class="d-flex mb-4">
+                    <div class="contents mr-2">
+                        <div class="modal_contents_title mb-2">부서</div>
+                        <div class="date_wrap d-flex justify-content-between">
+                            <input type="text" class="modal_form_control w_100" placeholder="부서를 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">직급</div>
+                        <div class="date_wrap d-flex justify-content-between">
+                            <input type="text" class="modal_form_control w_100" placeholder="직급을 입력해주세요.">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">
+                            이름
+                            <span class="r_value ml-1">*</span>
+                        </div>
+                        <input type="text" class="modal_form_control w_100" placeholder="이름을 입력해주세요.">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">
+                            연락처
+                            <span class="r_value ml-1">*</span>
+                        </div>
+                        <input type="text" class="modal_form_control w_100" placeholder="연락처를 입력해주세요.">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">이메일</div>
+                        <input type="text" class="modal_form_control w_100" placeholder="이메일을 입력해주세요.">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">명함 이미지</div>
+                        <div class="file_uploader_wrap w-100">
+                            <div class="file_uploader d-flex mb-2">
+                                <button class="btn_file mr-2">파일 선택</button>
+                                <input type="file" class="upload_file_input" style="display: none;">
+                                <div class="file_name_wrap" style="display: none;">
+                                    <div class="d-flex">
+                                        <p class="file_name">AI변호사_기획안 v0.2.ppt</p>
+                                        <img class="file_cancel pointer" src="http://test.s1.unipware.com/unipware/images/ico_file_cancel.svg" alt="복사">
+                                    </div>
+                                </div>
+                                <p class="no_file">선택된 파일이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">비고</div>
+                        <textarea type="text" class="modal_form_control w_100" placeholder="비고를 입력해주세요."></textarea>
+                    </div>
+                </div>
+                <!-- 하단 버튼 -->
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_close_modal">취소</button>
+                    <button class="modal_btn_ok">확인</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalCustomerImgSlide" >
+        <div class="customer_img_slide">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="slide_imgs" src="http://test.s1.unipware.com/unipware/images/customer_detailImg-1_large.jpg" alt="사업자등록증">
+                        <img class="btn_close_modal pointer" src="http://test.s1.unipware.com/unipware/images/customer_slide_close.svg" alt="팝업 닫기">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide_imgs" src="http://test.s1.unipware.com/unipware/images/customer_detailImg-2_large.jpg" alt="사업자등록증">
+                        <img class="btn_close_modal pointer" src="http://test.s1.unipware.com/unipware/images/customer_slide_close.svg" alt="팝업 닫기">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div> 
+        </div>
+    </div>
+
+   <!-- modal delete -->
+    <div class="modal_popup" id="modalCustomerImgView">
+        <div class="customer_img_slide">
+            <div class="img_cont">
+                <div class="img_wrap">
+                    <!-- Slides -->
+                    <div class="img_viewer">
+                        <img src="http://test.s1.unipware.com/unipware/images/customer_businessCard-1_large.jpg" alt="담당자 명함">
+                        <img class="btn_close_modal pointer" src="http://test.s1.unipware.com/unipware/images/customer_slide_close.svg" alt="팝업 닫기">
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div> 
+   
+    
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo"
+                    alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'" class="m_logo"
+                    alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li class="lnb_active"><a href="project.html">PROJECT</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold"><a href="myboard.html">강성희</a>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon" alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a class="lnb_active" href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg" class="m_menu_icon_active"
+                            alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li class="lnb_active"><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg" class="m_menu_icon" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon" alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile_nav -->
+
+    <!-- s: left aside -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='project.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_project.svg" class="aside_icon" alt="left aside project">
+            <div class="aside_menu_title">프로젝트 목록</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div class="left_aside_menu left_aside_active" onclick="location.href='customer.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_customer.svg" class="aside_icon" alt="left aside customer">
+            <div class="aside_menu_title">고객사 목록</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- e: left aside -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>콘솔</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>데이터베이스</div>
+                </div>
+            </div>
+            <img style="left:0"  src="http://test.s1.unipware.com/unipware/images/bg_database_add.jpg" class="bg_database_add"alt="배경이미지">
+            <div class="wrap project_detail_wrap">
+                <section class="project_info customer_info_wrap scroll d-flex justify-content-between">
+                    <div class="info_wrap d-flex justify-content-between">
+                        <section class="section_cont">
+                            <div class="d-flex align-items-center customer_tit">
+                                <h3>메리츠화재</h3>
+                                <div class="home_wrap">
+                                    <button class="btn_goto_home" onclick="window.open('#')">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_home.svg" alt="홈페이지 바로가기">
+                                    </button>
+                                    <span>홈페이지 바로가기</span>
+                                </div>
+                                <p class="ceo">
+                                    <span>대표자</span>
+                                    홍길동
+                                </p>
+                                <div class="d-flex btns">
+                                    <img onclick="location.href='customer_add.html'" class="btn_correction pointer mr-1" src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" alt="회의록 수정">
+                                    <img class="btn_delete pointer" src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" alt="회의록 삭제">
+                                </div>
+                            </div>
+                            <div class="customer_info">
+                                <div class="m_info d-flex justify-content-between">
+                                    <dl>
+                                        <dt class="item_tit mb-2">연락처</dt>
+                                        <dd>010-1234-1234</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="item_tit mb-2">이메일</dt>
+                                        <dd class="overflow_none d-flex align-items-center">
+                                            park123@kakao.com
+                                            <button>
+                                                <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                                <span class="tooltip">
+                                                    이메일 복사
+                                                </span>
+                                            </button>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="m_info d-flex justify-content-between mt-4">
+                                    <dl>
+                                        <dt class="item_tit mb-2">주소</dt>
+                                        <dd>경상북도 포항시 북구 새천년대로 70</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="item_tit mb-2">상세 주소</dt>
+                                        <dd>상세주소 내용입니다.</dd>
+                                    </dl>
+                                </div>
+                                <div class="m_info d-flex justify-content-between mt-4">
+                                    <dl>
+                                        <dt class="item_tit mb-2">세금 계산서용 이메일</dt>
+                                        <dd class="overflow_none d-flex align-items-center">
+                                            park345@kakao.com
+                                            <button>
+                                                <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                                <span class="tooltip">
+                                                    이메일 복사
+                                                </span>
+                                            </button>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt class="item_tit mb-2">사업자등록번호</dt>
+                                        <dd>000-00-00000</dd>
+                                    </dl>
+                                </div>
+                                <dl class="w_100 mt-4">
+                                    <dt class="item_tit mb-2">비고</dt>
+                                    <dd>비고가 입력된 칸.  길어지면 말줄임표 처리됩니다. 길어지면 말줄임처리됩니다. 최대 두 줄까지 작성을 추천합니다.  최대 두 줄까지 작성을 추천합니다.  최대 두 줄까지 작성을 추천합니다.  최대 두 줄까지 작성을 추천합니다.  최대 두 줄까지 작성을 추천합니다.  최대 두 줄까지 작성을 추천합니다.</dd>
+                                </dl>
+                            </div>
+                            <div class="d-block w_100 scroll_lock">
+                                <button class="all_download d-flex align-items-center">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_file_download_w.svg" class="mr-2 pointer" alt="파일 다운로드">
+                                    전체 파일 다운로드
+                                </button>
+                            </div>
+                            <ul class="images_wrap d-flex w_100 mt-2 justify-content-between">
+                                <li class="img_list">
+                                    <div class="img_cont">
+                                        <div class="zoom">
+                                            <div class="tools">
+                                                <div class="view_detail first d-flex justify-content-center align-items-center">
+                                                    <img src="http://test.s1.unipware.com/unipware/images/ico_customer_zoom.svg" alt="자세히 보기">
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center ml-2">
+                                                    <img src="http://test.s1.unipware.com/unipware/images/ico_customer_download.svg" alt="다운로드">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="http://test.s1.unipware.com/unipware/images/customer_detailImg-1.jpg" alt="사업자등록증"> 
+                                    </div>
+                                    <div class="card_tit d-flex justify-content-center mt-2 mb-2">
+                                        <p>사업자등록증.jpg</p>
+                                    </div>
+                                </li>
+                                <li class="img_list ">
+                                    <div class="img_cont">
+                                        <div class="zoom">
+                                            <div class="tools">
+                                                <div class="view_detail second d-flex justify-content-center align-items-center">
+                                                    <img src="http://test.s1.unipware.com/unipware/images/ico_customer_zoom.svg" alt="자세히 보기">
+                                                </div>
+                                                <div class="d-flex justify-content-center align-items-center ml-2">
+                                                    <img src="http://test.s1.unipware.com/unipware/images/ico_customer_download.svg" alt="다운로드">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="http://test.s1.unipware.com/unipware/images/customer_detailImg-2.jpg" alt="통장사본"> 
+                                    </div>
+                                    <div class="card_tit d-flex justify-content-center mt-2 mb-2">
+                                        <p>통장 사본.jpg</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="section_cont">
+                            <h4 class="manager mt-1">담당자</h4>
+                            <ul class="manager_list s_hover scroll w_100 mt-3">
+                                <li class="no_contents" style="display: none;">
+                                    담당자가 없습니다.<br>담당자를 등록해주세요.
+                                </li>
+                                <li class="d-grid">
+                                    <div class="name d-flex justify-content-center">
+                                        <div class="fixed">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_manager_selected.svg" alt="상단 고정">
+                                            <img style="display: none;" src="http://test.s1.unipware.com/unipware/images/ico_manager_default.svg" alt="상단 고정 하지 않음">
+                                            <span class="tooltip">
+                                                상단 고정
+                                            </span>
+                                        </div>
+                                        <span>전략기획실 대표이사</span>
+                                        <p>홍길동</p>
+                                    </div>
+                                    <div class="info">
+                                        <dl class="d-grid">
+                                            <dt>TEL</dt>
+                                            <dd>010-1234-5678</dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>EMAIL</dt>
+                                            <dd class="overflow_none d-flex align-items-center">
+                                                park012@kakao.com
+                                                <button>
+                                                    <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                                    <span class="tooltip">
+                                                        이메일 복사
+                                                    </span>
+                                                </button>
+                                            </dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>비고</dt>
+                                            <dd>비고에 들어가는 내용입니다. 비고에 들어가는 내용입니다. 비고에 들어가는 내용입니다. 비고에 들어가는 내용입니다. 비고에 들어가는 내용입니다. 비고에 들어가는 내용입니다.</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="business_card">
+                                        <div class="img_cont">
+                                            <div class="zoom">
+                                                <div class="tools">
+                                                    <div class="view_detail d-flex justify-content-center align-items-center">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_zoom.svg" alt="자세히 보기">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center ml-2">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_download.svg" alt="다운로드">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="http://test.s1.unipware.com/unipware/images/customer_businessCard-1.jpg" alt="담당자 명함"> 
+                                        </div>
+                                    </div>
+                                    <div class="more_wrap">
+                                        <div class="more">
+                                            <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_manager_dots.svg" alt="더보기">
+                                            <ul class="more_list" style="display: none;">
+                                                <li class="modify">수정</li>
+                                                <li class="btn_delete">삭제</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d-grid">
+                                    <div class="name d-flex justify-content-center">
+                                        <div class="fixed">
+                                            <img style="display: none;" src="http://test.s1.unipware.com/unipware/images/ico_manager_selected.svg" alt="상단 고정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_manager_default.svg" alt="상단 고정 하지 않음">
+                                            <span class="tooltip">
+                                                상단 고정
+                                            </span>
+                                        </div>
+                                        <span>전략기획실 이사</span>
+                                        <p>박경희</p>
+                                    </div>
+                                    <div class="info">
+                                        <dl class="d-grid">
+                                            <dt>TEL</dt>
+                                            <dd>010-0553-5221</dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>EMAIL</dt>
+                                            <dd class="overflow_none d-flex align-items-center">
+                                                park00@kakao.com
+                                                <button>
+                                                    <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                                    <span class="tooltip">
+                                                        이메일 복사
+                                                    </span>
+                                                </button>
+                                            </dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>비고</dt>
+                                            <dd>비고에 들어가는 내용입니다.</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="business_card">
+                                        <div class="img_cont">
+                                            <div class="zoom">
+                                                <div class="tools">
+                                                    <div class="view_detail d-flex justify-content-center align-items-center">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_zoom.svg" alt="자세히 보기">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center ml-2">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_download.svg" alt="다운로드">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="http://test.s1.unipware.com/unipware/images/customer_businessCard-2.jpg" alt="담당자 명함"> 
+                                        </div>
+                                    </div>
+                                    <div class="more_wrap">
+                                        <div class="more">
+                                            <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_manager_dots.svg" alt="더보기">
+                                            <ul class="more_list" style="display: none;">
+                                                <li class="modify">수정</li>
+                                                <li class="btn_delete">삭제</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d-grid">
+                                    <div class="name d-flex justify-content-center">
+                                        <div class="fixed">
+                                            <img style="display: none;" src="http://test.s1.unipware.com/unipware/images/ico_manager_selected.svg" alt="상단 고정">
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_manager_default.svg" alt="상단 고정 하지 않음">
+                                            <span class="tooltip">
+                                                상단 고정
+                                            </span>
+                                        </div>
+                                        <span>기획팀 팀장</span>
+                                        <p>이희망</p>
+                                    </div>
+                                    <div class="info">
+                                        <dl class="d-grid">
+                                            <dt>TEL</dt>
+                                            <dd>010-5855-4523</dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>EMAIL</dt>
+                                            <dd class="overflow_none d-flex align-items-center">
+                                                lee345@gmail.com
+                                                <button>
+                                                    <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                                    <span class="tooltip">
+                                                        이메일 복사
+                                                    </span>
+                                                </button>
+                                            </dd>
+                                        </dl>
+                                        <dl class="note d-grid">
+                                            <dt>비고</dt>
+                                            <dd>비고에 들어가는 내용입니다.</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="business_card">
+                                        <div class="img_cont">
+                                            <div class="zoom">
+                                                <div class="tools">
+                                                    <div class="view_detail d-flex justify-content-center align-items-center">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_zoom.svg" alt="자세히 보기">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center align-items-center ml-2">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/ico_customer_download.svg" alt="다운로드">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="http://test.s1.unipware.com/unipware/images/customer_businessCard-3.jpg" alt="담당자 명함"> 
+                                        </div>
+                                    </div>
+                                    <div class="more_wrap">
+                                        <div class="more">
+                                            <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_manager_dots.svg" alt="더보기">
+                                            <ul class="more_list" style="display: none;">
+                                                <li class="modify">수정</li>
+                                                <li class="btn_delete">삭제</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn_add w_100 mt-3">추가하기</button>
+                        </section>
+                    </div>
+                    <button class="go_to_list" onclick="location.href='customer.html'">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_gotoList.svg" alt="목록으로">
+                        목록으로
+                    </button>
+                </section>
+                
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <!-- swiper slide -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+
+    <script>
+        new Swiper('.swiper', {
+            navigation: {
+                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-button-next',
+            },
+        })
+new Swipe
+    </script>
+    
+    
+</body>
+
+</html>

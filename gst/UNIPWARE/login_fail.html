@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+    
+    <!-- 로그인 실패 팝업 -->
+    <div class="modal_popup" id="modalLoginFail" style="display: block;">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">아이디와 비밀번호를 확인해주세요.</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+    
+ 
+    <!-- s: header -->
+    <header id="index_header">
+        <div class="header_wrap d-flex justify-content-between">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'"  class="m_logo"alt="모바일 로고">
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- login area start -->
+    <main id="login_wrap">
+        <div class="bg_gradient"></div>
+        <section>
+            <div class="login_img_w">
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="empty_box d-flex align-items-center justify-content-center">UNIPWARE</div>
+                    <img src="http://test.s1.unipware.com/unipware/images/img_login01.jpg" class="img_login01"alt="">
+                </div>
+                <img src="http://test.s1.unipware.com/unipware/images/img_login02.jpg" class="img_login02"alt="">
+            </div>
+            <div class="login_w d-flex justify-content-center" >
+                <div>
+                    <label>LOGIN</label>
+                    <div class="my-4">
+                        <input class="form_control mb-3" placeholder="Username" id="userId">
+                        <input class="form_control" placeholder="Password" type="password" id="userPw">
+                    </div>
+                    <button onclick="loginClick()">로그인</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- login area end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+
+    <script>
+        //로드 됐을 때 모달 보여주기
+        $(window).on('load',function(){
+            $('#modal').fadeIn();
+        })
+
+        // 로그인 버튼 클릭 시
+        function loginClick(){
+            var Id = document.getElementById('userId').value
+            var Pw = document.getElementById('userPw').value
+
+            if (Id == "admin" && Pw == "123"){
+                location.href='myboard.html'
+            }
+            else{
+                location.href='login_fail.html'
+            }
+        }
+
+        //모달 닫기 버튼 클릭 시
+        $(document).ready(function(){
+            $('.btn_close_modal').click(function(){
+                $('#modal').fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>

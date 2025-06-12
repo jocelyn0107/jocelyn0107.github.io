@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal 로그인 실패 -->
+    <div class="modal_popup" id="modalLoginFail" >
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">아이디와 비밀번호를 확인해주세요.</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="index_header">
+        <div class="header_wrap d-flex justify-content-between">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'"  class="m_logo"alt="모바일 로고">
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- login area start -->
+    <main id="login_wrap">
+        <div class="bg_gradient"></div>
+        <section>
+            <div class="login_w phone_auth_wrap d-flex justify-content-center" >
+                <div>
+                    <h1>비밀번호 변경</h1>
+                    <p>신규회원은 전화번호 인증 후<br>
+                        비밀번호를 변경할 수 있습니다.</p>
+                    <h2>새로운 비밀번호 입력</h2>
+                    <div class="input_wrap new_pw error">
+                        <div class="d-flex phone_auth">
+                            <input class="form_control" type="password" placeholder="비밀번호를 입력해주세요.">
+                        </div>
+                        <div class="phone_auth_entry">
+                            <div class="auth share_password error">
+                                <input class="form_control auth_input w_100" type="password" placeholder="비밀번호가 일치하지 않습니다.">
+                            </div>
+                        </div>                        
+                    </div>
+                    <button>변경하기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- login area end -->
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+</body>
+
+</html>

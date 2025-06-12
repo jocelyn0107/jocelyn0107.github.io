@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1> 
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modalNewFileUpload -->
+    <div class="modal_popup uploader_section" id="modalNewFileUpload">
+        <div class="modal_wrap modal_wrap_md">
+
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">문서 등록</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+
+            <div class="modal_wrap_line"></div>
+
+            <div class="modal_scroll">
+                <div class="history_upload_w">
+                    <!-- 문서 타입 -->
+                    <div class="my-4">
+                        <div class="contents d-flex align-items-center">
+                            <div class="modal_contents_title ">문서 타입</div>
+                            <div class="year modal_select w-100">
+                                <button class="sel project">문서 타입 선택</button>
+                                <div class="lSel">
+                                    <button>기획안</button>
+                                    <button class="publishing">퍼블리싱</button>
+                                    <button>화면설계</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 파일 첨부 -->
+                    <div class="new_history upload">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="modal_contents_title">파일 첨부</div>
+                            <!-- file_uploader_wrap start -->
+                            <div class="file_uploader_wrap w-100">
+                                <div class="file_uploader d-flex mb-2">
+                                    <button class="btn_file mr-2">파일 선택</button>
+                                    <input type="file" class="upload_file_input" style="display: none;" />
+                                    <div class="file_name_wrap" style="display: none;">
+                                        <div class="d-flex">
+                                            <p class="file_name">AI변호사_기획안 v0.2.ppt</p>
+                                            <img class="file_cancel pointer" src="http://test.s1.unipware.com/unipware/images/ico_file_cancel.svg" alt="복사">
+                                        </div>
+                                    </div>
+                                    <p class="no_file">선택된 파일이 없습니다.</p>
+                                </div>
+                            </div>
+                            <!-- file_uploader_wrap end -->
+                        </div>
+                    </div>
+                    <!-- 링크 주소 입력 -->
+                    <div class="new_history link">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="modal_contents_title">링크 주소</div>
+                            <input type="text" class="modal_form_control w_100" placeholder="링크 주소를 입력해주세요.">
+                        </div>
+                    </div>
+                    <!-- 하단 버튼 -->
+                    <div class="modal_btn_w mb-2">
+                        <button class="btn_previous">취소</button>
+                        <button class="modal_btn_ok">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- modalMeetingAdd -->
+    <div class="modal_popup uploader_section" id="modalMeetingAdd">
+        <div class="modal_wrap modal_wrap_md meeting_add">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">회의록 등록</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+
+            <div class="modal_wrap_line"></div>
+
+            <div class="modal_scroll">
+                <div class="d-flex my-4 divide_wrap">
+                    <div class="divide">
+                        <!-- 회의명 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">
+                                회의명
+                                <span class="r_value ml-1">*</span>
+                            </div>
+                            <input type="text" class="modal_form_control w_100 mb-3" placeholder="회의명을 입력하세요.">
+                        </div>
+                        <!-- 장소 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">장소</div>
+                            <input type="text" class="modal_form_control w_100 mb-3" placeholder="장소를 입력하세요.">
+                        </div>
+                        <!-- 일시 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">
+                                일시
+                                <span class="r_value ml-1">*</span>
+                            </div>
+                            <input type="date" class="modal_form_control w-100 mb-2" required aria-required="true"
+                                value={startDateValue} onChange={StartDateValueHandler} />
+                            <div class="d-flex align-items-center w_100">
+                                <input type="text" class="modal_form_control w_100 mr-1" placeholder="시작 시간 입력">
+                                <p>to</p>
+                                <input type="text" class="modal_form_control w_100 ml-1" placeholder="종료 시간 입력">
+                            </div>
+                        </div>
+                        <!-- 참석자 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2 mt-3">참석자</div>
+                            <div class="charge_name_w w_100 position-relative people">
+                                <input type="text" class="modal_form_control date w_100" placeholder="참석자를 입력하세요">
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_charge_add.svg" class="ico_charge_add pointer" alt="담당자 추가">
+                                <div class="people_sel document">
+                                    <button class="active">이<b>길동</b> (감성텍)</button>
+                                    <button>임<b>길동</b> (감성텍)</button>
+                                </div>
+                            </div>                        
+                            <div class="participant s_hover scroll mt-2">
+                                <span class="inside">김민규(감성텍)<span class="delete ml-1"></span></span>
+                                <span class="inside">조영호(감성텍)<span class="delete ml-1"></span></span>
+                                <span class="inside">김상우(감성텍)<span class="delete ml-1"></span></span>
+                                <span class="inside">조지은(감성텍)<span class="delete ml-1"></span></span>
+                                <span class="external">이성텍(AI는 변호사)<span class="delete ml-1"></span></span>
+                                <span class="external">박찬호(AI는 변호사)<span class="delete ml-1"></span></span>
+                                <span class="external">김연경(AI는 변호사)<span class="delete ml-1"></span></span>
+                                <span class="external">김연아(AI는 변호사)<span class="delete ml-1"></span></span>
+                                <span class="external">손흥민(AI는 변호사)<span class="delete ml-1"></span></span>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="divide">
+                        <!-- 회의 내용 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">
+                                회의 내용
+                                <span class="r_value ml-1">*</span>
+                            </div>
+                            <textarea class="detail meeting modal_form_control w_100" placeholder="회의 내용을 입력하세요."></textarea>
+                        </div>
+                        <!-- 향후논의 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">향후 논의</div>
+                            <textarea class="detail extra modal_form_control w_100" placeholder="향후 논의를 입력하세요."></textarea>
+                        </div>
+                        <!-- 결정사항 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">결정 사항</div>
+                            <textarea class="detail extra modal_form_control w_100" placeholder="결정 사항을 입력하세요."></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- 하단 버튼 -->
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_previous">취소</button>
+                    <button class="modal_btn_ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modalMeetingView -->
+    <div class="modal_popup" id="modalMeetingView">
+        <div class="modal_wrap modal_wrap_md meeting_add view">
+
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">회의록</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+
+            <div class="modal_wrap_line"></div>
+
+            <div class="modal_scroll">
+                <div class="d-flex my-4 divide_wrap">
+                    <div class="divide">
+                        <!-- 회의명 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">회의명</div>
+                            <p class="w_100 text-left mb-3">1015 주간회의</p>
+                        </div>
+                        <!-- 장소 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">장소</div>
+                            <p class="w_100 text-left mb-3">와이키키 회의실</p>
+                        </div>
+                        <!-- 일시 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2">일시</div>
+                            <p class="w_100 text-left mb-1">2024. 10. 15</p>
+                            <div class="d-flex align-items-center w_100 mb-3">
+                                <span class="time">10:00</span>
+                                <span class="ml-2 mr-2">~</span>
+                                <span class="time">13:00</span>
+                            </div>
+                        </div>
+                        <!-- 참석자 -->
+                        <div class="contents d-flex align-items-center flex-wrap">
+                            <div class="modal_contents_title mb-2 mt-3">참석자</div>
+                            <div class="participant s_hover scroll">
+                                <span class="inside">김민규(감성텍)</span>
+                                <span class="inside">조영호(감성텍)</span>
+                                <span class="inside">김상우(감성텍)</span>
+                                <span class="inside">조지은(감성텍)</span>
+                                <span class="external">이성텍(AI는 변호사)</span>
+                                <span class="external">박찬호(AI는 변호사)</span>
+                                <span class="external">김연경(AI는 변호사)</span>
+                                <span class="external">김연아(AI는 변호사)</span>
+                                <span class="external">손흥민(AI는 변호사)</span>
+                            </div>
+                        </div>
+                        <!-- 파일 첨부 -->
+                        <div class="contents d-flex align-items-center flex-wrap mt-3">
+                            <div class="modal_contents_title w-100">파일 첨부</div>
+                            <div class="file_attached_wrap">
+                                <div class="file_attached d-flex align-items-center mb-2">
+                                    <p class="pointer">AI변호사_기획안_v0.2.ppt</p>
+                                    <span class="mr-4">2024.10.01</span>
+                                    <div class="d-flex">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_file_share.svg" class="mr-2 pointer" alt="파일 공유">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_file_download.svg" class="mr-2 pointer" alt="파일 다운로드">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- file_attached_wrap end -->
+                        </div>
+                    </div>
+                    <div class="divide">
+                        <!-- 회의 내용 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">회의 내용</div>
+                            <div class="content_container s_hover scroll">
+                               <pre>
+회의 내용입니다. 회의 내용입니다. 회의 내용입니다. 회의 내용입니다. 
+                               </pre>
+                            </div>
+                        </div>
+                        <!-- 향후논의 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">향후논의</div>
+                            <div class="content_container s_hover scroll short">
+                                <pre>
+향후 논의입니다.
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- 결정사항 -->
+                        <div class="d-flex flex-wrap mb-3">
+                            <div class="modal_contents_title mb-2">결정사항</div>
+                            <div class="content_container s_hover scroll short">
+                                <pre>
+결정사항 입니다.
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- 하단 버튼 -->
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal share -->
+    <div class="modal_popup" id="modalShare">
+        <div class="modal_wrap_smd">
+            <div class="modal_top_w_share">
+                <div class="modal_title">공유하기</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <!-- search area  -->
+            <div class="search_area mt-3 mb-4">
+                <input type="text" class="modal_form_control share" placeholder="Search">
+                <div class="search_icon">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_search.svg" alt="">
+                </div>
+            </div>
+            <!-- tab_area -->
+            <div class="tab_area mb-4">
+                <div class="team_area">
+                    <div class="active mb-2">이사실</div>
+                    <div class="mb-2">기획팀</div>
+                    <div class="mb-2">디자인팀</div>
+                    <div>개발팀</div>
+                </div>
+                <div class="vertical_line"></div>
+                <div class="name_area name_area_01">
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk1">
+                        <label class="" for="chk1">김민규</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk2">
+                        <label class="" for="chk2">조영호</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk3">
+                        <label class="" for="chk3">김상우</label>
+                    </div>
+                </div>
+                <div class="name_area name_area_02">
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk4">
+                        <label class="" for="chk4">유지현</label>
+                    </div>
+                </div>
+                <div class="name_area name_area_03">
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk8">
+                        <label class="" for="chk8">강성희</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk9">
+                        <label class="" for="chk9">정기쁨</label>
+                    </div>
+                </div>
+                <div class="name_area name_area_04">
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk6">
+                        <label class="" for="chk6">왕규웅</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk7">
+                        <label class="" for="chk7">정찬호</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk7">
+                        <label class="" for="chk7">박상언</label>
+                    </div>
+                    <div class="checks mb-2">
+                        <input type="checkbox" id="chk7">
+                        <label class="" for="chk7">강채은</label>
+                    </div>
+                </div>
+            </div>
+            <div class="selected_people_show_area">
+                김민규, 조영호
+            </div>
+            <div class="modal_btn_w">
+                <button class="btn_close_modal">닫기</button>
+                <button class="modal_btn_ok">공유</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal project modify -->
+    <div class="modal_popup" id="modalProjectAdd">
+        <div class="modal_wrap modal_wrap_md">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="d-flex">
+                    <div class="modal_title mr-3">프로젝트 수정</div>
+                    <div class="year mr-2 modal_select">
+                        <button class="sel">진행상태</button>
+                        <div class="lSel project_progress">
+                            <button class="active todo">진행 전</button>
+                            <button class="on">진행 중</button>
+                            <button class="done">프로젝트 마감</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+
+            <div class="modal_wrap_line"></div>
+
+            <div class="modal_scroll">
+                <div class="project_add_w">
+                    <!-- 프로젝트 명 -->
+                    <div class="mb-4 mt-4">
+                        <div class="contents d-flex align-items-center">
+                            <label class="modal_contents_title">프로젝트 명</label>
+                            <input type="text" class="modal_form_control w_100" placeholder="프로젝트 이름을 입력해주세요.">
+                        </div>
+                    </div>
+                    <!-- 고객사 -->
+                    <div class="mb-4">
+                        <div class="contents d-flex align-items-center">
+                            <label class="modal_contents_title">고객사</label>
+                            <div class="d-flex w_100">
+                                <input type="text" class="modal_form_control w_100 mr-1" placeholder="고객사 이름을 입력해주세요.">
+                                <button class="btn_find_customer">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_search_w.svg" alt="고객사 찾기">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 담당자 -->
+                    <div class="charge_w mb-4">
+                        <div class="contents d-flex">
+                            <label class="modal_contents_title mt-1">담당자</label>
+                            <div class="w_100">
+                                <div class="charge_selectbox_w d-flex mb-2">
+                                    <div class="year modal_select mr-2">
+                                        <button class="sel project">담당 분야 선택</button>
+                                        <div class="lSel">
+                                            <button>총괄 책임</button>
+                                            <button>기획 담당</button>
+                                            <button>디자인 담당</button>
+                                            <button>개발 담당</button>
+                                        </div>
+                                    </div>
+                                    <div class="charge_name_w w_100 position-relative people ">
+                                        <input type="text" class="modal_form_control form_bottom" placeholder="담당자 이름">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_charge_add.svg"
+                                            class="ico_charge_add pointer" alt="담당자 추가">
+                                        <div class="people_sel document">
+                                            <button class="active">강성희</button>
+                                            <button>정기쁨</button>
+                                            <button>정찬호</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 선택된 담당 분야, 담당자 표시 -->
+                                <div class="d-flex flex-wrap">
+                                    <div class="document_tag">총괄책임 김상우
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_charge_cancle_b.svg">
+                                    </div>
+                                    <div class="document_tag">기획 조지은
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_charge_cancle_b.svg">
+                                    </div>
+                                    <div class="document_tag">디자인 강성희
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_charge_cancle_b.svg">
+                                    </div>
+                                    <div class="document_tag">개발 왕규웅
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_charge_cancle_b.svg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 날짜 선택 -->
+                    <div class="content w_100 mb-4 d-flex">
+                        <div class="modal_contents_title mt-1">프로젝트 기간</div>
+                        <div class="calendar_area w_100">
+                            <input type="date" class="modal_form_control mr-2" required aria-required="true"
+                                value={startDateValue} onChange={StartDateValueHandler} />
+                            <hr class="mr-2 mt-3">
+                            <input type="date" class="modal_form_control" data-placeholder="종료일" required
+                                aria-required="true" value={startDateValue} onChange={StartDateValueHandler} />
+                        </div>
+                    </div>
+                    <!-- 프로젝트 요약 -->
+                    <div class="content w_100 mb-4 d-flex">
+                        <div class="modal_contents_title">프로젝트 요약</div>
+                        <div class="contents">
+                            <textarea class="project_summary modal_form_control w_100" placeholder="프로젝트 요약"></textarea>
+                        </div>
+                    </div>
+                    <!-- 피그마 링크 주소 -->
+                    <div class="mb-4 mt-4">
+                        <div class="contents d-flex align-items-center">
+                            <label class="modal_contents_title">피그마 링크 주소</label>
+                            <input type="text" class="modal_form_control w_100" placeholder="피그마 링크 주소를 입력해주세요.">
+                        </div>
+                    </div>
+                    <!-- 비고 -->
+                    <div class="mb-4">
+                        <div class="contents d-flex align-items-center">
+                            <label class="modal_contents_title">비고</label>
+                            <input type="text" class="modal_form_control w_100" placeholder="비고를 입력해주세요.">
+                        </div>
+                    </div>
+                    <!-- 하단 버튼 -->
+                    <div class="modal_btn_w mb-2">
+                        <button class="btn_close_modal">닫기</button>
+                        <button class="modal_btn_ok">확인</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo"
+                    alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'" class="m_logo"
+                    alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li class="lnb_active"><a href="project.html">PROJECT</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold"><a href="myboard.html">강성희</a>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg" class="m_menu_icon_active"
+                            alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon" alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg" class="m_menu_icon" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon" alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile_nav -->
+
+    <!-- s: left aside -->
+    <aside id="left_aside">
+        <div class="left_aside_menu left_aside_active" onclick="location.href='project.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_project.svg" class="aside_icon" alt="left aside project">
+            <div class="aside_menu_title">프로젝트 목록</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div class="left_aside_menu" onclick="location.href='customer.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_customer.svg" class="aside_icon" alt="left aside customer">
+            <div class="aside_menu_title">고객사 목록</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- e: left aside -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>프로젝트</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>상세보기</div>
+                </div>
+            </div>
+            <img style="left:0"  src="http://test.s1.unipware.com/unipware/images/bg_database_add.jpg" class="bg_database_add"alt="배경이미지">
+            <div class="wrap project_detail_wrap">
+                <div class="d-flex justify-content-between">
+                    <section class="project_info s_hover scroll">
+                        <div>
+                            <div class="d-flex">
+                                <h3>AI는 변호사AI는 변호사AI는 변호사AI는 변호사</h3>
+                                <img class="buttons project_edit" src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer ml-2" alt="프로젝트 수정">
+                            </div>
+                            <div class="pj_tag project_progress on">진행중</div>
+                            <div class="dev-project-tags s_hover scroll d-flex flex-wrap">
+                                <div class="document_tag">총괄 책임 김상우</div>
+                                <div class="document_tag">기획 조지은</div>
+                                <div class="document_tag">디자인 강성희</div>
+                                <div class="document_tag">디자인 정기쁨</div>
+                                <div class="document_tag">개발 왕규웅</div>
+                                <div class="document_tag">개발 정찬호</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                                <div class="document_tag">개발 테스트</div>
+                            </div>
+                            <div class="info_txt">
+                                <h4>고객사</h4>
+                                <p class="ft_14">(주)감성텍</p>
+                            </div>
+                            <div class="info_txt">
+                                <h4>프로젝트 기간</h4>
+                                <p>2024.9.01 - 2024.10.31</p>
+                            </div>
+                            <div class="info_txt">
+                                <h4>프로젝트 요약</h4>
+                                <p>감성텍 내부 시스템 프로젝트 입니다.</p>
+                            </div>
+                            <div class="info_txt">
+                                <h4>비고</h4>
+                                <p>비고 내용</p>
+                            </div>
+                            <div class="info_txt">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4>문서</h4>
+                                    <div class="figma_wrap">
+                                        <button class="btn_goto_figma" onclick="window.open('https://www.figma.com/design/IYKyGo2f2BQjNd7vy0fUAm/AI%EB%8A%94-%EB%B3%80%ED%98%B8%EC%82%AC?node-id=0-1&amp;t=JDCzlEPJP2NTdw1r-1')">
+                                            <img src="images/ico_goto_figma.svg" alt="피그마 바로가기">
+                                        </button>
+                                        <span>피그마 파일 보러가기</span>
+                                    </div>
+                                    <button class="btn_file_upload">문서 등록</button>
+                                </div>
+                                <ul class="s_hover scroll">
+                                    <li class="no_contents" style="display: none;"> 
+                                        문서가 존재하지 않습니다.
+                                    </li>
+                                    <li>
+                                        <span class="type">퍼블리싱</span>
+                                        <div class="txt_wrap">
+                                            <p class="pointer">http://test.s1.unipware.com/unipware/project.html</p>
+                                        </div>
+                                        <button>
+                                            <img class="pointer" src="http://test.s1.unipware.com/unipware/images/ico_publishLink_copy.svg" alt="복사">
+                                            <span class="tooltip">
+                                                링크 복사
+                                            </span>
+                                        </button>
+                                        <span class="date">2024.09.20</span>
+                                    </li>
+                                    <li>
+                                        <span class="type">기획안</span>
+                                        <div class="txt_wrap">
+                                            <p class="pointer">AI변호사_기획안_v0.2.ppt</p>
+                                        </div>
+                                        <span class="date">2024.10.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="type long_txt">화면설계</span>
+                                        <div class="txt_wrap">
+                                            <p class="pointer">AI변호사_기획안_v0.1.ppt</p>
+                                        </div>
+                                        <span class="date">2024.10.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="type long_txt">화면설계</span>
+                                        <div class="txt_wrap">
+                                            <p class="pointer">AI변호사_화면설계_최종본.xlsx</p>
+                                        </div>
+                                        <span class="date">2024.10.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="type long_txt">화면설계</span>
+                                        <div class="txt_wrap">
+                                            <p class="pointer">AI변호사_화면설계_최종본.xlsx</p>
+                                        </div>
+                                        <span class="date">2024.10.01</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="go_to_list" onclick="location.href='project.html'">
+                            <img src="http://test.s1.unipware.com/unipware/images/ico_gotoList.svg" alt="목록으로">
+                            목록으로
+                        </button>
+                    </section>
+                    <!-- section_history start -->
+                    <div id="section_history" class="section_cont">
+                        <section class="project_history">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3>HISTORY</h3>
+                                <button class="btn_history_add">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_history_add.svg" alt="히스토리 등록">
+                                </button>
+                            </div>
+                            <ul id="projecHistory_tab" class="d-flex">
+                                <li class="all on">전체</li>
+                                <li class="meeting">회의록</li>
+                                <li class="final">최종문서</li>
+                            </ul>
+                            <div class="history_contents all_contents on s_hover scroll">
+                                <ul>
+                                    <li class="on post_view">
+                                        <div class="d-flex align-items-center flex-wrap">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>조지은</p>
+                                            <span class="date">2024.10.01  15:44</span>
+                                        </div>
+                                        <p>기획안 v0.2 입니다. 기획안 v0.2 입니다. 기획안 v0.2 입니다. 기획안 v0.2 입니다.</p>
+                                        <div class="d-flex">
+                                            <span class="comment">3</span>
+                                            <span class="file">AI변호사_기획안_v0.2.ppt</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center flex-wrap">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>조지은</p>
+                                            <span class="date">2024.09.19  16:50</span>
+                                        </div>
+                                        <p>화면설계 최종문서입니다.</p>
+                                        <div class="d-flex">
+                                            <span class="comment">5</span>
+                                            <span class="file">파일명이 나타납니다. 파일명이 나타납니다. 파일명이 나타납니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center flex-wrap">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.30  16:00</span>
+                                        </div>
+                                        <p>9월 30일 미팅 내용</p>
+                                        <span class="comment">2</span>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>조지은</p>
+                                            <span class="date">2024.09.30  16:05</span>
+                                        </div>
+                                        <p class="file">기획안 v0.1 입니다.</p>
+                                        <span class="comment">3</span>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.25  16:10</span>
+                                        </div>
+                                        <p class="file">9월 25일 미팅 내용</p>
+                                        <span class="comment">3</span>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.23 16:15</span>
+                                        </div>
+                                        <p class="file">9월 23일 미팅 내용</p>
+                                        <span class="comment">6</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="history_contents meeting_contents s_hover scroll">
+                                <ul>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.30  16:00</span>
+                                        </div>
+                                        <p class="file">9월 30일 미팅 내용</p>
+                                        <span class="comment">2</span>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.25  16:10</span>
+                                        </div>
+                                        <p class="file">9월 25일 미팅 내용</p>
+                                        <span class="comment">3</span>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>김상우</p>
+                                            <span class="type">회의록</span>
+                                            <span class="date">2024.09.23 16:15</span>
+                                        </div>
+                                        <p class="file">9월 23일 미팅 내용</p>
+                                        <span class="comment">6</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="history_contents final_contents s_hover scroll">
+                                <ul>
+                                    <li class="no_comment">
+                                        히스토리가 존재하지 않습니다.
+                                    </li>
+                                    <li style="display: none;">
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>조지은</p>
+                                            <span class="date">2024.09.19  16:50</span>
+                                        </div>
+                                        <p class="file">화면설계서 최종문서입니다.</p>
+                                        <span class="comment">5</span>
+                                    </li>
+                                    <li style="display: none;">
+                                        <div class="d-flex align-items-center">
+                                            <img class="profile" src="http://test.s1.unipware.com/unipware/images/img_person.svg" alt="프로필 이미지">
+                                            <p>조지은</p>
+                                            <span class="date">2024.09.09  14:20</span>
+                                        </div>
+                                        <p class="file">플로우차트 최종문서입니다.</p>
+                                        <span class="comment">2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="historyView" class="history_view on s_hover scroll">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="tit_wrap d-flex mb-3">
+                                        <h3>기획안 v0.2 입니다. 기획안 v0.2 입니다. 기획안 v0.2 입니다. 기획안 v0.2 입니다. 기획안 v0.2 입니다. 최대 두 줄만 노출</h3>
+                                        <div class="d-flex">
+                                            <img class="btn_correction pointer mr-1" src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" alt="회의록 수정">
+                                            <img class="btn_delete pointer" src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" alt="회의록 삭제">
+                                        </div>
+                                    </div>
+                                    <p class="view_content s_hover scroll">
+                                        업로드한 파일은 AI는 변호사 기획안입니다.<br>
+                                        파일 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다.파일 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다.파일 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다.파일파일 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다.파일 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다. 참고하시어 MVP버젼만 디자인 및 퍼블리싱 작업 진행해주시기 바랍니다.
+                                    </p>
+                                    <div class="file_attached_wrap mb-3">
+                                        <div class="file_attached d-flex align-items-center">
+                                            <p class="pointer">AI변호사_기획안_v0.2.ppt</p>
+                                            <span class="mr-4">2024.10.01</span>
+                                            <div class="d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_file_share.svg" class="mr-2 pointer ico_share_file" alt="파일 공유">
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_file_download.svg" class="mr-2 pointer" alt="파일 다운로드">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- file_attached_wrap end -->
+                                    <div class="meeting_link d-flex">
+                                        <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_meeting_link.svg" alt="링크 주소">
+                                        <p onclick="window.open('http://test.s1.unipware.com/unipware/project_detail.html')">http://192.168.1.63:5500/unipware/project_detail.html</p>
+                                    </div>
+                                    <div class="text-left comment title mt-4 mb-4">댓글
+                                        <span class="ml-1 mr-2">5</span>
+                                    </div>
+                                    <div class="comment_container s_hover scroll">
+                                        <div class="comment_wrap">
+                                            <div class="w_100 d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                                <div class="d-block w_100 text-left">
+                                                    <div class="d-flex text-left justify-content-between flex-wrap">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="name mr-2">김상우</div>
+                                                            <div class="date mr-2">2024.10.01</div>
+                                                        </div>
+                                                        <div class="d-flex comment_btn_w position-relative">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_recomment.svg" class="pointer mr-1 btn_recomment" alt="대댓글">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                                        </div>
+                                                    </div>
+                                                    <pre class="comment_contents text-left mt-1 ">10 페이지 수정 부탁합니다.</pre>
+                                                </div>
+                                            </div>
+                                            <div class="comment_wrap_line my-3"></div>
+                                        </div>
+                                        <div class="comment_wrap">
+                                            <div class="w_100 d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                                <div class="d-block w_100 text-left">
+                                                    <div class="d-flex text-left justify-content-between flex-wrap">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="name mr-2">강성희</div>
+                                                            <div class="date mr-2">2024.10.01</div>
+                                                        </div>
+                                                        <div class="d-flex comment_btn_w position-relative">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_recomment.svg" class="pointer mr-1 btn_recomment" alt="대댓글">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delet btn_delete" alt="댓글 삭제">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                                        </div>
+                                                    </div>
+                                                    <pre class="comment_contents text-left mt-1 ">네 알겠습니다. 피그마에 디자인 남겨놓도록 하겠습니다.</pre>
+                                                </div>
+                                            </div>
+                                            <div class="comment_wrap_line my-3"></div>
+                                        </div>
+                                        <div class="comment_wrap">
+                                            <div class="w_100 d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_recomment.svg" class="img_recomment mr-3">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                                <div class="d-block w_100">
+                                                    <div class="d-flex text-left justify-content-between flex-wrap">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="name mr-2">조지은</div>
+                                                            <div class="date mr-2">2024.10.01</div>
+                                                        </div>
+                                                        <div class="d-flex comment_btn_w position-relative">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                                            <!-- 댓글 수정 파일 첨부 기능 삭제 수정 -->
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                                            <!-- 첨부 파일 삭제 수정 -->
+                                                        </div>
+                                                    </div>
+                                                    <pre class="comment_contents text-left mt-1">10, 12페이지는 해당 기획서에서 반영되지 않았으므로 디자인할 때 참고 바랍니다.</pre>
+                                                </div>
+                                            </div>
+                                            <div class="comment_wrap_line my-3"></div>
+                                        </div>
+                                        <div class="comment_wrap">
+                                            <div class="w_100 d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_recomment.svg" class="img_recomment mr-3">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                                <div class="d-block w_100">
+                                                    <div class="d-flex text-left justify-content-between flex-wrap">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="name mr-2">강성희</div>
+                                                            <div class="date mr-2">2024.10.01</div>
+                                                        </div>
+                                                        <div class="d-flex comment_btn_w position-relative">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                                            <!-- 댓글 수정 파일 첨부 기능 삭제 수정 -->
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                                            <!-- 첨부 파일 삭제 수정 -->
+                                                        </div>
+                                                    </div>
+                                                    <pre class="comment_contents text-left mt-1">네 알겠습니다.</pre>
+                                                </div>
+                                            </div>
+                                            <div class="comment_wrap_line my-3"></div>
+                                        </div>
+                                        <div class="comment_wrap">
+                                            <div class="w_100 d-flex">
+                                                
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_recomment.svg" class="img_recomment mr-3">
+                                                <img src="http://test.s1.unipware.com/unipware/images/img_person.svg" class="profile_icon mr-3">
+                                                <div class="d-block w_100">
+                                                    <div class="d-flex text-left justify-content-between flex-wrap">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="name mr-2">조지은</div>
+                                                            <div class="date mr-2">2024.10.01</div>
+                                                        </div>
+                                                        <div class="d-flex comment_btn_w position-relative">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_recomment_edit" alt="댓글 수정">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_recomment_delete btn_delete" alt="댓글 삭제">
+                                                            <!-- 댓글 수정 파일 첨부 기능 삭제 수정 -->
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg" class="pointer mr-1 btn_comment_edit_con" alt="댓글 수정 확인">
+                                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg" class="pointer btn_comment_edit_cancel" alt="댓글 수정 취소">
+                                                            <!-- 첨부 파일 삭제 수정 -->
+                                                        </div>
+                                                    </div>
+                                                    <pre class="comment_contents text-left mt-1">댓글 더 늘어나면 스크롤이 생깁니다.</pre>
+                                                </div>
+                                            </div>
+                                            <div class="comment_wrap_line my-3"></div>
+                                        </div>
+                                    </div>
+                                    <!-- comment_container end -->
+                                </div>
+                                <div>
+                                    <div class="title mb-2 text-left">댓글 작성</div>
+                                    <div class="position-relative">
+                                        <textarea class="detail_comment_input history_view_input s_hover scroll" placeholder="댓글을 입력해주세요"></textarea>
+                                        <div class="detail_comment_inpute_icon">
+                                            <!-- 파일 첨부 삭제 수정 -->
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_send.svg" class="pointer" alt="댓글 작성">
+                                        </div>
+                                        <!-- 파일 첨부 명 삭제 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="history_view no_contents on s_hover scroll" style="display: none;">
+                            <div class="empty_wrap">
+                                <div>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_empty_historyView.svg">
+                                    <span class="empty">히스토리를 등록해주세요.</span>  
+                                </div>
+                            </div>
+                        </section>
+                        <section id="historyMeetingView" class="history_view s_hover scroll">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <h3>9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 9월 30일 미팅 내용 </h3>
+                                        <div class="d-flex">
+                                            <img class="btn_correction pointer mr-1" src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" alt="회의록 수정">
+                                            <img class="btn_delete pointer" src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" alt="회의록 삭제">
+                                        </div>
+                                    </div>
+                                    <p class="view_content s_hover scroll">
+                                        9월 30일 미팅 내용입니다. 참고바랍니다.
+                                    </p>
+                                    <div class="file_attached_wrap mb-3">
+                                        <div class="file_attached d-flex align-items-center">
+                                            <p class="pointer">AI변호사_참고자료.pdf</p>
+                                            <span class="mr-4">2024.10.01</span>
+                                            <div class="d-flex">
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_file_share.svg" class="mr-2 pointer" alt="파일 공유">
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_file_download.svg" class="mr-2 pointer" alt="파일 다운로드">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- file_attached_wrap end -->
+                                    <div class="meeting_link d-flex">
+                                        <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_meeting_link.svg" alt="링크 주소">
+                                        <p onclick="window.open('http://test.s1.unipware.com/unipware/project_detail.html')">http://test.s1.unipware.com/unipware/project_detail.html</p>
+                                    </div>
+                                    <button class="btn_meeting_detail mt-3 mb-1">회의록 상세보기</button>
+                                    <div class="text-left comment title mt-5 mb-4">댓글
+                                        <span class="ml-1 mr-2">0</span>
+                                    </div>
+                                    <div class="comment_container s_hover scroll">
+                                        <p class="no_comment">댓글이 없습니다. 댓글을 작성해주세요.</p>
+                                    </div>
+                                    <!-- comment_container end -->
+                                </div>
+                                <div>
+                                    <div class="title mb-2 text-left">댓글 작성</div>
+                                    <div class="position-relative">
+                                        <textarea class="detail_comment_input history_view_input s_hover scroll" placeholder="댓글을 입력해주세요"></textarea>
+                                        <div class="detail_comment_inpute_icon">
+                                            <!-- 파일 첨부 삭제 수정 -->
+                                            <img src="http://test.s1.unipware.com/unipware/images/ico_comment_send.svg" class="pointer" alt="댓글 작성">
+                                        </div>
+                                        <!-- 파일 첨부 명 삭제 수정 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section id="historyWrite" class="history_view write s_hover scroll"> 
+                            <div class="d-flex justify-content-between uploader_section">
+                                <div>
+                                    <h3>HISTORY 등록</h3>
+                                    <div class="contents d-flex align-items-center">
+                                        <label class="title">
+                                            제목
+                                            <span class="r_value ml-1">*</span>
+                                        </label>
+                                        <input type="text" class="text w_100" placeholder="제목을 입력해주세요.">
+                                    </div>
+                                    <div class="contents d-flex mb-4" style="align-items: start;">
+                                        <label class="title">
+                                            내용
+                                            <span class="r_value ml-1">*</span>
+                                        </label>
+                                        <textarea class="detail_txtarea history_view_input s_hover scroll" placeholder="내용을 입력해주세요"></textarea>
+                                    </div>
+                                    <div class="contents d-flex align-items-center">
+                                        <label class="title">파일 첨부</label>
+                                        <!-- file_uploader_wrap start -->
+                                        <div class="file_uploader_wrap w-100">
+                                            <div class="file_uploader d-flex mb-2">
+                                                <button class="btn_file mr-2">파일 선택</button>
+                                                <input type="file" class="upload_file_input" style="display: none;" />
+                                                <div class="file_name_wrap" style="display: none;">
+                                                    <div class="d-flex">
+                                                        <p class="file_name">AI변호사_기획안 v0.2.ppt</p>
+                                                        <img class="file_cancel pointer" src="http://test.s1.unipware.com/unipware/images/ico_file_cancel.svg" alt="복사">
+                                                    </div>
+                                                </div>
+                                                <p class="no_file">선택된 파일이 없습니다.</p>
+                                            </div>
+                                        </div>
+                                        <!-- file_uploader_wrap end -->
+                                    </div>
+                                    <div class="contents d-flex align-items-center">
+                                        <label class="title">링크</label>
+                                        <input type="text" class="text w_100" placeholder="링크를 입력해주세요.">
+                                    </div>
+                                    <div class="contents d-flex align-items-center">
+                                        <label class="title">회의록</label>
+                                        <div class="d-flex flex-wrap w-100">
+                                            <div class="btn_meeting_add w-100">
+                                                <button class="d-flex align-items-center justify-content-center">
+                                                    <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_projectHistory_add.svg" alt="">
+                                                    회의록 등록하기
+                                                </button>
+                                            </div>
+                                            <div class="meeting_registered">
+                                                <div class="w-100 d-flex align-items justify-content-between">
+                                                    <p>회의록의 회의명입니다.</p>
+                                                    <div class="d-flex">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg" class="pointer mr-1 btn_meeting_edit" alt="댓글 수정">
+                                                        <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg" class="pointer btn_meeting_delete" alt="회의록 삭제">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal_btn_w mb-2 text-center">
+                                    <button class="btn_previous">취소</button>
+                                    <button class="modal_btn_ok">확인</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- section_history end -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+</body>
+
+</html>

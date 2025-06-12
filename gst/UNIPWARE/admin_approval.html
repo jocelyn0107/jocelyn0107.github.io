@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg"  class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg"  class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal modalDayoffAdmin -->
+    <div class="modal_popup" id="modalDayoffAdmin">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">휴가신청서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_1.svg" alt="휴가">
+                    휴가
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">개발팀 홍길동 휴가신청합니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 휴가기간 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.</p>
+                    <hr>
+                    <p>2024.01.03.</p>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>위와 같이 휴가를 신청하오니 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리</div>
+                        <div class="appr_decision d-flex mb-2 confirm">
+                            <label class="">
+                                <input class="" id="radio-check-test"  type="radio"  name="ApprDecisionRadio1" value="ApprDecisionConfirm" checked>
+                                승인
+                            </label>
+                        </div>
+                        <div class="appr_decision d-flex">
+                            <label class="">
+                                <input class="" type="radio" name="ApprDecisionRadio1" value="ApprDecisionRefuse">
+                                반려
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-4 refuse_reason" style="display: none;">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">반려사유</div>
+                        <textarea type="text" class="modal_form_control w_100" placeholder="반려사유 입력"></textarea>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_close_modal">닫기</button>
+                    <button class="modal_btn_ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal modalHalfAdmin -->
+    <div class="modal_popup" id="modalHalfAdmin">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">휴가신청서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_2.svg" alt="반차">
+                    반차
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">반차신청합니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 휴가기간 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.<span>09:00</span></p>
+                    <hr>
+                    <p>2024.01.01.<span>14:00</span></p>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>위와 같이 반차를 신청하오니 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리</div>
+                        <div class="appr_decision d-flex mb-2 confirm">
+                            <label class="">
+                                <input class="" type="radio" name="ApprDecisionRadio2" value="ApprDecisionConfirm" checked>
+                                승인
+                            </label>
+                        </div>
+                        <div class="appr_decision d-flex">
+                            <label class="">
+                                <input class="" type="radio" name="ApprDecisionRadio2" value="ApprDecisionRefuse">
+                                반려
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-4 refuse_reason" style="display: none;">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">반려사유</div>
+                        <textarea type="text" class="modal_form_control w_100" placeholder="반려사유 입력"></textarea>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_close_modal">닫기</button>
+                    <button class="modal_btn_ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal modalSpendingAdmin -->
+    <div class="modal_popup" id="modalSpendingAdmin">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">지출결의서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_3.svg" alt="지출결의서">
+                    지출결의서
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">개발팀 지출결의서입니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 지출날짜 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.</p>
+                </div>
+                <div class="mt-4 ,mb-4">
+                    <div class="contents d-flex justify-content-between spending_cost">
+                        <div class="modal_contents_title mb-2">금액</div>
+                        <p class="d-flex align-items-center">20,000<span class="ml-2">원</span></p>
+                    </div>
+                </div>
+                <div class="spending_item">
+                    <div class="modal_contents_title mb-2">품목</div>
+                    <div class="appr_txt_area mt-1 scroll">
+                        <p>과자 10봉지</p>
+                    </div>
+                </div>
+                <!-- 첨부파일 영역 -->
+                <div class="mt-4 mb-4">
+                    <div class="contents file_info_area d-flex">
+                        <!-- 수정 / "file_preview mr-3 w_100 d-flex" 클래스 div 삭제 -->
+                        <div class="w_100 text-left">
+                            <div class="file_info">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="file_name pointer">첨부된 파일.pdf</div>
+                                    </div>
+                                    <div class="file_volume">16MB</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="upload_date">2024.08.02</div>
+                                    <div class="d-flex">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_file_download.svg" class="pointer" alt="파일 다운로드">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>지출결의서 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리</div>
+                        <div class="appr_decision d-flex mb-2 confirm">
+                            <label class="">
+                                <input class="" type="radio" name="ApprDecisionRadio3" value="ApprDecisionConfirm" checked>
+                                승인
+                            </label>
+                        </div>
+                        <div class="appr_decision d-flex">
+                            <label class="">
+                                <input class="" type="radio" name="ApprDecisionRadio3" value="ApprDecisionRefuse">
+                                반려
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 mb-4 refuse_reason" style="display: none;">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">반려사유</div>
+                        <textarea type="text" class="modal_form_control w_100" placeholder="반려사유 입력"></textarea>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <button class="btn_close_modal">닫기</button>
+                    <button class="modal_btn_ok">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal modalSpendigView -->
+    <div class="modal_popup" id="modalSpendigView">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">지출결의서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_3.svg" alt="지출결의서">
+                    지출결의서
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">개발팀 지출결의서입니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date" id="dp1723771154842">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 지출날짜 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.</p>
+                </div>
+                <!-- 수정 / div class ',mb-4' 삭제 -->
+                <div class="mt-4">
+                    <div class="contents d-flex justify-content-between spending_cost">
+                        <div class="modal_contents_title mb-2">금액</div>
+                        <p class="d-flex align-items-center">20,000<span class="ml-2">원</span></p>
+                    </div>
+                </div>
+                <div class="spending_item">
+                    <div class="modal_contents_title mb-2">품목</div>
+                    <div class="appr_txt_area mt-1 scroll">
+                        <p>과자 10봉지</p>
+                    </div>
+                </div>
+                <!-- 첨부파일 영역 -->
+                <div class="mt-4 mb-4">
+                    <div class="contents file_info_area d-flex">
+                        <!-- 수정 / "file_preview mr-3 w_100 d-flex" 클래스 div 삭제 -->
+                        <div class="w_100 text-left">
+                            <div class="file_info">
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="file_name pointer">첨부된 파일.pdf</div>
+                                    </div>
+                                    <div class="file_volume">16MB</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="upload_date">2024.08.02</div>
+                                    <div class="d-flex">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_file_download.svg" class="pointer" alt="파일 다운로드">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>지출결의서 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리상태 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리상태</div>
+                        <div class="appr_view_status refuse">
+                            <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_3.svg" alt="반려">
+                            반려
+                        </div>
+                    </div>
+                </div>
+                <!-- 반려사유 : 결재처리상태가 '반려'인 경우 반려사유 노출 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">반려사유</div>
+                        <div class="appr_txt_area mt-2 scroll">
+                            <p>OO한 이유로 반려되었습니다. 다시 제출바랍니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <!-- 수정 / button 텍스트 '닫기 -> 확인' -->
+                    <button class="btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal modalDayoffView -->
+    <div class="modal_popup" id="modalDayoffView">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">휴가신청서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_1.svg" alt="휴가">
+                    휴가
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">개발팀 홍길동 휴가신청합니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date" id="dp1723774563472">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 휴가기간 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.</p>
+                    <hr>
+                    <p>2024.01.03.</p>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>위와 같이 휴가를 신청하오니 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리상태 -->
+                <!-- 수정 / div class ',mb-4' 삭제 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리상태</div>
+                        <div class="appr_view_status complete">
+                            <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_4.svg" alt="승인">
+                            승인
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <!-- 수정 / button 텍스트 '닫기 -> 확인' -->
+                    <button class="btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal modalhalfView -->
+    <div class="modal_popup" id="modalhalfView">
+        <div class="modal_wrap modal_wrap_md document_upload appr_board_view">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">휴가신청서</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_wrap_line mb-4"></div>
+            <div class="modal_scroll modal_popup_appr">
+                <span class="appr_board_sort">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_2.svg" alt="반차">
+                    반차
+                </span>
+                <!-- 제목, 이름, 시간 -->
+                <h2 class="mt-3">개발팀 홍길동 반차신청합니다.</h2>
+                <ul class="info mt-2">
+                    <li>개발팀 홍길동</li>
+                    <li class="date" id="dp1723774563473">2024.01.01.</li>
+                    <li class="time">10:00</li>
+                </ul>
+                <!-- 휴가기간 -->
+                <div class="period mt-4">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_view_period.svg" alt="기간">
+                    <p>2024.01.01.<span>09:00</span></p>
+                    <hr>
+                    <p>2024.01.01.<span>14:00</span></p>
+                </div>
+                <!-- 내용 -->
+                <div class="appr_txt_area mt-4 scroll">
+                    <p>위와 같이 반차를 신청하오니 결재 부탁드립니다. 감사합니다.</p>
+                </div>
+                <!-- 결재처리상태 -->
+                <!-- 수정 / div class ',mb-4' 삭제 -->
+                <div class="mt-4">
+                    <div class="contents">
+                        <div class="modal_contents_title mb-2">결재처리상태</div>
+                        <div class="appr_view_status complete">
+                            <img class="mr-2" src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_4.svg" alt="승인">
+                            승인
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_btn_w mb-2">
+                    <!-- 수정 / button 텍스트 '닫기 -> 확인' -->
+                    <button class="btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo"
+                    alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'" class="m_logo"
+                    alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li><a href="project.html">PROJECT</a>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold lnb_active"><a href="admin_board.html">강성희</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="admin_board.html">My Board</a></li>
+                                <li><a href="admin_schedule.html">Schedule</a></li>
+                                <li><a href="admin_employees.html">Employees Management</a></li>
+                                <li><a href="admin_notice.html">Notice</a></li>
+                                <li class="lnb_active"><a href="admin_approval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#" >
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg" class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg" class="m_menu_icon"alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg" class="m_menu_icon"alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg" class="m_menu_icon"alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#"class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg" class="m_menu_icon_active"alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="admin_board.html">My Board</a></li>
+                        <li><a href="admin_schedule.html">Schedule</a></li>
+                        <li><a href="admin_employees.html">Employees Management</a></li>
+                        <li><a href="admin_notice.html">Notice</a></li>
+                        <li class="lnb_active"><a href="admin_approval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile nav -->
+
+    <!-- left aside start -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='admin_board.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_board.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">My Board</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_schedule.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_schedule.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Schedule</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_employees.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_hour.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Employees Management</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='admin_notice.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_notice.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Notice</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu left_aside_active" onclick="location.href='admin_approval.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_approval.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Approval</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="my_left_signout btn_signout">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_logout.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">로그아웃</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- left aside end -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>내 프로필</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="전체">
+                    </div>
+                    <div>My Approval</div>
+                </div>
+            </div>
+            <div class="my_wrap">
+                <ul class="appr_progress ft_16 d-flex mt-5 justify-content-between">
+                    <li class="active" data-aos="fade-up">
+                        <a href="javascript:void(0);">
+                            <span class="status d-flex align-items-center">
+                                <span>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_1.svg" alt="전체">
+                                </span>
+                                전체
+                            </span>
+                            <span class="align-items-center">
+                                <b>9999999</b>
+                                건
+                            </span>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <a href="javascript:void(0);">
+                            <span class="status d-flex align-items-center">
+                                <span>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_2.svg" alt="대기">
+                                </span>
+                                대기
+                            </span>
+                            <span class="align-items-center">
+                                <b>1</b>
+                                건
+                            </span>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="600">
+                        <a href="javascript:void(0);">
+                            <span class="status d-flex align-items-center">
+                                <span>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_3.svg" alt="반려">
+                                </span>
+                                반려
+                            </span>
+                            <span class="align-items-center">
+                                <b>20</b>
+                                건
+                            </span>
+                        </a>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="800">
+                        <a href="javascript:void(0);">
+                            <span class="status d-flex align-items-center">
+                                <span>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_progress_4.svg" alt="승인">
+                                </span>
+                                승인
+                            </span>
+                            <span class="align-items-center">
+                                <b>100</b>
+                                건
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="main_contents_top appr_admin_top justify-content-end">
+                    <div class="select_add_tag">
+                        <!-- select box -->
+                        <div class="select_w">
+                            <button class="btn_select doc mr-3">
+                                전체
+                            </button>
+                            <div class="select_item">
+                                <button>제목</button>
+                                <button>내용</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- search area  -->
+                    <div class="search_area mr-3">
+                        <div class="search_icon">
+                            <img src="http://test.s1.unipware.com/unipware/images/ico_search.svg" alt="삭제">
+                        </div>
+                        <input type="text" class="data_form_control w_100" placeholder="검색">
+                    </div>
+                </div>
+
+                <!-- appr_admin_board start -->
+                <div class="appr_admin_board appr_slide">
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post dayoff_admin">
+                            <dt class="status_date_wrap">
+                                <span class="status wait">
+                                    대기
+                                </span>
+                                <span class="tit">휴가 신청합니다. 휴가 신청합니다. 휴가 신청합니다. 휴가 신청합니다.</span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_1.svg" alt="휴가">
+                                    휴가
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>기간 &#58; 2024-01-01 - 2024-01-03</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post half_admin">
+                            <dt class="status_date_wrap">
+                                <span class="status wait">
+                                    대기
+                                </span>
+                                <span class="tit">반차 신청합니다. </span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_2.svg" alt="반차">
+                                    반차
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>기간 : 2024-01-01 <b>09:00</b> - 2024-01-01 <b>14:00</b></span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post spending_admin">
+                            <dt class="status_date_wrap">
+                                <span class="status wait">
+                                    대기
+                                </span>
+                                <span class="tit">개발팀 지출결의서입니다. </span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_3.svg" alt="지출결의서">
+                                    지출결의서
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>날짜 &#58; 2024-01-01</span>
+                                <span>금액 &#58; 20,000</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post spending_view">
+                            <dt class="status_date_wrap">
+                                <span class="status refuse">
+                                    반려
+                                </span>
+                                <span class="tit">개발팀 지출결의서입니다. </span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_3.svg" alt="지출결의서">
+                                    지출결의서
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>날짜 &#58; 2024-01-01</span>
+                                <span>금액 &#58; 20,000</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post dayoff_view">
+                            <dt class="status_date_wrap">
+                                <span class="status complete">
+                                    승인
+                                </span>
+                                <span class="tit">휴가 신청합니다.</span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_1.svg" alt="휴가">
+                                    휴가
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>기간 : 2024-01-01 - 2024-01-03</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-xl-4 appr_post_wrap">
+                        <dl class="hvr-reveal appr_post half_view">
+                            <dt class="status_date_wrap">
+                                <span class="status complete">
+                                    승인
+                                </span>
+                                <span class="tit">반차 신청합니다. </span>
+                            </dt>
+                            <dd>
+                                개발팀 홍길동
+                                <span class="appr_board_sort ml-2">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_appr_sort_2.svg" alt="반차">
+                                    반차
+                                </span>
+                                <div class="d-flex appr_post_date">
+                                    <span class="mr-2">2024-01-01</span>
+                                    <span>10:00</span>
+                                </div>
+                            </dd>
+                            <dd class="appr_detail_preview">
+                                <span>기간 &#58; 2024-01-01 <b>09:00</b> - 2024-01-01 <b>14:00</b></span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- appr_admin_board end -->
+
+                <!-- s:pagination start -->
+                <div class="pagination justify-content-center">
+                    <ul>
+                        <li class="pagi_arrow init"></li>
+                        <li class="pagi_arrow prev"></li>
+                        <li class="is-active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="pagi_arrow next"></li>
+                        <li class="pagi_arrow last"></li>
+                    </ul>
+                </div>
+                <!-- e:pagination end -->
+
+            </div>
+            <!-- my_wrap end -->
+        </section>
+    </main>
+
+    <footer id="footer">
+            <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- calendar -->
+    <script src="http://test.s1.unipware.com/unipware/js/jquery-ui.min.js"></script>
+
+    <script>
+        
+        // AOS
+        AOS.init({
+            duration: 900,  // 애니메이션 지속 시간 (밀리초)
+            easing: 'ease-in-out',  // 애니메이션의 이징 함수
+            delay: 200,  // 애니메이션 지연 시간 (밀리초)
+            offset: 5,  // 스크롤 감지의 시작 위치 (픽셀)
+        });
+
+        // 결재 팝업모달 승인,반려 radio button - confirm, refuse
+        const ApprRadioButtons = document.querySelectorAll('input[name="ApprDecisionRadio1"], input[name="ApprDecisionRadio2"], input[name="ApprDecisionRadio3"]');
+        const ApprRefuseReason = document.querySelectorAll('.refuse_reason');
+
+        ApprRadioButtons.forEach(radio => {
+            radio.addEventListener('click', () => {
+                const ApprDecision = radio.closest('.appr_decision');
+
+                const siblingDecision = Array.from(ApprDecision.parentElement.children).filter(
+                    child => child !== ApprDecision && child.classList.contains('appr_decision')
+                );
+
+                siblingDecision.forEach(div => {
+                    div.classList.remove('confirm', 'refuse');
+                });
+
+                ApprDecision.classList.add(radio.value === 'ApprDecisionConfirm' ? 'confirm' : 'refuse');
+                
+                ApprRefuseReason.forEach(reason => {
+                    reason.style.display = radio.value === 'ApprDecisionRefuse' ? 'block' : 'none';
+                });
+            });
+        });
+
+        
+
+
+        
+            
+            
+           
+
+
+
+
+
+
+    if($('input[id="radio-check-test"]').is(":checked") == true){
+        console.log('체크된 상태');
+    }
+    
+    if($('input[id="radio-check-test"]').is(":checked") == false){
+        console.log('체크 안 된 상태');
+    }
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- 사용한 js -->
+    <!-- 01. 결재 진행상태 fade-in up으로 등장(AOS) -->
+    <!-- 02. 결재팝업 승인, 반려 라디오버튼 선택 / 반려 선택하면 반려사유 textarea 나타남 -->
+</body>
+</html>

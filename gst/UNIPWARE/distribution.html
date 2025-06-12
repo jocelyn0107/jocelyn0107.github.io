@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li class="lnb_active"><a href="database.html">CONSOLE</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="database.html">데이터베이스</a></li>
+                                <li class="lnb_active"><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li><a href="project.html">PROJECT</a>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold"><a href="myboard.html">강성희</a>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#" class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg"
+                            class="m_menu_icon_active" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li class="lnb_active"><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile_nav -->
+
+    <!-- s: left aside -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='database.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_database.svg" class="aside_icon"
+                alt="left aside database">
+            <div class="aside_menu_title">데이터베이스</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="left aside database">
+            </div>
+        </div>
+        <div class="left_aside_menu left_aside_active" onclick="location.href='distribution.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_distribution.svg" class="aside_icon"
+                alt="left aside distribution">
+            <div class="aside_menu_title">배포</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="left aside database">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='query.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_query.svg" class="aside_icon"
+                alt="left aside query">
+            <div class="aside_menu_title">쿼리관리</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="left aside database">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='resource.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_resource.svg" class="aside_icon"
+                alt="left aside resource">
+            <div class="aside_menu_title">리소스관리</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="left aside database">
+            </div>
+        </div>
+    </aside>
+    <!-- e: left aside -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>콘솔</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>배포</div>
+                </div>
+            </div>
+            <div class="pc_breadcrumb">
+                <div>콘솔</div>
+                <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                </div>
+                <div>배포</div>
+            </div>
+            <div class="wrap console">
+                <!-- table start -->
+                <div class="table_wrap my-5 w_100">
+                    <div class="text-right mb-4">
+                        <button type="button" class="btn_console">저장</button>
+                    </div>
+                    <!-- class 추가 수정 -->
+                    <table class="table data_table distribution">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>RepoName</th>
+                                <th>BranchName</th>
+                                <th>DeployType</th>
+                                <th>DestPath</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Unipware.Web</td>
+                                <td>Test-Master</td>
+                                <td>Web</td>
+                                <td>test.unipware.com</td>
+                                <!-- 아이콘 이미지 수정 -->
+                                <td class="btn_w d-flex justify-content-end">
+                                    <!-- 수정 / alt="배포 순서 변경" 인 img 태그 삭제 -->
+                                    <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg"
+                                        class="pointer mr-2 btn_edit distribution" alt="배포 수정">
+                                    <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg"
+                                        class="pointer btn_delete" alt="배포 삭제">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg"
+                                        class="pointer btn_edit_con mr-1" alt="댓글 수정 확인">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg"
+                                        class="pointer btn_edit_cancel" alt="댓글 수정 취소">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>KEA</td>
+                                <td>Test-Master</td>
+                                <td>APP</td>
+                                <td>test.s1.unipware.com</td>
+                                <!-- 아이콘 이미지 수정 -->
+                                <td class="btn_w d-flex justify-content-end">
+                                    <!-- 수정 / alt="배포 순서 변경" 인 img 태그 삭제 -->
+                                    <img src="http://test.s1.unipware.com/unipware/images/btn_edit.svg"
+                                        class="pointer mr-2 btn_edit" alt="배포 수정">
+                                    <img src="http://test.s1.unipware.com/unipware/images/btn_delete.svg"
+                                        class="pointer btn_delete" alt="배포 삭제">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_con.svg"
+                                        class="pointer btn_edit_con mr-1" alt="댓글 수정 확인">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_comment_edit_cancel.svg"
+                                        class="pointer btn_edit_cancel" alt="댓글 수정 취소">
+                                </td>
+                            </tr>
+                            <tr class="middle">
+                                <td></td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <input type="text" class="form_control">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <input type="text" class="form_control">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <input type="text" class="form_control">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <input type="text" class="form_control">
+                                    </div>
+                                </td>
+                                <td class="database_table_icon pointer">
+                                    <div>
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_plus.svg"
+                                            class="add_icon" alt="">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table end -->
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+</body>
+
+</html>

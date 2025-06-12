@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li><a href="project.html">PROJECT</a>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold lnb_active"><a href="myboard.html">강성희</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg"
+                            class="m_menu_icon_active" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li class="lnb_active"><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile nav -->
+
+    <!-- left aside start -->
+    <aside id="left_aside">
+        <div class="left_aside_menu left_aside_active" onclick="location.href='myboard.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_board.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">My Board</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='myschedule.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_schedule.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Schedule</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='myworkinghours.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_hour.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Working Hour</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='mynotice.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_notice.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Notice</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='myapproval.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_approval.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Approval</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="my_left_signout btn_signout">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_logout.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">로그아웃</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- left aside end -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section class="my_board_area">
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <div class="board_bg"></div>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>내 프로필</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>My Board</div>
+                </div>
+            </div>
+            <div class="my_board_wrap">
+                <div class="my_board_wrap01">
+                    <!-- s: Today’s Event -->
+                    <div class="board_event">
+                        <label class="box_title">Today’s Event</label>
+                        <div class="box_wrap event top">
+                            <ul class="scroll">
+                                <li class="content" onclick="location.href='myschedule.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_event_orange.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">주간미팅</span>
+                                            <span>10:00 AM</span>
+                                        </div>
+                                        <div>
+                                            <span>보라카이 미팅룸</span>
+                                            <span>김민규, 조영호, 김상우, 조지은, 왕규웅</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='myschedule.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_event_blue.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">연차</span>
+                                            <span>종일</span>
+                                        </div>
+                                        <div>
+                                            <span>-</span>
+                                            <span>강성희</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='myschedule.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_event_green.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">기획, 디자인팀 주간미팅</span>
+                                            <span>03:00 PM</span>
+                                        </div>
+                                        <div>
+                                            <span>비대면</span>
+                                            <span>조지은, 강성희, 정기쁨</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='myschedule.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_event_green.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">디자인팀 아이디어 회의</span>
+                                            <span>04:00 PM</span>
+                                        </div>
+                                        <div>
+                                            <span>6층 미팅룸</span>
+                                            <span>강성희, 정기쁨</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='myschedule.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_event_orange.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">회식</span>
+                                            <span>06:00 PM</span>
+                                        </div>
+                                        <div>
+                                            <span>회식 장소</span>
+                                            <span>김민규, 조영호, 김상우, 조지은, 강성희, 왕규웅, 정찬호, 정기쁨, 심세연</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- e: Today’s Event -->
+                    <!-- s: Calender -->
+                    <div class="board_calender">
+                        <label class="box_title">Calender</label>
+                        <div class="box_wrap calender top">
+                            <div class="calender_wrap position-relative">
+                                <table id="calendar" class="schedule">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="10%">
+                                    </colgroup>
+                                    <tr class="calendar_top">
+                                        <td colspan="7">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_select2.svg"
+                                                    class="pre_month">
+                                                <div id="calendarYM" class="calendar_pick">m월, yyyy</div>
+                                                <img src="http://test.s1.unipware.com/unipware/images/ico_select2.svg"
+                                                    class="next_month">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="day_of_the_week">
+                                        <td>SUN</td>
+                                        <td>MON</td>
+                                        <td>TUE</td>
+                                        <td>WED</td>
+                                        <td>THU</td>
+                                        <td>FRI</td>
+                                        <td>SAT</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: Calender -->
+                    <!-- s: Attendance Status -->
+                    <div class="board_attendance">
+                        <label class="box_title">Attendance Status</label>
+                        <div class="box_wrap attendance top">
+                            <div class="tab_list d-flex justify-content-between align-items-center mb-1">
+                                <div class="dropdown">
+                                    <button class="main_sel">전체</button>
+                                    <div class="sel">
+                                        <button class="active all">전체</button>
+                                        <button class="strategy">기획팀</button>
+                                        <button class="design">디자인팀</button>
+                                        <button class="development">개발팀</button>
+                                    </div>
+                                </div>
+                                <label>2/6</label>
+                            </div>
+                            <div class="attendance_list all_list active">
+                                <ul class="scroll">
+                                    <li class="active">
+                                        조지은(09:38) <span>ON</span>
+                                    </li>
+                                    <li class="active">
+                                        강성희(08:42) <span>ON</span>
+                                    </li>
+                                    <li>
+                                        왕규웅 <span>휴가</span>
+                                    </li>
+                                    <li>
+                                        정찬호 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        정기쁨 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        심세연 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="attendance_list strategy_list">
+                                <ul class="scroll">
+                                    <li class="active">
+                                        조지은(09:38) <span>ON</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        기획팀 이름 <span>OFF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="attendance_list design_list">
+                                <ul class="scroll">
+                                    <li class="active">
+                                        강성희(08:42) <span>ON</span>
+                                    </li>
+                                    <li>
+                                        정기쁨 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        디자인팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        디자인팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        디자인팀 이름 <span>OFF</span>
+                                    </li>
+                                    <li>
+                                        디자인팀 이름 <span>OFF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="attendance_list development_list">
+                                <ul class="scroll">
+                                    <li class="active">
+                                        왕규웅<span>휴가</span>
+                                    </li>
+                                    <li>
+                                        정찬호<span>OFF</span>
+                                    </li>
+                                    <li>
+                                        심세연<span>OFF</span>
+                                    </li>
+                                    <li>
+                                        개발팀 이름<span>휴가</span>
+                                    </li>
+                                    <li>
+                                        개발팀 이름<span>OFF</span>
+                                    </li>
+                                    <li>
+                                        개발팀 이름<span>OFF</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: Attendance Status -->
+                    <!-- s: Working Hour -->
+                    <div class="board_working_hour">
+                        <label class="box_title">Working Hour</label>
+                        <div class="box_wrap working_hour top">
+                            <ul class="scroll">
+                                <li class="d-flex justify-content-between align-items-center today_wrap">
+                                    <div>
+                                        <label class="today">오늘 출근시간</label>
+                                        <label class="today_start_time time">08:00</label>
+                                    </div>
+                                    <div class="position-relative btn_work_on">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_monitor.svg">
+                                        <dl class="screen_off active">
+                                            <dt></dt>
+                                            <dd>OFF</dd>
+                                        </dl>
+                                        <dl class="screen_on">
+                                            <dt></dt>
+                                            <dd>ON</dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_working_hour01.svg"
+                                            class="icon">
+                                        <label>잔여근무 시간</label>
+                                    </div>
+                                    <label class="time remaining">40:00</label>
+                                </li>
+                                <hr>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_working_hour02.svg"
+                                            class="icon">
+                                        <label>이 달 의무시간</label>
+                                    </div>
+                                    <label class="time duty">160:00</label>
+                                </li>
+                                <hr>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="http://test.s1.unipware.com/unipware/images/ico_working_hour03.svg"
+                                            class="icon">
+                                        <label>연차 현황(잔여/전체)</label>
+                                    </div>
+                                    <label class="time vacation">8/14</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- e: Working Hour -->
+                </div>
+
+
+
+
+                <div class="my_board_wrap02">
+                    <!-- s: Notice -->
+                    <div class="board_notice">
+                        <label class="box_title">Notice</label>
+                        <div class="box_wrap notice bottom">
+                            <ul class="scroll">
+                                <li class="content" onclick="location.href='notice.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_board_notice.svg"
+                                        class="icon">
+                                    <div class="notice_content">
+                                        <div class="list_title_date">
+                                            <span class="title">2025 설 연휴 공지</span>
+                                            <span>24.09.20 10:00</span>
+                                        </div>
+                                        <span>연휴 관련 공지를 알려드립니다. 2025년 설은 1월 28일 화요일부터 30일 목요일입니다.</span>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='notice.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_board_notice.svg"
+                                        class="icon">
+                                    <div class="notice_content">
+                                        <div class="list_title_date">
+                                            <span class="title">탄력근무제 관련 공지</span>
+                                            <span>24.09.20 10:00</span>
+                                        </div>
+                                        <span>현재 시행하고 있는 탄력근무제에 대하여 공지 드립니다.</span>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='notice.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_board_notice.svg"
+                                        class="icon">
+                                    <div class="notice_content">
+                                        <div class="list_title_date">
+                                            <span class="title">휴가 기안에 관한 공지</span>
+                                            <span>24.09.20 10:00</span>
+                                        </div>
+                                        <span>휴가 기안은 가급적 일주일 전에 신청해주시기 바라며 결재를 올리는 방식은 유닙웨어를 사용하시기 바랍니다.</span>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='notice.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_board_notice.svg"
+                                        class="icon">
+                                    <div class="notice_content">
+                                        <div class="list_title_date">
+                                            <span class="title">10월 24일 회식 공지</span>
+                                            <span>24.09.20 10:00</span>
+                                        </div>
+                                        <span>24일 목요일에 전체 회식이 진행됩니다. 장소는 광주입니다. </span>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='notice.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_board_notice.svg"
+                                        class="icon">
+                                    <div class="notice_content">
+                                        <div class="list_title_date">
+                                            <span class="title">주간회의 공지</span>
+                                            <span>24.09.20 10:00</span>
+                                        </div>
+                                        <span>매주 화요일에 진행하고 있는 주간회의 날짜를 변경합니다. 목요일 오후 3시로 변경됩니다. </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- e: Notice -->
+                    <!-- s: To do -->
+                    <div class="board_to_do">
+                        <label class="box_title">To do</label>
+                        <div class="box_wrap to_do bottom">
+                            <ul class="scroll">
+                                <li>
+                                    <span class="to_do_txt">잠코리아 설계</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">AI는 변호사 퍼블리싱</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">로히어 디자인 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">GST.Med 수정 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">성택이 캐릭터 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">GST.Med 수정 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">성택이 캐릭터 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">GST.Med 수정 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="to_do_txt">성택이 캐릭터 작업</span>
+                                    <div class="d-flex">
+                                        <span class="mr-2">24.09.20 10:00</span>
+                                        <img src="http://test.s1.unipware.com/unipware/images/icon_to-do_delete.svg"
+                                            class="delete">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="to_do_input d-flex justify-content-between">
+                                <input type="text" placeholder="새 항목 입력">
+                                <button onclick=""><img
+                                        src="http://test.s1.unipware.com/unipware/images/ico_todo_submit.svg"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: To do -->
+                    <!-- s: My Project -->
+                    <div class="board_project">
+                        <label class="box_title">My Project</label>
+                        <div class="box_wrap project bottom">
+                            <ul class="scroll">
+                                <li class="content" onclick="location.href='project.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_my_project.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">Unipware 프로젝트</span>
+                                            <span>24.00.00 ~ 24.00.00</span>
+                                        </div>
+                                        <label class="on">진행 중</label>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='project.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_my_project.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">Unipware 프로젝트</span>
+                                            <span>24.00.00 ~ 24.00.00</span>
+                                        </div>
+                                        <label class="before">진행 전</label>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='project.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_my_project.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">Unipware 프로젝트</span>
+                                            <span>24.00.00 ~ 24.00.00</span>
+                                        </div>
+                                        <label class="before">진행 전</label>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li class="content" onclick="location.href='project.html'">
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_my_project.svg"
+                                        class="icon">
+                                    <div class="w_100">
+                                        <div class="list_title_date">
+                                            <span class="title">Unipware 프로젝트</span>
+                                            <span>24.00.00 ~ 24.00.00</span>
+                                        </div>
+                                        <label class="done">프로젝트 마감</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- e: My Project -->
+                </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/board_calendar.js"></script>
+</body>
+
+</html>

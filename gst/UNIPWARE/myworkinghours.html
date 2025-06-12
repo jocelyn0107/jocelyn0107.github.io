@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css">
+</head>
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal notice -->
+    <div class="modal_popup" id="modalWorkingHourNotice" >
+        <div class="modal_wrap modal_wrap_md">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">감성텍 연차 기준 공지</div>
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg"  class="btn_close_modal" alt="팝업 닫기">
+                </div>               
+            </div>    
+
+            <div class="modal_wrap_line mb-4"></div>  
+
+            <div class="modal_scroll text-left">
+                <div class="modal_notice_wrap">
+                    <div>부고</div>
+                    <div>결혼</div>
+                    <div>동원훈련</div>
+                    <div>기타</div>
+                </div>
+                <!-- 하단 버튼 -->
+                <div class="modal_btn_w text-center">
+                    <button class="modal_btn_ok btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 휴가 신청 팝업 -->
+    <div class="modal_popup" id="modalVacationUpload">
+        <div class="modal_wrap modal_wrap_md">
+            <!-- 팝업 상단 -->
+            <div class="modal_top_w">
+                <div class="modal_title">휴가신청서</div>
+                <!-- 이미지 수정 -->
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg"  class="btn_close_modal" alt="팝업 닫기">
+                </div>                
+            </div>    
+
+            <div class="modal_wrap_line mb-4"></div>  
+
+            <div class="modal_scroll text-left">
+                <div class="add_schedule_wrap">
+                    <div class="mb-4">
+                        <div class="modal_input_title"></div>
+                        <input type="radio" id="select" name="vacation" checked="checked"><label for="select" class="mr-3">휴가</label>
+                        <input type="radio" id="select" name="vacation"><label for="select2">반차</label>
+                    </div>
+                    <div class="mb-4">
+                        <div class="modal_input_title">제목</div>
+                        <input type="text" class="modal_form_control w_fit" placeholder="OO팀 OOO 휴가신청합니다.">
+                    </div>
+                    <div class="mb-2 title_top">
+                        <div class="modal_input_title">날짜</div>
+                        <div>
+                            <div class="mb-2 d-flex">
+                                <input type="text" class="modal_form_control mr-3 input_calendar date" readonly value="날짜">
+                                <div class="year mr-2 modal_select">
+                                    <button class="sel">시간</button>
+                                    <div class="lSel">
+                                        <button class="active">08시</button>
+                                        <button>09시</button>
+                                        <button>10시</button>
+                                        <button>11시</button>
+                                        <button>12시</button>
+                                        <button>13시</button>
+                                        <button>14시</button>
+                                        <button>15시</button>
+                                        <button>16시</button>
+                                        <button>17시</button>
+                                        <button>18시</button>
+                                    </div>
+                                </div>
+                                <div class="title_center">부터</div>
+                            </div>
+                            <div class="d-flex">
+                                <input type="text" class="modal_form_control mr-3 input_calendar" disabled readonly value="날짜">
+                                <div class="year mr-2 modal_select">
+                                    <button class="sel disable">시간</button>
+                                    <div class="lSel">
+                                        <button class="active">010</button>
+                                        <button>011</button>
+                                    </div>
+                                </div>
+                                <div class="title_center">까지</div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="icon_area"></div>
+                    </div>
+                    <div class="mb-4 title_top">
+                        <div class="modal_input_title">내용</div>
+                        <textarea class="project_summary modal_form_control w_100">위와 같이 휴가를 신청하오니 결재 부탁드립니다. 감사합니다.</textarea>
+                    </div>
+                </div>
+                <!-- 하단 버튼 -->
+                <div class="modal_btn_w text-center">
+                    <button class="modal_btn_ok btn_close_modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg"  class="btn_close_modal" alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'" class="logo"
+                    alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg" onclick="location.href='index.html'" class="m_logo"
+                    alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li class="lnb_active"><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a></li>
+                        <li><a href="project.html">PROJECT</a>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold lnb_active"><a href="myboard.html">강성희</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li class="lnb_active"><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#" >
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg" class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg" class="m_menu_icon"alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg" class="m_menu_icon"alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg" class="m_menu_icon"alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#"class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg" class="m_menu_icon_active"alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li class="lnb_active"><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile nav -->
+
+    <!-- left aside start -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='myboard.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_board.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">My Board</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='myschedule.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_schedule.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Schedule</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu left_aside_active" onclick="location.href='myworkinghours.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_hour.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Working Hour</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='mynotice.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_notice.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Notice</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="left_aside_menu" onclick="location.href='myapproval.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_approval.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">Approval</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+        <div class="my_left_signout btn_signout">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_logout.svg" class="aside_icon" alt="">
+            <div class="aside_menu_title">로그아웃</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- left aside end -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">
+                    <div>내 프로필</div>
+                    <div class="unip_breadcrumb_arrow d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_breadcrumb.svg" alt="">
+                    </div>
+                    <div>Working Hour</div>
+                </div>
+            </div>
+            <div class="my_wrap working_hour d-flex justify-content-between">
+                <!-- 나의 근무 현황 -->
+                <div class="wh_div mr-4">
+                    <div class="title_area">
+                        <div>나의 근무 현황</div>
+                        <!-- 수정 / "year modal_select active" 클래스의 div 태그 삭제-->
+                        <!-- 수정 / "calendar_area" 클래스 div 태그 추가 -->
+                        <div class="calendar_area d-flex align-items-center">
+                            <input type="date" class="modal_form_control" required="" aria-required="true" value="{startDateValue}" onchange="{StartDateValueHandler}">
+                            <hr>
+                            <input type="date" class="modal_form_control" data-placeholder="종료일" required="" aria-required="true" value="{startDateValue}" onchange="{StartDateValueHandler}">
+                            <button class="btn_find_customer ml-1">
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_search_w.svg" alt="고객사 찾기">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart_area">
+                        <!-- progress -->
+                        <div class="pj_progress" data-value='25'>
+                            <span class="pj_progress_left">
+                                <span class="pj_progress_bar"></span>
+                            </span>
+                            <span class="pj_progress_right">
+                                <span class="pj_progress_bar"></span>
+                            </span>
+                            <div class="pj_progress_value w_100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="pj_progress_num">25%</div>
+                            </div>
+                        </div>
+                        <div class="text_area">
+                            <div>
+                                <div>누적 근무시간</div>
+                                <div>08:00</div>
+                            </div>
+                            <div>
+                                <div>잔여 근무시간</div>
+                                <div>160:00</div>
+                            </div>
+                            <div>
+                                <div>이달 의무시간</div>
+                                <div>172:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 나의 근무 현황 표 -->
+                    <div class="table_w mt-5">
+                        <table class="table table_working_hour_01">
+                            <thead class="table_thead">
+                                <tr>
+                                    <th>일자</th>
+                                    <th>상태</th>
+                                    <th>출근</th>
+                                    <th>퇴근</th>
+                                    <th>근무시간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                                <tr>
+                                    <td>24-02-07</td>
+                                    <td>출근</td>
+                                    <td>08:00</td>
+                                    <td>16:30</td>
+                                    <td>08:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 나의 연차 현황 -->
+                <div class="wh_div">
+                    <div class="title_area">
+                        <div>나의 연차 현황</div>
+                        <div>
+                            <btton class="btn_vacation_notice">
+                                연차 공지
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_notice.svg" class="icon_vacation_notice ml-1">
+                            </btton>
+                        </div>
+                    </div>
+                    <div class="chart_area">
+                        <!-- progress -->
+                        <div class="text_area text_area_02">
+                            <div>
+                                <div class="d-flex position-relative">
+                                    <div>총 연차</div>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_info.svg" class="ico_info ml-2 pointer">
+                                    <div class="bubble_info">발생연차 + 특별연차 + 공가</div>
+                                </div>
+                                <div>16</div>
+                            </div>
+                            <div>
+                                <div>특별 연차</div>
+                                <div>2</div>
+                            </div>
+                            <div>
+                                <div>공가</div>
+                                <div>14</div>
+                            </div>
+                        </div>
+                        <div class="text_area text_area_02">
+                            <div>
+                                <div>발생 연차</div>
+                                <div>16</div>
+                            </div>
+                            <div>
+                                <div class="d-flex position-relative">
+                                    <div>사용 연차</div>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_info.svg" class="ico_info ml-2 pointer">
+                                    <div class="bubble_info">사용연차 + 특별연차 + 공가</div>
+                                </div>
+                                <div>2</div>
+                            </div>
+                            <div>
+                                <div class="d-flex position-relative">
+                                    <div>잔여 연차</div>
+                                    <img src="http://test.s1.unipware.com/unipware/images/ico_info.svg" class="ico_info ml-2 pointer">
+                                    <div class="bubble_info">발생연차 - 사용연차</div>
+                                </div>
+                                <div>0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 나의 연차 현황 표 -->
+                    <div class="table_w mt-5">
+                        <table class="table table_working_hour_02">
+                            <thead class="table_thead">
+                                <tr>
+                                    <th>구분</th>
+                                    <th>시작일</th>
+                                    <th>종료일</th>
+                                    <th>사용연차</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>개인</td>
+                                    <td>24-02-07</td>
+                                    <td>24-02-09</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </section>
+    </main>
+    <!-- main end -->
+
+   
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/progress.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/jquery-ui.min.js"></script>
+</body>
+</html>

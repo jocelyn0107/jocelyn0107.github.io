@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="UNIPWARE">
+    <meta property="og:site_name" content="UNIPWARE">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+    <title>UNIPWARE</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/common/css/common.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/unipware/css/style.css"> 
+</head>
+
+<body>
+    <h1 class="ir_su">UNIPWARE</h1>
+
+    <!-- modal signout -->
+    <div class="modal_popup" id="modalSignOut">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">로그아웃 하시겠습니까?</div>
+
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok" onclick="location.href='index.html'">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDelete">
+        <div class="modal_wrap_sm">
+            <div class="modal_top_w_sm d-flex w_100 justify-content-end">
+                <div class="modal_control">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" class="btn_close_modal"
+                        alt="팝업 닫기">
+                </div>
+            </div>
+            <div class="modal_content">정말로 삭제하시겠습니까?</div>
+            <div class="modal_btn_w">
+                <button class="modal_btn_ok">확인</button>
+                <button class="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- s: header -->
+    <header id="header">
+        <div class="header_wrap d-flex justify-content-between align-items-center">
+            <div class="logo d-flex align-items-center">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_logo.svg" onclick="location.href='index.html'"
+                    class="logo" alt="로고">
+            </div>
+            <div class="m_logo d-flex align-items-center" onclick="location.href='index.html'">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_m_logo.svg"
+                    onclick="location.href='index.html'" class="m_logo" alt="로고">
+            </div>
+            <div class="nav_login">
+                <!-- s: nav -->
+                <nav class="pc_nav d-none d-md-block">
+                    <ul>
+                        <li><a href="database.html">CONSOLE</a>
+                            <ul class="second_menu">
+                                <li><a href="database.html">데이터베이스</a></li>
+                                <li><a href="distribution.html">배포</a></li>
+                                <li><a href="query.html">쿼리관리</a></li>
+                                <li><a href="resource.html">리소스 관리</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="demo.html">DEMO</a></li>
+                        <li><a href="document.html">DOCUMENT</a> </li>
+                        <li class="lnb_active"><a href="project.html">PROJECT</a>
+                            <div class="lnb_active_line"></div>
+                            <ul class="second_menu">
+                                <li><a href="project.html">프로젝트 목록</a></li>
+                                <li class="lnb_active"><a href="customer.html">고객사 목록</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="messenger.html">MESSENGER</a></li>
+                        <li><a href="task.html">TASK</a></li>
+                        <li class="font-weight-bold"><a href="myboard.html">강성희</a>
+                            <ul class="second_menu">
+                                <li><a href="myboard.html">My Board</a></li>
+                                <li><a href="myschedule.html">Schedule</a></li>
+                                <li><a href="myworkinghours.html">Working Hour</a></li>
+                                <li><a href="mynotice.html">Notice</a></li>
+                                <li><a href="myapproval.html">Approval</a></li>
+                                <li class="btn_signout cursor_p">로그아웃</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: nav -->
+
+                <!-- burger_menu_icon -->
+                <div class="d-md-none m_menu">
+                    <img src="http://test.s1.unipware.com/unipware/images/ico_burger.svg" alt="모바일 메뉴">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- e: header -->
+
+    <!-- s: mobile nav -->
+    <section id="mobile_nav_area">
+        <h2 class="ir_su">모바일 네비</h2>
+        <div class="mobile_nav_bg">
+            <div class="m_close">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_close.svg" alt="모바일 메뉴 닫기">
+            </div>
+            <ul class="mobile_nav">
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_console.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 console">
+                        CONSOLE
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="database.html">데이터베이스</a></li>
+                        <li><a href="distribution.html">배포</a></li>
+                        <li><a href="query.html">쿼리관리</a></li>
+                        <li><a href="resource.html">리소스 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="demo.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_demo.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 DEMO">
+                        DEMO
+                    </a>
+                </li>
+                <li>
+                    <a href="document.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_document.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 DOCUMENT">
+                        DOCUMENT
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="lnb_active">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_project.svg"
+                            class="m_menu_icon_active" alt="모바일 메뉴 PROJECT">
+                        PROJECT
+                    </a>
+                    <ul class="m_sub_menu d-block">
+                        <li><a href="project.html">프로젝트 목록</a></li>
+                        <li class="lnb_active"><a href="customer.html">고객사 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="messenger.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_messenger.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MESSENGER">
+                        MESSENGER
+                    </a>
+                </li>
+                <li>
+                    <a href="task.html">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_task.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 TASK">
+                        TASK
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_profile.svg"
+                            class="m_menu_icon" alt="모바일 메뉴 MY">
+                        MY
+                    </a>
+                    <ul class="m_sub_menu">
+                        <li><a href="myboard.html">My Board</a></li>
+                        <li><a href="myschedule.html">Schedule</a></li>
+                        <li><a href="myworkinghours.html">Working Hour</a></li>
+                        <li><a href="mynotice.html">Notice</a></li>
+                        <li><a href="myapproval.html">Approval</a></li>
+                    </ul>
+                </li>
+                <li class="mobile_signout_menu btn_signout">
+                    <a href="#">
+                        <img src="http://test.s1.unipware.com/unipware/images/ico_burger_logout.svg" class="m_menu_icon"
+                            alt="모바일 메뉴 LOGOUT">
+                        LOGOUT
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- e: mobile nav -->
+
+    <!-- s: left aside -->
+    <aside id="left_aside">
+        <div class="left_aside_menu" onclick="location.href='project.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_project.svg" class="aside_icon"
+                alt="left aside project">
+            <div class="aside_menu_title">프로젝트 목록</div>
+            <div class="right_arrow_icon">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+
+        <div class="left_aside_menu left_aside_active" onclick="location.href='customer.html'">
+            <img src="http://test.s1.unipware.com/unipware/images/ico_left_customer.svg" class="aside_icon"
+                alt="left aside customer">
+            <div class="aside_menu_title">고객사 목록</div>
+            <div class="right_arrow_icon visible">
+                <img src="http://test.s1.unipware.com/unipware/images/ico_left_arrow.svg" alt="">
+            </div>
+        </div>
+    </aside>
+    <!-- e: left aside -->
+
+    <!-- main start -->
+    <main id="main_contents">
+        <section>
+            <h2 class="ir_su">메인 컨텐츠</h2>
+            <!-- mobile contents top -->
+            <div class="m_contents_top d-md-none">
+                <div class="title">고객사 목록</div>
+            </div>
+            <div class="wrap">
+                <!-- table start -->
+                <div class="table_wrap customer_list mt-5 ">
+                    <div class="data_main_contents_top mb-4 d-flex flex-wrap align-items-center justify-content-between w_100">
+
+                        <!-- search area  -->
+                        <div class="data_search_area">
+                            <div class="search_icon">
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_search.svg" alt="삭제">
+                            </div>
+                            <div class="search_delete_icon">
+                                <img src="http://test.s1.unipware.com/unipware/images/ico_input_delete.svg" alt="검색 삭제">
+                            </div>
+                            <input type="text" class="data_form_control w_100" placeholder="검색">
+                        </div>
+
+                        <!-- buttons -->
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn_console" onclick="location.href='customer_add.html'">
+                                <span>등록</span>
+                            </button>
+                        </div>
+                    </div>
+                    <table class="table table-hover data_table customer">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="20%">
+                            <col width="35%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">고객사</th>
+                                <th scope="col">대표자</th>
+                                <th scope="col">연락처</th>
+                                <th scope="col">이메일</th>
+                                <th scope="col">주소</th>
+                                <th scope="col">비고</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">메리츠화재</td>
+                                <td onclick="location.href='customer_detail.html'">홍길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-1234-1234</td>
+                                <td onclick="location.href='customer_detail.html'">park012@kakao.com</td>
+                                <td onclick="location.href='customer_detail.html'">경상북도 포항시 북구 새천년대로 70</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">현대모비스</td>
+                                <td onclick="location.href='customer_detail.html'">나길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-1234-1234</td>
+                                <td onclick="location.href='customer_detail.html'">user123456@mail.com</td>
+                                <td onclick="location.href='customer_detail.html'">충청남도 천안시 동남구 신부로 79</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">SK바이오팜</td>
+                                <td onclick="location.href='customer_detail.html'">이길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-9874-1234</td>
+                                <td onclick="location.href='customer_detail.html'">baek789@naver.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 시흥시 중심상가로 77</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">삼성전자</td>
+                                <td onclick="location.href='customer_detail.html'">윤길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-5222-1234</td>
+                                <td onclick="location.href='customer_detail.html'">park456@kakao.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 수원시 팔달구 성문로 45</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">한국금융지주</td>
+                                <td onclick="location.href='customer_detail.html'">박길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-1111-1234</td>
+                                <td onclick="location.href='customer_detail.html'">song345@gmail.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 부천시 원미구 중동로 50</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">미래에셋대우</td>
+                                <td onclick="location.href='customer_detail.html'">신길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-2222-1234</td>
+                                <td onclick="location.href='customer_detail.html'">lee678@naver.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 안양시 동안구 경수대로 88</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">삼성SDI</td>
+                                <td onclick="location.href='customer_detail.html'">남길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-3258-1234</td>
+                                <td onclick="location.href='customer_detail.html'">sohn678@gmail.com</td>
+                                <td onclick="location.href='customer_detail.html'">제주특별자치도 제주시 일주서로 95</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">감성텍</td>
+                                <td onclick="location.href='customer_detail.html'">김길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-1478-1234</td>
+                                <td onclick="location.href='customer_detail.html'">lee@gmail.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 파주시 독립로 78</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                    비고를 기입하는 칸입니다.
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">두산인프라코어</td>
+                                <td onclick="location.href='customer_detail.html'">정길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-9888-1234</td>
+                                <td onclick="location.href='customer_detail.html'">kang234@kakao.com</td>
+                                <td onclick="location.href='customer_detail.html'">경기도 안산시 상록구 사3로 90</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다. </td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td onclick="location.href='customer_detail.html'">KT&G</td>
+                                <td onclick="location.href='customer_detail.html'">임길동</td>
+                                <td onclick="location.href='customer_detail.html'">010-3258-1234</td>
+                                <td onclick="location.href='customer_detail.html'">jung456@gmail.com</td>
+                                <td onclick="location.href='customer_detail.html'">부산광역시 해운대구 센텀동로 67</td>
+                                <td onclick="location.href='customer_detail.html'" class="text-overflow">비고를 기입하는 칸입니다.</td>
+                                <td class="d-flex justify-content-end">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- table end -->
+
+                <!-- s:pagination start -->
+                <div class="pagination justify-content-center customer">
+                    <ul>
+                        <li class="pagi_arrow init"></li>
+                        <li class="pagi_arrow prev"></li>
+                        <li class="is-active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="pagi_arrow next"></li>
+                        <li class="pagi_arrow last"></li>
+                    </ul>
+                </div>
+                <!-- e:pagination end -->
+            </div>
+        </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer id="footer">
+        <p>Copyright 2024. GAMSUNGTECH All Rights Reserved.</p>
+    </footer>
+    <!-- footer end -->
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- select box -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="http://test.s1.unipware.com/unipware/js/layout.js"></script>
+    <!-- address button -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function execDaumPostcode() {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                    console.log(data);
+
+                    var roadAddr = data.roadAddress; // 도로명 주소 변수
+                    var jibunAddr = data.jibunAddress; // 지번 주소 변수
+
+                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                    document.getElementById('member_post').value = data.zonecode;
+                    if (roadAddr !== '') {
+                        document.getElementById("member_addr").value = roadAddr;
+                    } else if (jibunAddr !== '') {
+                        document.getElementById("member_addr").value = jibunAddr;
+                    }
+                }
+            }).open();
+        }
+    </script>
+</body>
+
+</html>
