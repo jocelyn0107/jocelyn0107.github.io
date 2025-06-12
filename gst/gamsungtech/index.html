@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="GAMSUNGTECH">
+    <meta property="og:site_name" content="GAMSUNGTECH">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/unipware/images/favicon.ico" type="image/x-icon">
+
+    <title>GAMSUNGTECH</title>
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/GST/css/style.css">
+</head>
+ 
+<body>
+    <!-- s:modal contact us -->
+    <div class="modal_popup" id="modalContact">
+        <div class="modal_wrap scroll contact">
+            <!-- s:modal_scroll -->
+            <div class="modal_scroll scroll s_hover">
+                <img class="modal_close close_icon" src="http://test.s1.unipware.com/GST/images/ico_modal_close.svg" alt="닫기">
+                <div class="first step on">
+                    <h1 class="mb-3">Contact Us</h1>
+                    <p>연락처를 남겨주시면 빠른 시일안에 연락드리겠습니다.</p>
+                    <div class="d-flex">
+                        <!-- s:input_wrap -->
+                        <div class="input_wrap">
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>
+                                    <input type="text" placeholder="이름을 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>이메일</dt>
+                                <dd>
+                                    <input type="text" placeholder="이메일을 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>
+                                    <input type="text" placeholder="연락처를 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>소속</dt>
+                                <dd>
+                                    <input type="text" placeholder="소속을 입력해주세요.">
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>직책</dt>
+                                <dd>
+                                    <input type="text" placeholder="직책을 입력해주세요.">
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- e:input_wrap -->
+                        <!-- s:input_wrap -->
+                        <div class="input_wrap right">
+                            <dl>
+                                <dt>제안 구분</dt>
+                                <dd>
+                                    <div class="dropdown">
+                                        <button class="selected">
+                                            전체
+                                            <img src="http://test.s1.unipware.com/GST/images/ico_dropdown-chevron.svg"
+                                                alt="드롭다운 화살표">
+                                        </button>
+                                        <div class="dropdown_list scroll s_hover">
+                                            <button>전체</button>
+                                            <button>카테고리1</button>
+                                            <button>카테고리2</button>
+                                            <button>카테고리3</button>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>제안 내용</dt>
+                                <dd>
+                                    <textarea placeholder="제안 내용을 입력해주세요."></textarea>
+                                </dd>
+                            </dl>
+                        </div>
+                        <!-- e:input_wrap -->
+                    </div>
+                    <div class="checkbox_wrap">
+                        <label class="checkbox_label">
+                            <input type="checkbox">
+                            <span class="checkbox_icon"></span>
+                            <span class="checkbox_txt">개인정보수집 및 이용에 동의합니다.</span>
+                        </label>
+                    </div>
+                    <div class="terms_box scroll s_hover">
+                        <p>제 1조 (목적)
+                            <br>
+                            <br>
+                            본 약관은 [회사명] (이하 "회사")가 제공하는 문의하기 서비스(이하 "서비스")를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+                            <br>
+                            <br>
+                            제 2조 (개인정보의 수집 및 이용)
+                            <br>
+                            <br>
+                            사용자가 입력한 개인정보는 문의 처리 및 응답을 목적으로 사용됩니다.<br>
+                            회사는 사용자의 동의 없이 수집한 정보를 제3자에게 제공하지 않습니다.<br>
+                            수집된 개인정보는 문의 처리 완료 후 관련 법령에 따라 일정 기간 보관되며, 이후 안전하게 삭제됩니다.
+                            <br>
+                            <br>
+                            제 3조 (문의 내용의 제한)
+                            <br>
+                            <br>
+                            이용자는 다음과 같은 내용을 포함하는 문의를 작성해서는 안 됩니다.
+                            <br>
+                            타인의 명예를 훼손하거나 불쾌감을 주는 내용<br>
+                            허위 정보나 부정확한 내용을 포함한 문의<br>
+                            광고, 홍보, 스팸 등 서비스와 무관한 내용<br>
+                            기타 법령에 위반되는 내용
+                            <br>
+                            <br>
+                            제 4조 (회사의 의무)
+                            <br>
+                            <br>
+                            회사는 사용자의 문의에 대해 신속하고 성실하게 응답할 의무가 있습니다.<br>
+                            기술적 문제 또는 외부 요인으로 인해 문의 처리에 지연이 발생할 경우, 이를 사전에 공지하거나 지연 사유를 안내합니다.
+                            <br>
+                            <br>
+                            제 5조 (이용자의 의무)
+                            <br>
+                            <br>
+                            이용자는 정확하고 진실된 정보를 제공해야 합니다.<br>
+                            문의와 관련된 추가 정보가 필요한 경우, 회사의 요청에 성실히 응해야 합니다.<br>
+                            본 약관을 준수하지 않아 발생한 문제에 대한 책임은 이용자 본인에게 있습니다.
+                            <br>
+                            <br>
+                            제 6조 (서비스 중단 및 제한)
+                            <br>
+                            <br>
+                            회사는 다음과 같은 경우 서비스 제공을 일시 중단하거나 제한할 수 있습니다.
+                            <br>
+                            시스템 점검, 유지보수, 교체 등의 불가피한 사유 발생 시<br>
+                            천재지변, 정전, 통신 장애 등 불가항력적인 사유 발생 시
+                        </p>
+                    </div>
+                    <button class="submit">문의하기</button>
+                </div>
+                <div class="second step">
+                    <h1 class="mb-3">Contact Us</h1>
+                    <div class="wrap">
+                        <img src="http://test.s1.unipware.com/GST/images/contact_complete.svg" alt="완료">
+                        <p>
+                            문의가 완료되었습니다.<br>
+                            빠른 시일내로 확인하여 연락드리겠습니다
+                        </p>
+                    </div>
+                    <button class="close modal_close">닫기</button>
+                </div>
+            </div>
+            <!-- e:modal_scroll -->
+        </div>
+    </div> 
+    <!-- e:modal contact us -->
+
+    <div class="quick_wrap">
+        <div class="quick">
+            <a href="javascript:void(0)" class="goto_top">
+                <img src="http://test.s1.unipware.com/GST/images/arrow_top.svg" alt="맨 위로">
+            </a>
+        </div>
+    </div>
+
+    <header>
+        <h1 class="ir_su">GAMSUNGTECH</h1>
+        <div class="nav_bg"></div>
+        <div class="nav_bg_mobile">
+            <img class="close" src="http://test.s1.unipware.com/GST/images/mobile_close.svg" alt="모바일 메뉴 닫기">
+            <ul class="d-flex flex-direction-column">
+                <li class="about">
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                <li>
+                    <a href="location.html">Location</a>
+                </li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+                <li class="new_tab">
+                    <a href="technology.html">
+                        Technology
+                        <img src="http://test.s1.unipware.com/GST/images/ico_newTab.svg" alt="새창 열기">
+                    </a>
+                </li>
+                <li class="new_tab">
+                    <a href="#">
+                        Product
+                        <img src="http://test.s1.unipware.com/GST/images/ico_newTab.svg" alt="새창 열기">
+                    </a>
+                </li>
+                <li class="new_tab contact_us btn_contact">
+                    <a class="btn_contact" href="javascript:void(0);">
+                        Contact us
+                        <img src="http://test.s1.unipware.com/GST/images/ico_contact.svg" alt="문의하기">
+                    </a>
+                </li>
+            </ul>
+            <div class="info">
+                <h2>(주)감성텍</h2>
+                <dl>
+                    <dt>대표이사</dt>
+                    <dd>김민규</dd>
+                    <dt>사업자등록번호</dt>
+                    <dd>142-87-07944</dd>
+                </dl>
+                <dl>
+                    <dt>본사</dt>
+                    <dd>서울 강남구 테헤란로 501, 브이플렉스 506호 </dd>
+                    <dt>기업부설연구소</dt>
+                    <dd>광주 동구 금남로 193-12, 601호</dd>
+                </dl>
+            </div>
+        </div>
+        <nav class="d-flex">
+            <a href="index.html">
+                <img class="header_logo" src="http://test.s1.unipware.com/GST/images/gst_logo_w.svg" alt="감성텍 로고">
+                <img class="header_logo_m" src="http://test.s1.unipware.com/GST/images/gst_logo_w_mobile.svg" alt="감성텍 모바일 로고">
+            </a>
+            <ul class="menu d-flex align-items-center">
+                <li>
+                    <a class="nav_1dep" href="about.html">About</a>
+                </li>
+                <li>
+                    <a class="nav_1dep" href="history.html">History</a>
+                </li>
+                <li>
+                    <a class="nav_1dep" href="location.html">Location</a>
+                </li>
+                <li>
+                    <a class="nav_1dep" href="news.html">News</a>
+                </li>
+            </ul>
+            <ul class="nav_right_wrap">
+                <li class="tech_prod">
+                    <a href="technology.html">
+                        Technology
+                        <img src="http://test.s1.unipware.com/GST/images/ico_newTab.svg" alt="새창 열기">
+                    </a>
+                </li>
+                <li class="tech_prod">
+                    <a href="">
+                        Product
+                        <img src="http://test.s1.unipware.com/GST/images/ico_newTab.svg" alt="새창 열기">
+                    </a>
+                </li>
+                <li class="btn_contact d-flex align-items-center">
+                    Contact Us
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile_menu">
+            <img class="mobile_burger" src="http://test.s1.unipware.com/GST/images/mobile_burger.svg" alt="모바일 버거">
+        </div>
+    </header>
+    <!-- s:main section -->
+    <section class="main">
+        <div class="visual_line">
+            <i></i>
+        </div>
+        <video class="bg-video" autoplay loop muted playsinline>
+            <source src="http://test.s1.unipware.com/GST/videos/main_b.mp4" type="video/mp4">
+        </video>
+        <div class="inner">
+            <div class="copytxt fade-up">
+                <p class="fade-in">당신의 일상에 감성과 AI 기술을 더하겠습니다.</p>
+                <h1 class="fade-in">GAMSUNGTECH</h1>
+                <p class="sub_txt fade-in">
+                    AI 심장카메라 <b>기술 기반</b>, 인공지능 플랫폼 개발<b> 기업</b>
+                </p>
+            </div>
+        </div>
+        <div class="main_scroll_icon">
+            <span class="scroll_circle_box"></span>
+        </div>
+    </section>
+    <!-- e:main section -->
+    <!-- s:AIcamera section -->
+    <section class="AIcamera">
+        <div class="txt_wrap">
+            <h1>
+                <span>비접촉식</span><br><span>심장 반응 측정</span><br><b><span>AI 심장카메라</span></b>
+            </h1>
+            <p>
+                일상에서 흔히 보는 스마트폰, 노트북 등의 카메라를 통해 얼굴을 인식해<br>비접촉식으로 심장 반응을 측정하는 기술입니다.
+            </p>
+            <button class="btn_arrow">
+                <a href="about.html">
+                    <img src="http://test.s1.unipware.com/GST/images/right_arrow.svg" alt="화살표">
+                    VIEW MORE
+                </a>
+            </button>
+        </div>
+        <div class="reveal_box_wrap">
+            <!-- s:img_box -->
+            <video class="inner_video" id="innerVideo" autoplay loop muted playsinline>
+                <source src="http://test.s1.unipware.com/GST/videos/heartbeat.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- e:img_box -->
+        </div>
+    </section>
+    <!-- e:AIcamera section -->
+    <!-- s:technology section -->
+    <section class="technology">
+        <div class="inc02_wrap">
+            <!-- 기술 리스트 -->
+            <ul class="tech_list">
+                <li class="tech_item">
+                    <div class="gsap_container">
+                        <div class="txt_cont">
+                            <span class="num">01</span>
+                            <div class="txt">
+                                <h3 class="pl">AI 심장카메라</h3>
+                                <p class="pl">일상에서 흔히 보는 스마트폰, 노트북 등의 카메라를 통해<br>
+                                    얼굴을 인식해 비접촉식으로 심장 반응을 측정하는 기술입니다.</p>
+                            </div>
+                            <div class="button_wrap">
+                                <button onclick="location.href='technology.html'">
+                                    View more
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                                <button class="btn_trial">
+                                    체험하기
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="img_w one">
+                            <div class="img_bg"></div>
+                            <img class="ex" src="http://test.s1.unipware.com/GST/images/tech_img-1.png" alt="심장카메라 앱">
+                            <img class="logo" src="http://test.s1.unipware.com/GST/images/g_logo.svg" alt="로고">
+                        </div>
+                    </div>
+                </li>
+                <li class="tech_item">
+                    <div class="gsap_container">
+                        <div class="txt_cont">
+                            <span class="num">02</span>
+                            <div class="txt">
+                                <h3 class="pl">호감도 측정 서비스</h3>
+                                <p class="pl">측정된 심박수를 바탕으로 상대방에<br>
+                                    대한 호감도를 시각적으로 표시합니다.</p>
+                            </div>
+                            <div class="button_wrap">
+                                <button onclick="location.href='technology.html'">
+                                    View more
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                                <button class="btn_trial">
+                                    체험하기
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="img_w two">
+                            <div class="img_bg"></div>
+                            <img class="ex" src="http://test.s1.unipware.com/GST/images/tech_img-2.png" alt="호감도 앱">
+                            <img class="logo" src="http://test.s1.unipware.com/GST/images/g_logo.svg" alt="로고">
+                        </div>
+                    </div>
+                </li>
+                <li class="tech_item">
+                    <div class="gsap_container">
+                        <div class="txt_cont">
+                            <span class="num">03</span>
+                            <div class="txt">
+                                <h3 class="pl">비대면 상담 서비스</h3>
+                                <p class="pl">화상채팅을 통해 피상담자의 심박수를 분석해 스트레스, 우울,
+                                    불안 지수를 측정합니다.<br>측정된 데이터를 기반으로
+                                    개인의 트라우마 지수를 분석, 제공합니다.</p>
+                            </div>
+                            <div class="button_wrap">
+                                <button onclick="location.href='technology.html'">
+                                    View more
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                                <button onclick="location.href='tech_PRSP.html'" class="btn_trial">
+                                    체험하기
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="img_w three">
+                            <div class="img_bg"></div>
+                            <img class="ex" src="http://test.s1.unipware.com/GST/images/tech_img-3.png" alt="재난안전 앱">
+                            <img class="logo" src="http://test.s1.unipware.com/GST/images/g_logo.svg" alt="로고">
+                        </div>
+                    </div>
+                </li>
+                <li class="tech_item last">
+                    <div class="gsap_container">
+                        <div class="txt_cont">
+                            <span class="num">04</span>
+                            <div class="txt">
+                                <h3 class="pl">코골이 측정 서비스</h3>
+                                <p class="pl">휴대폰으로 녹음된 코골이 소리를 분석해 수면시간과
+                                    코골이 비율을 계산합니다.<br>이를 바탕으로 개인의 코골이 지수를 산출해 제공합니다.</p>
+                            </div>
+                            <div class="button_wrap">
+                                <button onclick="location.href='technology.html'">
+                                    View more
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                                <button class="btn_trial">
+                                    체험하기
+                                    <img src="http://test.s1.unipware.com/GST/images/ico_more_arrow.svg" alt="화살표">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="img_w four">
+                            <div class="img_bg "></div>
+                            <img class="ex" src="http://test.s1.unipware.com/GST/images/tech_img-4.png" alt="잠코리아 앱">
+                            <img class="logo" src="http://test.s1.unipware.com/GST/images/g_logo.svg" alt="로고">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile"></div>
+    </section>
+    <!-- e:technology section -->
+    <!-- s:mobile_technology section -->
+    <section class="mobile_technology swiper-container">
+        <div class="txt_wrap">
+            <h1 class="tit">
+                Technology
+            </h1>
+            <p class="animate">감성텍의 기술을 소개해드립니다.</p>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="m_tech_w swiper-slide">
+                <div class="d-flex contents_w">
+                    <img src="http://test.s1.unipware.com/GST/images/tech_img-1.png" alt="심장카메라 앱">
+                    <div class="txt_cont">
+                        <h6>AI 심장카메라</h6>
+                        <p>일상에서 흔히 보는 스마트폰,
+                            노트북 등의 카메라를 통해 얼굴을
+                            인식해 비접촉식으로
+                            심장 반응을 측정하는 기술</p>
+                    </div>
+                </div>
+            </div>
+            <div class="m_tech_w swiper-slide">
+                <div class="d-flex contents_w">
+                    <img src="http://test.s1.unipware.com/GST/images/tech_img-2.png" alt="호감도 앱">
+                    <div class="txt_cont">
+                        <h6>호감도 측정 서비스</h6>
+                        <p>측정된 심박수를 바탕으로 상대방에
+                            대한 호감도를 시각적으로 표시합니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="m_tech_w swiper-slide">
+                <div class="d-flex contents_w">
+                    <img src="http://test.s1.unipware.com/GST/images/tech_img-m3.png" alt="재난안전 앱">
+                    <div class="txt_cont">
+                        <h6>비대면 상담 서비스</h6>
+                        <p>일상에서 흔히 보는 스마트폰,
+                            노트북 등의 카메라를 통해 얼굴을
+                            인식해 비접촉식으로 심장 반응을
+                            측정하는 기술</p>
+                    </div>
+                </div>
+            </div>
+            <div class="m_tech_w swiper-slide">
+                <div class="d-flex contents_w">
+                    <img src="http://test.s1.unipware.com/GST/images/tech_img-m4.png" alt="잠코리아 앱">
+                    <div class="txt_cont">
+                        <h6>코골이 측정 서비스</h6>
+                        <p>휴대폰으로 녹음된 코골이 소리를
+                            분석해 수면시간과 코골이 비율을
+                            계산합니다. 이를 바탕으로 개인의
+                            코골이 지수를 산출해 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="navigation">
+            <li class="app-button prev">
+                <img src="http://test.s1.unipware.com/GST/images/ico_news_prev.svg" alt="이전">
+            </li>
+            <li class="app-button next">
+                <img src="http://test.s1.unipware.com/GST/images/ico_news_next.svg" alt="다음">
+            </li>
+        </ul>
+    </section>
+    <!-- e:mobile_technology section -->
+    <!-- s:application section -->
+    <section class="application">
+        <div class="inner">
+            <div class="app_section">
+                <div class="txt">
+                    <h1 class="tit">Fields of<br>Application</h1>
+                    <p>인공지능 기술을 바탕으로 헬스케어, <br>
+                        스마트 미러를 통한 스마트 홈,<br>
+                        교육 및 컨텍 센터 분야로 기술을 고도화합니다.</p>
+                </div>
+            </div>
+            <!-- 적용분야 리스트 -->
+            <div class="app_section">
+                <ul class="application_list">
+                    <li class="application_item fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business1.jpg" alt="적용분야 이미지 01">
+                            <h6>HealthCare</h6>
+                            <p>원격 의료 및 의사진단 툴로써
+                                디지털 치료제로 활용</p>
+                        </div>
+                    </li>
+                    <li class="application_item fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business2.jpg" alt="적용분야 이미지 01">
+                            <h6>Resident Space</h6>
+                            <p>실내 활동 중 상태를 상시 확인하여
+                                병원 및 응급 상황 발생시 그에 따른 연동 솔루션 제공</p>
+                        </div>
+                    </li>
+                    <li class="application_item fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business3.jpg" alt="적용분야 이미지 01">
+                            <h6>Company Space</h6>
+                            <p>업무의 피로도 등
+                                근무 감성 상태 제공</p>
+                        </div>
+                    </li>
+                    <li class="application_item fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business4.jpg" alt="적용분야 이미지 01">
+                            <h6>Multi Kiosk</h6>
+                            <p>출입모드 : 출입시 건강, 감성 상태 제공
+                                DID모드 : 평상시 광고 재생</p>
+                        </div>
+                    </li>
+                    <li class="application_item fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business5.jpg" alt="적용분야 이미지 01">
+                            <h6>Smart Mirror</h6>
+                            <p>스마트홈에서 건강 상태,
+                                감성 상태 솔루션 제공</p>
+                        </div>
+                    </li>
+                    <li class="application_item last fade-left">
+                        <div>
+                            <img src="http://test.s1.unipware.com/GST/images/business6.jpg" alt="적용분야 이미지 01">
+                            <h6>Education</h6>
+                            <p>비대면 온라인 학습 시 집중도 등의
+                                학습 상태 정보 제공</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- e:application section -->
+    <!-- s:mobile_application section -->
+    <section class="mobile_application swiper-container">
+        <div class="title">
+            <h1 class="tit">Fields of Application</h1>
+            <p>인공지능 기술을 바탕으로 헬스케어,<br>
+                스마트 미러를 통한 스마트 홈,<br>
+                교육 및 컨텍 센터 분야로 기술을 고도화합니다.</p>
+        </div>
+        <!-- s:swiper-wrapper -->
+        <div class="swiper-wrapper">
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business1.png" alt="적용분야 모바일 이미지 01">
+                <div class="txt_cont">
+                    <h6>Health Care</h6>
+                    <p>원격 의료 및 의사진단 툴로써 디지털 치료제로 활용</p>
+                </div>
+            </div>
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business2.png" alt="적용분야 모바일 이미지 02">
+                <div class="txt_cont">
+                    <h6>Resident Space</h6>
+                    <p>실내 활동 중 상태를 상시 확인하여<br>
+                        병원 및 응급 상황 발생시 그에 따른 연동 솔루션 제공</p>
+                </div>
+            </div>
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business3.png" alt="적용분야 모바일 이미지 03">
+                <div class="txt_cont">
+                    <h6>Company Space</h6>
+                    <p>업무의 피로도 등 근무 감성 상태를 제공</p>
+                </div>
+            </div>
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business4.png" alt="적용분야 모바일 이미지 04">
+                <div class="txt_cont">
+                    <h6>Multi Kiosk</h6>
+                    <p>출입모드 : 출입시 건강, 감성 상태 제공<br>
+                        DID모드 : 평상시 광고 재생</p>
+                </div>
+            </div>
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business5.png" alt="적용분야 모바일 이미지 05">
+                <div class="txt_cont">
+                    <h6>Smart Mirror</h6>
+                    <p>스마트홈에서 건강 상태, 감성 상태 솔루션 제공</p>
+                </div>
+            </div>
+            <div class="m_application_w swiper-slide">
+                <img src="http://test.s1.unipware.com/GST/images/m_business6.png" alt="적용분야 모바일 이미지 06">
+                <div class="txt_cont">
+                    <h6>Education</h6>
+                    <p>비대면 온라인 학습 시 집중도 등의 학습 상태 정보 제공</p>
+                </div>
+            </div>
+        </div>
+        <!-- e:swiper-wrapper -->
+        <ul class="navigation">
+            <li class="app-button prev">
+                <img src="http://test.s1.unipware.com/GST/images/ico_news_prev.svg" alt="이전">
+            </li>
+            <li class="app-button next">
+                <img src="http://test.s1.unipware.com/GST/images/ico_news_next.svg" alt="다음">
+            </li>
+        </ul>
+    </section>
+    <!-- e:mobile_application section -->
+    <!-- s:news section -->
+    <section class="news">
+        <div class="inner">
+            <div class="txt_wrap">
+                <h1 class="tit">News</h1>
+                <p>감성텍의 최신 소식을 확인해보세요.</p>
+            </div>
+            <!-- s:swiper-container -->
+            <div class="news_swiper swiper-container news_wrap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="http://test.s1.unipware.com/GST/images/news_img-1.jpg" alt="뉴스 썸네일1">
+                            </div>
+                            <dl>
+                                <dt>
+                                    2023 국제중소기업협의회 세계대회(ICSB) 성황리에 폐막… "기업가정신·광주 中企 관심도 제고!"
+                                </dt>
+                                <dd>
+                                    중소기업의 세계적인 성장 방안을 모색하고 새로운 기회의 장을 제공하기 위해 김대중컨벤션센터에서 개최된 ‘2023 ICSB World
+                                    Congress(2023 국제중소기업협의회 세계대회)’가 4일간의 일정을 마치고 지난 7월 14일(금) 성황리에 막을 내렸다.
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="http://test.s1.unipware.com/GST/images/news_img-2.jpg" alt="[삼성 헬스 스타트업 광주] "光州 스타트업과 삼성 디지털헬스 융합 도모! …삼성 헬스 스타트업데이 광주 성료>
+                            </div>
+                            <dl>
+                                <dt>
+                                    [삼성 헬스 스타트업 광주] "光州 스타트업과 삼성 디지털헬스 융합 도모!"…삼성 헬스 스타트업데이 광주 성료
+                                </dt>
+                                <dd>
+                                    삼성전자와 광주광역시는 19일 삼성화재 상무사옥에 소재한 삼성전자 C랩 아웃사이드(C-Lab Outside) 광주에서 열린 '삼성 헬스 스타트업 데이 광주'가 성황리에 마무리됐다고 밝혔다.
+                                </dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="http://test.s1.unipware.com/GST/images/news_img-3.jpg" alt="[삼성 헬스 스타트업 광주] 김민규 감성텍 대표, &quot;AI 심장카메라로 국민 건강 증진에 기여하고 파!	&quot;">
+                            </div>
+                            <dl>
+                                <dt>[삼성 헬스 스타트업 광주] 김민규 감성텍 대표, "AI 심장카메라로 국민 건강 증진에 기여하고 파!"</dt>
+                            <dd>김민규 감성텍 대표는 19일 삼성화재 상무사옥에 소재한 삼성전자 C랩 아웃사이드(C-Lab Outside) 광주에서 열린 '삼성 헬스 스타트업 데이 광주'에서 '인공지능(AI) 심장카메라' 기술에 대해 설명하고 주력 제품을 시연했다</dd>
+                            </dl>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <div class="thumb">
+                                <img src="http://test.s1.unipware.com/GST/images/news_img-4.jpg" alt="삼성전자가 점찍은 감성텍, '2023 ICSB World Congress' 참가… &quot;세계인에게 AI 심장카메라 기반 솔루션 공개한다!&quot;">
+                            </div>
+                            <dl>
+                                <dt>삼성전자가 점찍은 감성텍, '2023 ICSB World Congress' 참가… "세계인에게 AI 심장카메라 기반 솔루션 공개한다!"</dt>
+                                <dd>'삼성전자 C랩 아웃사이드 광주' 선정기업인 감성텍(대표 김민규)이 내달 9일부터 6일 동안 김대중컨벤션센터에서 진행되는 '2023 국제중소기업협의회 세계대회(2023 ICSB World Congress)'에 참가해 인공지능(AI) 심장카메라 기반 솔루션을 공개한다.</dd>
+                            </dl>
+                        </a>
+                    </div> 
+                </div> 
+                <ul class="news_navigation">
+                    <li>
+                        <div class="news-button prev">
+                            <img src="http://test.s1.unipware.com/GST/images/ico_news_prev.svg" alt="이전">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="news-button next">
+                            <img src="http://test.s1.unipware.com/GST/images/ico_news_next.svg" alt="다음">
+                        </div>
+                    </li>
+                    <li> 
+                        <a href="news.html">
+                            <img src="http://test.s1.unipware.com/GST/images/ico_news_more.svg" alt="뉴스 게시판 바로가기">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <!-- e:swiper-container -->
+        </div>
+    </section>
+    <!-- e:news section -->
+    <!-- s:partners section -->
+    <section class="partners">
+        <div class="inner">
+            <div class="txt_wrap">
+                <h1 class="tit">Partners</h1>
+                <p>신뢰받는 파트너들과 함께 성공을 만들어갑니다.</p>
+            </div>
+            <div class="logo_cont">
+                <div class="logo_wrap">
+                    <ul>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_samsung.svg" alt="삼성전자 로고">
+                        </li>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_gwangju.svg" alt="광주광역시 로고">
+                        </li>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_jeonnam.svg" alt="전남대학교병원 로고">
+                        </li>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_aica.jpg" alt="aica 로고">
+                        </li>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_ccei.jpg" alt="광주광역시 로고">
+                        </li>
+                        <li class="logo">
+                            <img src="http://test.s1.unipware.com/GST/images/logo_metsakuur.jpg" alt="메사쿠어컴퍼니 로고">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- e:partners section -->
+    <!-- s:contact_us section -->
+    <section class="contact_us">
+        <div class="d-flex con_w">
+            <div class="left">
+                <h1>감성텍과 상담하고<br>
+                    맞춤형 솔루션을 찾아보세요.</h1>
+                <p>감성텍과 협업하여 최고의 솔루션을 찾아보세요.<br>
+                    아래 버튼을 눌러 양식을 작성해주시면 신속히 연락드리겠습니다.</p>
+                <button class="btn_contact">문의하기</button>
+            </div>
+            <div class="right">
+                <img src="http://test.s1.unipware.com/GST/images/img_contact_us.jpg">
+            </div>
+        </div>
+    </section>
+    <!-- e:contact_us section -->
+
+    <footer class="section fp-auto-height">
+        <div class="inner">
+            <h2>(주)감성텍</h2>
+            <address>
+                <dl>
+                    <dt>대표이사</dt>
+                    <dd>김민규</dd>
+    
+                    <dt>사업자등록번호</dt>
+                    <dd>142-87-07944</dd>
+                </dl>
+                <dl>
+                    <dt>본사</dt>
+                    <dd>서울 강남구 테헤란로 501, 브이플렉스 506호 </dd>
+    
+                    <dt>기업부설연구소</dt>
+                    <dd>광주 동구 금남로 193-12, 601호</dd>
+                </dl>
+            </address>
+        </div>
+        <span>
+            Copyright GAMSUNGTECH. All rights reserved.
+        </span>
+    </footer>
+    <!-- e:fullpage -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- swiper slide -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src="http://test.s1.unipware.com/GST/js/main.js"></script>
+    <script src="http://test.s1.unipware.com/GST/js/layout.js"></script>
+
+    <script>
+        // 메인비디오 천천히 나타내기
+        const mainVideo = $(".bg-video");
+        $(window).on("load", function () {
+            mainVideo.addClass("visible");
+        });
+
+
+        // 두번째 섹션 비디오 느리게 재생
+        const video = document.getElementById('innerVideo');
+        // 재생 속도 설정 (기본값보다 느리게 설정, 예: 0.5배속)
+        video.playbackRate = 0.4;
+        // 비디오가 로드된 후 재생 속도를 확인하려면 이벤트 핸들러를 사용할 수도 있습니다.
+        video.addEventListener('loadeddata', () => {
+            video.playbackRate = 0.5; // 원하는 속도로 설정
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer_MVP1/user/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer_MVP1/admin/css/admin-style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalLoading" style="display: block;">
+        <div class="loading_wrap d-flex justify-content-center align-items-center text-center">
+            <div class="loading_w">
+                <div class="loding_thumb"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/img_logo_w.svg" class="pointer"
+            onclick="location.href='lawyer.html'">
+        <div class="btn_logout">
+            <label class="account">관리자님</label>
+            <label class="logout">로그아웃</label>
+        </div>
+    </header>
+
+    <aside class="show scroll">
+        <!-- s: 초기  aside -->
+        <div class="lawyer_init active">
+            <div class="lawyer_init_w d-flex justify-content-center align-items-center">
+                <div class="text-center ">
+                    <div class="d-flex justify-content-center">
+                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/img_logo.png" alt="logo" class="w_100 pb-5">
+                    </div>
+    
+                    <span>우측의 변호사를 선택하시면<br>
+                    변호사 상세 정보 조회가 가능합니다.</span>
+                </div>
+            </div>
+        </div>
+        <!-- e: 초기 aside -->
+        <!-- s: 변호사 상세보기 aside -->
+        <div class="lawyer_detail">
+            <div class="top mb-5">
+                <label>상담건수 <span>10건</span></label>
+                <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_close.svg" class="pointer ico_close">
+            </div>
+            <!-- 사진 편집 영역 -->
+            <div class="aside_photo mb-5">
+                <div class="photo_w position-relative">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/img_profile.svg">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_image_edit.svg"
+                        class="ico_image_edit">
+                </div>
+            </div>
+            <!-- 이름, 링크 영역 -->
+            <div class="aside_profile mb-5">
+                <label>홍길동 변호사</label>
+                <div class="mt-2 d-flex justify-content-center align-items-center position-relative">
+                    <span>https://open.kakao.com/o/sHuGMDKg</span>
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_copy.svg" class="btn_copy">
+                    <div class="bubble">복사되었습니다.</div>
+                </div>
+            </div>
+            <!-- 변호사 소개 영역 -->
+            <div class="aside_contents">
+                <dl class="d-flex align-items-center py-1">
+                    <dt>이름</dt>
+                    <dd>김길동</dd>
+                </dl>
+                <dl class="d-flex align-items-center py-1">
+                    <dt>연락처</dt>
+                    <dd>010-1234-5678</dd>
+                </dl>
+                <dl class="d-flex align-items-center py-1">
+                    <dt>소속</dt>
+                    <dd>AI는 변호사</dd>
+                </dl>
+                <dl class="d-flex py-1">
+                    <dt>프로필</dt>
+                    <dd>검사로서 9년, 판사로서 14년의
+                        근무 경력을 바탕으로 의뢰인이
+                        믿고 맡길 수 있는 법률 전문가</dd>
+                </dl>
+                <dl class="d-flex py-1">
+                    <dt>분야</dt>
+                    <dd>
+                        <label>성범죄</label>
+                        <label>성범죄</label>
+                        <label>성범죄</label>
+                        <label>성범죄</label>
+                        <label>성범죄</label>
+                    </dd>
+                </dl>
+                <button class="mt-5 btn_lawyer_edit">수정</button>
+            </div>
+        </div>
+        <!-- e: 변호사 상세보기 aside -->
+
+        <!-- s: 변호사 추가 aside -->
+        <div class="lawyer_add">
+            <div class="top mb-5">
+                <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_close.svg" class="pointer ico_close">
+            </div>
+            <!-- 사진 편집 영역 -->
+            <div class="aside_photo mb-5">
+                <div class="photo_w position-relative">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/img_profile.svg">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_image_edit.svg"
+                        class="ico_image_edit">
+                </div>
+            </div>
+            <!-- 이름, 링크 영역 -->
+            <div class="aside_profile mb-5">
+                <div class="mt-2 d-flex justify-content-center align-items-center position-relative">
+                    <input placeholder="카카오톡 상담 링크를 입력해주세요.">
+                </div>
+            </div>
+            <!-- 변호사 소개 영역 -->
+            <div class="aside_contents">
+                <dl class="d-flex align-items-center py-1">
+                    <dt>이름</dt>
+                    <dd><input placeholder="이름을 입력해주세요."></dd>
+                </dl>
+                <dl class="d-flex align-items-center py-1">
+                    <dt>연락처</dt>
+                    <dd><input placeholder="연락처를 입력해주세요."></dd>
+                </dl>
+                <dl class="d-flex align-items-center py-1">
+                    <dt>소속</dt>
+                    <dd><input placeholder="소속을 입력해주세요."></dd>
+                </dl>
+                <dl class="d-flex py-1">
+                    <dt>프로필</dt>
+                    <dd>
+                        <textarea placeholder="20자 이내로 작성해주세요."></textarea>
+                    </dd>
+                </dl>
+                <dl class="d-flex py-1">
+                    <dt>분야</dt>
+                    <dd class="d-flex flex-wrap">
+                        <button>성범죄</button>
+                        <button>이혼</button>
+                        <button>음주운전</button>
+                        <button>재산범죄</button>
+                        <button>학교폭력</button>
+                    </dd>
+                </dl>
+                <div class="d-flex mt-4">
+                    <button class="mr-3">취소</button>
+                    <button>확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- e: 변호사 상세보기 aside -->
+    </aside>
+
+
+
+
+    <main class="with_aside">
+        <section>
+            <!-- 검색, 등록 부분 -->
+            <div class="d-flex justify-content-between top_btn_area">
+                <div class="search_area">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_serch.svg">
+                    <input placeholder="이름, 연락처 검색" class="box">
+                </div>
+                <button class="btn main add">등록</button>
+            </div>
+            <!-- 변호사 리스트 -->
+            <table>
+                <colgroup>
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="15%">
+                    <col width="5%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">이름</th>
+                        <th scope="col" class="text-left">연락처</th>
+                        <th scope="col" class="text-left">링크</th>
+                        <th scope="col">상담 건수</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="pointer active">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                    <tr class="pointer">
+                        <td>1</td>
+                        <td>홍길동</td>
+                        <td class="text-left">010-1234-5678</td>
+                        <td class="text-left">https://open.kakao.com/o/sHuGMDKg</td>
+                        <td>10건</td>
+                        <td class="text-right">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/btn_delete.svg"
+                                class="btn_delete">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 페이지네이션 -->
+            <div class="pagination justify-content-center">
+                <ul>
+                    <li class="pagi_arrow init"></li>
+                    <li class="pagi_arrow prev"></li>
+                    <li class="is-active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li class="pagi_arrow next"></li>
+                    <li class="pagi_arrow last"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024. HumanRawbot All Rights Reserved.</p>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer_MVP1/admin/js/admin-ui.js"></script>
+</body>
+
+</html>

@@ -1565,7 +1565,7 @@ html {
 }
 
 .d_inline_block {
-  display: inline-block;
+  display: inline-block
 }
 
 
@@ -3151,6 +3151,8 @@ input[type=radio]:checked {
 }
 .stamp_input{
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   white-space: nowrap;
   align-items: center;
   margin-bottom: 20px;
@@ -3161,6 +3163,9 @@ input[type=radio]:checked {
 }
 .stamp_input input.size_01{
   width: 26px;
+}
+.stamp_input input.size_02{
+  max-width: 180px;
 }
 .preview_notice, .gift_condition_area{
   width: 100%;
@@ -3246,7 +3251,7 @@ input[type=radio]:checked {
   max-width: 500px;
   position: relative;
   margin: 0 auto;
-  min-width: 300px;
+  min-width: 260px;
   margin-bottom: 140px;
 }
 
@@ -3364,6 +3369,7 @@ input[type=radio]:checked {
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -3385,14 +3391,12 @@ input[type=radio]:checked {
 }
 
 .text_box {
-  height: 40px;
   background-color: #fff;
   font-size: 16px;
   border: 1px solid #ddd;
-  line-height: 40px;
+  line-height: 1.7;
   padding: 0 8px;
   font-weight: 600;
-
 }
 
 .text_box1 {
@@ -3487,28 +3491,27 @@ input[type=radio]:checked {
   margin: 8px 0 16px;
 }
 .stamp_list_dark .image_box{
-  width: 120px;
+  min-width: 110px;
   height: 70px;
   border-radius: 10px;
   background-color: #636363;
   background-size: 30px;
 }
 .stamp_list_dark .text_boxes{
-  width: calc(100% - 130px);
   justify-content: center;
-  gap: 10px;
-  padding: 0 0 0 4px;
+  padding: 0 0 0 10px;
 }
 
 .stamp_list_dark .text_box {
-  height: 20px;
-  line-height: 20px;
   background-color: var(--black);
   font-size: 16px;
   border: 0px;
   padding: 0;
   font-weight: 600;
   color: var(--wht);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .stamp_list_dark .text_box1 {
@@ -4771,12 +4774,7 @@ input[type=radio]:checked {
   }
 }
 @media screen and (max-width: 420px) {
-  .stamp_list_dark .list_wrap{
-    flex-direction: column;
-    align-items: center;
-  }
-  .stamp_list_dark .list_wrap .text_boxes{
-    text-align: center;
+  .stamp_list .list_wrap .text_boxes{
     margin-top: 6px;
   }
 }

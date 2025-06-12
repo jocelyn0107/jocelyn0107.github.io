@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer_MVP1/user/images/favicon.ico" type="image/x-icon">
+    <title>AI&#183;는 변호사</title>
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer_MVP1/user/css/user-style.css">
+</head>
+
+<body>
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDeleteHistory">
+        <div class="modal_wrap">
+            <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/modal_alert.svg" alt="모달 아이콘">
+            <p>대화 내용이 삭제됩니다.<br>
+                정말로 삭제하시겠습니다?</p>
+            <div class="d-flex justify-content-between">
+                <button class="btn_close_modal">취소</button>
+                <button class="modal_btn_ok">삭제</button>
+            </div>
+        </div>
+     </div>
+
+     
+   
+    <main id="law_user_content" class="chat_cont">
+        <button id="aside_open" class="law_aside_button law_user_tooltip_btn d-flex justify-content-center align-items-center">
+            <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_aside_close.svg" alt="사이드메뉴 열기">
+        </button>
+        <span class="law_user_tooltip side_tool_open">
+            사이드메뉴 열기
+        </span>
+        <!-- law_user_aside start -->
+        <div id="law_user_aside">
+            <div class="tit_box fade-up d-flex">
+                <button id="aside_close" class="law_aside_button law_user_tooltip_btn d-flex justify-content-center align-items-center">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_aside_close.svg" alt="사이드메뉴 닫기">
+                </button>
+                <span class="law_user_tooltip side_tool_close">
+                        사이드메뉴 닫기
+                </span>
+                <h1><b>AI&#183;</b>는 변호사</h1>
+                <p><b>AI 법률 Q&#38;A</b> 서비스</p>
+                <button class="new_chat" onclick="location.href='index.html'">
+                    <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_new-chat.svg" alt="새로운 채팅">
+                    새 질문
+                </button>
+            </div>
+            <!-- history start -->
+            <div class="history fade-up mt-3">
+                <div class="d-flex justify-content-between">
+                    <h2>HISTORY</h2>
+                    <button class="all_delete">전체삭제</button>
+                </div>
+                <div class="search_btn_wrapper position-relative">
+                    <div class="his_input_wrapper w_100">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                    </div>
+                    <button class="search law_user_tooltip_btn">
+                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_aside_search.svg" alt="검색">
+                    </button>
+                    <span class="law_user_tooltip tool_search">
+                        검색
+                    </span>
+                </div>
+                <ul class="scroll">
+                    <li class="no_list" style="display: none;">대화내역이 없습니다.<br>새 질문을 눌러 상담을 시작하세요.</li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort driving mr-1">음주운전</b>
+                                음주운전 2회로 집행유예 기간 중, 무면허 음주운전으로 적발되었습니다. 
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                            복사가 완료되었습니다.
+                        </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn" onclick="window.open('user_chat_link.html', '_blank')">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort divorce mr-1">이혼</b>
+                                협의 이혼 후 보증금 반환 방법에 대한 상담
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                            복사가 완료되었습니다.
+                        </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort s_offense mr-1">성범죄</b>
+                                준강제추행 손해배상 청구
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                            복사가 완료되었습니다.
+                        </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort driving mr-1">음주운전</b>
+                                음주운전 면허취소 벌금형 후 단순 무면허 음주 운전 단속 상담
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                                복사가 완료되었습니다.
+                        </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort property mr-1">재산범죄</b>
+                                횡령/배임 성립 여부 및 법적 책임에 대한 상담
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                                복사가 완료되었습니다.
+                            </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort bullying mr-1">행정소송</b>
+                                행정소송과 헌법소원에 대한 질문
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                                복사가 완료되었습니다.
+                            </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort bullying mr-1">행정소송</b>
+                                보상금 관련 행정심판 및 행정소송에 대한 문의
+                            </span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                                복사가 완료되었습니다.
+                            </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>
+                                <b class="history_sort bullying mr-1">행정소송</b>
+                                군징계 관련 행정소송 가능성 및 절차 알아보기
+                            <span>
+                        </a>
+                        <div class="h_buttons h_copy">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_copy.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del link">
+                                링크 복사
+                            </span>
+                        </div>
+                        <span class="tool_copy_complete">
+                                복사가 완료되었습니다.
+                            </span>
+                        <div class="copy_popup_wrap">
+                            <div class="copy_popup d-flex justify-content-between align-items-center">
+                                <span>https://aiislawyer.com/share/66ff3b3b-e974-8012-a8d4-aaf06b70a8b8</span>
+                                <button>복사</button>
+                            </div>
+                        </div>
+                        <div class="h_buttons h_newtab">
+                            <button class="law_user_tooltip_btn">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_newTab.svg" alt="히스토리 복사">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del newtab">
+                                새 창으로 열기
+                            </span>
+                        </div>
+                        <div class="h_buttons h_delete">
+                            <button class="law_user_tooltip_btn history_del">
+                                <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_history_delete.svg" alt="히스토리 삭제">
+                            </button>
+                            <span class="law_user_tooltip tool_history_del">
+                                삭제
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- history end -->
+            <div class="info">
+                <p>휴먼러벗</p>
+                <dl>
+                    <dt>주소</dt>
+                    <dd>광주 동구 지산로 73, 202호</dd>
+                </dl>
+                <dl>
+                    <dt>사업자등록번호</dt>
+                    <dd>838-88-03166</dd>
+                </dl>
+                <dl>
+                    <dt>대표자명</dt>
+                    <dd>김수지</dd>
+                </dl>
+                <dl>
+                    <dt>대표번호</dt>
+                    <dd>062-222-1487</dd>
+                </dl>
+                <p class="copyright mt-3">Copyright 2024&#46; HumanLawbot all rights reserved&#46;</p>
+            </div>
+        </div>
+        <!-- law_user_aside end -->
+        <div class="law_dim"></div>
+        <!-- content_chat_wrap start -->
+        <div class="content_chat_wrap">
+            <!-- content_container start -->
+            <div class="content_container chat_wrap">
+                <div class="title_container d-flex">
+                    <div class="title_wrap d-flex align-items-center">
+                        <span class="d-flex align-items-center">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_title_sort_3.svg" alt="음주운전">
+                            <p>음주운전</p>
+                        </span>
+                    </div>
+                    <button class="d-flex justify-content-center align-items-center">
+                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_link_copy.svg" alt="링크 복사">
+                        <p>링크복사</p>
+                    </button>
+                    <span class="tool_copy_complete">
+                        링크 복사가 완료되었습니다.
+                    </span>
+                </div>
+                <div class="chat_bundle">
+                    <div class="chat_user d-flex align-items-center mb-3">
+                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/user_profile.svg" alt="유저 이미지">
+                        <p class="allow-to-drag-text">음주운전 2회로 집행유예 기간 중, 무면허 음주운전으로 적발되었습니다. </p>
+                    </div>
+                    <div class="chat_ai mb-3">
+                        <div class="d-flex align-items-center mb-4 ai_name">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/lawyer_profile.svg" alt="ai 변호사 이미지">
+                            <span>
+                                <b>AI&#183;</b>는 변호사
+                            </span>
+                        </div>
+                        <div class="lawyer_answer_prev allow-to-drag-text">안녕하세요. AI&#183;는 변호사 입니다.<br>
+                            음주운전 2회로 집행유예 기간 중에 무면허 음주운전으로 적발되었다는 것은 매우 심각한 상황입니다.<br>
+                            이 경우, 집행유예가 취소될 가능성이 매우 높고, 실형 선고를 받을 가능성도 있습니다.<br>
+                            형법 제65조에 따라 집행유예 기간 중에 다시 범죄를 저지른 경우에는 집행유예가 취소될 수 있습니다.<br>
+                            특히, 음주운전은 사회적으로 엄중하게 처벌되는 범죄로, 집행유예 기간 중에 다시 음주운전을 저지른 경우에는 법원에서 엄격하게 판단하여 실형 선고를 내릴 가능성이 높습니다.<br>
+                            현재 상황에서는 법률 전문가의 도움이 절실히 필요합니다. 자신의 상황에 맞는 최선의 방어 전략을 마련해야 합니다.<br>
+                            변호사는 사건의 경위, 증거 자료, 법리 등을 종합적으로 검토하여 집행유예 취소 가능, 실형 선고 가능성 등을 정확하게 판단하고, 법원에 유리한 주장을 펼칠 수 있도록 도울 것입니다.
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mt-3">
+                            <dl class="d-flex align-items-center flex-wrap">
+                                <dt class="mr-3">관련법규</dt>
+                                <dd>도로교통법 제OO조 제O항</dd>
+                            </dl>
+                            <ul class="answer_options d-flex align-items-center">
+                                <li>
+                                    <button class="law_user_tooltip_btn">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-like.svg" alt="좋은 답변">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        좋은 답변
+                                    </span>
+                                </li>
+                                <li>
+                                    <button class="law_user_tooltip_btn">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-dislike.svg" alt="별로인 답변">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        별로인 답변
+                                    </span>
+                                </li>
+                                <li class="position-relative">
+                                    <button class="law_user_tooltip_btn option_copy">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-copy.svg" alt="답변 복사">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        복사
+                                    </span>
+                                    <span class="tool_copy_complete">
+                                        복사가 완료되었습니다.
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chat_user d-flex align-items-center mb-3">
+                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/user_profile.svg" alt="유저 이미지">
+                        <p class="allow-to-drag-text">음주운전 또 다른 질문. 음주운전 또 다른 질문. 음주운전 또 다른 질문. </p>
+                    </div>
+                    <div class="chat_ai mb-3">
+                        <div class="d-flex align-items-center mb-4 ai_name">
+                            <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/lawyer_profile.svg" alt="ai 변호사 이미지">
+                            <span>
+                                <b>AI&#183;</b>는 변호사
+                            </span>
+                        </div>
+                        <div class="lawyer_answer allow-to-drag-text"></div>
+                        <div class="d-flex justify-content-between align-items-center flex-wrap mt-3">
+                            <dl class="d-flex align-items-center flex-wrap">
+                                <dt class="mr-3">관련법규</dt>
+                                <dd>도로교통법 제OO조 제O항</dd>
+                            </dl>
+                            <ul class="answer_options d-flex align-items-center">
+                                <li>
+                                    <button class="law_user_tooltip_btn">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-like.svg" alt="좋은 답변">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        좋은 답변
+                                    </span>
+                                </li>
+                                <li>
+                                    <button class="law_user_tooltip_btn">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-dislike.svg" alt="별로인 답변">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        별로인 답변
+                                    </span>
+                                </li>
+                                <li>
+                                    <button class="law_user_tooltip_btn option_copy">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-copy.svg" alt="답변 복사">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        복사
+                                    </span>
+                                    <span class="tool_copy_complete">
+                                        복사가 완료되었습니다.
+                                    </span>
+                                </li>
+                                <li>
+                                    <button class="law_user_tooltip_btn">
+                                        <img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-refresh.svg" alt="답변 다시 생성">
+                                    </button>
+                                    <span class="law_user_tooltip anwser_tool_options" style="display: none;">
+                                        답변 다시 생성
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+                <div class="floating_btn d-flex justify-content-center align-items-center" onclick="location.href='law_reserv.html'">
+                    <img src="images/ico_reserv.svg" alt="변호사상담 아이콘">
+                    <p>변호사 상담하기</p>
+                </div>
+            </div>
+            <!-- content_container end -->
+            <div id="chat_input_wrap">
+                <div class="d-flex chat_input">
+                    <textarea style="align-self: center;" placeholder="궁금하신 내용을 입력해주세요." rows="1"></textarea>
+                    <button class="enter"><img src="http://test.s1.unipware.com/AILawyer_MVP1/user/images/ico_chat-enter.svg" alt="챗 보내기"></button>
+                </div>
+            </div>
+        </div>
+        <!-- content_chat_wrap end -->
+        
+    </main>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer_MVP1/user/js/user_ui.js"></script>
+
+    <script>
+
+    $(document).ready(function () {
+        
+        //타이핑 애니메이션
+        const text = `안녕하세요. AI·는 변호사 입니다.<br>
+                    음주운전 2회로 집행유예 기간 중에 무면허 음주운전으로 적발되었다는 것은 매우 심각한 상황입니다.<br>
+                    이 경우, 집행유예가 취소될 가능성이 매우 높고, 실형 선고를 받을 가능성도 있습니다.<br>
+                    형법 제65조에 따라 집행유예 기간 중에 다시 범죄를 저지른 경우에는 집행유예가 취소될 수 있습니다.<br>
+                    특히, 음주운전은 사회적으로 엄중하게 처벌되는 범죄로, 집행유예 기간 중에 다시 음주운전을 저지른 경우에는 법원에서 엄격하게 판단하여 실형 선고를 내릴 가능성이 높습니다.<br>
+                    현재 상황에서는 법률 전문가의 도움이 절실히 필요합니다. 자신의 상황에 맞는 최선의 방어 전략을 마련해야 합니다.<br>
+                    변호사는 사건의 경위, 증거 자료, 법리 등을 종합적으로 검토하여 집행유예 취소 가능, 실형 선고 가능성 등을 정확하게 판단하고, 법원에 유리한 주장을 펼칠 수 있도록 도울 것입니다.`; // 타이핑할 문구
+                    
+        let index = 0;
+        let speed = 10; // 글자 타이핑 속도 (밀리초 단위)
+
+        function typeWriter() {
+            const textElement = document.getElementsByClassName("lawyer_answer")[0]; // 첫 번째 요소만 선택
+
+            if (index < text.length) {
+                // 현재 문자에 <br> 태그가 있으면 줄바꿈 적용
+                if (text.charAt(index) === '<' && text.substring(index, index + 4) === '<br>') {
+                    textElement.innerHTML += "<br>"; // 줄바꿈 태그 추가
+                    index += 4; // <br>은 4글자이므로 인덱스를 4만큼 증가
+                } else {
+                    textElement.innerHTML += text.charAt(index); // 일반 텍스트 추가
+                    index++;
+                }
+                setTimeout(typeWriter, speed);
+            } else {
+                const lawReservation = document.querySelector(".lawyer_answer").closest(".chat_bundle").querySelector(".law_reservation");
+                if (lawReservation) {
+                    lawReservation.style.opacity = "1";
+                    lawReservation.style.visibility = "visible";
+                    lawReservation.style.top = "-7px"; 
+                }
+            }
+        }
+
+        typeWriter();
+
+        document.querySelectorAll('#law_user_content .law_reservation button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
+
+
+
+
+    });
+    </script>
+</body>
+
+
+</html>

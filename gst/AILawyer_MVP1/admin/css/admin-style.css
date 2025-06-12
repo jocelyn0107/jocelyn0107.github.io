@@ -1,0 +1,928 @@
+@charset "utf-8";
+
+:root {
+    --primary-color: #977F68;
+    --primary-light-color: #BB9A47;
+    --primary-color-light: #AC9986;
+    --primary-color-light02: #F0EBDF;
+    --secondary-color: #394674;
+    --light-grey: #F1F1F1;
+    --middle-grey: #B9B7B7;
+    --dark-grey: #56504C;
+    --background-color: #F9F9F9;
+    --white-color: #fff;
+    --bg-black-op-5: #0000004b;
+    --shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+footer,
+div,
+input,
+textarea,
+button,
+label,
+table,
+thead,
+tbody,
+li,
+tr,
+th,
+td {
+    font-family: 'Pretendard';
+    letter-spacing: -0.5px;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    background: var(--bg-black-op-5);
+    z-index: 201;
+}
+
+.modal_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    background: var(--white-color);
+    z-index: 101;
+    border-radius: 20px;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, .5);
+}
+
+.modal_wrap.warning {
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+}
+
+.modal_wrap img {
+    width: 40px;
+}
+
+.modal_wrap .text {
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_wrap .btn {
+    padding: 13px 45px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.modal_wrap .btn.ok {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+
+
+body {
+    background: var(--background-color);
+}
+
+body.login>section {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 987px;
+    height: 565px;
+    background: var(--white-color);
+    box-shadow: 0px 3px 9px rgba(151, 127, 104, .25);
+}
+
+body.login section .login_area {
+    display: flex;
+    justify-content: center;
+}
+
+body.login section .login_area .login_w {
+    padding-top: 90px;
+    text-align: center;
+}
+
+body.login section .login_area label {
+    background: var(--primary-color-light02);
+    color: var(--dark-grey);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    max-width: 115px;
+}
+
+body.login section .login_area label {
+    background: var(--primary-color-light02);
+    color: var(--dark-grey);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+body.login section .login_area .login_input_w label {
+    color: var(--secondary-color);
+    background: none;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    width: 55px;
+    text-align: right;
+    padding: 0;
+}
+
+.login_video {
+    position: relative;
+
+    div {
+        position: absolute;
+        background: #745f4c52;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.login_video video {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+input.box, textarea{
+    border: 0;
+    background: var(--white-color);
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 9px rgba(151, 127, 104, .25);
+    min-width: 280px;
+    box-sizing: border-box;
+}
+input {
+    position: relative;
+    border: 0;
+    padding: 12px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid var(--middle-grey);
+    /* box-shadow: 0px 3px 9px rgba(151, 127, 104, .25); */
+    min-width: 280px;
+}
+input::placeholder, textarea::placeholder {
+    font-size: 13px;
+    font-weight: 300;
+}
+input.box:hover, input.box:focus{
+    border: 1px solid var(--primary-color);
+    outline-offset: -1px;
+    margin: -1px;
+}
+textarea:focus {
+    border: 1px solid var(--primary-color);
+    outline-offset: 1px;
+}
+input:focus,
+input:hover {
+    border-bottom: 1px solid var(--primary-color);
+    outline-offset: -1px;
+}
+
+body.login section .login_area button {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px 0px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+}
+h1 {
+    font-family: "Noto Serif KR";
+    font-size: 36px;
+    font-weight: 500;
+    line-height: -2px;
+}
+h1 b {
+    font-family: "Noto Serif KR";
+    color: var(--primary-light-color);
+}
+
+/* 변호사 현황 */
+header {
+    width: 100%;
+    height: 90px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    img {
+        width: 150px;
+    }
+    h1, b{
+        font-family: "Noto Serif KR";
+        color: var(--white-color); 
+        font-size: 30px;
+    }
+}
+header .btn_logout {
+    position: relative;
+    background: var(--primary-color-light02);
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: var(--dark-grey);
+    cursor: pointer;
+    overflow: hidden;
+}
+label.account {
+    transition: opacity 0.3s ease;
+}
+header .logout {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    left: -100px;
+    top:30%;
+    transition: opacity 0.3s ease, left 0.3s ease; 
+    cursor: pointer;
+    font-weight: 500;
+}
+header .logout::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_header_logout.svg) 50% 50% no-repeat;
+}
+.btn_logout:hover label.account {
+    opacity: 0; 
+}
+.btn_logout:hover label.logout {
+    opacity: 1; 
+    left: 15px; 
+}
+
+
+aside {
+    position: absolute;
+    width: 350px;
+    height: calc(100vh - 90px);
+    background-color: var(--white-color);
+    padding: 20px;
+    box-shadow: 8px 0px 15px rgba(151, 127, 104, .25);
+    z-index: 10;
+
+    left: -100%;
+    transition: left 0.6s ease; /* 애니메이션 효과 */
+}
+aside .lawyer_init{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color-light02);
+
+    .lawyer_init_w{
+        height: 100%;
+    }
+    img{
+        width: 180px;
+    }
+    span{
+        line-height: 2;
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+}
+aside .lawyer_detail{
+    display: none;
+    .top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top label {
+        background: var(--primary-color-light02);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--dark-grey);
+        display: flex;
+        align-items: center;
+    }
+    .top label::before {
+        content: "";
+        background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_counsel.svg) no-repeat;
+        width: 30px;
+        height: 20px;
+        display: block;
+    }
+    .top label span {
+        font-weight: 500;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    .top img {
+        width: 20px;
+        transition: transform 0.3s ease;
+    }
+    .top .ico_close:hover{
+        transform: rotate(90deg);
+    }
+    button{
+        width: 100%;
+        border-radius: 8px;
+        background: var(--white-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    button:hover{
+        background: var(--primary-color);
+        color: var(--white-color);
+    }
+}
+aside .lawyer_detail.active, aside .lawyer_add.active, .lawyer_init.active{
+    display: block;
+}
+aside .lawyer_add{
+    display: none;
+    .top {
+        display: flex;
+        justify-content: end;
+    }
+    .top img {
+        width: 20px;
+        transition: transform 0.3s ease;
+    }
+    .top .ico_close:hover{
+        transform: rotate(90deg);
+    }
+    button{
+        width: 100%;
+        border-radius: 8px;
+        background: var(--white-color);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    button:hover{
+        background: var(--primary-color);
+        color: var(--white-color);
+    }
+    input{
+        width: 100%;
+        min-width: 100px;
+        padding: 8px 10px;
+    }
+    textarea{
+        width: 100%;
+        min-width: 100px;
+        padding: 8px 10px;
+        height: 70px;
+        resize: none;
+        border-radius: 0;
+    }
+    dd button{
+        width: 80px;
+        padding: 8px 0;
+        font-size: 14px;
+        border-radius: 4px;
+        background: var(--white-color);
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        font-weight: 500;
+        margin: 0 5px 5px 0;
+    }
+
+    dd button:hover{
+        background: #3946743b;
+        color: var(--secondary-color);
+    }
+    dd button.active{
+        background: var(--secondary-color);
+        color: var(--white-color);
+    }
+}
+aside.show {
+    left: 0; /* 화면 안으로 들어오도록 설정 */
+}
+.aside_photo {
+    display: flex;
+    justify-content: center;
+
+    .photo_w {
+        border-radius: 100%;
+        height: 110px;
+        width: 110px;
+        background: var(--white-color);
+        box-shadow: 0px 3px 9px rgba(151, 127, 104, .25);
+        background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/img_profile.svg) 50% 50% no-repeat;
+        background-size:cover;
+    }
+
+    .photo_w img:first-child {
+        width: 110px;
+    }
+
+    .ico_image_edit {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30px;
+        cursor: pointer;
+    }
+}
+
+.aside_profile {
+    text-align: center;
+
+    label {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    span {
+        cursor: pointer;
+        text-decoration: underline;
+        margin-right: 5px;
+        color: var(--middle-grey);
+        font-size: 13px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 380px;
+    }
+
+    img {
+        width: 20px;
+        cursor: pointer;
+    }
+    .bubble{
+        opacity: 0;
+        position: absolute;
+        background: #00000070;
+        color: var(--white-color);
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        top: 25px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        transition: opacity 0.7s ease;
+    }
+    .bubble.show{
+        opacity: 1;
+    }
+    .bubble::before{
+        content: "";
+        width: 20px;
+        height: 10px;
+        background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_check.svg) 50% 50% no-repeat;
+    }
+}
+.aside_contents{
+    padding: 0 20px;
+
+    dl+dl{
+        margin: 15px 0;
+    }
+    dt{
+        font-size: 14px;
+        color: var(--primary-color);
+        margin-right: 10px;
+        font-weight: 500;
+        border-right: 2px solid var(--primary-color);
+        padding-right: 15px;
+        width: 25%;
+        text-align: end;
+    }
+    dd{
+        font-size: 16px;
+        width: 75%;
+        line-height: 1.5;
+    }
+    dd label{
+        background:var(--secondary-color);
+        color: var(--white-color);
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 15px;
+        display:inline-block;
+    }
+    dd label:first-of-type {
+        margin-bottom: 5px;
+    }
+}
+
+aside .logout {
+    color: var(--white-color);
+    font-size: 18px;
+    padding: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    left: 20%;
+}
+
+aside .logout::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_aside_logout.svg) no-repeat;
+}
+
+button.btn.cancel {
+    background: var(--light-grey);
+}
+
+button.btn+.btn {
+    margin-left: 10px;
+}
+
+main {
+    /* width: calc(100% - 350px); */
+    height: calc(100vh - 138px);
+    overflow-y: auto;
+    margin-left: 350px;
+    transition: all 0.7s ease;
+}
+main.full {
+    width: 100%;
+    margin-left: 0px;
+}
+main.with_aside {
+    width: calc(100% - 350px);
+    margin-left: 350px;
+}
+
+main>section {
+    width: 100%;
+    height: 100%;
+    padding: 50px 100px;
+    min-width: 880px;
+}
+
+main>section .search_area {
+    position: relative;
+}
+
+main>section .search_area img {
+    position: absolute;
+    width: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    z-index: 20;
+}
+
+main>section .search_area input {
+    padding: 12px 16px 12px 45px;
+    min-width: 370px;
+}
+
+.btn.main {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 55px;
+}
+
+.btn.border {
+    background-color: var(--white-colorr);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 55px;
+}
+
+main>section .btn.main {
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+}
+
+main>section .btn.main.add::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background: url(http://test.s1.unipware.com/AILawyer_MVP1/admin/images/ico_plus.svg) 50% 50% no-repeat;
+    transition: transform 0.5s ease-in-out;
+}
+
+main>section .btn.main.add:hover::before {
+    transform: rotate(180deg);
+}
+
+main>section table {
+    margin-top: 40px;
+    width: 100%;
+}
+
+main>section table thead tr th {
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 6px solid var(--background-color);
+}
+
+main>section table tbody tr {
+    background-color: var(--white-color);
+}
+
+main>section table tbody tr td {
+    padding: 7px;
+    text-align: center;
+    align-content: center;
+    font-size: 16px;
+    border-bottom: 6px solid var(--background-color);
+    height: 50px;
+}
+main>section table tbody tr.active td {
+    background: var(--primary-color-light02);
+    font-weight: 500;
+}
+main>section table tbody tr:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    background: var(--primary-color-light02);
+}
+
+main>section table tbody tr td img {
+    width: 23px;
+    cursor: pointer;
+    margin-top: 3px;
+    z-index: 10;
+}
+
+
+.pagination {
+    display: flex;
+    font-size: 15px;
+    padding: 45px 0 0 0;
+}
+
+.pagination ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination .init {
+    background: url(http://test.s1.unipware.com/unipware/images/ico_arrow_double_left.svg) no-repeat right;
+}
+
+.pagination .prev {
+    background: url(http://test.s1.unipware.com/unipware/images/ico_arrow_left.svg) no-repeat center;
+}
+
+.pagination .next {
+    background: url(http://test.s1.unipware.com/unipware/images/ico_arrow_left.svg) no-repeat center;
+    transform: rotate(180deg);
+}
+
+.pagination .last {
+    background: url(http://test.s1.unipware.com/unipware/images/ico_arrow_double_right.svg) no-repeat left;
+}
+
+.pagination li.is-active {
+    border-radius: 100%;
+    color: var(--white-color);
+    background: var(--primary-color);
+    font-weight: 400;
+}
+
+.pagination li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+    margin: 0 2px;
+    color: #a3a3a3;
+    cursor: pointer;
+}
+
+.pagination li:hover:not(.pagi_arrow) {
+    border-radius: 100%;
+    border: 1px solid var(--primary-color);
+}
+
+section .lawyer_add {
+    background: var(--white-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 40px;
+    min-width: 900px;
+}
+
+section .lawyer_add .scroll {
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 15px;
+}
+
+.scroll {
+    margin: 0 2px;
+    overflow-y: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #d2d2d2;
+    border-radius: 5px;
+    height: 10%;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5px;
+}
+footer {
+    width: calc(100% - 350px);
+    height: 48px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: var(--middle-grey);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    font-weight: 200;
+    right: 0;
+    transition: all 0.3s ;
+}
+/* 404 */
+.error_wrap {
+    max-width: 1000px;
+    margin: 150px auto;
+    text-align: center;
+}
+.error_wrap .title_num {
+    font-size: clamp(25px, 40vw, 300px);
+    font-weight: 100;
+    color: var(--primary-color);
+    span{
+        content: '';
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        animation: bounce 1.5s infinite; /* 애니메이션 적용 */
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* 원래 위치 */
+    }
+    50% {
+        transform: translateY(-30px); /* 위로 이동 */
+    }
+}
+.error_wrap .title_ko {
+    font-size: clamp(20px, 6vw, 32px);
+    position: relative;
+    display: inline;
+    img{
+        width: 30px;
+    }
+}
+.error_wrap .title_ko::after {
+    content: '';
+    width: 100%;
+    height: 14px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #c5920538;
+    z-index: -1;
+}
+.error_wrap .sub_title_ko {
+    font-size: clamp(12px, 3vw, 16px);
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.error_wrap .btn_home {
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--dark-grey);
+    color: var(--white-color);
+    width: 18vw;
+}
+/* loading */
+.modal#modalLoading{
+    background: #ffffff9a;
+}
+.rotate {
+    animation: rotate 4s linear infinite;
+    max-width: 150px;
+}
+.loading_wrap {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-size: cover;
+    .loading_w{
+        width: 300px;
+        height: 10px;
+        background: var(--white-color);
+        border-radius: 50px;
+        position: relative;
+        overflow: hidden;
+    }
+    .loding_thumb{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        border-radius: 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: fillWidth 2s infinite;
+    }
+}
+
+
+@keyframes fillWidth {
+    0% {
+        left: -100%; /* 처음에는 왼쪽으로 벗어나게 위치시킴 */
+    }
+    50% {
+        left: 0; /* 중앙에서 채우기 시작 */
+    }
+    100% {
+        left: 100%; /* 오른쪽으로 벗어나게 위치시킴 */
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width:620px){
+    .error_wrap .title_num {
+        span{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .error_wrap .btn_home {
+        width: 60vw;
+    }
+}

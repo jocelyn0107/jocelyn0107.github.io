@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPWARE 파일 리스트</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<style>
+		*{-webkit-text-size-adjust:none;}
+		html,body{width:100%;height:100%; min-width:800px;}
+		html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, ul, li, fieldset, form, label, leging, table, caption, tbody, tfoot, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0; padding:0; outline:0; font-family:NanumGothic,'나눔고딕',Dotum,'돋움',applegothic,sans-serif; font-size:13px; color:#555; /*vertical-align:baseline;*/}
+		body{line-height:1.2em; border:0;}
+		strong, em, span, wbr, a{display:inline-block;}
+		span{margin:0; padding:0; outline:0;}
+		hr{display:none}
+		ol, ul, dl, dt, dd{list-style:none outside none; padding:0; margin:0;}
+		fieldset, img, table, caption, tbody, tfoot, thead, tr, th, td, button, hr{border:0;}
+		address, caption, cite, code, dfn, em, strong, th, var{font-style: normal;}
+		img{vertical-align:middle;}
+		a{cursor:pointer; text-decoration:none; color:#666;}
+		table{border-collapse:collapse;}
+		#wrap{padding:12px;}
+		#header{margin-bottom:20px;}
+		#header::after{content:''; clear:both; display:block;}
+		#header>h1{float:left; font-size:28px; color:#1a1a1a; padding-top:15px;}
+		#header>div{float:right;}
+		#header>div>p{font-size:11px; color:#888; text-align:right;}
+		div.box{border:1px solid #dedede; background:#f1f1f1; padding:12px 14px; margin-bottom:10px;}
+		h3{font-size:14px; color:#333; margin-bottom:13px;}
+		h4{font-size:14px; color:#333; margin:25px 0 8px 5px;}
+		ol.atten>li{margin-bottom:8px; padding:0; line-height:160%;}
+		ol.atten>li:last-child{margin-bottom:0;}
+		table.htmllist th,table.htmllist td{border:1px solid #ccc;}
+		table.htmllist .line th,
+		table.htmllist .line td{border-top-width:2px;}
+		table.htmllist tr:first-child td{text-align:center; font-weight:bold; border-bottom:1px solid #111 !important; height:30px; color:#000 !important; font-size:13px !important;}
+		table.htmllist th{padding:5px 6px; text-align:left; border-bottom:2px solid #3B5867 !important; height:32px; background-color:#f3f4f8;}
+		table.htmllist th.depth2{padding: 2px 18px; text-align:left; border-bottom:1px solid #333 !important; height:30px; font-size: 12px; background-color: #fff}
+		table.htmllist td{padding:5px 6px;}
+		table.htmllist td:first-child{text-align:center;}
+		table.htmllist td:last-child{color:#888; font-size:12px;}
+		table.htmllist td:nth-child(8){text-align:center;}
+		table.htmllist td>a{display:block; width:100%; height:26px; line-height:26px; text-align:center; color:#fff; font-size:11px; font-weight:bold; vertical-align:middle; background-color:#6e7c84; border:1px solid #3B5867; border-radius:3px;}
+		table.htmllist td>a:hover{background-color:#3B5867; line-height:28px;}
+		table.htmllist tr:hover>td{background-color:#fffad2;}
+		table.htmllist tr td{background-color:#eee;height:28px;}
+		table.htmllist tr.done td{background-color:#fff;}
+		table.htmllist tr.v2.done td{background-color:rgba(0, 0, 0, 0.8);color:#fff;}
+        table.htmllist tr.new td{background-color:rgba(169, 226, 255, 0.8);color:#000000;}
+		table.htmllist td.ing{text-align:center; font-size:12;}
+		table.htmllist td.end{text-align:center; font-size:12; font-weight:bold; background-color:#b8bbbf; color:#1a1a1a;}
+		.total .tit_txt{padding-left:10px;margin-left:10px;border-left:1px solid #ddd;}
+		.total h3 + .tit_txt{padding-left:0;margin-left:0;border-left:none;}
+		.total_page_num{font-size:18px;color:#5183eb;}
+		.cntTotal{position:absolute;top:-9999px;left:-9999px;}
+		.txtRed{color:#f00;}
+		.ico{display:inline-block;color:#fff;font-size:11px;border-radius:4px;padding:0 3px;background-color:#999;line-height:19px;height:18px;vertical-align:bottom;margin:0 0;}
+		.info{background-color:#f6f6f6;border:1px solid #aaa;line-height:160%;margin:0 0 10px;padding:10px 20px;}
+	</style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>UNIPWARE 파일 리스트 <span class="cntTotal">(<span class="total"></span>pages)</span></h1>
+        </div>
+        <table width="100%" cellspacing="0" cellpadding="0" class="htmllist">
+            <thead>
+                <tr class="head">
+                    <td>No</td>
+                    <td colspan="5">Path</td>
+                    <td>FileName</td>
+                    <td>담당자</td>
+                    <td>View</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 로그인 -->
+                <tr>
+                    <th colspan="9">로그인</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>인덱스 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>index.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/index.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>로그인 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>login.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/login.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>로그인 실패 팝업</td>
+                    <td>페이지에 포함</td>
+                    <td></td>
+                    <td></td>
+                    <td>login_fail.html</td>
+                    <td>강성희</td>
+                    <td></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>신규직원 비밀번호 변경</td>
+                    <td>휴대폰 인증</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>newMember_phoneAuth.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/newMember_phoneAuth.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>휴대폰 인증(에러 메시지)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>newMember_phoneAuth_error.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/newMember_phoneAuth_error.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>새 비밀번호 변경</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>newMember_pwAuth.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/newMember_pwAuth.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>새 비밀번호 변경(에러 메시지)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>newMember_pwAuth_error.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/newMember_pwAuth_error.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 콘솔 -->
+                <tr>
+                    <th colspan="9">콘솔</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>데이터베이스</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>database.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/database.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>등록 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>database_add.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/database_add.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>상세 보기 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>database_add.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/database_add.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>테이블 상세 보기 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td>database_table.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/database_table.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td>배포</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>distribution.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/distribution.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td>쿼리관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>query.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/query.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>추가(수정) 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>query_add.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/query_add.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td>리소스 관리</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>resource.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/resource.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>상세 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>resource_detail.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/resource_detail.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>추가(수정) 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>resource_add.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/resource_add.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 데모 -->
+                <!-- <tr>
+                    <th colspan="9">데모</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>데모</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+                <!-- 문서관리 -->
+                <tr>
+                    <th colspan="9">문서</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>문서 리스트 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>document.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/document.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>공유 팝업 등록</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>document_share.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/document_share.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>공유 팝업 등록(에러 메시지)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>document_shareInputError.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/document_shareInputError.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 프로젝트관리 -->
+                <tr>
+                    <th colspan="9">프로젝트</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>프로젝트</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>project.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/project.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 new">
+                    <td></td>
+                    <td>프로젝트 등록 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>project_add.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/project_add.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>상세 보기 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>project_detail.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/project_detail.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>상세 보기 페이지(회의록)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>project_detail_historyView.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/project_detail_historyView.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td>고객사 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>customer.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/customer.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>등록 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>customer_add.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/customer_add.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>상세 보기 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>customer_detail.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/customer_detail.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 메신저 -->   
+                <!-- <tr>
+                    <th colspan="9">메신저</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>메신저 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>messenger.html</td>
+                    <td>진예슬</td>
+                    <td><a href="unipware/messenger.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td>화상채팅 입장 전 설정 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>video_chat.html</td>
+                    <td>진예슬</td>
+                    <td><a href="unipware/video_chat.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v ">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>화상채팅 페이지</td>
+                    <td></td>
+                    <td></td>
+                    <td>video_chatting.html</td>
+                    <td>진예슬</td>
+                    <td><a href="unipware/video_chatting.html" target="_blank">View</a></td>
+                </tr> -->
+                <!-- TASK -->
+                <tr>
+                    <th colspan="9">TASK</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>TASK</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>task.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/task.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>TASK(empty)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>task_empty.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/task_empty.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 정보 -->
+                <tr>
+                    <th colspan="9">정보</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>마이보드</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>myboard.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/myboard.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>스케줄</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>myschedule.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/myschedule.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>근무시간</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>myworkinghours.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/myworkinghours.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>공지사항</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>mynotice.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/mynotice.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>결재</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>myapproval.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/myapproval.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>마이보드(관리자)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>admin_board.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/admin_board.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>스케줄(관리자)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>admin_schedule.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/admin_schedule.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>직원관리(관리자)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>admin_employees.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/admin_employees.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>공지사항(관리자)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>admin_notice.html</td>
+                    <td>강성희</td>
+                    <td><a href="unipware/admin_notice.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>결재(관리자)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>admin_approval.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/admin_approval.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>마이 프로필</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>myprofile.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/myprofile.html" target="_blank">View</a></td>
+                </tr>
+                <!-- 정보 -->
+                <tr>
+                    <th colspan="9">공유</th>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td>공유 팝업</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>external_share.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/external_share.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>비밀번호 입력</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>external_shareEntry.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/external_shareEntry.html" target="_blank">View</a></td>
+                </tr>
+                <tr class="v1 ">
+                    <td></td>
+                    <td></td>
+                    <td>비밀번호 입력(에러 메시지)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>external_share_error.html</td>
+                    <td>정기쁨</td>
+                    <td><a href="unipware/external_shareEntry_error.html" target="_blank">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var totalPageNum = 0;
+        $('tbody').each(function(idx){
+            var titTxt = $('tbody').eq(idx).find('th').text();
+            $('.total').append('<span class="tit_txt">' + titTxt + ': </span>')
+            $(this).find('tr').each(function(i){
+                $(this).find('td:first-child').text(i);
+                num = $(this).filter(':last-child').find('td:first-child').text();
+            });
+            $('.total').append('<strong>' + num + '</strong>');
+            totalPageNum += parseInt(num);
+        });
+        $('.total h3').append('<strong class="total_page_num">' + totalPageNum + '</strong>');
+    
+        var totalPage = 0;
+        $(".cnt").each(function(){
+            $(this).children("em").text( $(this).parent().parent().parent().children("tr").length-1 )
+            totalPage = totalPage + $(this).parent().parent().parent().children("tr").length-1
+        });
+    
+        $(".total").text( totalPage );
+    
+    </script>
+    
+</body>
+</html>
