@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body class="login">
+    <div class="main_logo_wrap">
+        <h1 class="main_logo pointer" onclick="location.href='index.html'"><b>AI·</b>는 변호사</h1>
+    </div>
+    <section class="d-flex justify-content-between">
+        <div class="login_area w_100 align-items-center">
+            <!-- s:select_signup -->
+            <div class="select_signup">
+                <h1>
+                    <span>회원가입 유형</span>을 선택해주세요. 
+                </h1>
+                <ul class="d-flex">
+                    <li class="fade-up">
+                        <div class="select_option d-flex align-items-center">
+                            <h2 class="mb-4">일반 회원</h2>
+                            <span class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_signup_option_1.svg" alt="일반 회원">
+                            </span>
+                            <p>누구나 가입할 수 있는<br>
+                                일반 회원 서비스입니다.</p>
+                        </div>
+                        <button onClick="location.href='user/user_signup.html'">가입하기</button>
+                    </li>
+                    <li class="fade-up">
+                        <div class="select_option d-flex align-items-center">
+                            <h2 class="mb-4">변호사 회원</h2>
+                            <span class="d-flex justify-content-center align-items-center mb-4">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_signup_option_2.svg" class="lawyer" alt="변호사 회원">
+                            </span>
+                            <p>전문성을 인증하고<br>
+                                변호사 전용 서비스를 이용하세요.</p>
+                        </div>
+                        <button onClick="location.href='lawyer/lawyer_signup.html'">가입하기</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- e:select_signup -->
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/main.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/animation.js"></script>
+</body>
+
+</html>

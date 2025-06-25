@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer_MVP1/user/images/favicon.ico"
+        type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/admin-style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalLogout">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_warning.svg" alt="" class="mt-2">
+            <div class="p-3 text">로그아웃 하시겠습니까?</div>
+            <button class="btn cancel mt-3">취소</button>
+            <button class="btn ok mt-3" onclick="location.href='login.html'">확인</button>
+        </div>
+    </div>
+
+    <header>
+        <h1 onclick="" class="pointer"><b>AI&#183;</b>는 변호사</h1>
+        <ul class="menu">
+            <li>
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_menu-1.svg" alt="회원관리">
+                회원관리
+                <ul>
+                    <li onclick="location.href='admin_user.html'">사용자</li>
+                    <li onclick="location.href='javascript:void(0)'">변호사</li>
+                </ul>
+            </li>
+            <li class="active drop">
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_menu-2.svg" alt="데이터 통계">
+                데이터 통계
+            </li>
+        </ul>
+        <div class="btn_logout">
+            <label class="account">관리자님</label>
+            <label class="logout">로그아웃</label>
+        </div>
+        <div class="btn_logout_mobile_wrap">
+            <div class="btn_logout_mobile">
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_mobile_menu.svg" alt="계정">
+                <div class="dropmenu" style="display: none;">
+                    <ul class="menu">
+                        <li class="drop pointer">
+                            <img class="mr-1" src="http://test.s1.unipware.com/AILawyer/images/ico_menu-1_m.svg" alt="회원관리">
+                            회원관리
+                        </li>
+                        <li class="active mr-1 pointer">
+                            <img class="mr-1" src="http://test.s1.unipware.com/AILawyer/images/ico_menu-2_m.svg"
+                                alt="데이터 통계">
+                            데이터 통계
+                        </li>
+                    </ul>
+                    <p>관리자님</p>
+                    <p class="pointer d-flex align-items-center justify-content-center">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_header_logout_m.svg" alt="로그아웃">
+                        로그아웃
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="scroll" style="display: none;">
+        <!-- s: 변호사 상세보기 aside -->
+        <div class="lawyer_detail active">
+            <div class="content_wrap">
+                <div>
+                    <!-- 사진 영역 -->
+                    <div class="aside_photo mt-3 mb-3">
+                        <div class="photo_w position-relative">
+                        </div>
+                    </div>
+                    <!-- 이름 영역 -->
+                    <div class="aside_profile mb-4">
+                        <label>
+                            <span>홍길동</span> 변호사
+                        </label>
+
+                    </div>
+                    <!-- 변호사 소개 영역 -->
+                    <div class="aside_contents">
+                        <div class="info_cont">
+                            <div class="info_wrap mb-4">
+                                <h2 class="mb-3">기본 정보</h2>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>연락처</dt>
+                                    <dd>01012345678</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>아이디</dt>
+                                    <dd>honggildong</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>이메일</dt>
+                                    <dd>humanlawbot@naver.com</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>소속</dt>
+                                    <dd>법무법인 한바다</dd>
+                                </dl>
+                            </div>
+                            <div class="info_wrap">
+                                <h2 class="mb-3">부가 정보</h2>
+                                <dl class="d-flex align-items-center align-start mb-2">
+                                    <dt class="mt-1">인증 서류</dt>
+                                    <dd class="d-flex flex-wrap ml-2">
+                                        <p class="d-flex align-items-center file_name">
+                                            변호사 자격증.jpg
+                                            <span class="d-flex align-items-center justify-content-center pointer ml-2">
+                                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_lawyer_download.svg"
+                                                    alt="다운로드">
+                                            </span>
+                                        </p>
+                                        <span class="document_img d-block w_100 my-2">
+                                            <span class="d-block">
+                                                <img src="http://test.s1.unipware.com/AILawyer/images/certifi_img_ex.jpg"
+                                                    alt="인증서류">
+                                                <img class="search pointer"
+                                                    src="http://test.s1.unipware.com/AILawyer/images/documents_zoom.svg"
+                                                    alt="크게 보기">
+                                            </span>
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>가입현황</dt>
+                                    <dd class="select disabled ml-2">
+                                        <p class="d-flex justify-content-between align-items-center">
+                                            대기 상태
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_select-chevron-2.svg"
+                                                alt="셀렉트 화살표">
+                                        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1 status">
+                                    <dt>계정 상태</dt>
+                                    <dd class="d-flex w_100 ml-2">
+                                        <div class="d-flex align-items-center mr-3">
+                                            <input id="normal-2" name="account-status-1" class="mr-2 disabled"
+                                                type="radio" checked disabled>
+                                            <label class="disabled" for="normal-2">정상</label>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input id="limits-2" name="account-status-1"
+                                                class="mr-2 disabled not_checked" type="radio" disabled>
+                                            <label class="disabled" for="limits-2">계정 제한</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="buttons d-flex justify-content-between">
+                    <div class="d-flex w_100">
+                        <button class="btn_lawyer_edit mr-2">수정</button>
+                        <button class="btn_lawyer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <main class="with_aside main_contents scrollable-div scroll data">
+        <div id="reviewAside">
+            <h2 class="title ml-4">
+                만족도 평가
+            </h2>
+            <img class="close pointer" src="http://test.s1.unipware.com/AILawyer/images/ico_admin_aside_close.svg" alt="aside 닫기">
+            <ul class="review_tab d-flex  ml-4 mr-4 mb-3">
+                <li class="active">
+                    전체
+                </li>
+                <li>5점</li>
+                <li>4점</li>
+                <li>3점</li>
+                <li>2점</li>
+                <li>1점</li>
+            </ul>
+            <div class="review_wrap">
+                <ul class="reviews scroll s_hover">
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty mr-2">
+                                <p>4.0</p>
+                            </div>
+                            <p class="name">
+                                김신청(24.11.06)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            서비스가 사용하기 너무 편해요.
+                        </p>
+                    </li> 
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star mr-2">
+                                <p>5.0</p>
+                            </div>
+                            <p class="name">
+                                이신청(24.10.31)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            AI 챗봇 정확도가 높습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty mr-2">
+                                <p>3.0</p>
+                            </div>
+                            <p class="name">
+                                박신청(24.10.25)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            법률검토까지 바로 받을 수 있어서 좋아요.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty mr-2">
+                                <p>4.0</p>
+                            </div>
+                            <p class="name">
+                                정신청(24.10.15)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            좋았어요.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star mr-2">
+                                <p>5.0</p>
+                            </div>
+                            <p class="name">
+                                강신청(24.10.08)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            변호사에게 상담까지 받으니 더 좋아요.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty mr-2">
+                                <p>2.0</p>
+                            </div>
+                            <p class="name">
+                                한신청(24.09.21)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            UI가 맘에 들어.
+                        </p>
+                    </li>
+                    <li>
+                        <div class="d-flex justify-content-between">
+                            <div class="stars d-flex">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg" class="star">
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg" class="star empty mr-2">
+                                <p>4.0</p>
+                            </div>
+                            <p class="name">
+                                김신청(24.09.11)
+                            </p>
+                        </div>
+                        <p class="comment">
+                            AI챗봇과 변호사와의 상담이라니 신선해요.
+                        </p>
+                    </li>
+                </ul>
+                <div class="pagination justify-content-center">
+                    <ul>
+                        <li class="pagi_arrow init"></li>
+                        <li class="pagi_arrow prev"></li>
+                        <li class="is-active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="pagi_arrow next"></li>
+                        <li class="pagi_arrow last"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section>
+            <!-- 기간 설정, 날짜 선택 -->
+            <div class="d-flex justify-content-between period_area align-items-center mb-5" style="display: none;">
+                <div class="period">
+                    <span class="title">기간 설정</span>
+                    <button class="active">전체</button>
+                    <button>최근 1개월</button>
+                    <button>최근 3개월</button>
+                    <button>최근 6개월</button>
+                    <button>최근 1년</button>
+                    <button>직접 입력</button>
+                </div>
+                <div class="date d-flex align-items-center">
+                    <span class="title">날짜 선택</span>
+                    <input type="date">
+                    <span>~</span>
+                    <input type="date">
+                    <button class="btn_search">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_chat_search.svg">
+                    </button>
+                </div>
+            </div>
+            <!-- s: 전체 대시보드 -->
+            <div class="section">
+                <div class="title">
+                    <span>전체</span>
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_arrow_down.svg">
+                </div>
+                <div class="contents d-flex justify-content-between">
+                    <div>
+                        <span>가입자 수</span>
+                        <div class="d-flex py-5 pr-3 justify-content-center">
+                            <dl class="user mr-5">
+                                <dt>사용자</dt>
+                                <dd>55명</dd>
+                            </dl>
+                            <dl class="lawyer">
+                                <dt>변호사</dt>
+                                <dd>22명</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>챗봇 이용 건 수</span>
+                        <div class="d-flex py-5 pr-3 justify-content-center">
+                            <dl class="user mr-5">
+                                <dt>사용자</dt>
+                                <dd>53명</dd>
+                            </dl>
+                            <dl class="lawyer">
+                                <dt>변호사</dt>
+                                <dd>18명</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>상담 분야 사용률</span>
+                        <div class="justify-content-between">
+                            <canvas id="allConsultationFieldUsageRate"></canvas>
+                        </div>
+                        <div class="d-flex justify-content-between datalabels">
+                            <div>
+                                <label class="sexual_offenses">성범죄</label>
+                                <span>25%</span>
+                            </div>
+                            <div>
+                                <label class="dui">음주운전</label>
+                                <span>40%</span>
+                            </div>
+                            <div>
+                                <label class="divorce">이혼</label>
+                                <span>10%</span>
+                            </div>
+                            <div>
+                                <label class="property_crime">재산범죄</label>
+                                <span>5%</span>
+                            </div>
+                            <div>
+                                <label class="administrative_litigation">행정소송</label>
+                                <span>20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="contents d-flex justify-content-between">
+                    <div>
+                        <span>카테고리 별 문서 사용률</span>
+                        <div class="d-flex justify-content-center datalabels">
+                            <label class="sexual_offenses">고소장</label>
+                            <label class="divorce">합의서</label>
+                            <label class="property_crime">지급명령신청</label>
+                            <label class="administrative_litigation">내용증명</label>
+                        </div>
+                        <div class="d-flex justify-content-between chart_warp">
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateSexualOffenses" width="138" height="138" style="display: block; box-sizing: border-box; height: 138px; width: 138px;"></canvas>
+                                <label>성범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateDUI" width="138" height="138" style="display: block; box-sizing: border-box; height: 138px; width: 138px;"></canvas>
+                                <label>이혼</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateDivorce" width="138" height="138" style="display: block; box-sizing: border-box; height: 138px; width: 138px;"></canvas>
+                                <label>음주운전</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRatePropertyCrime" width="138" height="138" style="display: block; box-sizing: border-box; height: 138px; width: 138px;"></canvas>
+                                <label>재산범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateAdministrativeLitigation" width="138" height="138" style="display: block; box-sizing: border-box; height: 138px; width: 138px;"></canvas>
+
+                                <label>행정소송</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 전체 대시보드 -->
+            <!-- s: 사용자 대시보드 -->
+            <div class="section user">
+                <div class="title">
+                    <span>사용자</span>
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_arrow_down.svg">
+                </div>
+                <div class="contents d-flex justify-content-between">
+                    <div class="center">
+                        <div>
+                            <span class="d-block mb-4">가입 대비 챗봇 사용률</span>
+                            <div class="d-flex justify-content-between align-items-center w_90 bar_chart_warp">
+                                <div class="bar_chart">
+                                    <div class="value chatbot"></div>
+                                </div>
+                                <label>90%</label>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="d-block mb-4">가입 대비 변호사 상담률</span>
+                            <div class="d-flex justify-content-between align-items-center w_90 bar_chart_warp">
+                                <div class="bar_chart">
+                                    <div class="value lawyer"></div>
+                                </div>
+                                <label>60%</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="d-flex justify-content-between pr-4">
+                            <span>만족도 평가</span>
+                            <button class="btn_satisfaction">더보기</button>
+                        </div>
+                        <div class="average_warp pr-4">
+                            <div class="mb-4">
+                                <span>평균 만족도<p>4.0</p>
+                                    <div>
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg">
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg">
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg">
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_fill_star.svg">
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_empty_star.svg">
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="satisfaction">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <label>5.0</label>
+                                    <div class="bar_chart mx-2">
+                                        <div class="value five"></div>
+                                    </div>
+                                    <label>80명</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <label>4.0</label>
+                                    <div class="bar_chart mx-2">
+                                        <div class="value four"></div>
+                                    </div>
+                                    <label>60명</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <label>3.0</label>
+                                    <div class="bar_chart mx-2">
+                                        <div class="value three"></div>
+                                    </div>
+                                    <label>50명</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <label>2.0</label>
+                                    <div class="bar_chart mx-2">
+                                        <div class="value two"></div>
+                                    </div>
+                                    <label>10명</label>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <label>1.0</label>
+                                    <div class="bar_chart mx-2">
+                                        <div class="value one"></div>
+                                    </div>
+                                    <label>3명</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>상담 분야 사용률</span>
+                        <div class="justify-content-between align-items-center">
+                            <canvas id="userConsultationFieldUsageRate"></canvas>
+                        </div>
+                        <div class="d-flex justify-content-between datalabels">
+                            <div>
+                                <label class="sexual_offenses">성범죄</label>
+                                <span>25%</span>
+                            </div>
+                            <div>
+                                <label class="dui">음주운전</label>
+                                <span>40%</span>
+                            </div>
+                            <div>
+                                <label class="divorce">이혼</label>
+                                <span>10%</span>
+                            </div>
+                            <div>
+                                <label class="property_crime">재산범죄</label>
+                                <span>5%</span>
+                            </div>
+                            <div>
+                                <label class="administrative_litigation">행정소송</label>
+                                <span>20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="contents d-flex justify-content-between">
+                    <div>
+                        <span>카테고리 별 문서 사용률</span>
+                        <div class="d-flex justify-content-center datalabels">
+                            <label class="sexual_offenses">고소장</label>
+                            <label class="divorce">합의서</label>
+                            <label class="property_crime">지급명령신청</label>
+                            <label class="administrative_litigation">내용증명</label>
+                        </div>
+                        <div class="d-flex justify-content-between chart_warp">
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateSexualOffenses"></canvas>
+                                <label>성범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateDUI"></canvas>
+                                <label>이혼</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateDivorce"></canvas>
+                                <label>음주운전</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRatePropertyCrime"></canvas>
+                                <label>재산범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="userDocumentUsageRateAdministrativeLitigation"></canvas>
+
+                                <label>행정소송</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- e: 사용자 대시보드 -->
+            <!-- s: 변호사 대시보드 -->
+            <div class="section user">
+                <div class="title">
+                    <span>변호사</span>
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_arrow_down.svg">
+                </div>
+                <div class="contents d-flex justify-content-between">
+                    <div class="center">
+                        <div>
+                            <span class="d-block mb-4">가입 대비 챗봇 사용률</span>
+                            <div class="d-flex justify-content-between align-items-center w_90 bar_chart_warp">
+                                <div class="bar_chart">
+                                    <div class="value chatbot"></div>
+                                </div>
+                                <label>90%</label>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="d-block mb-4">가입 대비 변호사 상담률</span>
+                            <div class="d-flex justify-content-between align-items-center w_90 bar_chart_warp">
+                                <div class="bar_chart">
+                                    <div class="value lawyer"></div>
+                                </div>
+                                <label>60%</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>상담 분야 사용률</span>
+                        <div class="d-flex justify-content-center">
+                            <div class="justify-content-between align-items-center mr-5">
+                                <canvas id="lawyerConsultationFieldUsageRate"></canvas>
+                            </div>
+                            <div class="datalabels horizontal">
+                                <div>
+                                    <label class="sexual_offenses">성범죄
+                                    </label>
+                                    <span>25%</span>
+                                </div>
+                                <div>
+                                    <label class="dui">음주운전
+                                    </label>
+                                    <span>40%</span>
+                                </div>
+                                <div>
+                                    <label class="divorce">이혼
+                                    </label>
+                                    <span>10%</span>
+                                </div>
+                                <div>
+                                    <label class="property_crime">재산범죄
+                                    </label>
+                                    <span>5%</span>
+                                </div>
+                                <div>
+                                    <label class="administrative_litigation">행정소송
+                                    </label>
+                                    <span>20%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="contents d-flex justify-content-between">
+                    <div>
+                        <span>카테고리 별 문서 사용률</span>
+                        <div class="d-flex justify-content-center datalabels">
+                            <label class="sexual_offenses">고소장</label>
+                            <label class="divorce">합의서</label>
+                            <label class="property_crime">지급명령신청</label>
+                            <label class="administrative_litigation">내용증명</label>
+                        </div>
+                        <div class="d-flex justify-content-between chart_warp">
+                            <div class="p-4 justify-content-between">
+                                <canvas id="lawyerDocumentUsageRateSexualOffenses"></canvas>
+                                <label>성범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="lawyerDocumentUsageRateDUI"></canvas>
+                                <label>이혼</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="lawyerDocumentUsageRateDivorce"></canvas>
+                                <label>음주운전</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="lawyerDocumentUsageRatePropertyCrime"></canvas>
+                                <label>재산범죄</label>
+                            </div>
+                            <div class="p-4 justify-content-between">
+                                <canvas id="lawyerDocumentUsageRateAdministrativeLitigation"></canvas>
+
+                                <label>행정소송</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- e: 사용자 대시보드 -->
+        </section>
+    </main>
+
+    <footer class="data">
+        <p>&#169; HumanLawbot&#46; All rights reserved&#46;</p>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/admin-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script>
+        const allConsultationFieldUsageRate = document.getElementById('allConsultationFieldUsageRate');
+        const userConsultationFieldUsageRate = document.getElementById('userConsultationFieldUsageRate');
+        const lawyerConsultationFieldUsageRate = document.getElementById('lawyerConsultationFieldUsageRate');
+
+        const userDocumentUsageRateSexualOffenses = document.getElementById('userDocumentUsageRateSexualOffenses');
+        const userDocumentUsageRateDUI = document.getElementById('userDocumentUsageRateDUI');
+        const userDocumentUsageRateDivorce = document.getElementById('userDocumentUsageRateDivorce');
+        const userDocumentUsageRatePropertyCrime = document.getElementById('userDocumentUsageRatePropertyCrime');
+        const userDocumentUsageRateAdministrativeLitigation = document.getElementById(
+            'userDocumentUsageRateAdministrativeLitigation');
+
+        const lawyerDocumentUsageRateSexualOffenses = document.getElementById('lawyerDocumentUsageRateSexualOffenses');
+        const lawyerDocumentUsageRateDUI = document.getElementById('lawyerDocumentUsageRateDUI');
+        const lawyerDocumentUsageRateDivorce = document.getElementById('lawyerDocumentUsageRateDivorce');
+        const lawyerDocumentUsageRatePropertyCrime = document.getElementById('lawyerDocumentUsageRatePropertyCrime');
+        const lawyerDocumentUsageRateAdministrativeLitigation = document.getElementById(
+            'lawyerDocumentUsageRateAdministrativeLitigation');
+
+        Chart.register(ChartDataLabels);
+
+        // 전체 > 상담 분야 사용률
+        new Chart(allConsultationFieldUsageRate, {
+            type: 'doughnut',
+            data: {
+                labels: ['성범죄', '음주운전', '이혼', '재산범죄', '행정소송'],
+                datasets: [{
+                    data: [123, 98, 85, 40, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#D4BDAC', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+
+        // 사용자 > 상담 분야 사용률
+        new Chart(userConsultationFieldUsageRate, {
+            type: 'doughnut',
+            data: {
+                labels: ['성범죄', '음주운전', '이혼', '재산범죄', '행정소송'],
+                datasets: [{
+                    data: [123, 98, 85, 40, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#D4BDAC', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+
+        // 사용자 > 카테고리별 문서 사용률 >  성범죄
+        new Chart(userDocumentUsageRateSexualOffenses, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 사용자 > 카테고리별 문서 사용률 >  이혼
+        new Chart(userDocumentUsageRateDivorce, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 사용자 > 카테고리별 문서 사용률 >  음주운전
+        new Chart(userDocumentUsageRateDUI, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 사용자 > 카테고리별 문서 사용률 >  재산범죄
+        new Chart(userDocumentUsageRatePropertyCrime, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 사용자 > 카테고리별 문서 사용률 >  행정소송
+        new Chart(userDocumentUsageRateAdministrativeLitigation, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+
+
+        // 변호사 > 상담 분야 사용률
+        new Chart(lawyerConsultationFieldUsageRate, {
+            type: 'doughnut',
+            data: {
+                labels: ['성범죄', '음주운전', '이혼', '재산범죄', '행정소송'],
+                datasets: [{
+                    data: [123, 98, 85, 40, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#D4BDAC', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+
+        // 변호사 > 카테고리별 문서 사용률 >  성범죄
+        new Chart(lawyerDocumentUsageRateSexualOffenses, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 변호사 > 카테고리별 문서 사용률 >  이혼
+        new Chart(lawyerDocumentUsageRateDivorce, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 변호사 > 카테고리별 문서 사용률 >  음주운전
+        new Chart(lawyerDocumentUsageRateDUI, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 변호사 > 카테고리별 문서 사용률 >  재산범죄
+        new Chart(lawyerDocumentUsageRatePropertyCrime, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+        // 변호사 > 카테고리별 문서 사용률 >  행정소송
+        new Chart(lawyerDocumentUsageRateAdministrativeLitigation, {
+            type: 'doughnut',
+            data: {
+                labels: ['고소장', '합의서', '지급명령신청', '내용증명'],
+                datasets: [{
+                    data: [123, 98, 85, 40],
+                    borderWidth: 1,
+                    backgroundColor: ['#977F68', '#FFF1DB', '#88C273', '#536493'],
+                }]
+            },
+            options: {
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true,
+                        padding: 10,
+                        font: {
+                            family: "'Pretendard Regular', 'serif'",
+                        }
+                    },
+                    datalabels: {
+                        display: false
+                    }
+                },
+                font: {
+                    family: 'Pretendard ExtraLight',
+                    lineHeight: 1
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

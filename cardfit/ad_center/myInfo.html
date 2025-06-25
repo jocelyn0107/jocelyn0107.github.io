@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="카드핏애드센터를 통해 광고를 하고 돈을 버세요">
+  <meta property="og:site_name" content="CARDFIT ADS CENTER">
+  <meta property="og:url" content="https://www.festivalstamp.com/">
+  <meta property="og:description" content="광고하고 돈벌자">
+  <!-- <meta property="og:image" content="images/og_img.jpg"> -->
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/common/css/common.css">
+  <link rel="stylesheet" href="/common/css/reset.css">
+  <link rel="stylesheet" href="/common/css/typography.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>카드핏 애드센터</title>
+</head>
+
+<body class="body_sign_up">
+  <div class="ir_su">카드핏애드센터</div>
+
+  <!-- s: modalWarning -->
+  <div class="modal_popup" id="modalWarning">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="images/icon_popup_error_org.svg" alt="icon" class="popup_icon">
+        <p>중복된 휴대전화번호입니다.</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalWarning -->
+
+  <!-- s: modalLogout -->
+  <div class="modal_popup" id="modalLogout">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="images/icon_popup_error_org.svg" alt="icon" class="popup_icon">
+        <p>정말 로그아웃하시겠습니까?</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close btn_modal_cancel">취소</button>
+          <button class="btn_modal_close" onclick="location.href='login.html'">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalLogout -->
+
+  <!-- s: modalWithdrawal -->
+  <div class="modal_popup" id="modalWithdrawal">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="images/icon_popup_error_org.svg" alt="icon" class="popup_icon">
+        <p>정말 탈퇴하시겠습니까?</p>
+        <p class="ft_14 color_red mt_3">탈퇴 버튼 선택 시,<br>계정은 삭제되며 복구되지 않습니다.</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close btn_modal_cancel">취소</button>
+          <button class="btn_modal_close" onclick="location.href='login.html'">탈퇴</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalWithdrawal -->
+
+  <div class="bg_gradient"></div>
+  <!-- s: header_after -->
+  <header class="header_after">
+    <img src="images/logo_wht.svg" alt="logo" class="logo" onclick="location.href='index.html'">
+    <div class="mobile_btn">
+      <input type="checkbox" id="hamburger" />
+      <label for="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="sidebar">
+        <h2 class="position_relative"><a href="index.html"><img src="images/logo_wht.svg" alt="logo"></a></h2>
+        <ul class="nav_mobile">
+          <li><a href="myInfo.html">내 정보</a></li>
+          <li><a href="activityDetails.html">활동 내역</a></li>
+          <li><a href="customerService.html">고객 센터</a></li>
+          <li><a href="policy.html">카드핏 정책</a></li>
+          <li><a href="#" class="btn_modal_open btn_logout">로그아웃</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- s: header_after -->
+
+  <!-- s: main -->
+  <main>
+    <section class="section_01">
+      <h1 class="title mt_4 mb_4">내 정보</h1>
+      <!-- s: sign_up_form -->
+      <form class="sign_up_form mb_5">
+        <!-- 이름 -->
+        <div>
+          <label for="userName">이름<span class="color_org ml_1">*</span></label>
+          <div class="position mb_4">
+            <input type="text" class="form_control dis" value="홍길동" id="userName" disabled>
+          </div>
+          <div class="helper">이름을 입력해주세요.</div>
+        </div>
+        <!-- 휴대전화 번호 -->
+        <div>
+          <label for="userNum">휴대전화 번호<span class="color_org ml_1">*</span></label>
+          <div class="flex mb_4">
+            <div class="position form_contact">
+              <input type="tel" class="form_control" value="010-1234-5678" id="userNum" maxlength="11">
+              <figure>
+                <img src="images/icon_circle_check_org.svg" alt="check" class="on visible">
+                <figcaption>휴대전화 번호 체크</figcaption>
+              </figure>
+            </div>
+            <div class="btn btn_contact_check ml_2 m_w_100 modal_btn_open">중복확인</div>
+          </div>
+          <div class="helper">잘못된 휴대전화 번호 형식입니다.</div>
+        </div>
+        <!-- 이메일 -->
+        <div>
+          <label for="userEmail">이메일<span class="color_org ml_1">*</span></label>
+          <div class="position mb_4">
+            <div class="flex">
+              <input type="text" class="form_control form_email" value="email123" id="userEmail">
+              <div class="mx_2">&#64;</div>
+              <div class="select">
+                <select name="sources" id="sources_01" class="custom_select sources" placeholder="naver.com">
+                  <option value="gmail">gmail.com</option>
+                  <option value="naver">naver.com</option>
+                  <option value="hanmail">hanmail.net</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="helper">이메일이 올바르지 않습니다.</div>
+        </div>
+        <!-- SNS 주소 -->
+        <div>
+          <label for="userSNS">SNS 주소<span class="color_org ml_1">*</span></label>
+          <div class="flex">
+            <div class="select mr_2">
+              <select name="sources" id="sources" class="custom_select sources" placeholder="블로그">
+                <option value="blog">블로그</option>
+                <option value="insta">인스타그램</option>
+                <option value="youtube">유튜브</option>
+              </select>
+            </div>
+            <div class="position form_sns">
+              <input type="text" class="form_control" value="https://www.naver.com/blog/jocelyn0107" id="userSNS">
+              <figure>
+                <img src="images/icon_circle_check_org.svg" alt="check" class="on visible">
+                <figcaption>SNS 주소 체크</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="mb_4 mt_2">
+            <div class="btn btn_add_sns">
+              <figure>
+                <img src="images/icon_plus_white.svg" alt="plus">
+              </figure>
+              <div class="ml_2">추가</div>
+            </div>
+          </div>
+          <div class="helper">SNS 주소는 https://가 포함된 전체 URL을 입력하세요.</div>
+        </div>
+        <!-- 신분증 사본 업로드 -->
+        <div>
+          <label>신분증 사본 업로드<span class="color_org ml_1">*</span></label>
+          <div class="filebox mb_4">
+            <div class="position_relative form_contact">
+              <input class="upload_name form_control" disabled="disabled">
+              <div class="icon_img_cancel"></div>
+              <input type="file" id="ex_filename" class="upload_hidden">
+            </div>
+            <label for="ex_filename" class="btn_add_file ml_2 m_w_100">첨부</label>
+          </div>
+          <div class="helper">신분증을 첨부해주세요.</div>
+        </div>
+        <!-- 계좌번호 -->
+        <div>
+          <label for="userAccount">계좌번호<span class="color_org ml_1">*</span></label>
+          <div class="flex mb_2">
+            <div class="select mr_2">
+              <select name="sources" id="sources_02" class="custom_select sources" placeholder="은행명" disabled>
+                <option value="blog">Blog</option>
+                <option value="insta">Instagram</option>
+                <option value="youtube">Youtube</option>
+              </select>
+            </div>
+            <div class="position form_sns">
+              <input type="text" class="form_control dis" value="189-111-111111" id="userAccount" disabled>
+            </div>
+          </div>
+          <input type="text" class="form_control dis" value="예금주 : 홍길동" disabled>
+          <div class="notice mb_4">
+            <p>* 예금주, 은행명, 계좌번호 변경은 카카오상담채널을 통해 신청해주시기 바랍니다.</p>
+          </div>
+        </div>
+        <!-- 통장 사본 업로드 -->
+        <div>
+          <label>통장 사본 업로드<span class="color_org ml_1">*</span></label>
+          <div class="filebox">
+            <div class="position_relative form_contact">
+              <input class="upload_name form_control" disabled="disabled">
+              <div class="icon_img_cancel"></div>
+              <input type="file" id="ex_filename" class="upload_hidden">
+            </div>
+            <label for="ex_filename" class="btn_add_file ml_2 m_w_100">첨부</label>
+          </div>
+          <div class="notice mb_5">
+            <p>* 계좌 관련 제출 서류가 확인되어야 활동비가 지급됩니다.<br>* 가입자와 예금주가 다를 경우 추가 확인 절차가 있을 수 있습니다.</p>
+          </div>
+        </div>
+        <!-- 버튼 -->
+        <div class="btn btn_main_gra mb_3" onclick="location.href='index.html'"><span>저</span><span>장</span><span>하</span><span>기</span></div>
+        <div class="btn_modal_open btn_withdrawal">회원탈퇴</div>
+      </form>
+      <!-- e: sign_up_form -->
+    </section>
+  </main>
+  <!-- e: main -->
+
+  <script src="/common/js/jquery-3.7.1.min.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/fileinput.js"></script>
+</body>
+
+</html>

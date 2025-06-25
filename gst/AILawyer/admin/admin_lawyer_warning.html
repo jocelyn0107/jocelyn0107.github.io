@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer_MVP1/user/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/admin-style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalLogout">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_warning.svg" alt="" class="mt-2">
+            <div class="p-3 text">로그아웃 하시겠습니까?</div>
+            <button class="btn cancel mt-3">취소</button>
+            <button class="btn ok mt-3" onclick="location.href='login.html'">확인</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modalDelete">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_warning.svg" alt="" class="mt-2">
+            <div class="p-3 text">정말로 삭제하시겠습니까?</div>
+            <button class="btn cancel mt-3">취소</button>
+            <button class="btn ok mt-3">확인</button>
+        </div>
+    </div>
+
+       <!-- modal delete -->
+    <div class="modal" id="modalCustomerImgView">
+    <div class="customer_img_slide">
+        <div class="img_cont">
+            <div class="img_wrap">
+                <!-- Slides -->
+                <div class="img_viewer">
+                    <img src="http://test.s1.unipware.com/AILawyer/images/certifi_img_ex.jpg" alt="인증 서류 이미지">
+                    <img class="btn_close_modal pointer" src="http://test.s1.unipware.com/unipware/images/customer_slide_close.svg" alt="팝업 닫기">
+                </div>
+            </div>
+        </div> 
+    </div>
+</div> 
+
+    <header>
+        <h1 onclick="" class="pointer"><b>AI&#183;</b>는 변호사</h1>
+        <ul class="menu">
+            <li class="active drop">
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_menu-1.svg" alt="회원관리">
+                회원관리
+                <ul>
+                    <li onclick="location.href='admin_user.html'">사용자</li>
+                    <li onclick="location.href='javascript:void(0)'">변호사</li>
+                </ul>
+            </li>
+            <li>
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_menu-2.svg" alt="데이터 통계">
+                데이터 통계
+            </li>
+        </ul>
+        <div class="btn_logout">
+            <label class="account">관리자님</label>
+            <label class="logout">로그아웃</label>
+        </div>
+        <div class="btn_logout_mobile_wrap">
+            <div class="btn_logout_mobile">
+                <img src="http://test.s1.unipware.com/AILawyer/images/ico_mobile_menu.svg" alt="계정">
+                <div class="dropmenu" style="display: none;">
+                    <ul class="menu">
+                        <li class="active drop pointer">
+                            <img class="mr-1" src="http://test.s1.unipware.com/AILawyer/images/ico_menu-1_m.svg" alt="회원관리">
+                            회원관리
+                        </li>
+                        <li class="mr-1 pointer">
+                            <img class="mr-1" src="http://test.s1.unipware.com/AILawyer/images/ico_menu-2_m.svg" alt="데이터 통계">
+                            데이터 통계
+                        </li>
+                    </ul>
+                    <p>관리자님</p>
+                    <p class="pointer d-flex align-items-center justify-content-center">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_header_logout_m.svg" alt="로그아웃">
+                        로그아웃
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="show scroll">
+        <!-- s: 초기  aside -->
+        <div class="lawyer_init active">
+            <div class="lawyer_init_w d-flex justify-content-center align-items-center">
+                <div class="text-center ">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="p-4" onclick="location.href='lawyer.html'"><b>AI&#183;</b>는 변호사</h1>
+                    </div>
+    
+                    <span>우측의 변호사를 선택하시면<br>
+                    변호사 상세 정보 조회가 가능합니다.</span>
+                </div>
+            </div>
+        </div>
+        <!-- e: 초기 aside -->
+        <!-- s: 변호사 상세보기 aside -->
+        <div class="lawyer_detail">
+            <div class="content_wrap">
+                <div>
+                    <!-- 사진 영역 -->
+                    <div class="aside_photo mt-3 mb-3">
+                        <div class="photo_w position-relative">
+                        </div>
+                    </div>
+                    <!-- 이름 영역 -->
+                    <div class="aside_profile mb-4">
+                        <label>
+                            <span>홍길동</span> 변호사
+                        </label>
+                        
+                    </div>
+                    <!-- 변호사 소개 영역 -->
+                    <div class="aside_contents">
+                        <div class="info_cont">
+                            <div class="info_wrap mb-4">
+                                <h2 class="mb-3">기본 정보</h2>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>연락처</dt>
+                                    <dd>01012345678</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>아이디</dt>
+                                    <dd>honggildong</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>이메일</dt>
+                                    <dd>humanlawbot@naver.com</dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>소속</dt>
+                                    <dd>법무법인 한바다</dd>
+                                </dl>
+                            </div>
+                            <div class="info_wrap">
+                                <h2 class="mb-3">부가 정보</h2>
+                                <dl class="d-flex align-items-center align-start mb-2">
+                                    <dt class="mt-1">인증 서류</dt>
+                                    <dd class="d-flex flex-wrap ml-2">
+                                        <p class="d-flex align-items-center file_name">
+                                            변호사 자격증.jpg
+                                            <span class="d-flex align-items-center justify-content-center pointer ml-2">
+                                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_lawyer_download.svg" alt="다운로드">
+                                            </span>
+                                        </p>
+                                        <span class="document_img d-block w_100 my-2">
+                                            <span class="d-block">
+                                                <img src="http://test.s1.unipware.com/AILawyer/images/certifi_img_ex.jpg" alt="인증서류">
+                                                <img class="search pointer" src="http://test.s1.unipware.com/AILawyer/images/documents_zoom.svg" alt="크게 보기">
+                                            </span>
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1">
+                                    <dt>가입현황</dt>
+                                    <dd class="select disabled ml-2">
+                                        <p class="d-flex justify-content-between align-items-center">
+                                            대기 상태
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_select-chevron-2.svg" alt="셀렉트 화살표">
+                                        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="d-flex align-items-center py-1 status">
+                                    <dt>계정 상태</dt>
+                                    <dd class="d-flex w_100 ml-2">
+                                        <div class="d-flex align-items-center mr-3">
+                                            <input id="normal-2"  name="account-status-1" class="mr-2 disabled" type="radio" checked disabled>
+                                            <label class="disabled" for="normal-2">정상</label>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <input id="limits-2" name="account-status-1" class="mr-2 disabled not_checked" type="radio" disabled>
+                                            <label class="disabled" for="limits-2">계정 제한</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="buttons d-flex justify-content-between">
+                    <div class="d-flex w_100">
+                        <button class="btn_lawyer_edit mr-2">수정</button>
+                        <button class="btn_lawyer_close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e: 변호사 상세보기 aside -->
+
+        <!-- s: 변호사 수정 aside -->
+        <div class="lawyer_add">
+            <div class="edit content_wrap">
+                <div class="info_cont">
+                    <div class="aside_contents">
+                        <h2 class="title mt-3 mb-4">변호사 정보 수정</h2>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt>이름</dt>
+                            <dd><input placeholder="이름을 입력해주세요." class="warning"></dd>
+                        </dl>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt>연락처</dt>
+                            <dd><input placeholder="연락처를 입력해주세요." class="warning"></dd>
+                        </dl>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt>아이디</dt>
+                            <dd><input placeholder="아이디를 입력해주세요." class="warning"></dd>
+                        </dl>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt>이메일</dt>
+                            <dd><input placeholder="이메일을 입력해주세요." class="warning"></dd>
+                        </dl>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt>소속</dt>
+                            <dd><input placeholder="소속을 입력해주세요."class="warning"></dd>
+                        </dl>
+                        <dl class="inputs d-flex align-items-center">
+                            <dt class="mt-2">인증서류</dt>
+                            <dd class="certifi">변호사 자격증.jpg</dd>
+                        </dl>
+                        <div class="info_wrap">
+                            <dl class="d-flex align-items-center py-1 select_wrap">
+                                <dt class="mt-2 mb-2 w_100">가입현황</dt>
+                                <dd class="select pointer warning">
+                                    <p class="d-flex justify-content-between align-items-center">
+                                        대기 상태
+                                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_select-chevron-2.svg" alt="셀렉트 화살표">
+                                    </p>
+                                    <ul style="display: none;">
+                                        <li>대기</li>
+                                        <li>보류</li>
+                                        <li>승인</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <dl class="d-flex align-items-center status edit">
+                            <dt class="mt-4">계정 상태</dt>
+                            <dd class="d-flex w_100">
+                                <div class="d-flex align-items-center mr-3">
+                                    <input id="normal-1" name="account-status-2" class="mr-2" type="radio" checked="checked">
+                                    <label class="pointer" for="normal-1">정상</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input id="limits-1" name="account-status-2" class="mr-2" type="radio">
+                                    <label class="pointer" for="limits-1">계정 제한</label>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="buttons d-flex justify-content-between">
+                    <div class="d-flex w_100">
+                        <button class="btn_lawyer_confirm mr-2">확인</button>
+                        <button class="btn_lawyer_close">취소</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- e: 변호사 상세보기 aside -->
+    </aside>
+
+
+
+
+    <main class="with_aside main_contents scrollable-div scroll">
+        <section>
+            <h2 class="title">
+                <span>회원관리</span> 변호사
+            </h2>
+            <!-- 검색, 등록 부분 -->
+            <div class="d-flex justify-content-between top_btn_area">
+                <div class="search_area">
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_serch.svg">
+                    <input placeholder="이름, 아이디 검색" class="box">
+                </div>
+            </div>
+            <!-- 변호사 리스트 -->
+             <div class="table_wrap scroll">
+                <table>
+                    <colgroup>
+                        <col width="137px">
+                        <col width="137px">
+                        <col width="411px">
+                        <col width="137px">
+                        <col width="274px">
+                        <col width="274px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col" class="array pointer">
+                                이름
+                                <img class="ascending arrow" src="http://test.s1.unipware.com/AILawyer/images/ico_table_order.svg" alt="오름차순">
+                            </th>
+                            <th scope="col">아이디</th>
+                            <th scope="col" class="array pointer">
+                                가입현황
+                                <img class="ascending arrow" src="http://test.s1.unipware.com/AILawyer/images/ico_table_order.svg" alt="오름차순">
+                            </th>
+                            <th scope="col" class="array pointer date">
+                                가입일
+                                <img class="descending arrow" src="http://test.s1.unipware.com/AILawyer/images/ico_table_order.svg" alt="내림차순">
+                            </th>
+                            <th scope="col" class="array pointer date">
+                                승인일
+                                <img class="descending arrow" src="http://test.s1.unipware.com/AILawyer/images/ico_table_order.svg" alt="내림차순">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pointer">
+                            <td>1</td>
+                            <td>홍길동</td>
+                            <td>hongildong</td>
+                            <td>
+                                <p class="status pending">대기</p>
+                            </td>
+                            <td>24-10-09</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>2</td>
+                            <td>임길동</td>
+                            <td>gildongkim123</td>
+                            <td>
+                                <p class="status pending">대기</p>
+                            </td>
+                            <td>24-10-09</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>3</td>
+                            <td>신길동</td>
+                            <td>park0123</td>
+                            <td>
+                                <p class="status pending">대기</p>
+                            </td>
+                            <td>24-10-09</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>4</td>
+                            <td>이길동</td>
+                            <td>jojojo100</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-08</td>
+                            <td>24-10-08</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>5</td>
+                            <td>박길동</td>
+                            <td>dong1010</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-07</td>
+                            <td>24-10-08</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>6</td>
+                            <td>김길동</td>
+                            <td>leelawyer111</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-06</td>
+                            <td>24-10-08</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>7</td>
+                            <td>이길동</td>
+                            <td>haha777</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-05</td>
+                            <td>24-10-07</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>8</td>
+                            <td>나길동</td>
+                            <td>gildonglawyer123</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-04</td>
+                            <td>24-10-07</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>9</td>
+                            <td>남길동</td>
+                            <td>kanggang</td>
+                            <td>
+                                <p class="status approval">승인</p>
+                            </td>
+                            <td>24-10-04</td>
+                            <td>24-10-07</td>
+                        </tr>
+                        <tr class="pointer">
+                            <td>10</td>
+                            <td>정길동</td>
+                            <td>shims</td>
+                            <td>
+                                <p class="status hold">보류</p>
+                            </td>
+                            <td>24-10-03</td>
+                            <td>24-10-07</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 페이지네이션 -->
+            <div class="pagination justify-content-center">
+                <ul>
+                    <li class="pagi_arrow init"></li>
+                    <li class="pagi_arrow prev"></li>
+                    <li class="is-active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li class="pagi_arrow next"></li>
+                    <li class="pagi_arrow last"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2024. HumanLawbot All Rights Reserved.</p>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/admin-ui.js"></script>
+
+    
+</body>
+
+</html>

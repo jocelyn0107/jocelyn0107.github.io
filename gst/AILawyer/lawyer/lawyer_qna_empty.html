@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body class="my_page">
+
+    <!-- s: floating 버튼 -->
+    <div class="floating_btn d-flex justify-content-center align-items-center ai_chat">
+        <img src="http://test.s1.unipware.com/AILawyer/images/ico_reserv.svg" alt="변호사상담 아이콘">
+        <p>채팅창 열기</p>
+        <span>6</span>
+    </div>
+    <!-- e: floating 버튼 -->
+
+    <!-- s: 상담 채팅 aside -->
+    <div class="chat_aside_area" id="chat_aside_area">
+        <!-- s: 채팅창 초기 화면 -->
+        <div class="d-flex chat_aside init justify-content-between">
+
+            <div class="chat_area">
+                <div class="chat_search_area">
+                    <div class="d-flex align-items-center mb-4 w_100">
+                        <div class="search_w w_100">
+                            <input type="text" placeholder="검색어를 입력하세요." class="w_100">
+                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_search.svg">
+                        </div>
+                        <button class="detail_search w_100">상세 검색</button>
+                    </div>
+                    <div class="chat_search_detail d-flex align-items-center mb-3">
+                        <input type="date">
+                        <p class="mx-1">~</p>
+                        <input type="date">
+                        <div class="dropdown_w mx-2">
+                            <button class="selected">음주운전</button>
+                            <div class="sel_w scroll">
+                                <button>음주운전</button>
+                                <button>이혼</button>
+                                <button>재산범죄</button>
+                                <button>학교폭력</button>
+
+                            </div>
+                        </div>
+                        <button class="btn_search">검색</button>
+                    </div>
+                </div>
+                <div class="tap_area mb-4">
+                    <label class="all active" data-tab="0">전체<span>(4)</span></label>
+                    <label class="request" data-tab="1">상담 요청<span>(2)</span></label>
+                    <label class="counseling" data-tab="2">상담 중<span>(1)</span></label>
+                    <label class="incomplete" data-tab="3">상담 미성사<span>(1)</span></label>
+                    <label class="done" data-tab="4">상담 종료<span>(1)</span></label>
+                    <div class="underline"></div>
+                </div>
+
+                <!-- s: 탭 내용 감싸기 -->
+                <div class="tap_contents_area">
+                    <!-- s: 전체 탭 -->
+                    <div class="chat_list all active">
+                        <ul class="scroll">
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">김신청</label>
+                                            <label class="tag request">상담 요청</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>[음주운전] 카테고리의 상담 요청</p>
+                                        <div class="uncheked_message">1</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">정신청</label>
+                                            <label class="tag counseling">상담 중</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-06 15:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>그러면 지금 상황에서는 제가 앞으로 어떻게 해야하는 걸까요?</p>
+                                        <div class="uncheked_message">3</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">이신청</label>
+                                            <label class="tag incomplete">상담 미성사</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>[앞 상담 지연]의 이유로 상담이 미성사되었습니다.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">박신청</label>
+                                            <label class="tag done">상담 종료</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>많은 도움이 되었어요 감사합니다~</p>
+                                        <div class="uncheked_message">3</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 전체 탭 -->
+                    <!-- s: 상담요청 탭 -->
+                    <div class="chat_list all">
+                        <ul class="scroll">
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">김신청</label>
+                                            <label class="tag request">상담 요청</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>[음주운전] 카테고리의 상담 요청</p>
+                                        <div class="uncheked_message">1</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 상담요청 탭 -->
+                    <!-- s: 상담 중 탭 -->
+                    <div class="chat_list all">
+                        <ul class="scroll">
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">정신청</label>
+                                            <label class="tag counseling">상담 중</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-06 15:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>그러면 지금 상황에서는 제가 앞으로 어떻게 해야하는 걸까요?</p>
+                                        <div class="uncheked_message">3</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 상담 중 탭 -->
+                    <!-- s: 상담 미성사 탭 -->
+                    <div class="chat_list all">
+                        <ul class="scroll">
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">이신청</label>
+                                            <label class="tag incomplete">상담 미성사</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>[앞 상담 지연]의 이유로 상담이 미성사되었습니다.</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 상담 미성사 탭 -->
+                    <!-- s: 상담 종료 탭 -->
+                    <div class="chat_list all">
+                        <ul class="scroll">
+                            <li>
+                                <div class="px-4">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <dl>
+                                            <label class="name">박신청</label>
+                                            <label class="tag done">상담 종료</label>
+                                        </dl>
+                                        <dl>
+                                            <label class="date">24-09-07 14:00</label>
+                                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_history_delete.svg"
+                                                alt="채팅창 삭제" class="delete_chat">
+                                        </dl>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p>많은 도움이 되었어요 감사합니다~</p>
+                                        <div class="uncheked_message">3</div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- e: 상담 종료 탭 -->
+                </div>
+                <!-- e: 탭 내용 감싸기 -->
+            </div>
+            <!-- s: 변호사 정보 -->
+            <div class="user_info_area">
+                <div class="position-relative">
+                    <div class="user_profile">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_profile.svg">
+                    </div>
+                    <p class="name">김철수 변호사</p>
+                    <div class="switch_w">
+                        <div class="checkbox-switch">
+                            <input type="checkbox" checked="" onchange="T.toggleToobarStatus()" value="1" name="status"
+                                class="input-checkbox" id="toolbar-active">
+                            <div class="checkbox-animate">
+                                <span class="checkbox-off">상담 불가</span>
+                                <span class="checkbox-on">상담 가능</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <div class="section_title">
+                            <p>상담 가능 요일</p>
+                            <hr>
+                        </div>
+                        <div class="select_day">
+                            <div>
+                                <button class="active">월</button>
+                                <button class="active">화</button>
+                                <button class="active">수</button>
+                                <button class="active">목</button>
+                                <button class="active">금</button>
+                            </div>
+                            <div>
+                                <button>토</button>
+                                <button>일</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="section_title">
+                            <p>상담 가능 시간</p>
+                            <hr>
+                        </div>
+                        <div class="time_w">
+                            <div class="d-flex mb-3">
+                                <p>from</p>
+                                <div class="dropdown_w mr-2">
+                                    <button class="selected">09시</button>
+                                    <div class="sel_w scroll">
+                                        <button>09시</button>
+                                        <button>10시</button>
+                                        <button>11시</button>
+                                        <button>12시</button>
+                                        <button>13시</button>
+                                        <button>14시</button>
+                                        <button>15시</button>
+                                        <button>16시</button>
+                                        <button>17시</button>
+                                        <button>18시</button>
+                                        <button>19시</button>
+                                        <button>20시</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown_w">
+                                    <button class="selected">00분</button>
+                                    <div class="sel_w scroll">
+                                        <button>00분</button>
+                                        <button>30분</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <p>to</p>
+                                <div class="dropdown_w mr-2">
+                                    <button class="selected">09시</button>
+                                    <div class="sel_w scroll">
+                                        <button>09시</button>
+                                        <button>10시</button>
+                                        <button>11시</button>
+                                        <button>12시</button>
+                                        <button>13시</button>
+                                        <button>14시</button>
+                                        <button>15시</button>
+                                        <button>16시</button>
+                                        <button>17시</button>
+                                        <button>18시</button>
+                                        <button>19시</button>
+                                        <button>20시</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown_w">
+                                    <button class="selected">00분</button>
+                                    <div class="sel_w scroll">
+                                        <button>00분</button>
+                                        <button>30분</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn_w">
+                        <button class="btn_save">변경 사항 저장</button>
+                        <button>취소</button>
+                    </div>
+                    <div class="toast_message">변경사항이 저장되었습니다.</div>
+                </div>
+            </div>
+            <!-- e: 변호사 정보 -->
+        </div>
+        <!-- e: 채팅창 초기 화면 -->
+        <!-- s: 채팅창 입장 -->
+        <div class="chat_aside info" style="display: none;">
+            <!-- 이미지 미리보기 팝업 -->
+            <div class="modal image_view" id="imageView">
+                <div class="img_slide">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- slides -->
+                            <div class="swiper-slide">
+                                <img class="slide_imgs"
+                                    src="http://test.s1.unipware.com/AILawyer/images/img_contract.png" alt="임대차계약서">
+                                <img class="btn_close_modal pointer"
+                                    src="http://test.s1.unipware.com/AILawyer/images/customer_slide_close.svg"
+                                    alt="팝업 닫기">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="slide_imgs"
+                                    src="http://test.s1.unipware.com/AILawyer/images/img_contract02.png" alt="임대차계약서">
+                                <img class="btn_close_modal pointer"
+                                    src="http://test.s1.unipware.com/AILawyer/images/customer_slide_close.svg"
+                                    alt="팝업 닫기">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="chat_aside_header">
+                <div class="d-flex align-items-center">
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_arrow_left.svg" alt="채팅창 목록으로 가기"
+                        class="back_to_chat_list">
+                    <label>2</label>
+                </div>
+                <p>김신청님과의 대화</p>
+                <div class="d-flex">
+                    <button class="info active">
+                        <span>의뢰인 정보</span>
+                    </button>
+                    <button class="search">
+                        <span>대화 검색</span>
+                    </button>
+                    <button class="file">
+                        <span>공유 파일</span>
+                    </button>
+                    <button class="image">
+                        <span>공유 이미지</span>
+                    </button>
+                    <button class="stamp">
+                        <span>문서 발급 승인 요청</span>
+                    </button>
+                    <button class="pen">
+                        <span>사건검토 보고서</span>
+                    </button>
+                    <button class="exit">
+                        <span>상담 종료</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex chat_aside_bottom">
+                <div class="chat_section ">
+                    <div class="scroll">
+                        <div class="date">
+                            <p>2024년 10월 16일 수요일</p>
+                            <hr>
+                        </div>
+                        <div class="auto_chat_bubble">
+                            <dl>
+                                <dt>상담 신청 일시</dt>
+                                <dd>24.09.09 14:00</dd>
+                            </dl>
+                            <dl>
+                                <dt>상담 분야</dt>
+                                <dd>음주운전</dd>
+                            </dl>
+                            <dl>
+                                <dt>AI 사건 요약</dt>
+                                <dd>음주운전 집행유예 기간 중 교통사고를 냈습니다.</dd>
+                            </dl>
+                            <dl>
+                                <dt>필요서류</dt>
+                                <dd>1. 경찰조사결과서류<br>
+                                    2. 보험관련 서류<br>
+                                    3. 의료관련 서류 </dd>
+                            </dl>
+                            <dl class="justify-content-center">
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button>상담 수락</button>
+                                    <button>상담 거절</button>
+                                </div>
+                            </dl>
+                        </div>
+                        <p class="auto_chat">상담을 수락하였습니다.(15:38)</p>
+                        <div class="chat_warp my">
+                            <p>나</p>
+                            <div class="bubble my">
+                                <div>
+                                    안녕하세요 ! 챗봇과의 대화 내용이 음주운전 2회로 집행유예 기간 중, <br>
+                                    무면허 음주운전상태에서 교통사고를 냈는데 이에 대한 해결방법이 궁금합니다.
+                                    라고 진행해주셨는데 위 내용이 맞을까요?</div>
+                                <span>15:38</span>
+                            </div>
+                        </div>
+                        <div class="chat_warp other">
+                            <p>상대</p>
+                            <div class="bubble other">
+                                <div>
+                                    안녕하세요. 혹시 계약서  검토가 가능할까요?</div>
+                                <div class="chat_file">
+                                    임대차 계약서.hwp</div>
+                                <span>15:38</span>
+                            </div>
+                        </div>
+                        <div class="chat_warp my">
+                            <p>나</p>
+                            <div class="bubble my">
+                                <div>
+                                    일단 계약서를 다운로드 받은 후, 검토해보고 연락드려도 괜찮을까요?</div>
+                                <span>15:38</span>
+                            </div>
+                        </div>
+                        <div class="chat_warp other">
+                            <p>상대</p>
+                            <div class="bubble other">
+                                <div>
+                                    네. 감사합니다. 혹시 시간이 얼마나 걸릴지 알 수 있을까요?</div>
+                                <span>15:38</span>
+                            </div>
+                        </div>
+                        <div class="chat_warp my">
+                            <p>나</p>
+                            <div class="bubble my">
+                                <div>
+                                    서류에 따라 기간이 상이하긴 한데, 보통은 일주일 정도 소요됩니다.</div>
+                                <span>15:38</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="chat_input_area">
+                        <div class="position-relative chat_input_wrap">
+                            <input type="text" placeholder="내용 입력">
+                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_input_file.svg"
+                                class="input_file">
+                            <img src="http://test.s1.unipware.com/AILawyer/images/ico_chat-enter.svg"
+                                class="send_message">
+                        </div>
+                    </div>
+                </div>
+                <!-- s: 의뢰인 정보 -->
+                <div class="function_section info active">
+                    <div class="function_title">의뢰인 정보</div>
+                    <div class="function_content">
+                        <div class="basic">
+                            <label>기본 정보</label>
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>김길동(남)</dd>
+                            </dl>
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>010-1234-5678</dd>
+                            </dl>
+                            <dl>
+                                <dt>이메일</dt>
+                                <dd>kimkd@email.com</dd>
+                            </dl>
+                            <dl>
+                                <dt>지역</dt>
+                                <dd>서울특별시 종로구</dd>
+                            </dl>
+                        </div>
+
+                        <div class="request mt-4 ">
+                            <label>상담 신청 정보</label>
+                            <dl>
+                                <dt>신청 일시</dt>
+                                <dd>24.09.09 14:00</dd>
+                            </dl>
+                            <dl>
+                                <dt>상담 분야</dt>
+                                <dd>음주 운전</dd>
+                            </dl>
+                            <dl>
+                                <dt>AI 사건 요약</dt>
+                                <dd>음주운전 집행유예 기간 중
+                                    교통사고를 냈습니다.</dd>
+                            </dl>
+                            <dl>
+                                <dt>필요서류</dt>
+                                <dd>1. 경찰조사결과서류<br>
+                                    2. 보험관련 서류<br>
+                                    3. 의료관련 서류 </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 의뢰인 정보 -->
+                <!-- s: 대화 검색 -->
+                <div class="function_section search">
+                    <div class="function_title">대화 검색</div>
+                    <div class="search_w">
+                        <input type="text" placeholder="검색어를 입력하세요." value="신청">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_search.svg">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_search_cancel.svg"
+                            class="btn_search_cancel">
+                    </div>
+                    <span class="search_result">총 2건의 검색 결과</span>
+                    <div class="search_chat_area scroll">
+                        <div class="bubble my">
+                            <div class="bubble_content">
+                                어디에 신청하셨어요?</div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                        <div class="bubble other">
+                            <div class="bubble_content">
+                                신청하는 방법이 어떻게 되나요?</div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                        <div class="bubble my">
+                            <div class="bubble_content">
+                                어디에 신청하셨어요?</div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 대화 검색 -->
+                <!-- s: 공유 파일 -->
+                <div class="function_section file">
+                    <div class="function_title">공유 파일</div>
+                    <div class="search_chat_area scroll">
+                        <div class="bubble my">
+                            <div class="bubble_content">
+                                임대차 계약서.hwp
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>문서 검토 요청</span>
+                                <span>24.10.16 15:40</span>
+                            </div>
+                        </div>
+                        <div class="bubble other">
+                            <div class="bubble_content">
+                                검토 완료 권고 계약서.hwp</div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                        <div class="bubble my">
+                            <div class="bubble_content">
+                                임대차 계약서 두번째.hwp</div>
+                            <div class="d-flex justify-content-between">
+                                <span>문서 검토 요청</span>
+                                <span>24.10.16 15:40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 공유 파일 -->
+                <!-- s: 공유 이미지 -->
+                <div class="function_section image">
+                    <div class="function_title">공유 이미지</div>
+                    <div class="search_chat_area scroll">
+                        <div class="bubble my">
+                            <div class="bubble_content">
+                                <div class="file">
+                                    임대차 계약서.jpg
+                                </div>
+                                <div class="image_preview">
+                                    <div class="image_preview_hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                        <div class="bubble other">
+                            <div class="bubble_content">
+                                <div class="file">
+                                    기본 양식 참고.jpg
+                                </div>
+                                <div class="image_preview second">
+                                    <div class="image_preview_hover">
+                                    </div>
+                                </div>
+                            </div>
+                            <span>24.10.16 15:40</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- e: 공유 이미지 -->
+                <!-- s: 문서 발급 승인 요청 -->
+                <div class="function_section stamp ">
+                    <div class="function_title">문서 발급 승인 요청</div>
+                    <div class="stamp_btn_w mb-3">
+                        <div class="d-flex">
+                            <button class="active certified_letter" data-target="certified_letter">내용증명</button>
+                            <button class="payment_order" data-target="payment_order">지급명령 신청서</button>
+                        </div>
+                        <div class="d-flex mt-2">
+                            <button class="complaint" data-target="complaint">고소장</button>
+                            <button class="agreement" data-target="agreement">합의서</button>
+                        </div>
+                    </div>
+                    <!-- 내용 증명 -->
+                    <div class="check_list certified_letter active">
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck">
+                            <label for="mCheck">계약해지통지</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck01">
+                            <label for="mCheck01">계약이행청구</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck02">
+                            <label for="mCheck02">임대차 계약연장불허통지</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck03">
+                            <label for="mCheck03">임대차 계약갱신 청구</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck04">
+                            <label for="mCheck04">보증금 반환</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck05" checked="">
+                            <label for="mCheck05">임대차 계약 해지 – 세입자</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck06" checked="">
+                            <label for="mCheck06">임대차 계약 해지 – 임대인</label>
+                        </div>
+                    </div>
+                    <!-- 지급명령 신청서 -->
+                    <div class="check_list payment_order">
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck07" checked="">
+                            <label for="mCheck07">대여금 청구</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck08">
+                            <label for="mCheck08">약정금 청구</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck09">
+                            <label for="mCheck09">투자금 반환</label>
+                        </div>
+                    </div>
+                    <!-- 고소장 -->
+                    <div class="check_list complaint">
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck10">
+                            <label for="mCheck10">강제추행죄</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck11">
+                            <label for="mCheck11">사기죄</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck12">
+                            <label for="mCheck12">고소취하서</label>
+                        </div>
+                    </div>
+                    <!-- 합의서 -->
+                    <div class="check_list agreement">
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck13">
+                            <label for="mCheck13">교통사고</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck14">
+                            <label for="mCheck14">금전</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck15">
+                            <label for="mCheck15">명예훼손</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck16">
+                            <label for="mCheck16">이혼</label>
+                        </div>
+                        <div class="check_w d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="mCheck17">
+                            <label for="mCheck17">폭행</label>
+                        </div>
+                    </div>
+                    <div class="selected_item_w">
+                        <label>선택한 문서</label>
+                        <div class="selected_item">
+                            <div>
+                                <p>임대차 계약 해지 – 세입자</p>
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_document_cancel.svg">
+                            </div>
+                            <div>
+                                <p>임대차 계약 해지 – 임대인</p>
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_document_cancel.svg">
+                            </div>
+                            <div>
+                                <p>대여금 청구</p>
+                                <img src="http://test.s1.unipware.com/AILawyer/images/ico_document_cancel.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="send">전송</button>
+                </div>
+                <!-- e: 문서 발급 승인 요청 -->
+                <!-- s: 사건검토 보고서 -->
+                <div class="function_section pen">
+                    <div class="function_title">사건검토 보고서</div>
+                    <button>전송</button>
+                </div>
+                <!-- e: 사건검토 보고서 -->
+                <!-- s: 상담 종료 -->
+                <div class="function_section exit">
+                    <div class="function_title">상담 종료</div>
+                    <span>하단의 ‘상담 종료’ 버튼을<br>
+                        클릭하시면 해당 상담이<br>
+                        종료됩니다.</span>
+                    <button class="mt-3">상담 종료</button>
+                </div>
+                <!-- e: 상담 종료 -->
+            </div>
+        </div>
+        <!-- s: 채팅창 입장 -->
+    </div>
+    <!-- e: 상담 채팅 aside -->
+    <header>
+        <div class="pc_header d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <h1 onclick="location.href='/AILawyer/lawyer/lawyer_index.html'" class="pointer mr-3"><b>AI&#183;</b>는
+                    변호사</h1>
+                <ul>
+                    <li>AI 챗봇</li>
+                    <li onclick="location.href='/AILawyer/lawyer/lawyer_my.html'">내 정보</li>
+                    <li onclick="location.href='/AILawyer/lawyer/lawyer_case_law.html'">관심판례 보관함</li>
+                    <li onclick="location.href='/AILawyer/lawyer/lawyer_document.html'">문서 관리</li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="info_qna">
+                    <button onclick="location.href='/AILawyer/lawyer/lawyer_info.html'">이용안내</button>
+                    <button onclick="location.href='/AILawyer/lawyer/lawyer_qna.html'">자주하는 질문</button>
+                </div>
+                <div class="btn_logout">
+                    <label class="account">김철수 변호사</label>
+                    <label class="logout">로그아웃</label>
+                </div>
+            </div>
+        </div>
+        <div class="mobile_header d-flex justify-content-between w_100 align-items-center">
+            <img src="http://test.s1.unipware.com/AILawyer/images/logo_w.svg" class="pointer"
+                onclick="location.href='/AILawyer/index.html'">
+            <div class="pointer btn_burger">
+                <hr class="burger01">
+                <hr class="burger02">
+                <hr class="burger03">
+                <div class="mobile_modal">
+                    <button class="ai" onclick="location.href='/AILawyer/lawyer/lawyer_index.html'">AI 챗봇</button>
+                    <button class="my">내 정보</button>
+                    <button class="case_law">관심판례 보관함</button>
+                    <button class="document">문서 관리</button>
+                    <hr>
+                    <button class="info" onclick="location.href='/AILawyer/lawyer/lawyer_info.html'">이용안내</button>
+                    <button class="qna" onclick="location.href='/AILawyer/lawyer/lawyer_qna.html'">자주하는 질문</button>
+                    <button class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="header_bg">
+        <img src="http://test.s1.unipware.com/AILawyer/images/img_header_bg.svg">
+    </div>
+
+    <main class="signup qna">
+        <div class="signup_title">
+            <span class="title mb-2">자주하는 질문</span>
+            <span>궁금한 점을 알려드립니다.
+                그밖에 궁금한 점은 하단의 전화번호를 이용해주세요.
+            </span>
+        </div>
+        <div class="signup_content">
+            <section>
+                <div class="search_top d-flex justify-content-center">
+                    <div class="search_w">
+                        <input type="text" placeholder="검색어를 입력하세요." value="채팅">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_search.svg">
+                    </div>
+                </div>
+                <div class="no_result">
+                    <p>검색 결과가 없습니다.</p>
+                 </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="info">
+            <p class="mr-5">휴먼러벗</p>
+            <div>
+                <div class="d-flex mb-1">
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>광주 동구 지산로 73, 202호</dd>
+                    </dl>
+                    <dl>
+                        <dt>사업자등록번호</dt>
+                        <dd>838-88-03166</dd>
+                    </dl>
+                </div>
+                <div class="d-flex mb-1">
+                    <dl>
+                        <dt>대표자명</dt>
+                        <dd>김수지</dd>
+                    </dl>
+                    <dl>
+                        <dt>대표번호</dt>
+                        <dd>062-222-1487</dd>
+                    </dl>
+                </div>
+                <dl>
+                    <dd>&#169; HumanLawbot&#46; All rights reserved&#46;</dd>
+                </dl>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/main.js"></script>
+    <!-- info_box가 아래에서 위로 올라오는 효과 -->
+    <script>
+        $(document).ready(function () {
+            $('.info_box').each(function (index) {
+                $(this).delay(300 * index).queue(function (next) {
+                    $(this).addClass('show');
+                    next();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

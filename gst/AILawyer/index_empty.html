@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body>
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDeleteHistory">
+        <div class="modal_wrap">
+            <img src="http://test.s1.unipware.com/AILawyer/images/modal_alert.svg" alt="모달 아이콘">
+            <p>대화 내용이 삭제됩니다.<br>
+                정말로 삭제하시겠습니다?</p>
+            <div class="d-flex justify-content-between">
+                <button class="btn_close_modal">취소</button>
+                <button class="modal_btn_ok">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal delete -->
+    <div class="modal_popup" id="modalDeleteHistory">
+        <div class="modal_wrap">
+            <img src="http://test.s1.unipware.com/AILawyer/images/modal_alert.svg" alt="모달 아이콘">
+            <p>삭제되었습니다.</p>
+            <div class="d-flex justify-content-center">
+                <button class="modal_btn_ok">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="law_user_content">
+        <button id="aside_open"
+            class="law_aside_button law_user_tooltip_btn d-flex justify-content-center align-items-center">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_aside_close.svg" alt="사이드메뉴 열기">
+        </button>
+        <span class="law_user_tooltip side_tool_open">
+            사이드메뉴 열기
+        </span>
+        <!-- law_user_aside start -->
+        <div id="law_user_aside">
+            <div class="tit_box fade-up d-flex">
+                <button id="aside_close"
+                    class="law_aside_button law_user_tooltip_btn d-flex justify-content-center align-items-center">
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_aside_close.svg" alt="사이드메뉴 닫기">
+                </button>
+                <span class="law_user_tooltip side_tool_close">
+                    사이드메뉴 닫기
+                </span>
+                <h1><b>AI&#183;</b>는 변호사</h1>
+                <p><b>AI 법률 Q&#38;A</b> 서비스</p>
+                <div class="login_signup_wrap">
+                    <button onclick="location.href='login.html'">로그인</button>
+                    <button class="btn_signup" onclick="location.href='select_signup.html'">회원가입</button>
+                </div>
+            </div>
+            <!-- history start -->
+            <div class="history fade-up mt-3">
+                <button class="new_chat">
+                    <img src="http://test.s1.unipware.com/AILawyer/images/ico_new-chat.svg" alt="새로운 채팅">
+                    새 질문
+                </button>
+                <div class="d-flex justify-content-between">
+                    <h2>HISTORY</h2>
+                    <button class="all_delete">전체삭제</button>
+                </div>
+                <div class="search_btn_wrapper position-relative">
+                    <div class="his_input_wrapper w_100">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                    </div>
+                    <button class="search law_user_tooltip_btn">
+                        <img src="http://test.s1.unipware.com/AILawyer/images/ico_aside_search.svg" alt="검색">
+                    </button>
+                    <span class="law_user_tooltip tool_search">
+                        검색
+                    </span>
+                </div>
+                <ul class="scroll">
+                    <li class="no_list">대화내역이 없습니다.<br>새 질문을 눌러 상담을 시작하세요.</li>
+                </ul>
+            </div>
+            <!-- history end -->
+            <div class="info_qna">
+                <button onclick="location.href='info.html'">이용안내</button>
+                <button onclick="location.href='qna.html'">자주하는 질문</button>
+            </div>
+            <div class="info">
+                <p>휴먼러벗</p>
+                <dl>
+                    <dt>주소</dt>
+                    <dd>광주 동구 지산로 73, 202호</dd>
+                </dl>
+                <dl>
+                    <dt>사업자등록번호</dt>
+                    <dd>838-88-03166</dd>
+                </dl>
+                <dl>
+                    <dt>대표자명</dt>
+                    <dd class="mr-2">김수지</dd>
+                    <dt>대표번호</dt>
+                    <dd>062-222-1487</dd>
+                </dl>
+                <dl>
+                </dl>
+                <p class="copyright mt-3">&#169; HumanLawbot&#46; All rights reserved&#46;</p>
+            </div>
+        </div>
+        <!-- law_user_aside end -->
+        <div class="law_dim"></div>
+        <!-- content_chat_wrap start -->
+        <div class="content_chat_wrap">
+            <div class="content_container">
+                <section class="content_wrap d-flex">
+                    <h1><b>AI&#183;</b>는 변호사</h1>
+                    <p id="sub_txt_typing"></p>
+                    <span class="sub-tit"><b>AI 법률 Q&#38;A</b> 서비스</span>
+                </section>
+                <ul class="d-flex justify-content-between law_category">
+                    <li class="off fade-up" onclick="location.href='lawyer_service_terms.html'">
+                        <figure>
+                            <img class="img-off"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_1-off.svg" alt="성범죄">
+                            <img class="img-on none"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_1-on.svg" alt="성범죄">
+                            <figcaption>성범죄</figcaption>
+                        </figure>
+                    </li>
+                    <li class="off fade-up" onclick="location.href='lawyer_service_terms.html'">
+                        <figure>
+                            <img class="img-off"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_2-off.svg" alt="이혼">
+                            <img class="img-on none"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_2-on.svg" alt="이혼">
+                            <figcaption>이혼</figcaption>
+                        </figure>
+                    </li>
+                    <li class="off fade-up" onclick="location.href='lawyer_service_terms.html'">
+                        <figure>
+                            <img class="img-off"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_3-off.svg" alt="음주운전">
+                            <img class="img-on none"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_3-on.svg" alt="음주운전">
+                            <figcaption>음주운전</figcaption>
+                        </figure>
+                    </li>
+                    <li class="off fade-up" onclick="location.href='lawyer_service_terms.html'">
+                        <figure>
+                            <img class="img-off"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_4-off.svg" alt="재산범죄">
+                            <img class="img-on none"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_4-on.svg" alt="재산범죄">
+                            <figcaption>재산범죄</figcaption>
+                        </figure>
+                    </li>
+                    <li class="off fade-up" onclick="location.href='lawyer_service_terms.html'">
+                        <figure>
+                            <img class="img-off"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_5-off.svg" alt="행정소송">
+                            <img class="img-on none"
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_category_5-on.svg" alt="행정소송">
+                            <figcaption>행정소송</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <div id="chat_input_wrap">
+                    <div class="d-flex chat_input disabled">
+                        <textarea style="align-self: center;" placeholder="카테고리를 먼저 선택해주세요." rows="1"
+                            disabled></textarea>
+                        <button class="enter disabled"><img
+                                src="http://test.s1.unipware.com/AILawyer/images/ico_chat-enter.svg"
+                                alt="챗 보내기"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- content_container end -->
+        </div>
+        <!-- content_chat_wrap end -->
+    </main>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/main.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/animation.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#law_user_content .law_category li').on('mouseenter', function () {
+                $(this).removeClass('off').addClass('on')
+                $(this).find('.img-on').removeClass('none');
+                $(this).find('.img-off').addClass('none');
+
+            }).on('mouseleave', function () {
+                $(this).removeClass('on').addClass('off')
+                $(this).find('.img-off').removeClass('none');
+                $(this).find('.img-on').addClass('none');
+            });
+
+
+            $('#law_user_content .law_category li').hover(function () {
+                // 이미지 애니메이션: 화면 너비가 992px 이상일 때만 적용
+                if ($(window).width() > 992) {
+                    $('#law_user_content .law_category li').hover(
+                        function () {
+                            $(this).find('figure img').css({
+                                transform: 'translateY(-8px)',
+                                transition: 'transform 0.3s ease'
+                            });
+                        },
+                        function () {
+                            $(this).find('figure img').css({
+                                transform: 'translateY(0px)',
+                                transition: 'transform 0.3s ease'
+                            });
+                        }
+                    );
+                }
+            });
+
+            //서브텍스트 타이핑 애니메이션
+            const text = "AI+변호사 법률 서비스<br>법률 전문 AI 챗봇과 변호사의 상담 서비스,<br>당신의 <AI는 변호사>를 경험해보세요!"; // 타이핑할 문구
+            let index = 0;
+            let speed = 35; // 글자 타이핑 속도 (밀리초 단위)
+
+            function typeWriter() {
+                const textElement = document.getElementById("sub_txt_typing");
+                if (index < text.length) {
+                    // 현재 문자에 <br> 태그가 있으면 줄바꿈 적용
+                    if (text.charAt(index) === '<' && text.substring(index, index + 4) === '<br>') {
+                        textElement.innerHTML += "<br>"; // 줄바꿈 태그 추가
+                        index += 4; // <br>은 4글자이므로 인덱스를 4만큼 증가
+                    } else {
+                        textElement.innerHTML += text.charAt(index); // 일반 텍스트 추가
+                        index++;
+                    }
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+</body>
+
+
+</html>

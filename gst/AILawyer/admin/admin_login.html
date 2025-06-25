@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer_MVP1/user/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/admin-style.css">
+</head>
+
+<body class="login">
+    <section class="d-flex justify-content-between">
+        <div class="login_area w_60">
+            <div class="login_w">
+                <div class="d-flex justify-content-center pb-3">
+                    <label>관리자 로그인</label>
+                </div>
+                <h1 class="mt-1 mb-5"><b>AI&#183;</b>는 변호사</h1>
+                <div class="login_input_w">
+                    <div class="mb-3">
+                        <label class="mr-3">아이디</label>
+                        <input type="text" placeholder="아이디를 입력해주세요." id="userId">
+                    </div>
+                    <div>
+                        <label class="mr-3">비밀번호</label>
+                        <input type="password" placeholder="비밀번호를 입력해주세요." id="userPassword">
+                    </div>
+                </div>
+                <button class="mt-5" onclick="loginClick()">로그인</button>
+            </div>
+        </div>
+
+        <div class="login_video">
+             <div></div>
+            <video autoplay muted loop>
+                <source src="http://test.s1.unipware.com/AILawyer_MVP1/admin/images/video_login.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/admin-ui.js"></script>
+    <script>
+        // 로그인 버튼 클릭 시
+        function loginClick() {
+            var userEmail = document.getElementById('userId').value
+            var userPassword = document.getElementById('userPassword').value
+            if (userId == "admin" && userPassword == "123") {
+                location.href = 'admin_user.html'
+            } else {
+                location.href = 'admin_login_fail.html'
+            }
+        }
+    </script>
+</body>
+
+</html>

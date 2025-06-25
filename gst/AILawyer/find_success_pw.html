@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalPasswordChange">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_modal_check.svg" alt="모달 아이콘">
+            <div class="p-3 text">비밀번호 변경이 완료되었습니다.<br>새로운 비밀번호로 로그인해주세요.</div>
+            <button class="btn ok mt-3" onclick="location.href='login.html'">확인</button>
+        </div>
+    </div>
+
+    <section class="d-flex justify-content-between">
+        <div class="login_area w_100 position-relative">
+            <div class="login_w w_60 find_account">
+                <div>
+                    <div class="mb-3">
+                        <h1>비밀번호 변경</h1>
+                        <span>새로운 비밀번호를 등록해주세요.</span>
+                    </div>
+
+                    <div class="login_input_w mb-5">
+                        <div class="find_account change_pw">
+                            <label class="mr-3">새 비밀번호</label>
+                            <input type="password" placeholder="새로운 비밀번호" id="newPassword">
+                        </div>
+                        <div class="find_account change_pw">
+                            <label class="mr-3 find_account">비밀번호 확인</label>
+                            <input type="password" placeholder="한번 더 입력" id="confirmPassword">
+                            <span class="warning_text pl-3" id="warningText" style="display: block;">비밀번호가 일치하지 않습니다.</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex btn_w">
+                        <button class="btn_login" onclick="validatePasswords()">변경완료</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login_video">
+                <div class="login_video_w">
+                    <div class="video_cover"></div>
+                    <img src="http://test.s1.unipware.com/AILawyer/images/img_find.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/main.js"></script>
+    <!-- 비밀번호 일치하지 않을 때 경고문 -->
+    <script>
+        function validatePasswords() {
+            const newPassword = document.getElementById("newPassword").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const warningText = document.getElementById("warningText");
+            const successModal = document.getElementById("modalPasswordChange");
+
+            if (newPassword !== confirmPassword) {
+                warningText.style.display = "block";
+                successModal.style.display = "none";
+            } else {
+                warningText.style.display = "none"; 
+                successModal.style.display = "block"; 
+            }
+        }
+    </script>
+</body>
+
+</html>

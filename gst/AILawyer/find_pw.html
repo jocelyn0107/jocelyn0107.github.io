@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalLoginFail">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_warning.svg" alt="" class="mt-2">
+            <div class="p-3 text">입력하신 정보와<br>일치하는 항목이 없습니다.</div>
+            <button class="btn ok mt-3">확인</button>
+        </div>
+    </div>
+
+
+    <section class="d-flex justify-content-between">
+        <div class="login_area w_100 position-relative">
+            <div class="login_w w_60 find_account">
+                <div>
+                    <div>
+                        <h1>비밀번호 찾기</h1>
+                        <span>가입시 입력했던 정보를 입력해주세요.</span>
+                    </div>
+
+                    <div class="login_input_w">
+                        <div class="find_account">
+                            <label class="mr-3">이름</label>
+                            <input type="text" placeholder="이름" id="userName">
+                        </div>
+                        <div class="find_account">
+                            <label class="mr-3 find_account">휴대폰 번호</label>
+                            <input type="text" placeholder="휴대폰 번호('-' 제외)" id="userPhoneNumber">
+                            <button class="send_code">인증번호 발송</button>
+                        </div>
+                        <div class="find_account">
+                            <label class="mr-3 find_account">인증번호</label>
+                            <div class="position-relative">
+                                <input type="text" placeholder="인증번호 6자리" id="userVerificationCode">
+                                <span class="count_time" style="display: none;">02:00</span>
+                            </div>
+                            <button>인증 확인</button>
+                            <span class="warning_text" id="warningText">인증번호를 다시 확인해주세요.</span>
+                        </div>
+                    </div>
+
+                    <button class="btn_login mt-5" onclick="loginClick()">확인</button>
+                    <div class="account_actions">
+                        <button onclick="location.href='login.html'">로그인</button>
+                        <button onclick="location.href='find_id.html'">아이디 찾기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login_video">
+                <div class="login_video_w">
+                    <div class="video_cover"></div>
+                    <img src="http://test.s1.unipware.com/AILawyer/images/img_find.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/admin/js/admin-ui.js"></script>
+    <script>
+        // 확인 버튼 클릭 시
+        function loginClick() {
+            var userId = document.getElementById('userId').value
+            var userPhoneNumber = document.getElementById('userPhoneNumber').value
+            var userVerificationCode = document.getElementById('userVerificationCode').value
+            var warningText = document.getElementById('warningText');
+
+            if (userId == "user" && userPhoneNumber == "01012345678" && userVerificationCode == "123456") {
+                location.href = 'find_success_pw.html'
+            } else {
+                warningText.style.display = 'block'; // 경고 메시지 보이기
+            }
+        }
+        // 인증번호 발송 script
+        document.addEventListener('DOMContentLoaded', function () {
+            const sendButton = document.querySelector('.send_code');
+            const countTime = document.querySelector('.count_time');
+            let countdown;
+
+            sendButton.addEventListener('click', function () {
+                countTime.style.display = 'inline';
+                this.textContent = '재발송';
+
+                clearInterval(countdown);
+
+                let timeRemaining = 120; // 2분 (120초)
+                countdown = setInterval(function () {
+                    const minutes = Math.floor(timeRemaining / 60);
+                    const seconds = timeRemaining % 60;
+                    countTime.textContent =
+                        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                    timeRemaining--;
+
+                    if (timeRemaining < 0) {
+                        clearInterval(countdown);
+                        countTime.textContent = "시간 초과";
+                    }
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

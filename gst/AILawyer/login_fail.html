@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AI lawyer">
+    <meta property="og:site_name" content="AI lawyer">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="http://test.s1.unipware.com/AILawyer/images/favicon.ico" type="image/x-icon">
+    <title>AI는 변호사</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/base.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/reset.css">
+    <link rel="stylesheet" href="http://test.s1.unipware.com/shared/css/typography.css">
+
+    <link rel="stylesheet" href="http://test.s1.unipware.com/AILawyer/css/style.css">
+</head>
+
+<body class="login">
+
+    <div class="modal" id="modalLoginFail" style="display: block;">
+        <div class="modal_wrap warning">
+            <img src="http://test.s1.unipware.com/AILawyer/images/ico_warning.svg" alt="" class="mt-2">
+            <div class="p-3 text">아이디와 비밀번호를<br>확인해주세요.</div>
+            <button class="btn ok mt-3">확인</button>
+        </div>
+    </div>
+
+    <section class="d-flex justify-content-between">
+        <div class="login_area w_100 position-relative">
+            <div class="login_w w_60">
+                <div>
+                    <div class="select_user">
+                        <div>
+                            <div class="switch_w">
+                                <div class="background"></div>
+                                <button class="btn active" id="userBtn">일반</button>
+                                <button class="btn" id="lawyerBtn">변호사</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>일반 회원 로그인</h1>
+                    <div class="login_input_w">
+                        <div class="mb-3">
+                            <label class="mr-3">아이디</label>
+                            <input type="text" placeholder="아이디를 입력해주세요." id="userId">
+                        </div>
+                        <div>
+                            <label class="mr-3">비밀번호</label>
+                            <input type="password" placeholder="비밀번호를 입력해주세요." id="userPassword">
+                        </div>
+                    </div>
+
+                    <button class="btn_login mt-5" onclick="loginClick()">로그인</button>
+                    <div class="account_actions">
+                        <button onclick="location.href='/AILawyer/lawyer/lawyer_signup.html'">회원가입</button>
+                        <button onclick="location.href='find_id.html'">아이디 찾기</button>
+                        <button onclick="location.href='find_pw.html'">비밀번호 찾기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="login_video">
+                <div class="login_video_w">
+                    <div class="video_cover"></div>
+                    <video id="loginVideo"autoplay muted loop>
+                        <source src="http://test.s1.unipware.com/AILawyer/images/video_login.mp4" type="video/mp4"
+                            alt="로그인 화면 영상">
+                    </video>
+                    <div class="video_text">
+                        <dl>
+                            <dt>AI&#183;는 변호사</dt>
+                            <dd>변호사 회원이신가요?<br>
+                                변호사 전용 페이지에 로그인해주세요.</dd>
+                            <button onclick="switchToLawyerLogin()">변호사 회원 로그인</button>
+                        </dl>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://test.s1.unipware.com/AILawyer/js/main.js"></script>
+    <script>
+        // 아이디, 비밀번호 입력
+        function loginClick() {
+            var userId = document.getElementById('userId').value
+            var userPassword = document.getElementById('userPassword').value
+            if (userId == "user" && userPassword == "123") {
+                location.href = 'user_index.html'
+            } else if (userId == "lawyer" && userPassword == "123") {
+                location.href = '/AIlawyer/lawyer/lawyer_index.html'
+            } else {
+                location.href = 'login_fail.html'
+            }
+        }
+
+        // 일반, 변호사 버튼
+        function switchToLawyerLogin() {
+        document.querySelector('.login_video').classList.toggle('active');
+        document.querySelector('.login_w').classList.toggle('active');
+
+        const loginTitle = document.querySelector('.login_w>div>h1');
+        const loginBtn = document.querySelector('.video_text button');
+        const loginText = document.querySelector('.video_text dl dd');
+        const videoSource = document.querySelector('#loginVideo source');
+        const loginVideo = document.getElementById('loginVideo');
+
+        if (loginTitle.textContent.includes("일반")) {
+            loginTitle.textContent = "변호사 회원 로그인";
+            loginBtn.textContent = "일반 회원 로그인";
+            loginText.innerHTML = "일반 회원 로그인 후<br>맞춤형 법률 상담 서비스를 이용해 보세요.";
+            videoSource.setAttribute('src', 'http://test.s1.unipware.com/AILawyer/images/video_user.mp4'); // 변호사용 비디오
+        } else {
+            loginTitle.textContent = "일반 회원 로그인";
+            loginBtn.textContent = "변호사 회원 로그인";
+            loginText.innerHTML = "변호사 회원이신가요?<br>변호사 전용 페이지에 로그인해주세요.";
+            videoSource.setAttribute('src', 'http://test.s1.unipware.com/AILawyer/images/video_login.mp4'); // 일반 회원용 비디오
+        }
+
+        loginVideo.load(); // 비디오 소스를 변경한 후 로드
+    }
+        
+        //일반, 변호사 toggle 버튼
+        const userBtn = document.getElementById('userBtn');
+        const lawyerBtn = document.getElementById('lawyerBtn');
+        const buttons = document.querySelectorAll('.btn');
+        const switchWrapper = document.querySelector('.switch_w');
+        const loginTitle = document.querySelector('.login_w>div>h1');
+        const videoSource = document.querySelector('#loginVideo source');
+
+        userBtn.addEventListener('click', () => {
+            switchWrapper.classList.remove('active');
+            updateActiveButton(userBtn);
+            loginTitle.textContent = "일반 회원 로그인"; // "일반"으로 변경
+        });
+
+        lawyerBtn.addEventListener('click', () => {
+            switchWrapper.classList.add('active');
+            updateActiveButton(lawyerBtn);
+            loginTitle.textContent = "변호사 회원 로그인"; // "변호사"로 변경
+        });
+
+        function updateActiveButton(activeButton) {
+            buttons.forEach(button => button.classList.remove('active'));
+            activeButton.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
