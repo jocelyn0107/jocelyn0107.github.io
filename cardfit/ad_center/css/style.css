@@ -321,6 +321,7 @@ body {
 .login_form .title {
   font-size: 26px;
   font-weight: 200;
+  color: var(--color-static-black);
 }
 .login_sns_btn {
   margin: 40px 0 0 0;
@@ -883,6 +884,7 @@ footer p.copyright{
   text-align: center;
 }
 .float_kakao{
+  cursor: pointer;
   position: fixed;
   right: 3%;
   bottom: 3%;
@@ -1723,6 +1725,11 @@ summary:before {
       opacity: 0;
       display: none;
   }
+}
+.highlight{
+  display: inline;
+  padding: 0 2px;
+  background: var(--color-input-main);
 }
 
 
