@@ -32,34 +32,110 @@ $(document).ready(function(){
 
   // selectbox
   $('.custom_select').each(function () {
-    var classes = $(this).attr('class'),
-      id = $(this).attr('id'),
-      name = $(this).attr('name');
+    if ($(this).next('.custom_select_trigger').length) return;
+
+    var $select = $(this);
+    var classes = $select.attr('class');
+    var placeholder = $select.attr('placeholder') || '선택하세요';
+
     var template = '<div class="' + classes + '">';
-    template += '<span class="custom_select_trigger">' + $(this).attr('placeholder') + '</span>';
+    template += '<span class="custom_select_trigger">' + placeholder + '</span>';
     template += '<div class="custom_options">';
-    $(this).find('option').each(function () {
-      template += '<span class="custom_option ' + $(this).attr('class') + '" data-value="' + $(this).attr('value') + '">' + $(this).html() + '</span>';
+    $select.find('option').each(function () {
+      template += '<span class="custom_option" data-value="' + $(this).attr('value') + '">' + $(this).html() + '</span>';
     });
     template += '</div></div>';
 
-    $(this).wrap('<div class="custom_select_wrapper"></div>');
-    $(this).hide();
-    $(this).after(template);
+    $select.wrap('<div class="custom_select_wrapper"></div>');
+    $select.hide();
+    $select.after(template);
+
+    var $wrapper = $select.parent();
+    var $trigger = $wrapper.find('.custom_select_trigger');
+    var $options = $wrapper.find('.custom_options');
+
+    // 옵션 중 가장 긴 텍스트 너비 계산 (hidden 요소로 계산)
+    var maxOptionWidth = 0;
+    $options.find('.custom_option').each(function () {
+      var $temp = $('<span>').text($(this).text()).css({
+        position: 'absolute',
+        visibility: 'hidden',
+        whiteSpace: 'nowrap',
+        fontSize: $trigger.css('font-size'),
+        fontWeight: $trigger.css('font-weight'),
+        fontFamily: $trigger.css('font-family'),
+        padding: $trigger.css('padding'),
+      }).appendTo('body');
+
+      var width = $temp.outerWidth();
+      $temp.remove();
+      if (width > maxOptionWidth) maxOptionWidth = width;
+    });
+
+    var extraSpace = 10; // 화살표 등 여유공간
+    var baseWidth = maxOptionWidth + extraSpace;
+
+    function adjustWidth() {
+      var windowWidth = $(window).width();
+      var wrapperLeft = $wrapper.offset().left;
+      var maxAvailableWidth = windowWidth - wrapperLeft - 20; // 오른쪽 여백
+
+      var newWidth = baseWidth;
+
+      // 화면이 좁으면 너비 줄임
+      if (newWidth > maxAvailableWidth) {
+        newWidth = maxAvailableWidth;
+      }
+
+      $trigger.css({
+        'width': newWidth + 'px',
+        'min-width': 'auto',
+        'white-space': 'nowrap',
+        'overflow': 'hidden',
+      });
+
+      // 옵션 너비는 trigger 너비 이상, 최대 화면 너비에서 여백 뺀 크기까지 허용
+      $options.css({
+        'min-width': newWidth + 'px',
+        'max-width': (windowWidth - wrapperLeft - 16) + 'px',
+        'white-space': 'normal', // 줄 바꿈 허용
+        'word-break': 'break-word',
+      });
+
+      // 옵션이 화면 오른쪽을 넘지 않도록 위치 조절
+      var optionRightEdge = wrapperLeft + newWidth;
+      if (optionRightEdge > windowWidth) {
+        $options.css({ left: 'auto', right: 0 });
+      } else {
+        $options.css({ left: 0, right: 'auto' });
+      }
+    }
+
+    adjustWidth();
+    $(window).on('resize', adjustWidth);
   });
-  $('.custom_select_trigger').on('click', function () {
+
+  // 트리거 클릭 이벤트
+  $('.custom_select_trigger').on('click', function (e) {
+    e.stopPropagation();
     $('html').one('click', function () {
       $('.custom_select').removeClass('opened');
     });
     $(this).parents('.custom_select').toggleClass('opened');
-    event.stopPropagation();
   });
+
+  // 옵션 선택 이벤트
   $('.custom_option').on('click', function () {
-    $(this).parents('.custom_select_wrapper').find('select').val($(this).data('value'));
-    $(this).parents('.custom_options').find('.custom_option').removeClass('selection');
-    $(this).addClass('selection');
-    $(this).parents('.custom_select').removeClass('opened');
-    $(this).parents('.custom_select').find('.custom_select_trigger').text($(this).text());
+    var $this = $(this);
+    var val = $this.data('value');
+    var text = $this.text();
+
+    var $wrapper = $this.closest('.custom_select_wrapper');
+    $wrapper.find('select').val(val).trigger('change');
+    $wrapper.find('.custom_option').removeClass('selection');
+    $this.addClass('selection');
+    $wrapper.find('.custom_select').removeClass('opened');
+    $wrapper.find('.custom_select_trigger').text(text);
   });
   $('.custom_select.disabled').each(function () {
     $(this).find('.custom_select_trigger').addClass('dis');
@@ -139,10 +215,10 @@ $(document).ready(function(){
   });
 
   $('.btn_filter').on('click', function(){
-    $('.filter_area').toggleClass('on');
+    $(this).siblings('.filter_area').toggleClass('on');
   });
 
-  // all checks  .checkbox input[name=tableChecks]
+  // all checks
   $('.check_all').on('click', function(){
     if($('.check_all').is(':checked')){
       $('input[name=tableChecks]').prop('checked',true);

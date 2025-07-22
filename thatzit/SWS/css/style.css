@@ -45,6 +45,9 @@ input:-webkit-autofill {
 }
 
 /** Custom Select **/
+.select{
+  height: 36px;
+}
 .custom_select_wrapper {
   position: relative;
   display: inline-block;
@@ -58,17 +61,19 @@ input:-webkit-autofill {
   display: inline-block;
 }
 .custom_select_trigger {
-  white-space: nowrap;
-  position: relative;
   display: block;
   min-width: 120px;
+  max-width: 100%; 
+  padding: 4px 22px 4px 12px;
   font-size: 18px;
   font-weight: 500;
-  padding: 4px 12px;
   color: var(--color-static-black);
   background: var(--color-static-white);
   border-radius: 4px;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .custom_select_trigger.dis{
   background: var(--color-gray-400);
@@ -771,7 +776,7 @@ header .btn_burger{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 36vh;
+  height: 38vh;
   z-index: -1;
   background: linear-gradient(135deg, #dff2ff 0%, #b6e1ff 50%, #8dd1ff 100%);
 }
@@ -946,6 +951,7 @@ section{
   border: 2px solid var(--primary-light-color);
   border-radius: 4px;
   padding: 12px;
+  background: var(--color-static-white);
 }
 .btn_view_more{
   min-width: 90px;
@@ -1369,12 +1375,13 @@ section{
   padding: 0px 10px;
   font-size: 14px;
   height: 35px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
   white-space: nowrap;
 }
 .btn_filter:hover, .btn_data_down:hover, .btn_gift:hover, .btn_gift_cancel:hover{
-  transition: all 0.3s ease-in-out;
-  background: var(--primary-light-color);
+  transition: all 0.15s ease-in-out;
+  background: #e0f0fd;
+  border: 2px solid #e0f0fd;
 }
 .btn_filter{
   opacity: 0;
@@ -1489,6 +1496,9 @@ input.btn_pick{
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.table_top_area .btn_area>div{
+  cursor: pointer;
 }
 .icon_question{
   position: relative;
@@ -1737,6 +1747,9 @@ footer{
   .icon_question{
     display: none;
   }
+  .bg_gra {
+    height: 330px;
+  }
 }
 @media (max-width: 620px) {
   .header_login{
@@ -1771,6 +1784,7 @@ footer{
   .con_title{
     font-size: 21px;
   }
+  
 }
 @media (max-width: 380px) {
   section{

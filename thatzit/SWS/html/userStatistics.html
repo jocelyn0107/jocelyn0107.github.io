@@ -117,6 +117,7 @@
             <button class="btn_date_search">조회</button>
           </div>
           <!-- e: date_area -->
+
           <!-- s: table_top_area -->
           <div class="table_top_area">
             <div class="filter_w">
@@ -143,6 +144,7 @@
             </div>
           </div>
           <!-- e: table_top_area -->
+
           <!-- s: table -->
           <div class="table_wrap mt_2 table_wrap_30">
             <table class="table table_hover">
@@ -228,16 +230,19 @@
         <div class="tab_contents">
           <!-- s: date_area -->
           <div class="date_area my_5">
-            <div class="datepicker">
-              <input type="text" class="date form_date" value="2025.01.01">
+            <!-- s: select -->
+            <div class="select">
+              <select name="sources" class="custom_select sources" placeholder="이벤트를 선택해주세요.">
+                <option value="event_01">이벤트 이름을 적는 곳입니다._01</option>
+                <option value="event_02">이벤트 이름을 적는 곳입니다._02</option>
+                <option value="event_03">[(재)당뇨병학연구재단] 위풍당당 6.5km 걷기 캠페인</option>
+              </select>
             </div>
-            <div>~</div>
-            <div class="datepicker">
-              <input type="text" class="date form_date" value="2025.12.31">
-            </div>
+            <!-- e: select -->
             <button class="btn_date_search">조회</button>
           </div>
           <!-- e: date_area -->
+
            <!-- s: table_top_area -->
           <div class="table_top_area">
             <div class="filter_w">
