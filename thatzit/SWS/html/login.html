@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <!-- OG 시작 -->
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:locale:alternate" content="en_us">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="스탬프워크 관리시스템(SWS)">
+  <meta property="og:site_name" content="STAMP WALK ADMIN SYSTEM">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1100">
+  <meta property="og:image:height" content="740">
+  <!-- OG 끝 -->
+  <!-- 트위터 카드 시작 -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="스탬프워크 관리시스템(SWS)" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+  <!-- 트위터 카드 끝 -->
+  <title>스탬프워크 관리시스템(SWS)</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/typography.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="body_login">
+  <div class="ir_su">스탬프워크 관리시스템</div>
+
+  <!-- s: modalLoginfail -->
+  <div class="modal_popup" id="modalLoginfail">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="../images/icon_popup_error_blue.svg" alt="icon" class="popup_icon">
+        <p>정말 로그아웃하시겠습니까?</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close btn_modal_cancel">취소</button>
+          <button class="btn_modal_close btn_modal_execute">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalLoginfail -->
+
+  <!-- s: header -->
+  <header class="header_login">
+    <figure>
+      <img src="../images/logo_blue.svg" alt="logo" class="logo_pc">
+      <img src="../images/logo_m_blue.svg" alt="logo" class="logo_m">
+      <figcaption>로고</figcaption>
+    </figure>
+  </header>
+  <!-- s: header -->
+
+  <div class="bg_m_img"></div>
+
+  <div class="wrap">
+    <!-- s: main -->
+    <main>
+      <!-- s: login_area_02 -->
+      <div class="login_area_02">
+        <figure>
+          <img src="../images/logo_common.png" alt="logo">
+        </figure>
+        <h1 class="mt_2">강릉특별시보건복지보건소</h1>
+        <div class="password_login_area">
+          <input type="text" class="input_form mt_4" placeholder="비밀번호" autocomplete="off">
+          <label class="checkbox mt_3">
+            <input type="checkbox">
+            <div class="label">비밀번호 저장</div>
+          </label>
+          <button class="btn_login mt_5" onclick="location.href='dashboard.html'">로그인</button>
+        </div>
+
+        
+      </div>
+      <!-- e: login_area_02 -->
+    </main>
+    <!-- e: main -->
+  </div>
+
+  <!-- s: footer -->
+  <footer>
+    <p class="copyright">Copyright 2025.THATZIT All Rights Reserved.</p>
+  </footer>
+  <!-- e: footer -->
+
+  <script src="../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

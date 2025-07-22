@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <!-- OG 시작 -->
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:locale:alternate" content="en_us">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="스탬프워크 관리시스템(SWS)">
+  <meta property="og:site_name" content="STAMP WALK ADMIN SYSTEM">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1100">
+  <meta property="og:image:height" content="740">
+  <!-- OG 끝 -->
+  <!-- 트위터 카드 시작 -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="스탬프워크 관리시스템(SWS)" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+  <!-- 트위터 카드 끝 -->
+  <title>스탬프워크 관리시스템(SWS)</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/typography.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="position_relative">
+  <div class="ir_su">스탬프워크 관리시스템</div>
+
+  <!-- s: modalLogout -->
+  <div class="modal_popup" id="modalLogout">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="../images/icon_popup_error_blue.svg" alt="icon" class="popup_icon">
+        <p>정말 로그아웃하시겠습니까?</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close btn_modal_cancel">취소</button>
+          <button class="btn_modal_close btn_modal_execute">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalLogout -->
+
+  <!-- s: header -->
+  <header class="shadow">
+    <div class="header">
+      <div class="logo_menu">
+        <img src="../images/logo_blue.svg" alt="logo" class="logo_pc" onclick="location.href='dashboard.html'">
+        <img src="../images/logo_m_blue.svg" alt="logo" class="logo_m" onclick="location.href='dashboard.html'">
+        <nav class="nav_pc">
+          <ul>
+            <li><a href="walkingRate.html">걷기 실천율</a></li>
+            <li><a href="userStatistics.html">유저별 통계</a></li>
+            <li class="active"><a href="giftManagement.html">선물 관리</a></li>
+            <li><a href="reviewManagement.html">이벤트 후기</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="btn_modal_open btn_logout">
+        <img src="../images/icon_logout_blk.svg" alt="logout">
+        <div class="down_helper">로그아웃</div>
+      </div>
+      <div class="btn_burger">
+        <input type="checkbox" id="hamburger" />
+        <label for="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="sidebar">
+          <div class="position_relative"><img src="../images/logo_m_blue.svg" alt="logo" onclick="location.href='dashboard.html'">
+          </div>
+          <ul class="nav_mobile">
+            <li><a href="walkingRate.html">걷기 실천율</a></li>
+            <li><a href="userStatistics.html">유저별 통계</a></li>
+            <li><a href="giftManagement.html">선물 관리</a></li>
+            <li><a href="reviewManagement.html">이벤트 후기</a></li>
+            <li><a href="#" class="btn_modal_open btn_logout">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- s: header -->
+
+  <div class="wrap">
+    <!-- s: section_01 -->
+    <section class="section_01">
+      <!-- s: date_area -->
+      <div class="date_area mb_3">
+        <div class="datepicker">
+          <input type="text" class="date form_date" value="2025.01.01">
+        </div>
+        <div>~</div>
+        <div class="datepicker">
+          <input type="text" class="date form_date" value="2025.12.31">
+        </div>
+        <!-- s: select -->
+        <div class="select">
+          <select name="sources" class="custom_select sources" placeholder="선물 전체" required>
+            <option value="gift_all">선물 전체</option>
+            <option value="gift_01">선물_01</option>
+            <option value="gift_02">선물_02</option>
+            <option value="gift_03">선물_03</option>
+          </select>
+        </div>
+        <!-- e: select -->
+        <button class="btn_date_search">조회</button>
+      </div>
+      <!-- e: date_area -->
+
+      <!-- s: pick_area -->
+      <div class="pick_area mb_5">
+        <p>추첨 인원수 : </p>
+        <input type="text" class="input_form border">
+        <input type="button" class="btn_pick" value="추첨">
+      </div>
+      <!-- e: pick_area -->
+
+      <!-- s: table_top_area -->
+      <div class="table_top_area">
+        <div class="filter_w">
+          <div class="btn_filter">
+            <figure>
+              <img src="../images/icon_filter_gra_blue.svg" alt="icon">
+            </figure>
+            <p>필터</p>
+          </div>
+          <div class="filter_area">
+            <label class="checkbox">
+              <input type="checkbox" checked>
+              <div class="label">부정사용자 제외</div>
+            </label>
+            <label class="checkbox ">
+              <input type="checkbox" checked>
+              <div class="label">지급 중복 제외</div>
+            </label>
+            <figure class="icon_question">
+              <img src="../images/icon_question_gry.svg" alt="icon">
+              <div class="question_box">이전에 선물을 지급받은<br>신청자는 제외됩니다.</div>
+            </figure>
+            <label class="checkbox">
+              <input type="checkbox">
+              <div class="label">선물지급자</div>
+            </label>
+          </div>
+        </div>
+        <div class="btn_area">
+          <div class="btn_gift">선물지급</div>
+          <div class="btn_gift_cancel">지급취소</div>
+          <div class="btn_data_down">
+            <figure>
+              <img src="../images/icon_download_gra_blue.svg" alt="download">
+            </figure>
+            <p>데이터 다운로드</p>
+          </div>
+        </div>
+      </div>
+      <!-- e: table_top_area -->
+      <!-- s: table -->
+      <div class="table_wrap mt_2 table_wrap_30">
+        <table class="table table_hover">
+          <thead class="table_thead">
+            <tr>
+              <th>
+                <label class="checkbox">
+                  <input type="checkbox" class="check_all">
+                  <div class="label"><p>전체</p></div>
+                </label>
+              </th>
+              <th>번호</th>
+              <th>성함</th>
+              <th>성별</th>
+              <th>연령대</th>
+              <th>주소</th>
+              <th>핸드폰 번호</th>
+              <th>선물지급여부</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="tableChecks">
+                  <div class="label"><p>항목</p></div>
+                </label>
+              </td>
+              <td>1</td>
+              <td>홍길동</td>
+              <td>남</td>
+              <td>10대</td>
+              <td class="text_left">주소를 보여주는 곳입니다.</td>
+              <td>010-1234-5677</td>
+              <td>지급</td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="tableChecks">
+                  <div class="label"><p>항목</p></div>
+                </label>
+              </td>
+              <td>2</td>
+              <td>진길동</td>
+              <td>남</td>
+              <td>10대</td>
+              <td class="text_left">주소를 보여주는 곳입니다.</td>
+              <td>010-1234-5677</td>
+              <td>지급</td>
+            </tr>
+            <tr>
+              <td>
+                <label class="checkbox">
+                  <input type="checkbox" name="tableChecks">
+                  <div class="label"><p>항목</p></div>
+                </label>
+              </td>
+              <td>3</td>
+              <td>김길동</td>
+              <td>남</td>
+              <td>10대</td>
+              <td class="text_left">주소를 보여주는 곳입니다. 곳입니다.</td>
+              <td>010-1234-5677</td>
+              <td>미지급</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- e: table -->
+
+      <!-- s: pagination -->
+      <div class="pagination my_5">
+        <ul>
+            <li class="pagi_arrow prev">이전</li>
+            <li class="is-active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li class="pagi_arrow next">다음</li>
+        </ul>
+      </div>
+      <!-- e: pagination -->
+      
+    </section>
+    <!-- e: section_01 -->
+     
+  </div>
+
+  <!-- s: footer -->
+  <footer>
+    <p class="copyright">Copyright 2025.THATZIT All Rights Reserved.</p>
+  </footer>
+  <!-- e: footer -->
+
+  <script src="../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../../SETTING/common/js/jquery-ui.min.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/calendar.js"></script>
+</body>
+
+</html>

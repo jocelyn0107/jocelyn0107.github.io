@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <!-- OG 시작 -->
+  <meta property="og:locale" content="ko_kr">
+  <meta property="og:locale:alternate" content="en_us">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="스탬프워크 관리시스템(SWS)">
+  <meta property="og:site_name" content="STAMP WALK ADMIN SYSTEM">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="1100">
+  <meta property="og:image:height" content="740">
+  <!-- OG 끝 -->
+  <!-- 트위터 카드 시작 -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="스탬프워크 관리시스템(SWS)" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+  <!-- 트위터 카드 끝 -->
+  <title>스탬프워크 관리시스템(SWS)</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../SETTING/common/css/typography.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="position_relative">
+  <div class="ir_su">스탬프워크 관리시스템</div>
+
+  <!-- s: modalLogout -->
+  <div class="modal_popup" id="modalLogout">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_content modal_content_sm">
+        <img src="../images/icon_popup_error_blue.svg" alt="icon" class="popup_icon">
+        <p>정말 로그아웃하시겠습니까?</p>
+        <div class="modal_btn_w">
+          <button class="btn_modal_close btn_modal_cancel">취소</button>
+          <button class="btn_modal_close btn_modal_execute">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalLogout -->
+
+  <!-- s: header -->
+  <header class="shadow">
+    <div class="header">
+      <div class="logo_menu">
+        <img src="../images/logo_blue.svg" alt="logo" class="logo_pc" onclick="location.href='dashboard.html'">
+        <img src="../images/logo_m_blue.svg" alt="logo" class="logo_m" onclick="location.href='dashboard.html'">
+        <nav class="nav_pc">
+          <ul>
+            <li class="active"><a href="walkingRate.html">걷기 실천율</a></li>
+            <li><a href="userStatistics.html">유저별 통계</a></li>
+            <li><a href="giftManagement.html">선물 관리</a></li>
+            <li><a href="reviewManagement.html">이벤트 후기</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="btn_modal_open btn_logout">
+        <img src="../images/icon_logout_blk.svg" alt="logout">
+        <div class="down_helper">로그아웃</div>
+      </div>
+      <div class="btn_burger">
+        <input type="checkbox" id="hamburger" />
+        <label for="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class="sidebar">
+          <div class="position_relative"><img src="../images/logo_m_blue.svg" alt="logo" onclick="location.href='dashboard.html'">
+          </div>
+          <ul class="nav_mobile">
+            <li><a href="walkingRate.html">걷기 실천율</a></li>
+            <li><a href="userStatistics.html">유저별 통계</a></li>
+            <li><a href="giftManagement.html">선물 관리</a></li>
+            <li><a href="reviewManagement.html">이벤트 후기</a></li>
+            <li><a href="#" class="btn_modal_open btn_logout">로그아웃</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- s: header -->
+
+  <div class="wrap">
+    <!-- s: section_01 -->
+    <section class="section_01">
+      <!-- s: tab_area -->
+      <div class="tab_area border">
+        <div class="active">전체</div>
+        <div>이벤트</div>
+      </div>
+      <!-- e: tab_area -->
+
+      <!-- s: tab_contents -->
+      <div class="tab_contents_area">
+        <!-- s: contents_all -->
+        <div class="tab_contents on">
+          <div class="tab_round mt_5">
+            <div class="tab_value_01 active">전체</div>
+            <div class="tab_value_02">성별</div>
+            <div class="tab_value_03">연령별</div>
+            <div class="tab_value_04">동네별</div>
+          </div>
+          <div class="tab_values">
+            <!-- 전체 -->
+            <div class="tab_value"></div>
+            <!-- 성별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">남성</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">여성</div>
+              </label>
+            </div>
+            <!-- 연령별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">10대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">20대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">30대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">40대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">50대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">60대 이상</div>
+              </label>
+            </div>
+            <!-- 동네별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름1</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름름22</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름3</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름4</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름5</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름6</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름7</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름8</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름9</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름10</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름11</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름12</div>
+              </label>
+            </div>
+          </div>
+          <!-- s: date_area -->
+          <div class="date_area my_3">
+            <div class="datepicker">
+              <input type="text" class="date form_date" value="2025.01.01">
+            </div>
+            <div>~</div>
+            <div class="datepicker">
+              <input type="text" class="date form_date" value="2025.12.31">
+            </div>
+            <button class="btn_date_search">조회</button>
+          </div>
+          <!-- e: date_area -->
+          <h2 class="con_title mt_5">강릉시 회원 걷기 실천율</h2>
+          <div class="total_chart_area mt_2">
+            <div class="chart_area">
+              <!-- 차트 넣는 곳 -->
+              <!-- 데이터 없을 때 -->
+              <div class="no_data">
+                <figure>
+                  <img src="../images/icon_chart_blk.svg" alt="icon">
+                </figure>
+                <p>데이터가 없습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- e: contents_all -->
+
+        <!-- s: contents_event -->
+        <div class="tab_contents">
+          <div class="tab_round mt_5">
+            <div class="tab_value_01 active">전체</div>
+            <div class="tab_value_02">성별</div>
+            <div class="tab_value_03">연령별</div>
+            <div class="tab_value_04">동네별</div>
+          </div>
+          <div class="tab_values">
+            <!-- 전체 -->
+            <div class="tab_value"></div>
+            <!-- 성별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">남성</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">여성</div>
+              </label>
+            </div>
+            <!-- 연령별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">10대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">20대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">30대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">40대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">50대</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">60대 이상</div>
+              </label>
+            </div>
+            <!-- 동네별 -->
+            <div class="tab_value">
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름1</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름름22</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름3</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름4</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름5</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름6</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름7</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름8</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름9</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름10</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름11</div>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox">
+                <div class="label">동이름12</div>
+              </label>
+            </div>
+          </div>
+          <!-- s: date_area -->
+          <div class="date_area my_3">
+            <div class="datepicker">
+              <input type="text" class="date form_date" value="2025.01.01">
+            </div>
+            <div>~</div>
+            <div class="datepicker">
+              <input type="text" class="date form_date" value="2025.12.31">
+            </div>
+            <button class="btn_date_search">조회</button>
+          </div>
+          <!-- e: date_area -->
+          <h2 class="con_title mt_5">이벤트 참여 회원 걷기 실천율</h2>
+          <div class="total_chart_area mt_2">
+            <div class="chart_area">
+              <!-- 차트 넣는 곳 -->
+              <!-- 데이터 없을 때 -->
+              <div class="no_data">
+                <figure>
+                  <img src="../images/icon_chart_blk.svg" alt="icon">
+                </figure>
+                <p>데이터가 없습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- e: contents_event -->
+      </div>
+      <!-- e: tab_contents_area -->
+    </section>
+    <!-- e: section_01 -->
+     
+  </div>
+
+  <!-- s: footer -->
+  <footer>
+    <p class="copyright">Copyright 2025.THATZIT All Rights Reserved.</p>
+  </footer>
+  <!-- e: footer -->
+
+  <script src="../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../../SETTING/common/js/jquery-ui.min.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/calendar.js"></script>
+</body>
+
+</html>

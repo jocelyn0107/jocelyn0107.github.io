@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스탬프워크 관리시스템(SWS) 파일 리스트</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="../common/css/filelist.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>스탬프워크 관리시스템(SWS) 파일 리스트 <span class="cntTotal">(<span class="total"></span>pages)</span></h1>
+    </div>
+    <table width="100%" cellspacing="0" cellpadding="0" class="htmllist">
+      <thead>
+        <tr class="head">
+          <td>No</td>
+          <td colspan="5">Path</td>
+          <td>FileName</td>
+          <td>담당자</td>
+          <td>View</td>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 메인 -->
+        <tr>
+          <th colspan="9">메인</th>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>대쉬보드</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>dashboard.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/dashboard.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td></td>
+          <td><span class="ico">팝업</span> 로그아웃</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>dashboard.html</td>
+          <td>진예슬</td>
+          <td></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>걷기 실천율 페이지</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>walkingRate.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/walkingRate.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>유저별 통계 페이지</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>userStatistics.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/userStatistics.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>선물 관리 페이지</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>giftManagement.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/giftManagement.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>이벤트 후기</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>reviewManagement.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/reviewManagement.html" target="_blank">View</a></td>
+        </tr>
+        <!-- 로그인 -->
+        <tr>
+          <th colspan="9">로그인</th>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>로그인 페이지_01</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>indesx.html</td>
+          <td>진예슬</td>
+          <td><a href="/SWS/html/index.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td>로그인 페이지_02</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>login.html</td>
+          <td>최홍철</td>
+          <td><a href="/SWS/html/login.html" target="_blank">View</a></td>
+        </tr>
+        <tr class="v1 ">
+          <td></td>
+          <td></td>
+          <td><span class="ico">팝업</span> 실패 팝업</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>login.html</td>
+          <td>진예슬</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var totalPageNum = 0;
+    $('tbody').each(function (idx) {
+      var titTxt = $('tbody').eq(idx).find('th').text();
+      $('.total').append('<span class="tit_txt">' + titTxt + ': </span>')
+      $(this).find('tr').each(function (i) {
+        $(this).find('td:first-child').text(i);
+        num = $(this).filter(':last-child').find('td:first-child').text();
+      });
+      $('.total').append('<strong>' + num + '</strong>');
+      totalPageNum += parseInt(num);
+    });
+    $('.total h3').append('<strong class="total_page_num">' + totalPageNum + '</strong>');
+
+    var totalPage = 0;
+    $(".cnt").each(function () {
+      $(this).children("em").text($(this).parent().parent().parent().children("tr").length - 1)
+      totalPage = totalPage + $(this).parent().parent().parent().children("tr").length - 1
+    });
+
+    $(".total").text(totalPage);
+
+  </script>
+
+</body>
+
+</html>
