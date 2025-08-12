@@ -1539,6 +1539,7 @@ main .about_01{
     background-position: center;
     position: relative;
     overflow: hidden;
+    background-size: cover;
 }
 .main_about_wrap{
     position: absolute;
@@ -1690,6 +1691,8 @@ main .price_01{
     height: 80vh;
     background: url('../images/bg_sub_price.jpg') no-repeat;
     position: relative;
+    background-size: cover;
+
 }
 main .price_01 .main_price_wrap{
     position: absolute;
