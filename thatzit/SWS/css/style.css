@@ -60,6 +60,14 @@ input:-webkit-autofill {
   position: relative;
   display: inline-block;
 }
+.big_font .custom_select_trigger{
+  text-align: center;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
+.big_font .select{
+  height: 57px;
+}
 .custom_select_trigger {
   display: block;
   min-width: 120px;

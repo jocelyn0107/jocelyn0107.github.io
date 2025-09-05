@@ -1,0 +1,402 @@
+<html lang="ko">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-58LD963D"></script>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-58LD963D');
+  </script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N2DC9G43RN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-N2DC9G43RN');
+  </script>
+  <!-- NAVER PV 이벤트 전송 공통 SCRIPT -->
+  <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+  <script type="text/javascript" async="" src="https://ssl.pstatic.net/melona/libs/gfp-nac-module/synchronizer.js">
+  </script>
+  <script type="text/javascript">
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "s_5203503db295";
+    if (window.wcs) {
+      wcs.inflow("cardfit.co.kr");
+      wcs_do();
+    }
+  </script>
+  <!-- NAVER 공통 SCRIPT 끝-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="<나의 소비내역 명세서 + 인공지능(AI) = 나의 신용카드 > 인공지능(AI)이 나의 핏(fit)에 맞는 좋은 신용카드를 한방에! 카드핏(cardfit)">
+  <meta name="keywords" content="인공지능, AI, 신용카드 추천, 신용카드 혜택">
+  <link rel="alternate" media="only screen and (max-width: 1023px)" href="https://m.cardfit.co.kr/top_ten_page">
+  <link rel="icon" href="./Images/faviconV2.png" type="image/webp">
+  <title>Cardfit | 이벤트</title>
+  <script>
+    // 간단한 User-Agent 검사
+    var userAgent = navigator.userAgent.toLowerCase();
+    //구글봇인지 확인 - 구글봇은 리디렉션 적용되면 안 됨
+    var isGoogleBot = /googlebot|adsbot-google|mediapartners-google/i.test(userAgent);
+
+    //모바일 기기인지 확인
+    var isMobile = /mobi|android|iphone|ipad|ipod|windows phone|blackberry/i.test(userAgent);
+
+    // 모바일 사용자일 경우 m.cardfit.co.kr로 리다이렉트
+    if (isMobile && !isGoogleBot) {
+      window.location.href = 'https://m.cardfit.co.kr/top_ten_page';
+    }
+  </script>
+  <!-- css 경로만 수정 -->
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <!-- css 경로만 수정 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script defer="" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+  </script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer="" type="module" src="/top10.js"></script>
+
+  <script type="text/javascript" async=""
+    src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/670397087/?random=1757030262720&amp;cv=11&amp;fst=1757030262720&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45je5931h1v9203355392z89203344283za200zd9203355392xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527907~104528501~104573694~104684208~104684211~104948811~104948813~105478657~105478659&amp;u_w=2560&amp;u_h=1440&amp;url=https%3A%2F%2Fwww.cardfit.co.kr%2Ftop10&amp;ref=https%3A%2F%2Fwww.cardfit.co.kr%2FbyBenefit&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Cardfit%20%7C%20%ED%83%91%2010&amp;npa=0&amp;pscdl=noapi&amp;auid=772138234.1751009479&amp;uaa=arm&amp;uab=64&amp;uafvl=Chromium%3B132.0.6834.196%7CWhale%3B4.30.291.11%7CNot.A%252FBrand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=15.6.1&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4">
+  </script>
+</head>
+
+<body class="body-gray">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58LD963D" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- 공간 분할 : 1) 일단 헤더랑 푸터는 있고 중간 공간을 좌우로 분할 2) 좌측 공간 높이 기준 약 1/3 정도를 제목 + 소분류 명칭, 나머지 2/3를 파이차트로. 3) 제목 + 소분류 명칭 중 3/10 정도를 소분류 명칭으로. 나머지는 제목 + 패딩 -->
+  <section class="section d-flex justify-content-between d-flex flex-column mainContent">
+    <header class="navbar navbar-expand-lg sticky-lg-top">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand" href="/">
+          <img src="/Images/Logo.webp" class="cardFitLogo" alt="카드핏">
+        </a>
+        <div class="navbar-nav">
+          <a class="text-dark  nav-link px-2" href="byBenefit">혜택별 카드추천</a>
+          <a class="text-dark  nav-link px-1 c757575">|</a>
+          <a class="text-dark  nav-link px-2" href="bysearch">검색으로 찾기 </a>
+          <a class="text-dark  nav-link px-1 c757575">|</a>
+          <a class="text-dark  nav-link px-2" href="top10">카드 TOP 10</a>
+          <a class="text-dark  nav-link px-1 c757575">|</a>
+          <a class="nav-link  text-dark px-2" href="cardialogue">CARDIALOGUE</a>
+          <!-- 회원가입, 로그인은 게시판에서만 쓸 거고 그나마도 글을 쓸 때 용도로만 쓸 것(보는 건 상관없음) 그러므로 해당 게시판에서만 보이게 -->
+        </div>
+      </div>
+    </header>
+    <div class="container mb-5 w-100 d-flex flex-column align-items-center">
+      <div class="mt-5 w-60">
+        <h1 class="fw-bold fs-3 w-100 d-flex justify-content-center">
+          <div class="text-center">신한카드 쓰고 최대 <span class="point">15만원</span> 캐시백 받기</div>
+        </h1>
+      </div>
+      <!-- s: event_contents -->
+      <div class="event-contents mt-5">
+        <!-- s: 1 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">1</div>
+            <div class="line"></div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">아래 카드로</div>
+            <div class="card-list my-3">
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card_wrap -->
+              <div class="card-wrap">
+                <img src="images/img_card_01.png" alt="card">
+                <div class="text-area w-100">
+                  <div>
+                    <div class="card-name">신한카드 Mr.Life</div>
+                    <div class="card-sub-01">연 최대 60만원 할인</div>
+                  </div>
+                  <div class="sub-view-area">
+                    <div class="card-suv-02">* 전월 최소 30만원 이상 이용</div>
+                    <div class="btn-view" onclick="location.href='#'">보기</div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center">전월 실적 및 할인한도 등은 “보기” 를 참조 바랍니다.</p>
+            </div>
+          </div>
+        </div>
+        <!-- e: 1 -->
+
+        <!-- s: 2 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">2</div>
+            <div class="line"></div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">이벤트 응모하고</div>
+            <p class="txt my-3">응모기한 : 2025.9.1(월) ~2025.09.30(화)</p>
+          </div>
+        </div>
+        <!-- e: 2 -->
+
+        <!-- s: 3 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">3</div>
+            <div class="line"></div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">15만원 쓰고<br>10만원 받아요</div>
+            <p class="txt my-3">카드 이용기간 : 2025.9.1(월)~2025.10.31(금)</p>
+          </div>
+        </div>
+        <!-- e: 3 -->
+
+        <!-- s: 4 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">4</div>
+            <div class="line"></div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">해외 가맹점에서 추가 이용하고<br>3만원 더 받아요</div>
+            <p class="txt my-3">카드 이용기간 : 2025.9.1(월)~2025.10.31(금)</p>
+          </div>
+        </div>
+        <!-- e: 4 -->
+
+        <!-- s: 5 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">5</div>
+            <div class="line"></div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">생활요금 자동이체 시<br>최대 2만원 캐시백</div>
+            <p class="txt my-3">자동이체 신청 및 납부기한 : 2025.9.1(월)~2025.10.31(금)</p>
+            <div class="btn-submit my-3">응모하기</div>
+          </div>
+        </div>
+        <!-- e: 5 -->
+
+        <!-- s: 6 -->
+        <div class="d-flex mb-2">
+          <div class="line-wrap">
+            <div class="num">6</div>
+          </div>
+          <div class="ms-3 w-100">
+            <div class="title">끝!</div>
+          </div>
+        </div>
+        <!-- e: 6 -->
+
+        <div class="gubun my-5"></div>
+
+        <!-- s: detail -->
+        <div class="detail">
+          <div class="title mb-2">행사 대상</div>
+          <p>행사기간 내 이벤트 응모를 완료한 회원</p>
+          <p>온라인 채널을 통해 대상카드를 보유한 회원(*은행 및 오프라인 채널 등 제외)</p>
+          <p>2025.3.1 ~2025.8.31 동안 신한 개인 신용카드 모든 이용 및 탈회이력이 없는 회원</p>
+          <p>이벤트 기간 내 마케팅 전체항목 동의 완료 및 혜택 제공시점까지 유지한 회원</p>
+          <p>※ 마케팅 동의: 마케팅 활용을 위한 [개인(신용) 정보 선택적 동의] 전체 선택</p>
+          <p class="ms-3">*동의여부 확인방법</p>
+          <p class="ms-3">- 신한카드 홈페이지>마이>내정보관리>’혜택정보 수신동의’</p>
+          <p class="ms-3 mb-3">- 신한SOL페이 >검색창 ‘혜택정보 수신동의‘</p>
+          <p class="mb-3">※ 최종 혜택 제공월로부터 12개월 이내에 신한카드 탈회 시 받은 혜택은 금액으로 환산하여 청구하거나 카드 결제계좌에서 자동 출금될 수 있습니다.</p>
+          <p class="mb-5">※ 이벤트 제외대상, 이용금액 기준, 세부조건 등은 하단의 [반드시 확인하세요]를 확인하시기 바랍니다.</p>
+
+          <div class="title mb-2">행사 내용</div>
+          <p>혜택1. 2025.9.1 ~ 2025.10.31 일시불 ·할부로 00만원 이상 이용</p>
+          <p>혜택2. 2025.9.1 ~ 2025.10.31 해외 가맹점에서 추가로 00만원 이상 이용</p>
+          <p>혜택3. 최근 6개월 이내 생활요금 자동이체 납부 이력이 없는 고객이 <span class="d-block ms-5">(도시가스, 전기요금,아파트관리비,통신요금) 자동이체 시 항목별 각 0천원 캐시백</span></p>
+          <p class="mb-5">*자동이체 신청 및 납부금액 결제기간 2025.9.1 ~ 2025.10.31</p>
+
+          <div class="d-flex align-items-center mb-2">
+            <div class="title">받는 날짜</div>
+            <p>2025. 11. 28</p>
+          </div>
+          <p class="mb-5">※ 혜택1 조건 충족 시 혜택 2~3 참여가능 (단독 제공불가)</p>
+
+          <p class="important">반드시 확인하세요.</p>
+          <p>[대상카드 연회비]</p>
+          <p>• 신한카드 Mr.Life : 국내겸용 15,000원 해외겸용 18,000원</p>
+          <p>• 신한카드Point Plan+ : 국내전용 30,000원 해외겸용 33,000원</p>
+          <p>• 신한카드 처음(anniverse) :국내전용 15,000원 해외겸용 18,000원</p>
+          <p>• 신한카드 Deep Oil : 국내겸용 10,000원 해외겸용 13,000원</p>
+          <p>• 신한카드 Discount Plan+ : 국내전용 50,000원 해외겸용 50,000원</p>
+          <p>• 신한카드 Air One :국내전용 49,000원 해외겸용 51,000원</p>
+          <p>• 신한카드 Haru(Hoshino Resorts) :국내전용 30,000원 해외겸용 30,000원</p>
+        </div>
+        <!-- e: detail -->
+
+        <div class="gubun my-5"></div>
+
+        <!-- s: notice -->
+        <div class="notice">
+          <p>[공통사항]</p>
+          <p>이벤트 응모는 행사기간 내 본 이벤트 페이지에서 응모하셔야 하며, 혜택조건이 충족되어도 미응모시 혜택이 제공되지 않습니다.</p>
+          <p>카드 이용과 응모하기 간에 선후 순서는 상관없으며 반드시 응모한 휴대전화번호와 신한카드에 등록된 전화번호가 동일해야 합니다.</p>
+          <p>응모는 변경/취소가 불가능하며 다른 이용 이벤트와 중복 응모는 불가합니다 (먼저 응모를 완료한 이벤트 적용을 받습니다)</p>
+          <p>카드 수령일과 관계없이 먼저 응모하신 월의 이벤트를 적용 받으며 수정 적용은 불가하니 신중하게 응모하시기 바랍니다.(예 : 25년 9월.10월 이벤트 중복 응모 시 25년 9월 이벤트 우선적용)</p>
+          <p>이용금액은 쿠폰적용/포인트 사용 등을 제외한 실제 카드 사용 금액 기준이며, 결제 금액이 승인거절, 승인취소, 부분취소, 매입취소, 반품/환불 등의 사유로 정상처리 되지 않을 시, 합산 이용금액에 포함되지 않습니다.</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+          <p>dddddd</p>
+        </div>
+        <!-- e: notice -->
+
+      </div>
+      <!-- e: event_contents -->
+    </div>
+    <footer class="footer">
+      <div class="container row d-flex justify-content-between">
+        <div class="col-2 d-flex flex-column justify-content-center">
+          <img src="./Images/Layer_1.webp" class="footerLogo">
+          <span class="footerText">댓츠잇(주)</span>
+        </div>
+        <div class="col-7 ps-5 text-center footerText">
+          댓츠잇소프트(주) | 대표 김범수 | 사업자등록번호 384-81-01361
+          <br>
+          E-mail thatzit1012@gmail.com | 연락처 1551-0901
+          <br><br>
+          Copyright THATZIT co.,Ltd © All rights reserved.
+        </div>
+        <div class="d-flex flex-row col-3 justify-content-end">
+          <div class="d-flex flex-column">
+            <!-- 사각형. 제일 위 칸 하나는 개인정보.. 다음 칸은 반으로 나누어서 이용약관 이용안내 / 그림 -->
+            <a class="footerText" href="./sub_pages/privacy.html">개인정보처리방침</a>
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-column ">
+                <a class="footerText" href="./sub_pages/tems_of_service.html">서비스 약관</a>
+                <!-- <a class="footerText" href="#">이용안내</a> -->
+              </div>
+              <a href="http://pf.kakao.com/_xgcJnn" class="chat_icon" alt="">
+                <img src="./Images/kakao-talk-fill.svg" class="kakao-chat" style="width: auto;" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- NAVER 사용자정의(custom001~010) SCRIPT -->
+  <script type="text/javascript">
+    if (window.wcs) {
+      if (!wcs_add) var wcs_add = {};
+      wcs_add['wa'] = 's_5203503db295';
+      var _conv = {};
+      _conv.type = 'custom007'; //메인페이지
+      wcs.trans(_conv);
+    }
+  </script>
+  <!-- /body 바로 앞까지 네이버 애널리틱스 연동 코드 -->
+  <!-- <script type="text/javascript">
+      if (!wcs_add) var wcs_add = {};
+      wcs_add["wa"] = "103f899fb5e28f0";
+      if (window.wcs) {
+          wcs_do();
+      }
+  </script> --><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+
+
+</body>
+<whale-quicksearch translate="no"></whale-quicksearch>
+
+</html>
