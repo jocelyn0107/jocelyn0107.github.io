@@ -24,11 +24,6 @@
   <link rel="stylesheet" href="../../SETTING/common/css/typography.css">
   <link rel="stylesheet" href="../../SETTING/common/css/aos.css">
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .nav_pc .gnb>li:nth-of-type(2)>a:after {
-      opacity: 1;
-    }
-  </style>
 </head>
 
 <body id="scrollTop">
@@ -144,7 +139,7 @@
   <!-- s: section_06 -->
   <section class="pt_0">
     <div class="text_center">
-      <button class="btn_bottom_home" onclick="window.open('https://stamptour.app/')">홈페이지 바로가기</button>
+      <button class="btn_bottom_home" onclick="window.open('https://www.cardfit.co.kr/')">홈페이지 바로가기</button>
     </div>
   </section>
   <!-- e: section_06 -->
@@ -165,28 +160,7 @@
   <script src="../js/layout.js"></script>
   <script>
     $(document).ready(function () {
-      const ani = gsap.timeline();
-      ani.from("#cardText .t1", {autoAlpha: 0, duration: 1}, "+=1")
-          .from("#cardText .t2", {autoAlpha: 0, duration: 1}, "+=1")
-          .from("#cardText .t3", {autoAlpha: 0, duration: 1}, "+=1")
-
-      ScrollTrigger.create({
-        animation: ani,
-        trigger: "#cardText",
-        start: "top top",
-        end: "+=3000",
-        scrub: true,
-        pin: true,
-        markers: false,
-        anticipatePin: 1
-      });
-
-
-
-
-
-
-
+      
 
 
 

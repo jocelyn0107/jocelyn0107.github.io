@@ -85,6 +85,23 @@ $(document).ready(function(){
     }
   });
 
+  //cardfit
+  const ani = gsap.timeline();
+      ani.from("#cardText .t1", {autoAlpha: 0, duration: 1}, "+=1")
+          .from("#cardText .t2", {autoAlpha: 0, duration: 1}, "+=1")
+          .from("#cardText .t3", {autoAlpha: 0, duration: 1}, "+=1")
+
+  ScrollTrigger.create({
+    animation: ani,
+    trigger: "#cardText",
+    start: "top top",
+    end: "+=3000",
+    scrub: true,
+    pin: true,
+    markers: false,
+    anticipatePin: 1
+  });
+
   
 
 });
