@@ -1,4 +1,19 @@
 $(document).ready(function(){
+  $('header').load('header.html');
+  $('footer').load('footer.html');
+  $('#float').load('float_menu.html');
+  $('#modalContact').load('modal_contact.html');
+
+  $(document).on('click', '.btn_contact, .float_contact', function () {
+    $('#modalContact').fadeIn();
+    $('body').addClass('hidden_scroll');
+  });
+  $(document).on('change', '#hamburger', function () {
+    $('body').toggleClass('hidden_scroll', this.checked);
+  });
+
+  
+  
   // 마우스
   if (window.innerWidth > 768) {
     const cursor = document.querySelector('.cursor');
@@ -6,15 +21,15 @@ $(document).ready(function(){
     let mouseX = 0, mouseY = 0;
     let cursorX = 0, cursorY = 0;
     const speed = 0.25;
-    let offsetX = -10, offsetY = -10;
+    let offsetX = -5, offsetY = -5;
 
     function updateOffset() {
       if (window.innerWidth <= 1024) {
-        offsetX = -25;
-        offsetY = -25;
+        offsetX = -12;
+        offsetY = -12;
       } else {
-        offsetX = -20;
-        offsetY = -20;
+        offsetX = -12;
+        offsetY = -12;
       }
     }
 
@@ -43,10 +58,23 @@ $(document).ready(function(){
   $('.btn_modal_open').on('click', function () {
     $('body').addClass('hidden_scroll');
   });
-  $('.btn_modal_close').on('click', function () {
-    $('.modal_popup').hide();
+  
+  $(document).on('click', '.btn_modal_close', function () {
+    $('#modalContact').fadeOut();
     $('body').removeClass('hidden_scroll');
   });
+
+
+  // 메뉴
+
+  $(document).on('mouseenter', '.gnb>li', function () {
+    $(this).find('ul.lnb').stop().slideDown();
+  });
+  
+  $(document).on('mouseleave', '.gnb>li', function () {
+    $(this).find('ul.lnb').stop().slideUp();
+  });
+  
 
   // 모바일 메뉴
   $('.btn_burger input[id="hamburger"]').on('change', function () {
@@ -57,6 +85,19 @@ $(document).ready(function(){
     }
   });
 
+  
+
+});
+$(window).on('scroll', function () {
+  $('section').each(function () {
+    const elementTop = $(this).offset().top;
+    const windowBottom = $(window).scrollTop() + $(window).height();
+
+    if (windowBottom > elementTop + 150) {
+      $(this).addClass('on');
+      $('.float_menu').addClass('on');
+    }
+  });
 });
 
 // 메인
@@ -82,3 +123,4 @@ window.onload = function () {
     });
   }
 };
+AOS.init();

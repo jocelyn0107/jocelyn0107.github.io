@@ -18,7 +18,7 @@
   <meta property="og:image:height" content="740">
   <!-- e: og -->
   <title>댓츠잇소프트(주)</title>
-  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="../../SETTING/common/css/common.css">
   <link rel="stylesheet" href="../../SETTING/common/css/reset.css">
   <link rel="stylesheet" href="../../SETTING/common/css/typography.css">
@@ -26,62 +26,17 @@
 </head>
 
 <body id="scrollTop">
-  <div class="ir_su">댓츠잇소프트(주)</div>
+  <h1 class="ir_su">댓츠잇소프트(주)</h1>
   <div class="cursor"></div>
+
   <!-- s: modalContact -->
-  <div class="modal_popup" id="modalContact">
-    <div class="modal_wrap modal_wrap_xl">
-      <div class="modal_content modal_content_sm">
-        
-        <p>모달 내용</p>
-        <div class="btn_contact_submit_area">
-          <div class="btn_contact_submit">문의하기</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="modal_popup" id="modalContact"></div>
   <!-- e: modalContact -->
    
   <!-- s: header -->
-  <header class="on">
-    <div class="header_wrap">
-      <a href="index.html" class="logo">
-        <img src="../img/logo_main_wht.svg" alt="logo">
-      </a>
-      <nav class="nav_pc">
-        <ul>
-          <li><a href="company.html">Company</a></li>
-          <li><a href="business.html">Business</a></li>
-          <li class="btn_contact">
-            <img src="../img/icon_mail.svg" alt="mail">Contact
-          </li>
-        </ul>
-      </nav>
-      <div class="btn_burger">
-        <input type="checkbox" id="hamburger" />
-        <label for="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <div class="sidebar">
-          <div class="position_relative"><img src="../img/logo_main_wht.svg" alt="logo" onclick="location.href='index.html'" class="logo">
-          </div>
-          <ul class="nav_mobile">
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Business</a></li>
-            <li class="btn_contact">
-              <img src="../img/icon_mail.svg" alt="mail">Contact
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  <header class="on"></header>
   <!-- s: header -->
 
-
-  
   <!-- s: main -->
   <main>
     <video class="bg_video" autoplay loop muted playsinline>
@@ -98,7 +53,7 @@
   <!-- s: section_01 -->
   <section class="section_main">
     <div class="wrap">
-      <div class="section_main_text">
+      <div class="section_main_text" id="quote">
         우리는 또 하나의 서비스가 아닌,<br>
         <span>반드시 필요한 변화</span>를 만듭니다.<br>
         불필요한 것을 더하지 않고,<br>
@@ -203,73 +158,49 @@
   <!-- e: section_02 -->
 
   <!-- s: float_menu -->
-  <div class="float_menu">
-    <div>
-      <div class="float_contact">
-        <div>
-          <img src="../img/icon_mail.svg" alt="mail">
-          <p>문의</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <a href="#scrollTop" class="float_top">
-        <img src="../img/icon_arrow_up_wht.svg" alt="top">
-      </a>
-    </div>
-  </div>
+  <div id="float"></div>
   <!-- e: float_menu -->
 
   <!-- s: footer -->
-  <footer>
-    <div class="wrap">
-      <div class="text_center">
-        <img src="../img/logo_bottom_wht.svg" alt="logo">
-      </div>
-      <div class="footer_text">
-        <p class="company_name">댓츠잇소프트(주)</p>
-        <p><span>대표</span>김범수</p>
-        <p><span>문의</span>1551-0901</p>
-        <p><span>이메일</span>thatzit1012@gmail.com</p>
-        <p><span>개인정보관리책임자</span>댓츠잇소프트 주식회사</p>
-        <p><span>사업자등록번호</span>384-81-01361 </p>
-        <p><span>통신판매</span>제 2023-4960111-30-2-00021호</p>
-        <p class="copy">&copy;THATZIT Co. Ltd. All rights reserved</p>
-      </div>
-
-    </div>
-  </footer>
+  <footer></footer>
   <!-- e: footer -->
 
   <script src="../../SETTING/common/js/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
   <script src="../js/layout.js"></script>
   <script>
-  
-    $(document).ready(function(){
-      $(window).on('load', function () {
-        $('.bg_video').addClass('on');
-        $('.main_text').addClass('on');
-      });
-
-      
-      
-      
+    $(window).on('load', function () {
+      $('.bg_video').addClass('on');
+      $('.main_text').addClass('on');
     });
-    $(window).on('scroll', function () {
-      $('.section_main').each(function () {
-        const elementTop = $(this).offset().top;
-        const windowBottom = $(window).scrollTop() + $(window).height();
 
-        if (windowBottom > elementTop + 150) {
-          $(this).addClass('on');
-          $('.float_menu').addClass('on');
+    // ScrollTrigger 등록
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.fonts.ready.then(() => {
+      gsap.set("#quote", { opacity: 1 }); // 초기 표시
+
+      let mySplitText = new SplitText("#quote", { type: "chars, words" });
+
+      gsap.from(mySplitText.chars, {
+        duration: 3,
+        opacity: 0,
+        y: 20,
+        ease: "power3.out",
+        stagger: { from: "random", each: 0.04 },
+        scrollTrigger: {
+          trigger: "#quote",
+          start: "top 80%",
+          toggleActions: "play reverse play reverse"
         }
       });
-
     });
-    </script>
+
+
+
+  </script>
 </body>
 </html>
