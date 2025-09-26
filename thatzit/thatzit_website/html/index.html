@@ -46,7 +46,7 @@
       <div class="en">Adding Value,<span class="m_block"></span> Not Trash.</div>
       <div class="ko">필요<span>만 남기다.</span></div>
     </div>
-    <div class="icon_scroll"></div>
+    <div class="icon_scroll" data-aos="fade-in" data-aos-delay="900" data-aos-duration="1000"></div>
   </main>
   <!-- e: main -->
 
@@ -170,7 +170,9 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="../../SETTING/common/js/library/aos.js"></script>
   <script src="../js/layout.js"></script>
+  <script src="../js/main.js"></script>
   <script>
     $(window).on('load', function () {
       $('.bg_video').addClass('on');
@@ -190,7 +192,7 @@
         opacity: 0,
         y: 20,
         ease: "power3.out",
-        stagger: { from: "random", each: 0.04 },
+        stagger: { from: "random", each: 0.02 },
         scrollTrigger: {
           trigger: "#quote",
           start: "top 80%",

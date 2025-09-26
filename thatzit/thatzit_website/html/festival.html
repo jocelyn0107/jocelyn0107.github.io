@@ -40,7 +40,7 @@
   <!-- s: header -->
 
   <!-- s: main -->
-  <main class="busi_sub_main">
+  <main class="busi_sub_main busi_sub_main_02">
     <div class="title_location">
       <h2 class="sub_main_title" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
         축제스탬프투어
@@ -63,9 +63,27 @@
   <!-- e: main -->
 
   <!-- s: section_01 -->
-  <section>
-    <div class="wrap">
-      <div class="sm_text fw_500" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">즐기고, 모으고, 선물
+  <section class="festi_img_ani">
+    <div class="bg_main_gra lo_bottom"></div>
+    <div class="bg_main_gra lo_top"></div>
+    <div class="bg_festi_img left">
+      <div class="rolling_inner">
+        <img src="../img/img_fes_left_01.webp" alt="img">
+        <img src="../img/img_fes_left_02.webp" alt="img">
+        <img src="../img/img_fes_left_03.webp" alt="img">
+        <img src="../img/img_fes_left_04.webp" alt="img">
+        <img src="../img/img_fes_left_05.webp" alt="img">
+        <img src="../img/img_fes_left_06.webp" alt="img">
+        <img src="../img/img_fes_left_01.webp" alt="img">
+        <img src="../img/img_fes_left_02.webp" alt="img">
+        <img src="../img/img_fes_left_03.webp" alt="img">
+        <img src="../img/img_fes_left_04.webp" alt="img">
+        <img src="../img/img_fes_left_05.webp" alt="img">
+        <img src="../img/img_fes_left_06.webp" alt="img">
+      </div>
+    </div>
+    <div class="festi_main_text_wrap">
+      <div class="sm_text fw_500 mb_2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">즐기고, 모으고, 선물
         받는<br>축제스탬프투어의 짜릿한 경험!</div>
       <div class="big_title outline" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">수 많은 축제의
         열기,<br>추억을 담고<br>선물도 받자!</div>
@@ -79,7 +97,22 @@
         <a href="../document/thatzit.pdf" download="댓츠잇_카달로그" class="btn_download" data-aos="fade-in" data-aos-delay="700" data-aos-duration="1000">브로슈어<img
             src="../img/icon_down_wht.svg" alt="down"></a>
       </div>
-
+    </div>
+    <div class="bg_festi_img right">
+      <div class="rolling_inner">
+        <img src="../img/img_fes_right_01.webp" alt="img">
+        <img src="../img/img_fes_right_02.webp" alt="img">
+        <img src="../img/img_fes_right_03.webp" alt="img">
+        <img src="../img/img_fes_right_04.webp" alt="img">
+        <img src="../img/img_fes_right_05.webp" alt="img">
+        <img src="../img/img_fes_right_06.webp" alt="img">
+        <img src="../img/img_fes_right_01.webp" alt="img">
+        <img src="../img/img_fes_right_02.webp" alt="img">
+        <img src="../img/img_fes_right_03.webp" alt="img">
+        <img src="../img/img_fes_right_04.webp" alt="img">
+        <img src="../img/img_fes_right_05.webp" alt="img">
+        <img src="../img/img_fes_right_06.webp" alt="img">
+      </div>
     </div>
   </section>
   <!-- e: section_01 -->
@@ -87,7 +120,7 @@
   <!-- s: section_02 -->
   <section>
     <div class="wrap text_center">
-      <img src="../img/img_main_02.jpg" alt="main" class="main_img" data-aos="fade-up" data-aos-delay="100"
+      <img src="../img/img_main_02.webp" alt="main" class="main_img" data-aos="fade-up" data-aos-delay="100"
         data-aos-duration="1000">
     </div>
   </section>
@@ -144,6 +177,26 @@
   <script src="../../SETTING/common/js/library/aos.js"></script>
   <script src="../js/layout.js"></script>
   <script>
+    $(function(){
+  $('.rolling_inner').each(function(){
+    const $inner = $(this);
+    const speed = 1; // px/frame
+    let translateY = 0;
+
+    function loop(){
+      translateY -= speed;
+      const height = $inner.height() / 2; // 한 세트 높이
+      if(-translateY >= height){
+        translateY = 0; // 점프 없이 반복
+      }
+      $inner.css('transform', `translateY(${translateY}px)`);
+      requestAnimationFrame(loop);
+    }
+
+    requestAnimationFrame(loop);
+  });
+});
+
 
   </script>
 </body>

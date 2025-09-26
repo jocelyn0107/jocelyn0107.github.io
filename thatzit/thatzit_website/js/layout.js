@@ -85,24 +85,9 @@ $(document).ready(function(){
     }
   });
 
-  //cardfit
-  const ani = gsap.timeline();
-      ani.from("#cardText .t1", {autoAlpha: 0, duration: 1}, "+=1")
-          .from("#cardText .t2", {autoAlpha: 0, duration: 1}, "+=1")
-          .from("#cardText .t3", {autoAlpha: 0, duration: 1}, "+=1")
+ 
 
-  ScrollTrigger.create({
-    animation: ani,
-    trigger: "#cardText",
-    start: "top top",
-    end: "+=3000",
-    scrub: true,
-    pin: true,
-    markers: false,
-    anticipatePin: 1
-  });
 
-  
 
 });
 $(window).on('scroll', function () {
@@ -117,27 +102,4 @@ $(window).on('scroll', function () {
   });
 });
 
-// 메인
-window.onload = function () {
-  if (window.innerWidth > 620) {   // 해상도 620 초과일 때만 실행
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils.toArray('.con_01 .list_box .box').forEach((selector) => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: selector,
-          start: '0% 10%',
-          end: '0% 0%',
-          scrub: 1,
-        }
-      })
-      .to(selector, {
-        rotateX: -5,
-        scale: 0.95,
-        transformOrigin: 'top',
-        filter: 'brightness(0.7)'
-      }, 0);
-    });
-  }
-};
 AOS.init();
