@@ -7,13 +7,18 @@ $(document).ready(function(){
   $(document).on('click', '.btn_contact, .float_contact', function () {
     $('#modalContact').fadeIn();
     $('body').addClass('hidden_scroll');
+    document.getElementById('conCompany').value = '';
+    document.getElementById('conPosition').value = '';
+    document.getElementById('conName').value = '';
+    document.getElementById('conContact').value = '';
+    document.getElementById('conEmail').value = '';
+    document.getElementById('conContents').value = '';
   });
   $(document).on('change', '#hamburger', function () {
     $('body').toggleClass('hidden_scroll', this.checked);
   });
+  
 
-  
-  
   // 마우스
   if (window.innerWidth > 768) {
     const cursor = document.querySelector('.cursor');

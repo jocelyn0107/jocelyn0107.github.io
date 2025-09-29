@@ -1453,17 +1453,17 @@ footer img{
   position: absolute;
   width: 100px;
 }
-.lo_01{
+.bg_icon.lo_01{
   right: -80px;
   top: 30%;
   z-index: -1;
 }
-.lo_02{
+.bg_icon.lo_02{
   left: -110px;
   bottom: 30%;
   z-index: -1;
 }
-.lo_03{
+.bg_icon.lo_03{
   width: 80px;
   height: 80px;
   left: 160px;

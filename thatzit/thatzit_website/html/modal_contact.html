@@ -5,43 +5,62 @@
   <div class="modal_content modal_scroll py_0">
     <h2>CONTACT</h2>
     <p class="sub_txt">문의를 남겨주시면 빠른 시일안에 연락드리겠습니다.</p>
-    <div class="contact_con">
-      <div>
+    <iframe name="frAttachFiles" class="d_none"></iframe>
+    <form role="form"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycbwO16MtfBDnY8ceFjfGo4huMwE7Sd4mHa3FPVx5DdEdLoFVlZKtQu-dXJJLyNa-FA7z/exec" 
+          target="frAttachFiles"
+          onsubmit="alert('전송이 완료되었습니다!'); document.getElementById('modalContact').style.display='none';">
+      <div class="contact_con">
         <div>
-          <p>회사명</p>
-          <input type="text" class="input_form" placeholder="회사명을 입력해주세요.">
+          <div>
+            <p>회사명</p>
+            <input type="text" id="conCompany" class="input_form" name="회사명" placeholder="회사명을 입력해주세요." required autocomplete="off">
+          </div>
+          <div>
+            <p>직책</p>
+            <input type="text" id="conPosition" class="input_form" name="직책" placeholder="직책을 입력해주세요." required autocomplete="off">
+          </div>
+          <div>
+            <p>이름</p>
+            <input type="text" id="conName" class="input_form" name="이름" placeholder="이름을 입력해주세요." required autocomplete="off">
+          </div>
+          <div>
+            <p>연락처</p>
+            <input type="text" id="conContact" class="input_form" name="연락처" placeholder="연락처를 입력해주세요." required autocomplete="off" maxlength="11">
+          </div>
+          <div>
+            <p>이메일</p>
+            <input type="text" id="conEmail" class="input_form" name="이메일" placeholder="이메일을 입력해주세요." required autocomplete="off">
+          </div>
         </div>
         <div>
-          <p>직책</p>
-          <input type="text" class="input_form" placeholder="직책을 입력해주세요.">
-        </div>
-        <div>
-          <p>이름</p>
-          <input type="text" class="input_form" placeholder="이름을 입력해주세요.">
-        </div>
-        <div>
-          <p>연락처</p>
-          <input type="text" class="input_form" placeholder="연락처를 입력해주세요.">
-        </div>
-        <div>
-          <p>이메일</p>
-          <input type="text" class="input_form" placeholder="이메일을 입력해주세요.">
+          <p>내용</p>
+          <textarea id="conContents" placeholder="문의하실 내용을 입력해주세요." name="문의 내용" class="text_contact" required autocomplete="off"></textarea>
         </div>
       </div>
-      <div>
-        <p>내용</p>
-        <textarea placeholder="문의하실 내용을 입력해주세요." class="text_contact"></textarea>
+      <div class="privacy_con">
+        <textarea class="text_contact privacy" readonly>개인정보 수집 및 이용 동의
+
+■ 개인정보 수집목적 및 이용목적
+문의 및 메시지 접수
+
+■ 수집하는 개인정보 항목
+성명, 이메일, 주소 등
+
+■ 개인정보의 보유기간 및 이용기간
+관계 법령의 규정에 따라 귀하의 개인정보를 보존할 의무가 있는 경우가 아닌 한, 회사는 위의 수집 및 이용목적을 달성할 때까지 귀하의 개인정보를 보유 및 이용합니다.
+
+* 귀하는 위와 같은 일반 개인정보의 수집 및 이용을 거부할 수 있습니다. 다만, 일반 개인정보의 필수적 수집 및 이용에 동의하지 않을 경우 문의 및 메시지 서비스 이용이 불가능합니다.
+        </textarea>
+        <div class="checkbox mb_5">
+          <input type="checkbox" name="개인정보방침 체크박스" id="checkbox1" class="essential_input" checked>
+          <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+        </div>
       </div>
-    </div>
-    <div class="privacy_con">
-      <textarea class="text_contact privacy" readonly>개인정보처리방침</textarea>
-      <div class="checkbox mb_5">
-        <input type="checkbox" name="checkbox1" id="checkbox1" class="essential_input" checked>
-        <label class="label" for="checkbox1">(필수) 개인정보 수집 및 이용 동의</label>
+      <div class="btn_hover">
+        <button type="submit" class="btn_contact_submit"><div><span>문</span><span>의</span><span>하</span><span>기</span></div></button>
       </div>
-    </div>
-    <div class="btn_hover">
-      <button class="btn_contact_submit"><div><span>문</span><span>의</span><span>하</span><span>기</span></div></button>
-    </div>
+    </form>
   </div>
 </div>
