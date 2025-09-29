@@ -425,6 +425,7 @@ main{
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden !important;
 }
 .bg_video{
   width: 100vw;
@@ -491,6 +492,7 @@ main{
   animation: scrollMove 2s infinite;
 }
 section{
+  /* overflow: hidden; */
   width: 100%;
   padding: 120px 0 ;
 }
@@ -1808,7 +1810,7 @@ footer img{
   transition: width 1s linear;
 }
 .cardfit_img_wrap>div.active::after{
-  width: 200vw;
+  width: 100vw;
   transition: all 0.9s linear 0.5s;
 }
 .cardfit_img_wrap>div>div{
@@ -2193,6 +2195,9 @@ footer img{
   }
   .direct_guide_wrap .guide_area{
     margin-bottom: 20px !important;
+  }
+  .direct_guide_wrap .big_title, .direct_guide_wrap .sm_text{
+    text-align: center !important;
   }
   .main_img {
     border-radius: 3%;
