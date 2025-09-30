@@ -18,7 +18,7 @@ $(document).ready(function(){
     $('body').toggleClass('hidden_scroll', this.checked);
   });
   
-
+0
   // 마우스
   if (window.innerWidth > 768) {
     const cursor = document.querySelector('.cursor');

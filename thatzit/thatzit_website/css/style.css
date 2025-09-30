@@ -1163,11 +1163,16 @@ footer img{
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, auto));
-  row-gap: 6%;
-  column-gap: 5%;
   margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 40px;
+  column-gap: 5%;
+}
+.certificate_wrap img{
+  width: 30%;
 }
 
 /* 어바웃 끝 */
@@ -2249,6 +2254,16 @@ footer img{
   .partner_slide .partner {
     max-width: 120px;
     padding: 0 10px;
+  }
+  .certificate_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+  }
+  .certificate_wrap img{
+    width: 45%;
   }
   .stamp_img_wrap{
     display: grid;
