@@ -1169,7 +1169,7 @@ footer img{
   align-items: center;
   justify-content: space-between;
   row-gap: 40px;
-  column-gap: 5%;
+  column-gap: 5%;        
 }
 .certificate_wrap img{
   width: 30%;
