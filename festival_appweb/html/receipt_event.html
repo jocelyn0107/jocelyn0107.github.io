@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: modal_alert_two_button -->
+  <div class="modal_popup" id="modalAlertTwoBtn">
+    <div class="modal_wrap modal_wrap_sm ">
+      <div class="modal_icon">
+        <img src="../img/icon_receipt_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">알림</p>
+          <p class="modal_p mb_0">업로드 하시겠습니까?</p>
+          <p class="modal_p_pur mb_3">* 제출한 영수증은 수정할 수 없습니다.<br>업로드 전 유의사항을 꼭 확인해주세요.</p>
+          <img src="../img/img_receipt_02.webp" alt="img" class="modal_img mb_4">
+          <div class="modal_button two">
+            <div class="btn_main_gra btn_small">확인</div>
+            <div class="btn_gray btn_small btn_modal_close">취소</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_alert_one_button -->
+
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">영수증 이벤트</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: inner -->
+    <div class="inner">
+      <div class="inner_magin"></div>
+      <div class="img_w receipt">
+        <img src="../img/img_receipt_02.webp" alt="img">
+        <h2>인식된 정보를 확인해주세요!</h2>
+      </div>
+      <div class="card receipt">
+        <div>
+          <p class="title">사업자번호</p>
+          <p>000-00-0000000</p>
+        </div>
+        <div>
+          <p class="title">주소</p>
+          <p>경기 수원시 팔달구 권광로 ***번길 41</p>
+        </div>
+        <div>
+          <p class="title">결제 일시</p>
+          <p>100,500원</p>
+        </div>
+        <div>
+          <p class="title wrong">카드번호</p>
+          <p>000-00-0000000</p>
+        </div>
+        <div>
+          <p class="title wrong">승인번호</p>
+          <p>0000000</p>
+        </div>
+      </div>
+
+      <!-- btn -->
+      <div class="btn_gift_apply" data-modal="#modalAlertTwoBtn">영수증 업로드</div>
+      <p class="privacy_helper">※ 영수증 정보는 이벤트 참여를 위한 목적으로만<br>사용되며, 이벤트 종료 후 즉시 파기됩니다.</p>
+      <div class="text_center mb_4">
+        <p class="privacy_helper btn_auto" data-modal="#modalAlertTwoBtn">수동 인증 요청</p>
+      </div>
+
+    </div>
+    <!-- e: inner -->
+     
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

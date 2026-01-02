@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: modal_choose_img -->
+  <div class="modal_popup" id="modalChooseImg">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="btn_close btn_modal_close">
+        <img src="../img/icon_close_blk.svg" alt="icon">
+      </div>
+      <div class="modal_content img">
+        <p class="modal_p mb_3">이미지 선택</p>
+        <div class="modal_button">
+          <div class="btn_take_picture mb_3">사진 찍기</div>
+          <div class="btn_choose_img">이미지 첨부</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_choose_img -->
+
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">계정</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: inner -->
+    <div class="inner">
+      <div class="inner_magin"></div>
+      <div class="img_profile_area member">
+        <img src="../img/icon_profile_light_gry_pur.svg" alt="profile">
+        <div class="btn_gallery" data-modal="#modalChooseImg"></div>
+      </div>
+      <div class="user_id text_center">소셜 계정</div>
+      <div class="user_info text_center mb_4">@5684・카카오로 로그인됨</div>
+      <div class="card member">
+        <!-- 닉네임 -->
+        <div>
+          <p class="strong">닉네임</p>
+          <p class="info">여행길</p>
+        </div>
+        <!-- 이름 -->
+        <div>
+          <p class="strong">이름</p>
+          <p class="info">-</p>
+        </div>
+        <!-- 연락처 -->
+        <div>
+          <p class="strong">연락처</p>
+          <p class="info">-</p>
+        </div>
+        <!-- 주소 -->
+        <div>
+          <p class="strong">주소</p>
+          <p class="info">-</p>
+        </div>
+      </div>
+
+      <!-- btn -->
+      <div class="btn_gift_apply" onclick="location.href='profile_modify.html'">정보 수정하기</div>
+
+      <!-- s: btn_area -->
+      <div class="btn_area profile">
+        <div>계정 삭제</div>
+        <div>로그아웃</div>
+      </div>
+      <!-- e: btn_area -->
+    </div>
+    <!-- e: inner -->
+    
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/723bbc93b2.js" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

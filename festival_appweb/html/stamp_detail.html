@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header>
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">콘텐츠명</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: bg_stamp_detail -->
+    <div class="bg_stamp_detail"></div>
+    <!-- e: bg_stamp_detail -->
+
+    <!-- s: inner -->
+    <div class="inner">
+      <!-- s: card(info) -->
+      <section class="card info">
+        <h1 class="text_center mb_4">콘텐츠명</h1>
+        <p class="stamp_info mb_4">콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. 콘텐츠 설명이 들어갑니다. </p>
+        <div class="btn_smart_commentary">
+          <img src="../img/icon_triangle_blk.svg" alt="icon">
+          <p>스마트 관광 해설</p>
+        </div>
+      </section>
+      <!-- e: card(info) -->
+
+      <!-- s: card(stamping) -->
+      <!-- class에 off추가 하면 가려집니다. -->
+      <div class="card stamping">
+        <img src="../img/icon_stamp_on_wht_gra.svg" alt="stamp">
+        <div>
+          <p class="title">4번째로 스탬핑했습니다.</p>
+          <p class="letter_spa_0">2025.11.27 10:19:25</p>
+        </div>
+      </div>
+      <!-- e: card(stamping) -->
+  
+      <!-- s: card(review) -->
+      <div class="card review">
+        <div class="d_flex align_items_center justify_content_between mb_4">
+          <h2>평점 및 리뷰</h2>
+          <img src="../img/icon_arrow_right_gry.svg" alt="arrow" class="arrow" onclick="location.href='review.html'">
+        </div>
+        <div class="d_flex align_items_center justify_content_between">
+          <p class="ft_40 fw_700">4.5</p>
+          <div class="stars">
+            <img src="../img/icon_star_pur.svg" alt="star">
+            <img src="../img/icon_star_pur.svg" alt="star">
+            <img src="../img/icon_star_pur.svg" alt="star">
+            <img src="../img/icon_star_half.svg" alt="star">
+            <img src="../img/icon_star_gry.svg" alt="star">
+          </div>
+        </div>
+      </div>
+      <!-- e: card(review) -->
+  
+      <!-- s: card(location) -->
+      <div class="card location">
+        <div class="d_flex align_items_center justify_content_between mb_3">
+          <h2>장소</h2>
+          <img src="../img/icon_arrow_right_gry.svg" alt="arrow" class="arrow">
+        </div>
+        <!-- s: map_area -->
+        <div class="map_area">
+          <!-- 이미지 지우고 여기에 추가해주세요. -->
+          <img src="../img/img_poster.jpg" alt="map">
+        </div>
+        <!-- e: map_area -->
+      </div>
+      <!-- e: card(location) -->
+    </div>
+    <!-- e: inner -->
+    
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

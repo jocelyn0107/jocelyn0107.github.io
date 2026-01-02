@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">계정</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: inner -->
+    <div class="inner">
+      <div class="inner_magin"></div>
+      <div class="img_profile_area non_member">
+        <img src="../img/icon_profile_light_gry_pur.svg" alt="profile">
+        <div class="btn_gallery"></div>
+      </div>
+      <div class="user_id text_center">게스트</div>
+      <div class="user_info text_center mb_4">@5684</div>
+      <div class="card non_member">
+        <h2 class="mb_4 text_center">계정을 연동해서 데이터 보관</h2>
+        <p>게스트 로그인은 데이터가 안전하게 보관되지 않습니다. 기기 변경 또는 예기치 않은 오류가 발생할 경우, 스탬프 인증 내역을 포함한 모든 정보가 삭제될 수 있습니다. 이미 축제스탬프투어 앱에서 카카오로그인으로 회원가입한 이력이 있는 경우, ‘연동하기' 버튼을 누르면 동일한 카카오 계정으로 자동 연동되며 기존 데이터가 그대로 이관됩니다.</p>
+        <!-- btn -->
+        <div class="btn" onclick="location.href='login.html'">연동하기</div>
+      </div>
+
+      <!-- s: btn_area -->
+      <div class="btn_area profile">
+        <div>계정 삭제</div>
+        <div>로그아웃</div>
+      </div>
+      <!-- e: btn_area -->
+    </div>
+    <!-- e: inner -->
+    
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/723bbc93b2.js" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

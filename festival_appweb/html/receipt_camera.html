@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">영수증 촬영</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: camera_area -->
+    <div class="camera_area">
+    </div>
+    <!-- e: camera_area -->
+
+    <!-- s: camera_text_area -->
+    <div class="camera_text_area receipt_area justify_content_between">
+      <p>영수증의 사업자 및 결제정보가<br>모두 보이도록 촬영해주세요.</p>
+      <div class="btn_camera" onclick="location.href='receipt_event.html'">
+        <img src="../img/icon_camera_pur.svg" alt="camera">
+      </div>
+    </div>
+    <!-- e: camera_text_area -->
+
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+.ft_60 {font-size: 60px !important;}
+.ft_55 {font-size: 55px !important;}
+.ft_50 {font-size: 50px !important;}
+.ft_45 {font-size: 45px !important;}
+.ft_40 {font-size: 40px !important;}
+.ft_35 {font-size: 35px !important;}
+.ft_30 {font-size: 30px !important;}
+.ft_29 {font-size: 29px !important;}
+.ft_28 {font-size: 28px !important;}
+.ft_27 {font-size: 27px !important;}
+.ft_26 {font-size: 26px !important;}
+.ft_25 {font-size: 25px !important;}
+.ft_24 {font-size: 24px !important;}
+.ft_23 {font-size: 23px !important;}
+.ft_22 {font-size: 22px !important;}
+.ft_21 {font-size: 21px !important;}
+.ft_20 {font-size: 20px !important;}
+.ft_19 {font-size: 19px !important;}
+.ft_18 {font-size: 18px !important;}
+.ft_17 {font-size: 17px !important;}
+.ft_16 {font-size: 16px !important;}
+.ft_15 {font-size: 15px !important;}
+.ft_14 {font-size: 14px !important;}
+.ft_13 {font-size: 13px !important;}
+.ft_12 {font-size: 12px !important;}
+.ft_11 {font-size: 11px !important;}
+.ft_10 {font-size: 10px !important;}
+.fw_100{font-weight: 100 !important;}
+.fw_200{font-weight: 200 !important;}
+.fw_300{font-weight: 300 !important;}
+.fw_400{font-weight: 400 !important;}
+.fw_500{font-weight: 500 !important;}
+.fw_600{font-weight: 600 !important;}
+.fw_700{font-weight: 700 !important;}
+.fw_800{font-weight: 800 !important;}
+.fw_900{font-weight: 900 !important;}

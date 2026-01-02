@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">선물 신청</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    <!-- s: inner -->
+    <div class="inner">
+      <div class="inner_magin"></div>
+      <!-- 이름 -->
+      <div class="card gift_apply mb_0">
+        <label for="userName" class="essential">이름</label>
+        <input type="text" id="userName" class="input_control" placeholder="이름을 입력하세요." autocomplete="off">
+      </div>
+      <div class="gift_apply_helper">본명을 입력해주세요.</div>
+      <!-- 휴대폰 번호 -->
+      <div class="card gift_apply mb_0">
+        <label for="userContact" class="essential">휴대폰 번호</label>
+        <input type="text" id="userContact" class="input_control" placeholder="휴대폰 번호를 입력하세요." autocomplete="off">
+      </div>
+      <div class="gift_apply_helper">‘-’없이 숫자만 입력하세요.</div>
+      <!-- 주소 -->
+      <div class="card gift_apply">
+        <label for="userAddress">주소</label>
+        <div class="d_flex align_items_center mb_2">
+          <input type="text" id="userAddress" class="input_control" placeholder="주소를 입력하세요." autocomplete="off">
+          <div class="btn_address">주소 검색</div>
+        </div>
+        <input type="text" class="input_control" placeholder="상세주소" autocomplete="off">
+      </div>
+      <!-- 개인정보처리 -->
+      <div class="card privacy">
+        <h3 class="text_center mb_3 ft_18 fw_500">개인정보 제 3자 제공 동의</h3>
+        <p class="mb_3">축제스탬프투어 이벤트 경품 지급과 관련하여 개인정보를 수집 이용하는 경우에는 [개인정보 보호법에] 따라 본인의 동의를 얻어야 합니다. 귀하께서 제공한 모든 정보는 다음의 목적을 위해 활용되며, 아래 목적 이외의 용도로는 사용되지 않습니다.</p>
+        <p>[제공받는 기관]</p>
+        <p class="mb_3">지자체, 지자체사무위탁기관, 축제 행사 운영 기관</p>
+        <p>[제공정보의 이용목적]</p>
+        <p class="mb_3">경품지급</p>
+        <p>[제공정보]</p>
+        <p class="mb_3">이름, 전화번호, 주소</p>
+        <p>[보유 및 이용기간]</p>
+        <p class="mb_3">수집이용동의 날짜부터 이벤트 경품 지급 후 폐기까지 귀하는 개인정보 제 3자 제공 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 이벤트 경품 지급을 받을 수 없습니다.</p>
+      </div>
+      <!-- btn -->
+      <div class="btn_gift_apply">신청</div>
+      <p class="privacy_helper">신청을 누르시면 약관에 동의한것으로 간주됩니다.<br>정보는 선물신청 외에 사용되지 않습니다.</p>
+    </div>
+    <!-- e: inner -->
+    
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/723bbc93b2.js" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

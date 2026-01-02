@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- 룰렛으로 가는 버튼 나중에 개발시 지워주세요. -->
+  <div class="goto_roulette" onclick="location.href='roulette.html'">룰렛으로</div>
+  <div class="goto_roulette lo_01" onclick="location.href='festival_detail_type_02.html'">타입2</div>
+
+  <!-- s: modal_choose_img -->
+  <div class="modal_popup" id="modalChooseImg">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="btn_close btn_modal_close">
+        <img src="../img/icon_close_blk.svg" alt="icon">
+      </div>
+      <div class="modal_content img">
+        <p class="modal_p mb_3">이미지 선택</p>
+        <div class="modal_button">
+          <div class="btn_take_picture mb_3" onclick="location.href='receipt_camera.html'">사진 찍기</div>
+          <div class="btn_choose_img" onclick="location.href='receipt_recognize.html'">이미지 첨부</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_choose_img -->
+  
+  <!-- s: modal_alert_two_button -->
+  <div class="modal_popup" id="modalAlertTwoBtn">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_icon">
+        <img src="../img/icon_check_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">알림</p>
+          <p class="modal_p mb_5">알림 내용을 입력하는 곳입니다.</p>
+          <div class="modal_button two">
+            <div class="btn_main_gra btn_small">확인</div>
+            <div class="btn_gray btn_small btn_modal_close">취소</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_alert_one_button -->
+
+  <!-- s: modal_alert_one_button -->
+  <div class="modal_popup" id="modalAlertOneBtn">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_icon">
+        <img src="../img/icon_check_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">알림</p>
+          <p class="modal_p mb_5">알림 내용을 입력하는 곳입니다.</p>
+          <div class="modal_button">
+            <div class="btn_main_gra btn_small btn_modal_close">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_alert_one_button -->
+
+  <!-- s: modal_notice -->
+  <div class="modal_popup" id="modalNotice">
+    <div class="modal_wrap modal_wrap_md">
+      <div class="modal_icon">
+        <img src="../img/icon_notice_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">공지</p>
+          <p class="modal_p mb_4">공지사항을 적는 곳입니다.공지사항을 적는 곳입니다.     공지사항을 적는 곳입니다.공지사항을 적는 곳입니다.</p>
+          <div class="title_icon">
+            <img src="../img/icon_gift_pur.svg" alt="gift">
+            <p class="modal_title text_left">선물안내</p>
+          </div>
+          <p class="modal_p text_left">선물내용을 <span class="color_main">적는</span> 곳입니다.</p>
+          <p class="modal_p text_left">선물내용을 <span class="color_main">적는</span> 곳입니다.</p>
+          <p class="modal_p_gray text_left mb_4">※ 유의사항이 들어가는 곳입니다.</p>
+          <div class="modal_button">
+            <div class="btn_main_gra mb_3">확인</div>
+            <div class="color_gray_600 btn_modal_close">다시보지 않기</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_notice -->
+
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header>
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">제 10회 실향민문화축제</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+
+    
+    <!-- s: poster_area -->
+    <section class="poster_area">
+      <div class="bg_gra">
+        <div class="inner">
+          <img src="../img/img_poster.jpg" alt="poster">
+          <div class="title">제 10회 실향민문화축제</div>
+          <div class="badge_period">
+            <div class="badge">진행</div>
+            <div class="period letter_spa_0">2026.12.24 ~ 2026.12.25</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- e: poster_area -->
+
+    <!-- s: contents_area -->
+    <section class="contents_area">
+      <!-- s: inner -->
+      <div class="inner">
+        <!-- s: tab_menu -->
+        <div class="tab_menu">
+          <div class="on" data-tab="0">스탬프</div>
+          <div data-tab="1">영수증</div>
+          <div data-tab="2">정보</div>
+          <div data-tab="3">한마디</div>
+        </div>
+        <!-- e: tab_menu -->
+  
+        <!-- s: tab_contents -->
+        <div class="tab_contents">
+          <!-- s: tab_con_01 -->
+          <div class="tab_con_01 tab_con on" id="tabStamp"></div>
+          <!-- e: tab_con_01 -->
+
+          <!-- s: tab_con_02 -->
+          <div class="tab_con_02 tab_con" id="tabReceipt"></div>
+          <!-- e: tab_con_02 -->
+
+          <!-- s: tab_con_03 -->
+          <div class="tab_con_03 tab_con" id="tabInfo"></div>
+          <!-- e: tab_con_03 -->
+
+          <!-- s: tab_con_04 -->
+          <div class="tab_con_04 tab_con" id="tabComment"></div>
+          <!-- e: tab_con_04 -->
+        </div>
+        <!-- e: tab_contents -->
+      </div>
+      <!-- e: inner -->
+    </section>
+    <!-- e: contents_area -->
+
+    <!-- s: float_menu -->
+    <div class="float_menu">
+      <div class="btn_gift d_none">신청가능한 선물이 있어요!</div>
+      <div class="location">
+        <div class="map">
+          <img src="../img/icon_map_pur.svg" alt="map">
+        </div>
+        <div class="qr" onclick="location.href='qr_camera.html'">
+          <img src="../img/icon_qr_wht.svg" alt="qr">
+        </div>
+      </div>
+    </div>
+    <!-- e: float_menu -->
+
+    <!-- s: send_area -->
+    <div class="send_area">
+      <div>
+        <input type="text" class="write_input" name="write_input" placeholder="한마디를 입력해주세요.">
+        <div class="btn_send">
+        </div>
+      </div>
+    </div>
+    <!-- e: send_area -->
+
+    <!-- s: btn_receipt -->
+    <div class="btn_receipt">
+      <div class="btn_gift_apply mb_0" data-modal="#modalChooseImg">영수증 업로드</div>
+    </div>
+    <!-- e: btn_receipt -->
+
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

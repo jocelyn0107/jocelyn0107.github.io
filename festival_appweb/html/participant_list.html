@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>축제스탬프투어</title>
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- s: modal_alert_one_button -->
+  <div class="modal_popup" id="modalAlertOneBtn">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_icon">
+        <img src="../img/icon_receipt_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">내 영수증</p>
+          <img src="../img/img_receipt_02.webp" alt="img" class="modal_img mb_4">
+          <div class="modal_button">
+            <div class="btn_main_gra btn_small btn_modal_close">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_alert_one_button -->
+
+  <!-- s: wrap -->
+  <div class="wrap">
+    <!-- s: header -->
+    <div class="header_wrap">
+      <header class="always_on">
+        <div class="arrow_left" onclick="history.go(-1);">
+          <img src="../img/icon_arrow_left_blk.svg" alt="arrow">
+        </div>
+        <div class="appbar_title">이벤트 참여현황</div>
+        <div class="mobile_btn">
+          <input type="checkbox" id="hamburger" />
+          <label for="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <!-- s: mobile_menu -->
+        <div class="mobile_menu" id="menu"></div>
+        <!-- e: mobile_menu -->
+      </header>
+    </div>
+    <!-- e: header -->
+    
+    <!-- s: inner -->
+    <div class="inner">
+        <div class="inner_magin"></div>
+        <!-- s: tab_menu -->
+        <div class="tab_menu receipt mt_2">
+          <div class="on" data-tab="0">전체</div>
+          <div data-tab="1">내 영수증</div>
+        </div>
+        <!-- e: tab_menu -->
+  
+        <!-- s: tab_contents -->
+        <div class="tab_contents">
+          <!-- s: tab_con_01 -->
+          <div class="tab_con_01 tab_con on" id="tabReceiptAll"></div>
+          <!-- e: tab_con_01 -->
+
+          <!-- s: tab_con_02 -->
+          <div class="tab_con_02 tab_con" id="tabReceiptMy"></div>
+          <!-- e: tab_con_02 -->
+
+        </div>
+        <!-- e: tab_contents -->
+      </div>
+      <!-- e: inner -->
+     
+  </div>
+  <!-- e: wrap -->
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
