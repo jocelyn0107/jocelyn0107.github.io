@@ -1788,6 +1788,8 @@ input#hamburger:checked + label + div {
 
 /* s: 나의 기록 */
 .history_helper{
+  max-width: 700px;
+  margin: 0 auto;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0;
