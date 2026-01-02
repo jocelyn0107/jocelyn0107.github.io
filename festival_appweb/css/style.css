@@ -1275,7 +1275,7 @@ input#hamburger:checked + label + div {
   min-width: 240px;
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 40%;
   transform: translate(-50%, -50%);
 }
 .camera_text_area{
