@@ -10,8 +10,24 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <!-- 당첨으로 가는 버튼 나중에 개발시 지워주세요. -->
-  <div class="goto_roulette" onclick="location.href='roulette_win.html'">당첨으로</div>
+  <!-- s: modal_alert_one_button -->
+  <div class="modal_popup" id="modalPrize">
+    <div class="modal_wrap modal_wrap_sm">
+      <div class="modal_icon">
+        <img src="../img/icon_prize_wht.svg" alt="modal_icon">
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <p class="modal_title">선물명01</p>
+          <p class="modal_p mb_5">축하드립니다! 당첨되었습니다.</p>
+          <div class="modal_button">
+            <div class="btn_main_gra btn_small" onclick="location.href='roulette_win.html'">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_alert_one_button -->
 
   <!-- s: wrap -->
   <div class="wrap">
@@ -47,11 +63,7 @@
           <div class="btn_inner_start">START</div>
         </div>
         <div class="btn_start_wrap">
-          <div class="btn_roulette_start">START</div>
-          <div class="btn_helper">눌러주세요.</div>
-        </div>
-        <div class="btn_start_wrap">
-          <div class="btn btn_roulette_start disable">START</div>
+          <div class="btn_roulette_start" data-modal="#modalPrize">START</div>
           <div class="btn_helper">눌러주세요.</div>
         </div>
       </div>
