@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/ui.css">
+  <style>
+    nav li:nth-of-type(3){
+      color: var(--primary-color);
+    }
+  </style>
+  <title>축제스탬프투어 관리자</title>
+</head>
+<body class="bg_body rewards">
+  <h1 class="ir_su">축제스탬프투어 공무원 관리자</h1>
+  <!-- s: modal_receipt -->
+  <div class="modal_popup" id="modalReceipt">
+    <div class="modal_wrap modal_wrap_md bg">
+      <div class="modal_top">
+        <div class="title_area">
+          <div>영수증 보기</div>
+        </div>
+        <div class="close_area btn_modal_close">
+          <img src="../img/icon_close.svg" alt="icon">
+        </div>
+      </div>
+      <div class="modal_scroll">
+        <div class="modal_content">
+          <div class="receipt_img">
+            <img src="../img/img_receipt.jpg" alt="img">
+          </div>
+          <div class="modal_button">
+            <div class="btn_navy btn_x_small btn_modal_close">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modal_receipt -->
+  
+  <!-- s: modal_alert_two_button_logout -->
+  <div id="modalLogout"></div>
+  <!-- e: modal_alert_two_button_logout -->
+   
+  <!-- s: header -->
+  <header id="header"></header>
+  <!-- e: header -->
+
+  <div class="main_section_wrap">
+    <!-- s: main -->
+    <main class="wrap">
+      <div class="title_area">
+        <div class="breadcrumb">
+          <h2 class="title">영수증</h2>
+          <img src="../img/icon_arrow_down.svg" alt="arrow" class="arrow">
+          <h2 class="title">영수증 상세</h2>
+        </div>
+        <h3 class="sub_tt">앱에서 보낸 영수증을 상세하게 확인하고 처리 할 수 있습니다.</h3>
+      </div>
+    </main>
+    <!-- e: main -->
+    
+    <!-- s: section -->
+    <section class="wrap mt_3 mb_4">
+      <!-- s: card_area -->
+      <div class="card_area">
+        <!-- card -->
+        <div class="gift_left_area card_12_12_12">
+          <p>요청</p>
+          <div>요청자: <span>닉네임_01</span>(12345)</div>
+          <div>요청일시: <span class="letter_spa_0">2026.01.01 16:38</span></div>
+        </div>
+        <!-- card -->
+        <div class="card card_12_12_12 pa">
+          <!-- s: receipt_detail_wrap -->
+          <div class="receipt_detail_wrap">
+            <div class="receipt_img">
+              <img src="../img/img_receipt.jpg" alt="img">
+            </div>
+            <!-- s: receipt_detail_box -->
+            <div class="filter receipt_detail_box">
+              <div>
+                <div class="tt">사업자번호</div>
+                <input type="text" class="input_form">
+                <div class="helper">사업자번호를 입력해주세요.</div>
+              </div>
+              <div class="w_2">
+                <div class="tt">주소</div>
+                <input type="text" class="input_form">
+                <div class="helper">주소를 입력해주세요.</div>
+              </div>
+              <div>
+                <div class="tt">결제 일시</div>
+                <input type="text" class="input_form">
+                <div class="helper">결제 일시를 입력해주세요.</div>
+              </div>
+              <div>
+                <div class="tt">결제 금액</div>
+                <input type="text" class="input_form">
+                <div class="helper">결제 금액을 입력해주세요.</div>
+              </div>
+              <div>
+                <div class="tt">승인 번호</div>
+                <input type="text" class="input_form">
+                <div class="helper">승인 번호를 입력해주세요.</div>
+              </div>
+              <!-- s: table -->
+              <div class="table_wrap button abuser">
+                <table class="table table_hover">
+                  <thead class="table_thead">
+                    <tr>
+                      <th>닉네임</th>
+                      <th>유저 번호</th>
+                      <th>승인 번호</th>
+                      <th>결제 금액</th>
+                      <th>결제일시</th>
+                      <th>등록일</th>
+                      <th>이미지</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>닉네임_01</td>
+                      <td>12345</td>
+                      <td>0000000000</td>
+                      <td>30,000</td>
+                      <td>2026.01.19 12:14</td>
+                      <td>2026.01.20</td>
+                      <td class="button auto"><div data-modal="#modalReceipt">보기</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- e: table -->
+              <!-- s: notice -->
+              <div class="notice">
+                <div class="title">유의사항</div>
+                <div class="content">위 데이터는 OCR로 자동 추출되었으며, 일부 정보가 누락되거나 틀릴 수 있습니다. 이미지와 대조하여 최종 처리를 진행해 주세요.</div>
+              </div>
+              <!-- e: notice -->
+            </div>
+            <!-- e: receipt_detail_box -->
+          </div>
+          <!-- e: receipt_detail_wrap -->
+        </div>
+      </div>
+      <!-- e: card_area -->
+
+      <!-- s:validation_btn -->
+      <div class="validation_btn">
+        <button class="wrong">부적격 처리</button>
+        <button class="complete">처리 완료</button>
+      </div>
+      <!-- e:validation_btn -->
+      
+    </section>
+    <!-- e: section -->
+  </div>
+
+
+  <!-- s: footer -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Festival Stamp Tour Admin System. All right reserved.</p>
+    </div>
+  </footer>
+  <!-- e: footer -->
+
+
+
+
+
+
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../../../SETTING/common/js/jquery-ui.min.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/calendar.js"></script>
+</body>
+</html>

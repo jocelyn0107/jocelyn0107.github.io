@@ -1,0 +1,33 @@
+<div class="header_nav">
+  <div class="logo" onclick="location.href='dashboard.html'">
+    <img src="../img/logo.svg" alt="logo">
+  </div>
+  <!-- s: nav -->
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">대시보드</a></li>
+      <li><a href="rewards.html">선물 신청 내역</a></li>
+      <li><a href="receipts.html">영수증</a></li>
+      <li><a href="contents.html">콘텐츠</a></li>
+      <li><a href="participation.html">참여 내역</a></li>
+      <!-- <li><a href="#">추첨(공개)</a></li> -->
+      <!-- !!!!!!!!!! 공개 추첨은 기존꺼 그대로 가져와 쓸게요. !!!!!!!!!! -->
+      <li><a href="lottery_private.html">추첨</a></li>
+    </ul>
+  </nav>
+  <!-- e: nav -->
+  <div class="btn_logout d_none mobile_block cursor_p" data-modal="#modalAlertTwoBtnLogout">
+    <img src="../img/icon_logout.svg" alt="logout">
+  </div>
+</div>
+<div class="header_right">
+  <div class="btn_logout" data-modal="#modalAlertTwoBtnLogout">
+    <img src="../img/icon_logout.svg" alt="logout">
+    <span class="helper">로그아웃</span>
+  </div>
+  <div class="btn_burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>

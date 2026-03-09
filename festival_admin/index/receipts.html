@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/ui.css">
+  <title>축제스탬프투어 관리자</title>
+</head>
+<body class="bg_body rewards">
+  <h1 class="ir_su">축제스탬프투어 공무원 관리자</h1>
+  
+  <!-- s: modal_alert_two_button_logout -->
+  <div id="modalLogout"></div>
+  <!-- e: modal_alert_two_button_logout -->
+   
+  <!-- s: header -->
+  <header id="header"></header>
+  <!-- e: header -->
+
+  <div class="main_section_wrap">
+    <!-- s: main -->
+    <main class="wrap">
+      <div class="title_area">
+        <div class="breadcrumb">
+          <h2 class="title">영수증</h2>
+        </div>
+        <h3 class="sub_tt">영수증 이벤트 금액별 리스트입니다.</h3>
+      </div>
+    </main>
+    <!-- e: main -->
+    
+    <!-- s: section -->
+    <section class="wrap mt_3 mb_4">
+      <!-- s: card_area -->
+      <div class="card_area">
+        <!-- card -->
+        <div class="card card_12_12_12 pa sm">
+          <!-- s: filter_wrap -->
+          <div class="filter_wrap">
+            <div class="filter">
+              <div>
+                <!-- s: select -->
+                <div class="select ma">
+                  <select name="search" id="search" class="custom_select no_border" placeholder="검색어">
+                    <option value="new">닉네임</option>
+                    <option value="like">유저 번호</option>
+                    <option value="like">승인 번호</option>
+                  </select>
+                </div>
+                <!-- e: select -->
+                <input type="text" class="input_form">
+              </div>
+              <div>
+                <div class="tt">상태</div>
+                <!-- s: select -->
+                <div class="select">
+                  <select name="condition" id="condition" class="custom_select w_100" placeholder="전체">
+                    <option value="new">수동요청</option>
+                    <option value="like">처리완료</option>
+                    <option value="like">승인 번호</option>
+                  </select>
+                </div>
+                <!-- e: select -->
+              </div>
+              <div class="m_w_100">
+                <div class="tt">영수증 등록일</div>
+                <div class="datapicker_wrap">
+                  <div class="datepicker">
+                    <input type="text" class="date input_form" value="2026.01.01">
+                  </div>
+                  <div class="mx_2">~</div>
+                  <div class="datepicker">
+                    <input type="text" class="date input_form" value="2026.01.01">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter_up gift_left_area">
+              <p>적용된 필터</p>
+              <div>이름: <span>김하늘</span></div>
+              <div>기간: <span class="letter_spa_0">2026.01.01 ~ 2026.01.15</span></div>
+            </div>
+            <div class="filter_btn_wrap">
+              <div class="btn_reset">
+                <img src="../img/icon_reset.svg" alt="reset">
+              </div>
+              <div class="btn_up">
+                <img src="../img/icon_arrow_db_up.svg" alt="arrow">
+              </div>
+              <!-- btn_search -->
+              <div class="btn_hover">
+                <button class="btn_search">
+                  <div><span>검</span><span>색</span><span>하</span><span>기</span></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- e: filter_wrap -->
+        </div>
+        <!-- card -->
+        <div class="card card_12_12_12">
+          <div class="top">
+            <div class="total">총 <span>327</span>건</div>
+            <div class="down_tab">
+              <!-- s: btn_down -->
+              <button class="btn_down">
+                <img src="../img/icon_report.svg" alt="report"><span>엑셀 다운로드</span>
+              </button>
+              <!-- e: btn_down -->
+              <!-- s: tab_area -->
+              <div class="tab_area view">
+                <span class="tab_indicator"></span>
+                <div class="active"><img src="../img/icon_list.svg" alt="list"></div>
+                <div><img src="../img/icon_grid.svg" alt="grid"></div>
+              </div>
+              <!-- e: tab_area -->
+            </div>
+          </div>
+          <!-- s: table -->
+          <div class="tab_con active">
+            <div class="table_wrap button">
+              <table class="table table_hover">
+                <thead class="table_thead">
+                  <tr>
+                    <th>번호</th>
+                    <th>닉네임</th>
+                    <th>유저 번호</th>
+                    <th>승인 번호</th>
+                    <th>
+                      <div class="align">
+                        결제 금액
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        결제 일시
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        등록일
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        상태
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>327</td>
+                    <td>닉네임_01</td>
+                    <td>12345</td>
+                    <td>0000000000</td>
+                    <td>-</td>
+                    <td>2026.01.19 12:14</td>
+                    <td>2026.01.20</td>
+                    <td class="button auto"><div onclick="location.href='receipt_detail.html'">수동요청</div></td>
+                  </tr>
+                  <tr>
+                    <td>326</td>
+                    <td>닉네임_01</td>
+                    <td>12345</td>
+                    <td>0000000000</td>
+                    <td>100,000</td>
+                    <td>2026.01.19 12:14</td>
+                    <td>2026.01.20</td>
+                    <td class="button wrong"><div onclick="location.href='receipt_detail.html'">부적격</div></td>
+                  </tr>
+                  <tr>
+                    <td>325</td>
+                    <td>닉네임_01</td>
+                    <td>12345</td>
+                    <td>0000000000</td>
+                    <td>12,000</td>
+                    <td>2026.01.19 12:14</td>
+                    <td>2026.01.20</td>
+                    <td class="button"><div onclick="location.href='receipt_detail.html'">처리완료</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- e: table -->
+
+          <!-- s: grid_area -->
+          <div class="tab_con">
+            <div class="grid_area card_area">
+              <!-- card -->
+              <div class="card card_04_06_12">
+                <div class="card_top">
+                  <div>
+                    <p class="num">3</p>
+                    <p class="stamp"></p>
+                  </div>
+                  <p class="date">2026.01.05</p>
+                </div>
+                <div class="card_contents">
+                  <div class="img_p">
+                    <img src="../img/icon_person.svg" alt="icon">
+                    <div>
+                      <p>닉네임(172568)</p>
+                    </div>
+                  </div>
+                  <div class="img_p">
+                    <img src="../img/icon_coin.svg" alt="icon">
+                    <p>결제 금액</p>
+                  </div>
+                  <div class="img_p_other">
+                    <div class="img_p mb_0">
+                      <img src="../img/icon_calendar.svg" alt="icon">
+                      <p>결제일</p>
+                    </div>
+                    <div class="button auto" onclick="location.href='receipt_detail.html'">수동요청</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="card card_04_06_12">
+                <div class="card_top">
+                  <div>
+                    <p class="num">2</p>
+                    <p class="stamp"></p>
+                  </div>
+                  <p class="date">2026.01.05</p>
+                </div>
+                <div class="card_contents">
+                  <div class="img_p">
+                    <img src="../img/icon_person.svg" alt="icon">
+                    <div>
+                      <p>닉네임(172568)</p>
+                    </div>
+                  </div>
+                  <div class="img_p">
+                    <img src="../img/icon_coin.svg" alt="icon">
+                    <p>결제 금액</p>
+                  </div>
+                  <div class="img_p_other">
+                    <div class="img_p mb_0">
+                      <img src="../img/icon_calendar.svg" alt="icon">
+                      <p>결제일</p>
+                    </div>
+                    <div class="button wrong" onclick="location.href='receipt_detail.html'">부적격</div>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="card card_04_06_12">
+                <div class="card_top">
+                  <div>
+                    <p class="num">1</p>
+                    <p class="stamp"></p>
+                  </div>
+                  <p class="date">2026.01.05</p>
+                </div>
+                <div class="card_contents">
+                  <div class="img_p">
+                    <img src="../img/icon_person.svg" alt="icon">
+                    <div>
+                      <p>닉네임(172568)</p>
+                    </div>
+                  </div>
+                  <div class="img_p">
+                    <img src="../img/icon_coin.svg" alt="icon">
+                    <p>결제 금액</p>
+                  </div>
+                  <div class="img_p_other">
+                    <div class="img_p mb_0">
+                      <img src="../img/icon_calendar.svg" alt="icon">
+                      <p>결제일</p>
+                    </div>
+                    <div class="button" onclick="location.href='receipt_detail.html'">처리완료</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- e: grid_area -->
+           
+          <!-- s: pagination -->
+          <div class="pagination">
+            <ul>
+              <li class="pagi_arrow prev">이전</li>
+              <li class="is-active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>...</li>
+              <li>9</li>
+              <li class="pagi_arrow next">다음</li>
+            </ul>
+          </div>
+          <!-- e: pagination -->
+        </div>
+      </div>
+      <!-- e: card_area -->
+    </section>
+    <!-- e: section -->
+  </div>
+
+
+  <!-- s: footer -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Festival Stamp Tour Admin System. All right reserved.</p>
+    </div>
+  </footer>
+  <!-- e: footer -->
+
+
+
+
+
+
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../../../SETTING/common/js/jquery-ui.min.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/ui.css">
+  <title>축제스탬프투어 관리자</title>
+</head>
+<body class="bg_body">
+  <h1 class="ir_su">축제스탬프투어 공무원 관리자</h1>
+  <!-- s: header -->
+  <header id="header"></header>
+  <!-- e: header -->
+
+  <div class="main_section_wrap">
+    <!-- s: main -->
+    <main class="wrap">
+      <div class="title_area">
+        <div class="breadcrumb">
+          <h2 class="title">콘텐츠</h2>
+        </div>
+        <h3 class="sub_tt">콘텐츠별 리스트입니다.</h3>
+      </div>
+    </main>
+    <!-- e: main -->
+  
+    <!-- s: section -->
+    <section class="wrap mt_3 mb_4">
+      <!-- s: card_area -->
+      <div class="card_area">
+        <!-- card -->
+        <div class="card card_12_12_12 pa sm">
+          <!-- s: filter_wrap -->
+          <div class="filter_wrap">
+            <div class="filter">
+              <div>
+                <div class="tt">시작일</div>
+                <div class="datepicker">
+                  <input type="text" class="date input_form" value="2026.01.01">
+                </div>
+              </div>
+              <div>
+                <div class="tt">종료일</div>
+                <div class="datepicker">
+                  <input type="text" class="date input_form" value="2026.01.01">
+                </div>
+              </div>
+            </div>
+            <div class="filter_up gift_left_area">
+              <p>적용된 필터</p>
+              <div>기간: <span class="letter_spa_0">2026.01.01 ~ 2026.01.15</span></div>
+            </div>
+            <div class="filter_btn_wrap">
+              <div class="btn_reset">
+                <img src="../img/icon_reset.svg" alt="reset">
+              </div>
+              <div class="btn_up">
+                <img src="../img/icon_arrow_db_up.svg" alt="arrow">
+              </div>
+              <!-- btn_search -->
+              <div class="btn_hover">
+                <button class="btn_search">
+                  <div><span>검</span><span>색</span><span>하</span><span>기</span></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- e: filter_wrap -->
+        </div>
+        <!-- card -->
+        <div class="card card_12_12_12">
+          <div class="top">
+            <div class="total">총 <span>327</span>건</div>
+            <div class="down_tab">
+              <!-- s: btn_down -->
+              <button class="btn_down">
+                <img src="../img/icon_report.svg" alt="report"><span>엑셀 다운로드</span>
+              </button>
+              <!-- e: btn_down -->
+              <!-- s: tab_area -->
+              <div class="tab_area view">
+                <span class="tab_indicator"></span>
+                <div class="active"><img src="../img/icon_list.svg" alt="list"></div>
+                <div><img src="../img/icon_grid.svg" alt="grid"></div>
+              </div>
+              <!-- e: tab_area -->
+            </div>
+          </div>
+          <!-- s: table -->
+          <div class="tab_con active">
+            <div class="table_wrap">
+              <table class="table table_hover">
+                <thead class="table_thead">
+                  <tr>
+                    <th>번호</th>
+                    <th>이미지</th>
+                    <th>
+                      <div class="align">
+                        코스명
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        콘텐츠명
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        스탬프 개수
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        평점
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="align">
+                        리뷰수
+                        <figure>
+                          <img src="../img/icon_arrow_down.svg" alt="icon" class="arrow">
+                        </figure>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_01</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>문경새재 도립공원</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_01</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>옛길박물관</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_01</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>자연생태박물관</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_01</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>문경새재 오픈세트장</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_02</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>문경새재 어드벤처파크</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                    <td>코스_02</td>
+                    <td class="content_title" onclick="location.href='content_detail.html'">
+                      <div>문경도자기 박물관</div>
+                    </td>
+                    <td>942</td>
+                    <td>4.5</td> 
+                    <td>452</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- e: table -->
+          <!-- s: grid_area -->
+          <div class="tab_con">
+            <div class="grid_area card_area">
+              <!-- card -->
+              <div class="card card_04_06_12">
+                <div class="card_top">
+                  <div>
+                    <p class="num">3</p>
+                    <p class="stamp">전남청소년수련시설협회(목포시청소년문화센터)</p>
+                  </div>
+                  <p class="date">2026.01.05</p>
+                </div>
+                <div class="card_contents">
+                  <div class="w_d_flex">
+                    <img src="../img/img_bg_01.jpg" alt="img" class="thumnail">
+                    <div class="w_100">
+                      <div class="img_p">
+                        <img src="../img/icon_stamp.svg" alt="icon">
+                        <div>
+                          <p>36</p>
+                        </div>
+                      </div>
+                      <div class="img_p">
+                        <img src="../img/icon_star.svg" alt="icon">
+                        <p>4.5</p>
+                      </div>
+                      <div class="img_p_other">
+                        <div class="img_p mb_0">
+                          <img src="../img/icon_comment.svg" alt="icon">
+                          <p>2</p>
+                        </div>
+                        <div class="button auto" onclick="location.href='content_detail.html'">상세보기</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <div class="card card_04_06_12">
+                <div class="card_top">
+                  <div>
+                    <p class="num">3</p>
+                    <p class="stamp">전남청소년수련시설협회</p>
+                  </div>
+                  <p class="date">2026.01.05</p>
+                </div>
+                <div class="card_contents">
+                  <div class="w_d_flex">
+                    <img src="../img/img_bg_01.jpg" alt="img" class="thumnail">
+                    <div class="w_100">
+                      <div class="img_p">
+                        <img src="../img/icon_folder.svg" alt="icon">
+                        <div>
+                          <p>코스가 있을 때 코스명</p>
+                        </div>
+                      </div>
+                      <div class="img_p">
+                        <img src="../img/icon_stamp.svg" alt="icon">
+                        <div>
+                          <p>36</p>
+                        </div>
+                      </div>
+                      <div class="img_p">
+                        <img src="../img/icon_star.svg" alt="icon">
+                        <p>4.5</p>
+                      </div>
+                      <div class="img_p_other">
+                        <div class="img_p mb_0">
+                          <img src="../img/icon_comment.svg" alt="icon">
+                          <p>2</p>
+                        </div>
+                        <div class="button auto" onclick="location.href='content_detail.html'">상세보기</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- e: grid_area -->
+          <!-- s: pagination -->
+          <div class="pagination">
+            <ul>
+              <li class="pagi_arrow prev">이전</li>
+              <li class="is-active">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>...</li>
+              <li>9</li>
+              <li class="pagi_arrow next">다음</li>
+            </ul>
+          </div>
+          <!-- e: pagination -->
+        </div>
+  
+      </div>
+      <!-- e: card_area -->
+    </section>
+    <!-- e: section -->
+  </div>
+
+  <!-- s: footer -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Festival Stamp Tour Admin System. All right reserved.</p>
+    </div>
+  </footer>
+  <!-- e: footer -->
+
+
+
+
+
+
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>

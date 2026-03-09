@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../../../SETTING/common/css/reset.css">
+  <link rel="stylesheet" href="../../../SETTING/common/css/common.css">
+  <link rel="stylesheet" href="../css/font.css">
+  <link rel="stylesheet" href="../css/ui.css">
+  <title>축제스탬프투어 관리자</title>
+</head>
+<body class="bg_body dashboard">
+  <h1 class="ir_su">축제스탬프투어 공무원 관리자</h1>
+  
+  <!-- s: modal_alert_two_button_logout -->
+  <div id="modalLogout"></div>
+  <!-- e: modal_alert_two_button_logout -->
+   
+  <!-- s: header -->
+  <header id="header"></header>
+  <!-- e: header -->
+
+  <div class="main_section_wrap">
+    <!-- s: main -->
+    <main class="wrap">
+      <div class="title_area">
+        <div class="breadcrumb">
+          <h2 class="title">대시보드</h2>
+        </div>
+        <h3 class="sub_tt">실시간 축제 운영 현황 및 통계 데이터입니다.</h3>
+      </div>
+      <!-- s: btn_down -->
+      <button class="btn_down">
+        <img src="../img/icon_report.svg" alt="report"><span>보고서 다운로드</span>
+      </button>
+      <!-- e: btn_down -->
+    </main>
+    <!-- e: main -->
+
+    <!-- s: section -->
+    <section class="wrap mt_3 mb_4">
+      <!-- s: card_area -->
+      <div class="card_area">
+        <!-- card -->
+        <div class="card card_04_12_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_person.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_person.svg" alt="icon">
+              </div>
+              <div class="tt">참여자</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">8,430</div>
+              <div class="gb">명</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_stamp.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_stamp.svg" alt="icon">
+              </div>
+              <div class="tt">총 스탬프 개수</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">45,201</div>
+              <div class="gb">개</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_gift.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_gift.svg" alt="icon">
+              </div>
+              <div class="tt">선물 신청자</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">8,430</div>
+              <div class="gb">명</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_08_06_12 pa">
+          <div class="top p_0 mb_2">
+            <div class="title_area">
+              <div class="card_tt">콘텐츠별 TOP5</div>
+              <div class="sub_tt"><img src="../img/icon_info.svg" alt="icon">누적 스탬프 기준 상위 콘텐츠입니다.</div>
+            </div>
+            <div class="legned_area">
+              <ul>
+                <li>스탬프 개수</li>
+                <li>리뷰수</li>
+              </ul>
+            </div>
+          </div>
+          <!-- 그래프 영역 -->
+          <div class="graph">그래프영역입니다.</div>
+          <!-- 그래프 영역 -->
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa">
+          <div>
+            <div class="card_tt">선물 잔여 수량</div>
+            <!-- s: progress_area -->
+            <div class="progress_area">
+  
+            </div>
+            <!-- e: progress_area -->
+            <div class="btn_view_more_area">
+              <div class="btn_view_more" onclick="location.href='rewards.html'">선물 신청내역 더보기</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_12_12_12">
+          <div class="top">
+            <div class="title_area">
+              <div class="card_tt">콘텐츠별 순위</div>
+              <div class="sub_tt letter_spa_0"><img src="../img/icon_calendar.svg" alt="icon">2026.01.01 ~ 2026.01.31</div>
+            </div>
+            <!-- s: tab_area -->
+            <div class="tab_area">
+              <span class="tab_indicator"></span>
+              <div class="active">전체</div>
+              <div>주간</div>
+            </div>
+            <!-- e: tab_area -->
+          </div>
+          <!-- s: table -->
+          <div class="table_wrap">
+            <table class="table table_hover">
+              <thead class="table_thead">
+                <tr>
+                  <th>순위</th>
+                  <th>이미지</th>
+                  <th>콘텐츠명</th>
+                  <th>스탬프 개수</th>
+                  <th>평점</th>
+                  <th>리뷰수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                  <td class="content_title" onclick="location.href='content_detail.html'">
+                    <div>콘텐츠명을 입력하는 곳입니다.</div>
+                  </td>
+                  <td>942</td>
+                  <td>4.5</td> 
+                  <td>452</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><img src="../img/img_bg_01.jpg" alt="img" class="thumnail"></td>
+                  <td class="content_title" onclick="location.href='content_detail.html'">
+                    <div>콘텐츠명을</div>
+                  </td>
+                  <td>942</td>
+                  <td>4.5</td>
+                  <td>452</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- e: table -->
+          <div class="btn_view_more_area">
+            <div class="btn_view_more" onclick="location.href='contents.html'">콘텐츠 더보기</div>
+          </div>
+        </div>
+        <div class="wrap p_0 mt_4">
+          <div class="title_area">
+            <div class="breadcrumb">
+              <h2 class="title mr_2">영수증 이벤트 통계</h2>
+              <div class="sub_tt letter_spa_0"><img src="../img/icon_calendar.svg" alt="icon">2026.01.01 ~ 2026.01.31</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_person.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_person.svg" alt="icon">
+              </div>
+              <div class="tt">영수증 참여자</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">8,201</div>
+              <div class="gb">명</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_coin.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_coin.svg" alt="icon">
+              </div>
+              <div class="tt">영수증 인증 금액</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">59,005,201</div>
+              <div class="gb">원</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm">
+          <div class="icon">
+            <img src="../img/icon_receipt.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon">
+                <img src="../img/icon_receipt.svg" alt="icon">
+              </div>
+              <div class="tt">총 영수증 건수</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">45,301</div>
+              <div class="gb">건</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm line grey">
+          <div class="icon grey">
+            <img src="../img/icon_ing.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon grey">
+                <img src="../img/icon_ing.svg" alt="icon">
+              </div>
+              <div class="tt">수동요청</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">81</div>
+              <div class="gb">건</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm line blue">
+          <div class="icon blue">
+            <img src="../img/icon_check.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon blue">
+                <img src="../img/icon_check.svg" alt="icon">
+              </div>
+              <div class="tt">처리완료</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">45,201</div>
+              <div class="gb">건</div>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card card_04_06_12 pa sm line red">
+          <div class="icon red">
+            <img src="../img/icon_close.svg" alt="icon">
+          </div>
+          <div class="tt_num">
+            <div class="tt_wrap">
+              <div class="m_icon red">
+                <img src="../img/icon_close.svg" alt="icon">
+              </div>
+              <div class="tt">부적격</div>
+            </div>
+            <div class="num_wrap">
+              <div class="num">8,201</div>
+              <div class="gb">건</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- e: card_area -->
+    </section>
+    <!-- e: section -->
+  </div>
+
+
+  <!-- s: footer -->
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Festival Stamp Tour Admin System. All right reserved.</p>
+    </div>
+  </footer>
+  <!-- e: footer -->
+
+
+
+
+
+
+
+  <script src="../../../SETTING/common/js/jquery-3.7.1.min.js"></script>
+  <script src="../js/layout.js"></script>
+</body>
+</html>
