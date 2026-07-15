@@ -1,0 +1,43 @@
+<iframe name="frAttachFiles" frameborder="0" class="d-none"></iframe>
+<script>
+  function validateForm(event){
+    document.getElementById('modalContact').style.display='none';
+    alert('전송이 완료되었습니다!')
+    return true; // 폼 제출 허용
+  }
+</script>
+<div class="modal_popup" id="modalContactMe">
+  <div class="modal_wrap">
+    <div class="modal_content">
+      <div class="btn_modal_close">
+        <img src="./assets/img/icon_close.svg" alt="close">
+      </div>
+      <h2>CONTACT</h2>
+      <p class="sub_txt"><span class="dc">프로젝트 및 채용 문의</span>는 언제든 환영합니다.<br>메시지를 남겨주시면 빠르게 답변드리겠습니다.</p>
+      <form
+        role="form" 
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbwbLwwl-AxoTew4yhy8z1431IaWI__pEAN0GyZ9DTpdk-U5ICAeHBQHs1t3kjTPl9Y_9w/exec"
+        target="frAttachFiles"
+        onsubmit="return validateForm(event);">
+        <div class="contact_con">
+          <div>
+            <p>NAME</p>
+            <input type="text" id="conName" class="input_form" name="성함" placeholder="성함을 입력해주세요." required autocomplete="off">
+          </div>
+          <div>
+            <p>E-MAIL</p>
+            <input type="text" id="conEmail" class="input_form" name="이메일" placeholder="이메일을 입력해주세요." required autocomplete="off">
+          </div>
+          <div>
+            <p>MESSAGE</p>
+            <textarea id="conContents" placeholder="메시지를 입력해주세요." name="내용" class="text_contact" required autocomplete="off"></textarea>
+          </div>
+        </div>
+        <div class="btn_hover">
+          <button type="submit" class="btn_contact_submit"><div><span>S</span><span>E</span><span>N</span><span>D</span></div></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

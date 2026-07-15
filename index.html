@@ -1,83 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>퍼블리셔 진예슬</title>
-  <link rel="stylesheet" href="common/css/typography.css">
-  <style>
-    html {font-family: 'Pretendard'; font-weight: 400; font-size: 17px; letter-spacing: -0.5px; line-height: 1.5;}
-    h1 {text-align: center;}
-    .wrap {padding: 30px 100px;}
-    .list_title {font-size: 20px; font-weight: 600; padding-left: 30px; position: relative;}
-    .list_title::before {content: ''; display: block; width: 16px; height: 16px; border-radius: 50%; background: #7200FF; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
-    .list {width: 200px;}
-    .list>div>a {text-decoration: none;color: #000;}
-    .list_sub_title {font-size: 20px; font-weight: 700;  margin-bottom: 16px; border-bottom: 1px solid #ddd;  text-align: center;  margin-right: 20px;  padding-bottom: 6px;}
-    .mb {margin-bottom: 4px;}
-    .mb:hover a {background-color: #7300ff20;}
-  </style>
+  <title>Jocelyn Portfolio</title>
+  <meta property="og:type" content="Website" />
+  <meta property="og:title" content="Jocelyn Portfolio" />
+  <meta property="og:url" content="https://jocelyn0107.github.io/index.html" />
+  <meta property="og:description" content="Portfolio" />
+  <!-- <meta property="og:image" content="https://i.ibb.co/dbkbSSd/image.png"/> -->
+  <meta property="og:site_name" content="Jocelyn Portfolio" />
+
+  <link rel="shortcut icon" href="./assets/img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/fullpage.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+
+
 </head>
 
 <body>
-  <h1>jocelyn0107.github.io</h1>
-  <div class="wrap">
-    <div class="list_title">퍼블리싱</div>
-    <hr>
-    <div style="display:flex; margin-bottom: 90px;">
-      <div class="list">
-        <div class="list_sub_title">현재 회사</div>
-        <div class="mb"><a href="filelist_direct.html" target="_blank">다이렉트</a></div>
-        <div class="mb"><a href="filelist_festival.html" target="_blank">축제스탬프투어</a></div>
-        <div class="mb"><a href="filelist_festival_appweb.html" target="_blank">축제스탬프투어(앱)</a></div>
-        <div class="mb"><a href="filelist_festival_admin.html" target="_blank">축제스탬프투어(관리자)</a></div>
-        <div class="mb"><a href="filelist_cardfit_ad.html" target="_blank">카드핏애드센터</a></div>
-        <div class="mb"><a href="thatzit/SETTING/filelist/filelist_sws.html" target="_blank">스탬프워크 관리시스템(SWS)</a></div>
-        <div class="mb"><a href="thatzit/thatzit_website/html/index.html" target="_blank">댓츠잇소프트</a></div>
-      </div>
-      <!-- <div class="list">
-                <div class="list_sub_title">참고용 포트폴리오</div>
-                <div class="mb"><a href="portfolio/enterpriseblockchain-main/index.html" target="_blank">블록체인 | css</a></div>
-                <div class="mb"><a href="portfolio/eql-main/index.html" target="_blank">eql | scss</a></div>
-                <div class="mb"><a href="portfolio/keywordlab-main/index.html" target="_blank">키워드랩 | full page | css</a></div>
-                <div class="mb"><a href="portfolio/louvremuseum-main/index.html" target="_blank">루브르박물관 | css</a></div>
-                <div class="mb"><a href="portfolio/portfolio-master/index.html" target="_blank">포트폴리오 | scss</a></div>
-                <div class="mb"><a href="portfolio/portfolio_2024-main/index.html" target="_blank">포트폴리오 | scss !</a></div>
-                <div class="mb"><a href="portfolio/Qude-main/index.html" target="_blank">qude | css | read me</a></div>
-                <div class="mb"><a href="portfolio/tectonicventures-main/index.html" target="_blank">tectonic | scss</a></div>
-            </div> -->
+  <!-- s: modalContact -->
+  <div id="modalContact"></div>
+  <!-- e: modalContact -->
 
-    </div>
-    <div class="list_title">디자인</div>
-    <hr>
-    <div style="display:flex; margin-bottom: 90px;">
-      <div class="list">
-        <div class="list_sub_title">현재 회사</div>
-
-      </div>
-      <div class="list">
-        <div class="list_sub_title">이전 회사</div>
-        <div class="mb"><a href="design/design_01.jpg" target="_blank">웹 디자인</a></div>
-        <div class="mb"><a href="design/design_02.jpg" target="_blank">웹 디자인(관리자)</a></div>
-        <div class="mb"><a href="design/design_03.jpg" target="_blank">앱 디자인</a></div>
-        <div class="mb"><a href="design/design_04.jpg" target="_blank">웹 디자인(관리자)</a></div>
-        <div class="mb"><a href="design/design_05.jpg" target="_blank">웹 디자인</a></div>
-        <div class="mb"><a href="design/design_06.jpg" target="_blank">웹 디자인</a></div>
-        <div class="mb"><a href="design/design_07.jpg" target="_blank">앱·웹 디자인(관리자)</a></div>
-        <div class="mb"><a href="design/design_08.jpg" target="_blank">키오스크 디자인</a></div>
+  <!-- s: modalPort01 -->
+  <div class="modal_popup" id="modalPort01">
+    <div class="modal_wrap">
+      <div class="modal_content">
+        <div class="btn_modal_close">
+          <img src="./assets/img/icon_close.svg" alt="close">
+        </div>
+        <h2>Portfolio</h2>
+        <p class="sub_txt"><span class="dc">프로젝트 및 채용 문의</span>는 언제든 환영합니다.</p>
+        <div class="modal_scroll">
+          <img src="./assets/img/port_img_01.jpg" alt="img">
+        </div>
       </div>
     </div>
-    <div class="list_title">기획서 및 설계서</div>
-    <hr>
-    <!-- <div style="display:flex;">
-            <div class="list">
-                <div class="list_sub_title">이전 회사</div>
-                <div class="mb"><a href="document/storyBoard_gef.pdf" target="_blank">설계서</a></div>
-            </div>
-        </div> -->
   </div>
+  <!-- e: modalPort01 -->
 
+  <!-- s: modalPort02 -->
+  <div class="modal_popup" id="modalPort02">
+    <div class="modal_wrap">
+      <div class="modal_content">
+        <div class="btn_modal_close">
+          <img src="./assets/img/icon_close.svg" alt="close">
+        </div>
+        <h2>Portfolio</h2>
+        <p class="sub_txt"><span class="dc">프로젝트 및 채용 문의</span>는 언제든 환영합니다.</p>
+        <div class="modal_scroll">
+          <img src="./assets/img/port_img_02.jpg" alt="img">
+          <p class="port-p">웹 배너</p>
+          <img src="./assets/img/port_img_03.jpg" alt="img">
+          <p class="port-p">인쇄물 포스터</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e: modalPort02 -->
+
+  <div class="wraper">
+    <!-- s: header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1>
+          <a href="index.html">
+            <span class="blind">Jocelyn Portfolio</span>
+            <p>Jocelyn</p>
+          </a>
+        </h1>
+        <button class="btn-slide">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </button>
+        <div class="slide-menu">
+          <ul class="menu-list">
+            <li class="nav1">
+              <a href="#aboutMe" class="nav">ABOUT ME<i></i></a>
+            </li>
+            <li class="nav2">
+              <a href="#portfolio" class="nav">PORTFOLIO<i></i></a>
+            </li>
+            <li class="nav3">
+              <a href="#contact" class="nav">CONTACT<i></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="dimmed"></div>
+        <div class="m-bg"></div>
+      </div>
+      <nav class="gnb">
+        <ul class="nav-list">
+          <li class="nav-item nav1">
+            <a href="#aboutMe" class="nav">ABOUT ME</a>
+          </li>
+          <li class="nav-item nav2">
+            <a href="#portfolio" class="nav">PORTFOLIO</a>
+          </li>
+          <li class="nav-item nav3">
+            <a href="#contact" class="nav">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- e: header -->
+
+    <main class="main" id="fullpage">
+      <!-- s: visual -->
+      <section class="sc-visual section" id="scVisual">
+        <div class="inner">
+          <div class="group-text">
+            <h2>함께 일하고 싶은<br>
+              <span class="dc">퍼블리셔</span>
+              <sapn class="sub-job">& UIUX디자이너</sapn><br>
+              <span class="dc">진예슬</span>
+              <span>입니다.</span>
+            </h2>
+          </div>
+          <div class="img-wrap">
+            <div class="img1 imgpo"><img src="./assets/img/jocelyn.png" alt="이모지"></div>
+            <div class="img2 imgpo"><img src="./assets/img/draw.png" alt="그림판"></div>
+          </div>
+        </div>
+      </section>
+      <!-- e: visual -->
+
+      <!-- s: about me -->
+      <section class="sc-aboutme section" id="aboutMe">
+        <div class="inner">
+          <div class="content">
+            <div class="cont-flex">
+              <div class="con-left">
+                <h2 class="sm-font">안녕하세요.<br>
+                  웹퍼블리셔 겸 UIUX디자이너 진예슬 입니다.<br>
+                  <span class="wc">사용자가 쉽게 접근하고, 직관적으로 이용</span>할 수 있는 웹사이트를 만드는 것을 목표로 노력하고 있습니다.<br>
+                  <span class="dc">디자인과 개발의 경계를 허물며</span> 창의성과 기술력을 동시에 갖춘 웹퍼블리셔입니다.
+                </h2>
+                <div class="flex">
+                  <div class="content-inner">
+                    <div class="top-box">
+                      <span class="dc">연락처</span>
+                    </div>
+                    <div class="count-wrap">
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">0</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">0</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list up">
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">0</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">0</li>
+                        </ul>
+                      </div>
+                      <span>-</span>
+                      <div class="number">
+                        <ul class="count-list up">
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list up">
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                        </ul>
+                      </div>
+                      <span>-</span>
+                      <div class="number">
+                        <ul class="count-list up">
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list up">
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                        </ul>
+                      </div>
+                      <div class="number">
+                        <ul class="count-list down">
+                          <li class="conut-item">1</li>
+                          <li class="conut-item">2</li>
+                          <li class="conut-item">3</li>
+                          <li class="conut-item">4</li>
+                          <li class="conut-item">5</li>
+                          <li class="conut-item">6</li>
+                          <li class="conut-item">7</li>
+                          <li class="conut-item">8</li>
+                          <li class="conut-item">9</li>
+                          <li class="conut-item">1</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-inner">
+                    <div class="top-box">
+                      <span class="dc">이메일</span>
+                    </div>
+                    <div class="count-wrap">
+                      <div class="email">yeseulj95@gmail.com</div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="skills">
+                <div class="content-inner">
+                  <div class="top-box">
+                    <span class="dc">학력</span>
+                  </div>
+                  <div class="bottom-text">
+                    <div><span class="date">13.02</span>광주여자상업고등학교 졸업(디자인과)</div>
+                    <div><span class="date">18.02</span>광주대학교 졸업(의상디자인학과)</div>
+                  </div>
+                </div>
+                <div class="content-inner">
+                  <div class="top-box">
+                    <span class="dc">경력</span>
+                  </div>
+                  <div class="bottom-text">
+                    <div><span class="date">26.06 ~ </span>광주광역시 버스운행정보 리뉴얼 (디자인, 퍼블리싱) [프리랜서]</div>
+                    <div><span class="date">25.01 ~ 26.04</span>댓츠잇 [웹퍼블리셔]</div>
+                    <div><span class="date">25.12 ~ 25.12</span>화순버스 앱 (디자인) [프리랜서]</div>
+                    <div><span class="date">22.03 ~ 24.06</span>감성텍 [웹퍼블리셔]</div>
+                    <div><span class="date">21.09 ~ 21.10</span>해남군청 저수지관리시스템 (디자인, 퍼블리싱) [프리랜서]</div>
+                    <div><span class="date">21.01 ~ 21.10</span>가피아 [웹퍼블리셔]</div>
+                    <div><span class="date">13.01 ~ 13.06</span>남흥건설 [회계]</div>
+                  </div>
+                </div>
+                <div class="content-inner">
+                  <div class="top-box">
+                    <span class="dc">자격증</span>
+                  </div>
+                  <div class="bottom-text">
+                    <div>정보처리기사, 컴퓨터그래픽기능사, 웹디자인개발기능사, GTQ 1급, 전산회계 2급, 2종보통운전면허</div>
+                  </div>
+                </div>
+                <div class="content-inner">
+                  <div class="top-box">
+                    <span class="dc">Skill</span>
+                  </div>
+                  <div class="bottom-icons">
+                    <img src="./assets/img/icon_01.png" alt="icon">
+                    <img src="./assets/img/icon_02.png" alt="icon">
+                    <img src="./assets/img/icon_03.png" alt="icon">
+                    <img src="./assets/img/icon_04.png" alt="icon">
+                    <img src="./assets/img/icon_05.png" alt="icon">
+                    <img src="./assets/img/icon_06.png" alt="icon">
+                    <img src="./assets/img/icon_07.png" alt="icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- e: about me -->
+
+      <!-- s: portfolio -->
+      <section class="sc-portfolio section" id="Portfolio">
+        <div class="inner">
+          <div class="flex">
+            <div class="group-intro">
+              <h2>Portfolio</h2>
+              <p>
+                모든 프로젝트는 <span class="dc">명확한 목적</span>과<br>
+                <span class="dc">사용자 경험</span>을 중심으로 설계되었습니다.
+              </p>
+            </div>
+            <div class="group-tab">
+              <button data-tab="#tab1" class="on"><em>01</em><span>반응형 홈페이지</span></button>
+              <button data-tab="#tab2"><em>02</em><span>관리자페이지</span></button>
+              <button data-tab="#tab3"><em>03</em><span>앱 디자인</span></button>
+              <button data-tab="#tab4"><em>04</em><span>그래픽 디자인</span></button>
+              <div class="on-ic">
+                <span><i></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper">
+            <div class="content swiper-wrapper">
+              <div id="tab1" class="cont on swiper-slide">
+                <span class="dc top">01</span>
+                <h3>반응형 홈페이지</h3>
+                <p class="top-text">
+                  브랜드 가치를 담은 반응형 웹 구축
+                </p>
+                <p class="bottom-text">
+                  서비스의 특성과 브랜드 아이덴티티를 반영해 웹사이트를 제작했습니다.<br class="m-none">
+                  사용자 중심의 UI와 최적화된 레이아웃을 설계하고,<br class="m-none">
+                  반응형 퍼블리싱을 중심으로 제작했습니다.
+                </p>
+                <div class="site-move" onclick="window.open('https://www.thatzit.co.kr/')">사이트 이동</div>
+                <a href="port_01.html" class="more">포트폴리오 더 보기<span><i></i></span></a>
+                <img class="port-img" src="./assets/img/thumnail_01.jpg" alt>
+              </div>
+              <div id="tab2" class="cont swiper-slide">
+                <span class="dc top">02</span>
+                <h3>관리자페이지</h3>
+                <p class="top-text">
+                  효율적인 운영을 위한 관리자 시스템 구축
+                </p>
+                <p class="bottom-text">
+                  운영자의 업무 효율 향상을 목표로 관리자 페이지를 제작했습니다.<br class="m-none">
+                  데이터 관리와 통계 기능을 직관적인 UI로 설계하고,<br class="m-none">
+                  반응형 퍼블리싱을 중심으로 제작했습니다.
+                </p>
+                <div class="site-move"
+                  onclick="window.open('https://jocelyn0107.github.io/filelist_festival_admin.html')">사이트 이동</div>
+                <a href="port_01.html" class="more">포트폴리오 더 보기<span><i></i></span></a>
+                <img class="port-img" src="./assets/img/thumnail_02.jpg" alt>
+              </div>
+              <div id="tab3" class="cont swiper-slide">
+                <span class="dc top">03</span>
+                <h3>앱 디자인</h3>
+                <p class="top-text">
+                  사용자 경험을 중심으로 설계한 모바일 앱
+                </p>
+                <p class="bottom-text">
+                  사용자의 편의성과 접근성을 고려해 앱을 디자인했습니다.<br class="m-none">
+                  직관적인 UI와 일관된 디자인 시스템을 적용하고,<br class="m-none">
+                  사용자 경험을 중심으로 설계했습니다.
+                </p>
+                <div class="site-move" data-modal="#modalPort01">이미지 보기</div>
+                <a href="port_01.html" class="more">포트폴리오 더 보기<span><i></i></span></a>
+                <img class="port-img" src="./assets/img/thumnail_03.jpg" alt>
+              </div>
+              <div id="tab4" class="cont swiper-slide">
+                <span class="dc top">04</span>
+                <h3>그래픽 디자인</h3>
+                <p class="top-text">
+                  목적에 맞는 시각적 커뮤니케이션 디자인
+                </p>
+                <p class="bottom-text">
+                  다양한 매체에 맞춰 그래픽 콘텐츠를 디자인했습니다.<br class="m-none">
+                  포스터, X-배너, 카드뉴스, 웹배너 등 목적에 맞는 디자인을 제작하고,<br class="m-none">
+                  브랜드 메시지를 효과적으로 전달할 수 있도록 구성했습니다.
+                </p>
+                <div class="site-move" data-modal="#modalPort02">이미지 보기</div>
+                <a href="port_01.html" class="more">포트폴리오 더 보기<span><i></i></span></a>
+                <img class="port-img" src="./assets/img/thumnail_04.jpg" alt>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- e: portfolio -->
+
+      <!-- s: contact me -->
+      <section class="sc-contact section" id="scContact">
+        <div class="inner" data-modal="#modalContactMe">
+          <h2 class="contact-h2">
+            프로젝트나 채용에 대해<br>언제든 편하게 연락주세요.
+          </h2>
+          <div> <img src="./assets/img/visual-img4.png" alt></div>
+        </div>
+      </section>
+      <!-- e: contact me -->
+
+      <!-- s: footer -->
+      <footer class="footer section fp-auto-height">
+        <div class="footer-inner">
+          <h2>Jocelyn</h2>
+          <p>COPYRIGHT © 2026 JOCELYN ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+      <!-- e: footer -->
+    </main>
+
+    <div class="btn-bottom-wrap">
+      <button class="btn-top">
+        <span class="blind">TOP</span>
+        <i></i>
+      </button>
+      <div class="link-popup" data-modal="#modalContactMe">
+        <img src="./assets/img/mouse-pointer.png" alt="문의하기">
+        CONTACT ME
+      </div>
+    </div>
+    <div class="mouse">
+      <div class="img"></div>
+      <div class="click">클릭</div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+  <script src="assets/js/fullpage.min.js"></script>
+  <script src="assets/js/js.js"></script>
 </body>
 
 </html>
